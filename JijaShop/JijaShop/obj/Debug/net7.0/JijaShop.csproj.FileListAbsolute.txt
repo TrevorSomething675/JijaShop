@@ -40,3 +40,5 @@ C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\refint\JijaShop.dll
 C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\JijaShop.pdb
 C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\JijaShop.genruntimeconfig.cache
 C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\ref\JijaShop.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\AutoMapper.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

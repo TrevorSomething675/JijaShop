@@ -1,4 +1,4 @@
-﻿namespace JijaShop.Models
+﻿namespace JijaShop.Models.Entities
 {
     public class User : BaseEntity
     {
