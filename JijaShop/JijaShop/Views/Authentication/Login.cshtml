@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["title"] = "Login";
+}
+
+<form method="post" action="LoginAccess">
+    <div class="container border">
+        <div class="row row-cols-2">
+            <label>Name</label> 
+            <input name="UserName"/>
+
+            <label>Password</label> 
+            <input name="UserPassword" />
+
+            <label>Email</label> 
+            <input name="UserEmail" />
+
+             <button type="submit" class="btn btn-primary w-100">Войти</button>
+        </div>
+    </div>
+</form>

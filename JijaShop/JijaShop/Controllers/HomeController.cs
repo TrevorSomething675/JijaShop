@@ -20,7 +20,7 @@ namespace JijaShop.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return Redirect("/Authentication");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

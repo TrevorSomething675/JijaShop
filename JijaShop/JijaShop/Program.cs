@@ -23,8 +23,14 @@ using(var scope = app.Services.CreateScope())
 {
     using(var context = scope.ServiceProvider.GetRequiredService<MainContext>())
     {
-        context.Database.Migrate();
-        //context.Database.EnsureCreated();
+        try
+        {
+            context.Database.Migrate();
+        }
+        catch
+        {
+            context.Database.EnsureCreated();
+        }
     }
 }
 
