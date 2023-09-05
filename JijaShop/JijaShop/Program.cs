@@ -2,7 +2,6 @@ using JijaShop.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using JijaShop;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 var configuration = new ConfigurationBuilder()

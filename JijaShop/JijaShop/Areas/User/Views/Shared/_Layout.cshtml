@@ -11,15 +11,33 @@
 
 <body>
     <header>
-        <h2 class="text-danger">User Area</h2>
-            <div>
-                @RenderBody()
-            </div>
-    </header>
+        <div class="container">
+            <span>
+                <button type="button">Jija Shop</button>
+            </span>
+             <span class="col-4">
+                 <button type="button" class="btn btn-secondary">Button 1</button>
+             </span>
 
+             <span class="col-4">
+                 <button type="button" class="btn btn-secondary">Button 2</button>
+             </span>
+
+             <span class="col-4">
+                 <button type="button" class="btn btn-secondary">Button 3</button>
+             </span>
+        </div>
+    </header>
+        <div>
+            @RenderBody()
+        </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
+<footer>
+
+</footer>
 </html>
