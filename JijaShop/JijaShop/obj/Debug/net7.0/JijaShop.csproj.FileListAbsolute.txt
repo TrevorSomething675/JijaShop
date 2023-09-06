@@ -31,7 +31,6 @@ C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\staticwebassets\msbuild.
 C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\staticwebassets.pack.json
 C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\staticwebassets.build.json
 C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\staticwebassets.development.json
-C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\scopedcss\bundle\JijaShop.styles.css
 C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\scopedcss\projectbundle\JijaShop.bundle.scp.css
 C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\JijaShop.csproj.CopyComplete
@@ -86,3 +85,4 @@ C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\refint\JijaSho
 C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\JijaShop.pdb
 C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\JijaShop.genruntimeconfig.cache
 C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\ref\JijaShop.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\scopedcss\Views\Shared\Layouts\_UserLayout.cshtml.rz.scp.css
