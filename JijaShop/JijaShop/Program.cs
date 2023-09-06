@@ -1,5 +1,6 @@
 using JijaShop.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
+using JijaShop.Repositories;
 using JijaShop;
 
 var builder = WebApplication.CreateBuilder(args);

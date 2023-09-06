@@ -12,5 +12,19 @@ namespace JijaShop
         {
             base.OnModelCreating(modelBuilder);
         }
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            lock(new object())
+            {
+                try
+                {
+                    return base.SaveChangesAsync(cancellationToken).GetAwaiter().GetResult();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }
