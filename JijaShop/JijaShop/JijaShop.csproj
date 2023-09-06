@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\AuthUser\Views\Shared\" />
     <Folder Include="Areas\UnAuthUser\Views\Shared\" />
     <Folder Include="Repositories\Commands\" />
   </ItemGroup>
