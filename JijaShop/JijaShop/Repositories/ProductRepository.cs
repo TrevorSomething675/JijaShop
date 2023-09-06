@@ -18,7 +18,7 @@ namespace JijaShop.Repositories
 
         public async Task<Product> GetProduct(int id)
         {
-            var resultProduct = await _context.Products.Where(prod=>prod.Id == id).FirstOrDefaultAsync();
+            var resultProduct = await _context.Products.FirstOrDefaultAsync(prod => prod.Id == id);
 
             return resultProduct;
         }
@@ -32,11 +32,10 @@ namespace JijaShop.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteProduct(int id)
+        public async Task DeleteProduct(ProductDto productDto)
         {
-            var resultProduct = _context.Products.Include(prod=>prod.ProductDetails).FirstOrDefault(prod => prod.Id == id);
-
-            _context.Products.Remove(resultProduct);
+            var product = _mapper.Map<Product>(productDto);
+            _context.Remove(product);
 
             await _context.SaveChangesAsync();
         }
