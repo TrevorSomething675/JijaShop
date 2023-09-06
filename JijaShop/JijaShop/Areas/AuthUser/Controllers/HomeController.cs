@@ -2,7 +2,7 @@
 
 namespace JijaShop.Areas.User.Controllers
 {
-    [Area("User")]
+    [Area("AuthUser")]
     public class HomeController : Controller
     {
         public IActionResult Index()
