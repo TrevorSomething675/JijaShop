@@ -8,7 +8,7 @@
 }
 
 .user-header-background-color {
-    padding: 40px;
+    padding: 20px;
     background: var(--gradientUserColor1);
     background: -moz-linear-gradient(top, var(--gradientUserColor1) 0%, var(--gradientUserColor2) 100%);
     background: -webkit-linear-gradient(top, var(--gradientUserColor1) 0%,var(--gradientUserColor2) 100%);
@@ -17,7 +17,7 @@
 }
 
 .moderator-header-background-color {
-    padding: 40px;
+    padding: 20px;
     background: var(--gradientModeratorColor1);
     background: -moz-linear-gradient(top, var(--gradientModeratorColor1) 0%, var(--gradientModeratorColor2) 100%);
     background: -webkit-linear-gradient(top, var(--gradientModeratorColor1) 0%,var(--gradientModeratorColor2) 100%);
@@ -26,10 +26,14 @@
 }
 
 .admin-header-background-color {
-    padding: 40px;
+    padding: 20px;
     background: var(--gradientAdminColor1);
     background: -moz-linear-gradient(top, var(--gradientAdminColor1) 0%, var(--gradientAdminColor2) 100%);
     background: -webkit-linear-gradient(top, var(--gradientAdminColor1) 0%,var(--gradientAdminColor2) 100%);
     background: linear-gradient(to bottom, var(--gradientAdminColor1) 0%,var(--gradientAdminColor2) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientAdminColor1), endColorstr=var(--gradientAdminColor2),GradientType=0 );
+}
+
+.nav-link{
+    color: black;
 }
