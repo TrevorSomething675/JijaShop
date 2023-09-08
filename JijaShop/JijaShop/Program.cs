@@ -43,29 +43,18 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller}/{action}",
-    defaults: new { area = "UnAuthUser", controller = "Home", action = "Index" });
-
 app.MapAreaControllerRoute(
-    name: "UnAuthUser_area",
-    areaName: "UnAuthUser",
-    pattern: "UnAuthUser/{controller=Home}/{action=Index}");
-
-app.MapAreaControllerRoute(
-    name: "AuthUser_area",
-    areaName: "AuthUser",
-    pattern: "AuthUser/{controller=Home}/{action=Index}");
-
-app.MapAreaControllerRoute(
-    name: "Admin_area",
-    areaName: "Admin",
-    pattern: "Admin/{controller=Home}/{action=Index}");
+    name:"User_area",
+    areaName: "User",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}");
 
 app.MapAreaControllerRoute(
     name: "Moderator_area",
     areaName: "Moderator",
-    pattern: "Moderator/{controller=Home}/{action=Index}");
+    pattern: "{area:exists}/{controller=Home}/{action=Index}");
 
+app.MapAreaControllerRoute(
+    name: "Admin_area",
+    areaName: "Admin",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}");
 app.Run();

@@ -1,0 +1,35 @@
+﻿:root {
+    --gradientUserColor1: #52998A;
+    --gradientUserColor2: #A5C9E5;
+    --gradientModeratorColor1: #b0bf65;
+    --gradientModeratorColor2: #b0f2c7;
+    --gradientAdminColor1: #c66969;
+    --gradientAdminColor2: #bc8b89;
+}
+
+.user-header-background-color {
+    padding: 40px;
+    background: var(--gradientUserColor1);
+    background: -moz-linear-gradient(top, var(--gradientUserColor1) 0%, var(--gradientUserColor2) 100%);
+    background: -webkit-linear-gradient(top, var(--gradientUserColor1) 0%,var(--gradientUserColor2) 100%);
+    background: linear-gradient(to bottom, var(--gradientUserColor1) 0%,var(--gradientUserColor2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientUserColor1), endColorstr=var(--gradientUserColor2),GradientType=0 );
+}
+
+.moderator-header-background-color {
+    padding: 40px;
+    background: var(--gradientModeratorColor1);
+    background: -moz-linear-gradient(top, var(--gradientModeratorColor1) 0%, var(--gradientModeratorColor2) 100%);
+    background: -webkit-linear-gradient(top, var(--gradientModeratorColor1) 0%,var(--gradientModeratorColor2) 100%);
+    background: linear-gradient(to bottom, var(--gradientModeratorColor1) 0%,var(--gradientModeratorColor2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientModeratorColor1), endColorstr=var(--gradientModeratorColor2),GradientType=0 );
+}
+
+.admin-header-background-color {
+    padding: 40px;
+    background: var(--gradientAdminColor1);
+    background: -moz-linear-gradient(top, var(--gradientAdminColor1) 0%, var(--gradientAdminColor2) 100%);
+    background: -webkit-linear-gradient(top, var(--gradientAdminColor1) 0%,var(--gradientAdminColor2) 100%);
+    background: linear-gradient(to bottom, var(--gradientAdminColor1) 0%,var(--gradientAdminColor2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientAdminColor1), endColorstr=var(--gradientAdminColor2),GradientType=0 );
+}
