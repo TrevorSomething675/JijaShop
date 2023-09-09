@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace JijaShop.Areas.User.Controllers
 {
@@ -7,6 +8,7 @@ namespace JijaShop.Areas.User.Controllers
     {
         public IActionResult Index()
         {
+            Log.Debug("index");
             return View();
         }
     }

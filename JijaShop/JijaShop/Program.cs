@@ -2,12 +2,18 @@ using JijaShop.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using JijaShop.Repositories;
 using JijaShop;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
     .Build();
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.File("Logs/Log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
 builder.Services.AddAutoMapper(typeof(AppMappingProfile));
 
@@ -17,6 +23,8 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MainContext>(options => options
     .UseNpgsql(configuration.GetConnectionString("MainConnectionString")));
+
+
 
 var app = builder.Build();
 using(var scope = app.Services.CreateScope())
