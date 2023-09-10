@@ -8,7 +8,7 @@ namespace JijaShop.Areas.User.Controllers
     {
         public IActionResult Index()
         {
-            Log.Debug("index");
+            Log.Logger.Information("index");
             return View();
         }
     }

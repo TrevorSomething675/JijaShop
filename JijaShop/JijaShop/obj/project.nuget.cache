@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CcTVTMOQ3qfj+1JUI4RnIouAGEmY0BUVgASShd/+AjVkFMsCuJyOV7RhNClC92liXpUlUUyO+UUcCDwRBCuHww==",
+  "dgSpecHash": "mGj6t166TYRp4UtP+KczUqNTxECtzeR3VSkgh4MIIPb/J5kQfFnp2T6n9Z3/Gb/LxDbdGVG2ZgZEll1ZA2Ov3A==",
   "success": true,
   "projectFilePath": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
   "expectedPackageFiles": [
@@ -41,7 +41,7 @@
     "C:\\Users\\Win10Pro\\.nuget\\packages\\serilog.extensions.logging\\7.0.0\\serilog.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\serilog.formatting.compact\\1.1.0\\serilog.formatting.compact.1.1.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\serilog.settings.configuration\\7.0.0\\serilog.settings.configuration.7.0.0.nupkg.sha512",
-    "C:\\Users\\Win10Pro\\.nuget\\packages\\serilog.sinks.console\\4.0.1\\serilog.sinks.console.4.0.1.nupkg.sha512",
+    "C:\\Users\\Win10Pro\\.nuget\\packages\\serilog.sinks.console\\4.1.0\\serilog.sinks.console.4.1.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\serilog.sinks.debug\\2.0.0\\serilog.sinks.debug.2.0.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
