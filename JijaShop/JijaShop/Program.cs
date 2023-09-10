@@ -6,11 +6,8 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var configuration = new ConfigurationBuilder()
-    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-    .Build();
-
 Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
     .MinimumLevel.Debug()
     .WriteTo.File("Logs/Log.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
@@ -22,7 +19,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MainContext>(options => options
-    .UseNpgsql(configuration.GetConnectionString("MainConnectionString")));
+    .UseNpgsql(builder.Configuration.GetConnectionString("MainConnectionString")));
 
 
 
