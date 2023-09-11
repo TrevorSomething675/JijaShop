@@ -17,6 +17,7 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MainContext>(options => options
     .UseNpgsql(builder.Configuration.GetConnectionString("MainConnectionString")));
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 using(var scope = app.Services.CreateScope())
@@ -57,4 +58,8 @@ app.MapAreaControllerRoute(
     name: "Admin_area",
     areaName: "Admin",
     pattern: "{area:exists}/{controller=Home}/{action=Index}");
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
 app.Run();
