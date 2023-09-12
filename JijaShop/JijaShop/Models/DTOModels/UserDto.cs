@@ -3,5 +3,6 @@
     public class UserDto : BaseDtoEntity
     {
         public string? UserDtoName { get; set; }
+        public string? UserDtoPassword { get; set; }
     }
 }

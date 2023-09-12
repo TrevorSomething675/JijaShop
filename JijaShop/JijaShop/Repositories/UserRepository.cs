@@ -4,6 +4,9 @@ using JijaShop.Models.DTOModels;
 using JijaShop.Models.Entities;
 using AutoMapper;
 using Npgsql.Internal;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace JijaShop.Repositories
 {
@@ -19,11 +22,11 @@ namespace JijaShop.Repositories
             _mapper = mapper;
         }
 
-        public async Task<User> GetUser(int id)
+        public async Task<User> GetUser(Expression<Func<User, bool>> filter)
         {
-            var resultUser = await _context.Users.FirstOrDefaultAsync(user => user.Id == id);
+            var user = await _context.Users.FirstOrDefaultAsync(filter);
 
-            return resultUser;
+            return user;
         }
 
         public async Task CreateUser(UserDto userDto)
@@ -70,7 +73,5 @@ namespace JijaShop.Repositories
                 _logger.LogError($"{ex.Message}");
             }
         }
-
-
     }
 }

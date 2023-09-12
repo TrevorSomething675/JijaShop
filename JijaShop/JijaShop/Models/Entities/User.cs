@@ -7,5 +7,7 @@
         public string? UserEmail { get; set; }
         public string? UserPhone { get; set; }
         public int? UserAge { get; set; }
+        public byte[]? UserPasswordHash { get; set; }
+        public byte[]? UserPasswordSalt { get; set; }
     }
 }

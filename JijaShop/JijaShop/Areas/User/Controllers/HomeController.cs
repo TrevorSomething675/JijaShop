@@ -1,5 +1,4 @@
 ﻿using JijaShop.Repositories.Abstractions;
-using JijaShop.Models.DTOModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JijaShop.Areas.User.Controllers
@@ -14,7 +13,7 @@ namespace JijaShop.Areas.User.Controllers
             _userRepository = userRepository;
         }
 
-        public IActionResult Index(UserDto userDto)
+        public IActionResult Index()
         {
             return View();
         }
