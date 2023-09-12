@@ -5,18 +5,21 @@ using Microsoft.AspNetCore.Mvc;
 namespace JijaShop.Areas.User.Controllers
 {
     [Area("User")]
-    public class HomeController : Controller
+    public class AuthController : Controller
     {
         private readonly IUserRepository _userRepository;
 
-        public HomeController(IUserRepository userRepository)
+        public AuthController(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }
 
-        public IActionResult Index(UserDto userDto)
+        [HttpPost]
+        public async Task<IActionResult> Register(UserDto userDto)
         {
-            return View();
+            await _userRepository.CreateUser(userDto);
+
+            return Ok(userDto);
         }
     }
 }

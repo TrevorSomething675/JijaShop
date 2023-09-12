@@ -1,6 +1,6 @@
 ﻿namespace JijaShop.Models.DTOModels
 {
-    public class UserDto
+    public class UserDto : BaseDtoEntity
     {
         public string? UserDtoName { get; set; }
     }

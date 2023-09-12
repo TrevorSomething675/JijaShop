@@ -8,11 +8,13 @@ namespace JijaShop.Repositories
 {
     public class ProductRepository : IProductRepository
     {
+        private readonly ILogger<ProductRepository> _logger;
         private readonly MainContext _context;
         private readonly IMapper _mapper;
-        public ProductRepository(MainContext context, IMapper mapper) 
+        public ProductRepository(MainContext context, IMapper mapper, ILogger<ProductRepository> logger) 
         {
             _context = context;
+            _logger = logger;
             _mapper = mapper;
         }
 
@@ -25,27 +27,48 @@ namespace JijaShop.Repositories
 
         public async Task CreateNewProduct(ProductDto productDto)
         {
-            var resultProduct = _mapper.Map<Product>(productDto);
-            resultProduct.CreatedDate = DateTime.Now;
-            _context.Add(resultProduct);
+            try
+            {
+                var resultProduct = _mapper.Map<Product>(productDto);
+                resultProduct.CreatedDate = DateTime.Now;
+                _context.Add(resultProduct);
 
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"{ex.Message}");
+            }
         }
 
         public async Task DeleteProduct(ProductDto productDto)
         {
-            var product = _mapper.Map<Product>(productDto);
-            _context.Remove(product);
-
-            await _context.SaveChangesAsync();
+            try
+            {
+                var product = _mapper.Map<Product>(productDto);
+                _context.Remove(product);
+                    
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"{ex.Message}");
+            }
         }
 
         public async Task UpdateProduct(ProductDto productDto)
         {
-            var resultProduct = _mapper.Map<Product>(productDto);
-            _context.Products.Update(resultProduct);
+            try
+            {
+                var resultProduct = _mapper.Map<Product>(productDto);
+                _context.Products.Update(resultProduct);
 
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"{ex.Message}");
+            }
         }
     }
 }
