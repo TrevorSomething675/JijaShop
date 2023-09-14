@@ -1,9 +1,8 @@
 ﻿using JijaShop.Repositories.Abstractions;
-using JijaShop.Models.Entities;
-using System.Linq.Expressions;
-using JijaShop.Models.DTOModels;
-using AutoMapper;
 using System.Security.Cryptography;
+using JijaShop.Models.DTOModels;
+using JijaShop.Models.Entities;
+using AutoMapper;
 
 namespace JijaShop.Services
 {
@@ -23,14 +22,13 @@ namespace JijaShop.Services
 		{
 			try
 			{
-				CreatePasswordHash(userDto.UserPassword, out byte[] passwordHash, out byte[] passwordSalt);
-	
-				var user = _mapper.Map<User>(userDto);
-				user.UserPasswordHash = passwordHash;
-				user.UserPasswordSalt = passwordSalt;
-	
-				if (!IsRegister(user))
+				if (!IsRegistered(userDto))
 				{
+					CreatePasswordHash(userDto.UserPassword, out byte[] passwordHash, out byte[] passwordSalt);
+					var user = _mapper.Map<User>(userDto);
+					user.UserPasswordHash = passwordHash;
+					user.UserPasswordSalt = passwordSalt;
+	
 					await _userRepository.CreateUser(user);
 					return true;
 				}
@@ -50,10 +48,7 @@ namespace JijaShop.Services
 		{
 			try
 			{
-				var user = _userRepository.GetUser(userFilter => userFilter.UserName == userDto.UserName);
-				var result = VerifyPasswordHash(userDto.UserPassword, user.UserPasswordHash, user.UserPasswordSalt);
-
-				if (IsRegister(user) && result)
+				if (IsRegistered(userDto) && IsValidPasswordHash(userDto))
 					return true;
 				else
 					return false;
@@ -64,9 +59,10 @@ namespace JijaShop.Services
 				return false;
 			}
 		}
-		private bool IsRegister(User requestUser)
+
+		private bool IsRegistered(UserDto userDto)
 		{
-			var user = _userRepository.GetUser(filterUser => filterUser.UserName == requestUser.UserName);
+			var user = _userRepository.GetUser(filterUser => filterUser.UserName == userDto.UserName);
 
 			if(user != null)
 				return true;
@@ -82,22 +78,31 @@ namespace JijaShop.Services
 				passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
 			}
 		}
-		private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
+
+		private bool IsValidPasswordHash(UserDto userDto)
 		{
-			try
+			var user = _userRepository.GetUser(userFilter => userFilter.UserName == userDto.UserName);
+
+			if(user?.UserPasswordHash != null && user?.UserPasswordSalt != null)
 			{
-				using (var hmac = new HMACSHA512(passwordSalt))
+				try
 				{
-					var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-					return computedHash.SequenceEqual(passwordHash);
+					using (var hmac = new HMACSHA512(user.UserPasswordSalt))
+					{
+						var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(userDto.UserPassword));
+						return computedHash.SequenceEqual(user.UserPasswordHash);
+					}
+				}
+				catch(Exception ex)
+				{
+					_logger.LogInformation($"{ex.Message}");
+					return false;
 				}
 			}
-			catch(Exception ex)
+			else
 			{
-				_logger.LogInformation($"{ex.Message}");
 				return false;
 			}
 		}
 	}
-
 }
