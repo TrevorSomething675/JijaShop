@@ -14,12 +14,10 @@ namespace JijaShop.Repositories
     {
         private readonly ILogger<UserRepository> _logger;
         private readonly MainContext _context;
-        private readonly IMapper _mapper;
-        public UserRepository(MainContext context, IMapper mapper, ILogger<UserRepository> logger)
+        public UserRepository(MainContext context, ILogger<UserRepository> logger)
         {
             _context = context;
             _logger = logger;
-            _mapper = mapper;
         }
 
         public async Task<User> GetUser(Expression<Func<User, bool>> filter)
@@ -29,13 +27,11 @@ namespace JijaShop.Repositories
             return user;
         }
 
-        public async Task CreateUser(UserDto userDto)
+        public async Task CreateUser(User user)
         {
             try
             {
-                var user = _mapper.Map<User>(userDto);
                 _context.Add(user);
-
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -44,13 +40,11 @@ namespace JijaShop.Repositories
             }
         }
 
-        public async Task DeleteUser(UserDto userDto)
+        public async Task DeleteUser(User user)
         {
             try
             {
-                var user = _mapper.Map<User>(userDto);
                 _context.Remove(user);
-
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -59,13 +53,11 @@ namespace JijaShop.Repositories
             }
         }
 
-        public async Task UpdateUser(UserDto userDto)
+        public async Task UpdateUser(User user)
         {
             try
             {
-                var user = _mapper.Map<User>(userDto);
                 _context.Update(user);
-    
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)

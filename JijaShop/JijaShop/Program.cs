@@ -1,9 +1,9 @@
 using JijaShop.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using JijaShop.Repositories;
+using JijaShop.Services;
 using JijaShop;
 using Serilog;
-using System.Windows.Input;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,9 +14,10 @@ builder.Services.AddAutoMapper(typeof(AppMappingProfile));
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IdentityService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MainContext>(options => options
     .UseNpgsql(builder.Configuration.GetConnectionString("MainConnectionString")));
 builder.Services.AddSwaggerGen();
@@ -48,7 +49,7 @@ app.UseAuthorization();
 
 app.MapAreaControllerRoute(
     name:"User_area",
-    areaName: "User",
+    areaName: "UserArea",
     pattern: "{area:exists}/{controller=Home}/{action=Index}");
 
 app.MapAreaControllerRoute(

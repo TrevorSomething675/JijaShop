@@ -6,9 +6,9 @@ namespace JijaShop.Repositories.Abstractions
 {
     public interface IUserRepository
     {
-        public Task DeleteUser(UserDto userDto);
-        public Task UpdateUser(UserDto userDto);
-        public Task CreateUser(UserDto userDto);
+        public Task DeleteUser(User userDto);
+        public Task UpdateUser(User userDto);
+        public Task CreateUser(User userDto);
         public Task<User> GetUser(Expression<Func<User, bool>> filter);
     }
 }
