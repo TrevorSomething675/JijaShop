@@ -93,10 +93,6 @@ namespace JijaShop.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("UserPassword")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<byte[]>("UserPasswordHash")
                         .HasColumnType("bytea");
 

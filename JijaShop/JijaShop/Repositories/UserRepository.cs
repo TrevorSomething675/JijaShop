@@ -1,11 +1,5 @@
 ﻿using JijaShop.Repositories.Abstractions;
-using Microsoft.EntityFrameworkCore;
-using JijaShop.Models.DTOModels;
 using JijaShop.Models.Entities;
-using AutoMapper;
-using Npgsql.Internal;
-using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using System.Linq.Expressions;
 
 namespace JijaShop.Repositories
@@ -20,9 +14,9 @@ namespace JijaShop.Repositories
             _logger = logger;
         }
 
-        public async Task<User> GetUser(Expression<Func<User, bool>> filter)
+        public User GetUser(Expression<Func<User, bool>> filter)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(filter);
+            var user = _context.Users.FirstOrDefault(filter);
 
             return user;
         }

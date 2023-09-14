@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace JijaShop.Migrations
 {
     [DbContext(typeof(MainContext))]
-    [Migration("20230914080957_FixUserModel")]
-    partial class FixUserModel
+    [Migration("20230914094848_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -93,10 +93,6 @@ namespace JijaShop.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserPassword")
                         .IsRequired()
                         .HasColumnType("text");
 

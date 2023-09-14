@@ -1,53 +1,39 @@
-﻿using System.Security.Cryptography;
-using JijaShop.Models.DTOModels;
+﻿using JijaShop.Models.DTOModels;
 using Microsoft.AspNetCore.Mvc;
-using JijaShop.Models.Entities;
 using JijaShop.Services;
-using AutoMapper;
 
 namespace JijaShop.Areas.UserArea.Controllers
 {
 	[Area("UserArea")]
 	public class AuthController : Controller
 	{
-		private readonly IMapper _mapper;
 		private readonly IdentityService _identityService;
 
-		public AuthController(IMapper mapper, IdentityService identityService)
+		public AuthController(IdentityService identityService)
 		{
 			_identityService = identityService;
-			_mapper = mapper;
 		}
 
 		[HttpPost("register")]
 		public async Task<IActionResult> Register(UserDto userDto)
 		{
-			CreatePasswordHash(userDto.UserDtoPassword, out byte[] passwordHash, out byte[] passwordSalt);
+			var result = await _identityService.RegisterUser(userDto);
 
-			var user = _mapper.Map<User>(userDto);
-			user.UserPasswordHash = passwordHash;
-			user.UserPasswordSalt = passwordSalt;
-
-			await _identityService.RegisterUser(user);
-
-			return Ok(user);
+			if (result)
+				return Ok(userDto);
+			else
+				return BadRequest("Пользователь с таким именем уже существует");
 		}
+
 		[HttpPost("login")]
 		public async Task<IActionResult> Login(UserDto userDto)
 		{
-			var user = _mapper.Map<User>(userDto);
-			await _identityService.LoginUser(user);
+			var result = await _identityService.LoginUser(userDto);
 
-			return Ok(user);
-		}
-
-		private void CreatePasswordHash(string? password, out byte[] passwordHash, out byte[] passwordSalt)
-		{
-			using (var hmac = new HMACSHA512())
-			{
-				passwordSalt = hmac.Key;
-				passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-			}
+			if (result)
+				return Ok(userDto);
+			else
+				return BadRequest("Пользователя с таким именем не существует");
 		}
 	}
 }

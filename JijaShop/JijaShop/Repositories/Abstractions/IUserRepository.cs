@@ -1,5 +1,4 @@
-﻿using JijaShop.Models.DTOModels;
-using JijaShop.Models.Entities;
+﻿using JijaShop.Models.Entities;
 using System.Linq.Expressions;
 
 namespace JijaShop.Repositories.Abstractions
@@ -9,6 +8,6 @@ namespace JijaShop.Repositories.Abstractions
         public Task DeleteUser(User userDto);
         public Task UpdateUser(User userDto);
         public Task CreateUser(User userDto);
-        public Task<User> GetUser(Expression<Func<User, bool>> filter);
+        public User GetUser(Expression<Func<User, bool>> filter);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -31,11 +32,12 @@ namespace JijaShop.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserName = table.Column<string>(type: "text", nullable: true),
-                    UserPassword = table.Column<string>(type: "text", nullable: true),
-                    UserEmail = table.Column<string>(type: "text", nullable: true),
+                    UserName = table.Column<string>(type: "text", nullable: false),
+                    UserEmail = table.Column<string>(type: "text", nullable: false),
                     UserPhone = table.Column<string>(type: "text", nullable: true),
-                    UserAge = table.Column<int>(type: "integer", nullable: true)
+                    UserAge = table.Column<int>(type: "integer", nullable: true),
+                    UserPasswordHash = table.Column<byte[]>(type: "bytea", nullable: true),
+                    UserPasswordSalt = table.Column<byte[]>(type: "bytea", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -50,6 +52,8 @@ namespace JijaShop.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: true),
                     Quantity = table.Column<int>(type: "integer", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     ProductDetailsId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
