@@ -1,20 +1,14 @@
-﻿using JijaShop.Repositories.Abstractions;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace JijaShop.Areas.UserArea.Controllers
 {
 	[Area("UserArea")]
 	public class HomeController : Controller
 	{
-		private readonly IUserRepository _userRepository;
-
-		public HomeController(IUserRepository userRepository)
-		{
-			_userRepository = userRepository;
-		}
-
 		public IActionResult Index()
 		{
+			Log.Information("Index");
 			return View();
 		}
 	}

@@ -8,32 +8,48 @@ namespace JijaShop.Areas.UserArea.Controllers
 	public class AuthController : Controller
 	{
 		private readonly IdentityService _identityService;
+		private readonly ILogger<AuthController> _logger;
 
-		public AuthController(IdentityService identityService)
+		public AuthController(IdentityService identityService, ILogger<AuthController> logger)
 		{
+			_logger = logger;
 			_identityService = identityService;
 		}
-
+		
 		[HttpPost("register")]
-		public async Task<IActionResult> Register(UserDto userDto)
+		public IActionResult Register(UserDto userDto)
 		{
-			var result = await _identityService.RegisterUser(userDto);
+			_logger.LogInformation("Test");
+			var result = _identityService.RegisterUser(userDto, out string message);
 
 			if (result)
 				return Ok(userDto);
 			else
-				return BadRequest("Пользователь с таким именем уже существует");
+				return BadRequest(message);
 		}
 
-		[HttpPost("login")]
+        [HttpGet]
+        public async Task<IActionResult> Register()
+        {
+            return View();
+        }
+
+
+        [HttpPost("login")]
 		public async Task<IActionResult> Login(UserDto userDto)
 		{
-			var result = await _identityService.LoginUser(userDto);
+			var result = _identityService.LoginUser(userDto, out string message);
 
 			if (result)
 				return Ok(userDto);
 			else
-				return BadRequest("Пользователя с таким именем не существует");
+				return BadRequest(message);
 		}
-	}
+
+        [HttpGet]
+        public async Task<IActionResult> Login()
+        {
+            return View();
+        }
+    }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj": {}
+    "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj": {
+    "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
+        "projectUniqueName": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
         "projectName": "JijaShop",
-        "projectPath": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
-        "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\obj\\",
+        "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
+        "packagesPath": "C:\\Users\\Win10Pro\\.nuget\\packages\\",
+        "outputPath": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Win10Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,9 +68,17 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.4, )"
+            },
+            "Portable.BouncyCastle": {
+              "target": "Package",
+              "version": "[1.9.0, )"
             },
             "Serilog": {
               "target": "Package",
@@ -92,6 +99,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "System.Linq.Expressions": {
               "target": "Package",
@@ -125,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

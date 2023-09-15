@@ -25,7 +25,7 @@ namespace JijaShop
                     }));
 
             CreateMap<ProductDetails, ProductDetailsDto>().ReverseMap();
-            CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<UserDto, User>().ReverseMap();
         }
     }
 }

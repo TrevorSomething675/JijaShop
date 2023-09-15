@@ -105,3 +105,14 @@ C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\refint\JijaSho
 C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\JijaShop.pdb
 C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\JijaShop.genruntimeconfig.cache
 C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\ref\JijaShop.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\obj\Debug\net7.0\JijaShop.MvcApplicationPartsAssemblyInfo.cs
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
