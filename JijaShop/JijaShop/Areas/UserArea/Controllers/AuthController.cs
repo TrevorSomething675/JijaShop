@@ -1,4 +1,5 @@
-﻿using JijaShop.Models.DTOModels;
+﻿using Microsoft.AspNetCore.Authorization;
+using JijaShop.Models.DTOModels;
 using Microsoft.AspNetCore.Mvc;
 using JijaShop.Services;
 
@@ -7,25 +8,24 @@ namespace JijaShop.Areas.UserArea.Controllers
 	[Area("UserArea")]
 	public class AuthController : Controller
 	{
+		private readonly UserService _userService;
 		private readonly IdentityService _identityService;
-		private readonly ILogger<AuthController> _logger;
 
-		public AuthController(IdentityService identityService, ILogger<AuthController> logger)
+		public AuthController(IdentityService identityService, UserService userService)
 		{
-			_logger = logger;
+			_userService = userService;
 			_identityService = identityService;
 		}
 		
 		[HttpPost("register")]
 		public IActionResult Register(UserDto userDto)
-		{
-			_logger.LogInformation("Test");
-			var result = _identityService.RegisterUser(userDto, out string message);
+		{ 
+			var result = _identityService.RegisterUser(userDto, out string response);
 
 			if (result)
 				return Ok(userDto);
 			else
-				return BadRequest(message);
+				return BadRequest(response);
 		}
 
         [HttpGet]
@@ -34,22 +34,30 @@ namespace JijaShop.Areas.UserArea.Controllers
             return View();
         }
 
-
-        [HttpPost("login")]
+		[HttpPost("login")]
 		public async Task<IActionResult> Login(UserDto userDto)
 		{
-			var result = _identityService.LoginUser(userDto, out string message);
+			var result = _identityService.LoginUser(userDto, out string response);
 
 			if (result)
-				return Ok(userDto);
+			{
+				return Ok(new {token = response});
+			}
 			else
-				return BadRequest(message);
+				return BadRequest(response);
 		}
 
-        [HttpGet]
+		[HttpGet]
         public async Task<IActionResult> Login()
         {
             return View();
         }
-    }
+
+		[HttpGet("GetInfo"), Authorize(Roles = "User")]
+		public async Task<IActionResult> GetInfo()
+		{
+			var userName = _userService.GetName();
+			return Ok(userName);
+		}
+	}
 }

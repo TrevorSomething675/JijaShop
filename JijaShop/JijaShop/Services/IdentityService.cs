@@ -1,13 +1,12 @@
 ﻿using JijaShop.Repositories.Abstractions;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
 using JijaShop.Models.DTOModels;
 using JijaShop.Models.Entities;
 using System.Security.Claims;
-using AutoMapper;
-using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using System.IdentityModel.Tokens.Jwt;
-using System.Runtime.InteropServices;
+using AutoMapper;
 using Serilog;
 
 namespace JijaShop.Services
@@ -26,11 +25,11 @@ namespace JijaShop.Services
 			_mapper = mapper;
 		}
 
-		public bool RegisterUser(UserDto userDto, out string message)
+		public bool RegisterUser(UserDto userDto, out string response)
 		{
 			if (IsRegistered(userDto))
 			{
-				message = $"Пользователь с таким именем уже существует";
+				response = $"Пользователь с таким именем уже существует";
 				return false;
 			}
 			try
@@ -42,38 +41,37 @@ namespace JijaShop.Services
 				user.UserPasswordSalt = passwordSalt;
 
 				_userRepository.CreateUser(user);
-				message = "Упешная регистрация";
+				response = CreateToken(userDto);
 				return true;
 			}
 			catch(Exception ex)
 			{
 				_logger.LogError(ex.Message);
-				message = "Не удалось выполнить регистрацию";
+				response = "Не удалось выполнить регистрацию";
 				return false;
 			}
         }
 
-		public bool LoginUser(UserDto userDto, out string message)
-		{
+		public bool LoginUser(UserDto userDto, out string response)
+		{ 
 			if (!IsRegistered(userDto))
 			{
-				message = "Пользователя с таким именем не существует";
+                response = "Пользователя с таким именем не существует";
 				return false;
 			}
 			if (!IsValidPasswordHash(userDto))
 			{
-				message = "Неверный пароль";
+                response = "Неверный пароль";
 				return false;
 			}
 			try
 			{
-				message = "Успешно";
-				CreateToken(userDto);
-				return true;
+                response = CreateToken(userDto);
+                return true;
 			}
 			catch(Exception ex)
 			{
-				message = "Возникла ошибка";
+                response = "Возникла ошибка";
 				_logger.LogError(ex.Message);
 				return false;
 			}
@@ -117,7 +115,8 @@ namespace JijaShop.Services
 
 				List<Claim> claims = new List<Claim>
 				{
-					new Claim(ClaimTypes.Name, user.UserName)
+					new Claim(ClaimTypes.Name, user.UserName),
+					new Claim(ClaimTypes.Role, "User"),
 				};
 				var key = new SymmetricSecurityKey(Encoding.UTF8
 					.GetBytes(_configuration.GetSection("AppSettings:SecretKeyForToken").Value));
@@ -126,7 +125,7 @@ namespace JijaShop.Services
 
 				var token = new JwtSecurityToken(
 					claims: claims,
-					expires: DateTime.UtcNow.AddSeconds(30),
+					expires: DateTime.UtcNow.AddDays(7),
 					signingCredentials: creds);
 
 				var jwt = new JwtSecurityTokenHandler().WriteToken(token);

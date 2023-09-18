@@ -3,7 +3,7 @@
 namespace JijaShop.Areas.Moderator.Controllers
 {
     [Area("Moderator")]
-    public class AuthController : Controller
+	public class AuthController : Controller
     {
         public IActionResult Register()
         {
