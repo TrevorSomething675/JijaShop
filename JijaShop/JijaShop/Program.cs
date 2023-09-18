@@ -4,6 +4,7 @@ using JijaShop.Repositories.Abstractions;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Filters;
+using JijaShop.Services.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using JijaShop.Repositories;
@@ -22,8 +23,7 @@ builder.Services.AddAutoMapper(typeof(AppMappingProfile));
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<UserService>();
-builder.Services.AddScoped<IdentityService>();
+builder.Services.AddScoped<IIdentityService, IdentityService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -54,8 +54,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     {
 		ValidateIssuer = false,
 		ValidateAudience = false,
-        ValidateLifetime = true,
-		ValidateIssuerSigningKey = true,
+        ValidateLifetime = false,
+		ValidateIssuerSigningKey = false,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
             .GetBytes(builder.Configuration.GetSection("AppSettings:SecretKeyForToken").Value)),
     };

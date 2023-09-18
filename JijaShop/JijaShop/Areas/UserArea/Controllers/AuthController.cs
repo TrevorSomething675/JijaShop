@@ -1,19 +1,19 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using JijaShop.Services.Abstractions;
 using JijaShop.Models.DTOModels;
 using Microsoft.AspNetCore.Mvc;
-using JijaShop.Services;
+using System.Collections;
+using Serilog;
 
 namespace JijaShop.Areas.UserArea.Controllers
 {
 	[Area("UserArea")]
 	public class AuthController : Controller
 	{
-		private readonly UserService _userService;
-		private readonly IdentityService _identityService;
+		private readonly IIdentityService _identityService;
 
-		public AuthController(IdentityService identityService, UserService userService)
+		public AuthController(IIdentityService identityService)
 		{
-			_userService = userService;
 			_identityService = identityService;
 		}
 		
@@ -41,6 +41,8 @@ namespace JijaShop.Areas.UserArea.Controllers
 
 			if (result)
 			{
+				HttpContext.Response.Headers.Add("Authorization", $"Bearer {response}");
+				Log.Information(HttpContext.Response.Headers.Authorization);
 				return Ok(new {token = response});
 			}
 			else
@@ -56,8 +58,7 @@ namespace JijaShop.Areas.UserArea.Controllers
 		[HttpGet("GetInfo"), Authorize(Roles = "User")]
 		public async Task<IActionResult> GetInfo()
 		{
-			var userName = _userService.GetName();
-			return Ok(userName);
+			return Ok("Jija");
 		}
 	}
 }

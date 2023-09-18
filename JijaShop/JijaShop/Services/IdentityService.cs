@@ -1,5 +1,6 @@
 ﻿using JijaShop.Repositories.Abstractions;
 using System.IdentityModel.Tokens.Jwt;
+using JijaShop.Services.Abstractions;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
 using JijaShop.Models.DTOModels;
@@ -11,7 +12,7 @@ using Serilog;
 
 namespace JijaShop.Services
 {
-	public class IdentityService
+	public class IdentityService : IIdentityService
 	{
 		private readonly ILogger<IdentityService> _logger;
 		private readonly IUserRepository _userRepository;
