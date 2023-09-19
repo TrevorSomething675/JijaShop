@@ -21,27 +21,6 @@ namespace JijaShop.Areas.Admin.Controllers
 			_configuration = configuration;
 			_userRepository = userRepository;
 		}
-		//[HttpPost("login")]
-		//public IActionResult Login(UserDto userDto)
-		//{
-		//	if (!IsRegistered(userDto))
-		//	{
-		//		return BadRequest("Пользователя с таким именем не существует");
-		//	}
-		//	if (!IsValidPasswordHash(userDto))
-		//	{
-		//		return BadRequest("Неверный пароль");
-		//	}
-		//	try
-		//	{
-		//		var token = CreateToken(userDto);
-		//		return Ok(token);
-		//	}
-		//	catch (Exception ex)
-		//	{
-		//		return BadRequest($"Возникла ошибка {ex}");
-		//	}
-		//}
 
 		[NonAction]
 		private bool IsRegistered(UserDto userDto)

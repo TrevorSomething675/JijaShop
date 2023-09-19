@@ -22,10 +22,10 @@ namespace JijaShop
                     {
                         Price = prodDto.ProductDetailsDto.Price,
                         Description = prodDto.ProductDetailsDto.Description,
-                    }));
+					}));
+			CreateMap<ProductDetails, ProductDetailsDto>().ReverseMap();
 
-            CreateMap<ProductDetails, ProductDetailsDto>().ReverseMap();
-            CreateMap<UserDto, User>().ReverseMap();
-        }
+			CreateMap<User, UserDto>().ReverseMap();
+		}
     }
 }

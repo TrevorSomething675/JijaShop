@@ -23,8 +23,9 @@ builder.Services.AddAutoMapper(typeof(AppMappingProfile));
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IIdentityService, IdentityService>();
-builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddSwaggerGen(options =>
@@ -95,12 +96,12 @@ app.MapAreaControllerRoute(
 app.MapAreaControllerRoute(
     name: "Moderator_area",
     areaName: "Moderator",
-    pattern: "{area:exists}/{controller=Home}/{action=Index}");
+    pattern: "Moderator/{controller=Home}/{action=Index}");
 
 app.MapAreaControllerRoute(
     name: "Admin_area",
     areaName: "Admin",
-    pattern: "{area:exists}/{controller=Home}/{action=Index}");
+    pattern: "Admin/{controller=Home}/{action=Users}");
 
 app.UseSwagger();
 app.UseSwaggerUI();

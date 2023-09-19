@@ -8,7 +8,12 @@ namespace JijaShop.Areas.UserArea.Controllers
 	{
 		public IActionResult Index()
 		{
-			Log.Information("Index");
+			Log.Information($"[Index] {HttpContext.Response.Headers.Authorization}");
+			return View();
+		}
+		
+		public IActionResult Products()
+		{
 			return View();
 		}
 	}

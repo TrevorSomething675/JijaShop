@@ -24,13 +24,10 @@
                             <div class="collapse navbar-collapse" id="navbarScroll">
                                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
                                     <li class="nav-item border">
-                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Home" asp-action="Users">Пользователи</a>
                                     </li>
                                     <li class="nav-item border">
-                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Products">Товары</a>
-                                    </li>
-                                    <li class="nav-item border">
-                                        <a class="nav-link">О нас</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Home" asp-action="Products">Продукты</a>
                                     </li>
                                 </ul>
                             </div>
@@ -40,10 +37,10 @@
                 <div class="col-lg-4 border d-flex flex-row-reverse">
                     <ul class="nav justify-content-end list-unstyled my-2">
                         <li class="nav-item border">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Вход</a>
+                            <a class="nav-link" asp-area="Admin" asp-controller="Auth" asp-action="Login">Вход</a>
                         </li>
                         <li class="nav-item border">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Products">Регистрация</a>
+                            <a class="nav-link" asp-area="Admin" asp-controller="Auth" asp-action="Register">Регистрация</a>
                         </li>
                     </ul>
                 </div>

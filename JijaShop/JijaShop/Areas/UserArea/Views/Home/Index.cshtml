@@ -1,53 +1,26 @@
-﻿@using AutoMapper;
+﻿@using JijaShop.Services.Abstractions;
 @using JijaShop.Models.DTOModels;
 @using JijaShop.Models.Entities;
-@inject IMapper _mapper
-@{
-	Product product = new Product()
-			{
-				Name = "product1",
-				ProductDetails = new ProductDetails
-				{
-					Price = 10
-				}
-			};
-	ProductDto productDto = new ProductDto()
-			{
-				Name = "productDto1",
-				ProductDetailsDto = new ProductDetailsDto
-				{
-					Price = 20
-				}
-			};
+@using AutoMapper;
 
-	var resultProductDto = _mapper.Map<ProductDto>(product);
-	var resultProduct = _mapper.Map<Product>(productDto);
+@inject IProductService _productService;
 
-}
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8" style="background-color: #D3D3D3;">
 			<div class="row">
-				<div class="col-4">Товар 1</div>
-				<div class="col-4">Товар 2</div>
-				<div class="col-4">Товар 3</div>
-				<div class="col-4">Товар 4</div>
-				<div class="col-4">Товар 5</div>
-				<div class="col-4">Товар 6</div>
-				<div class="col-4">Товар 7</div>
-				<div class="col-4">Товар 8</div>
-				<div class="col-4">Товар 9</div>
-				<div class="col-4">Товар 10</div>
-				<div class="col-4">Товар 11</div>
-				<div class="col-4">Товар 12</div>
+				@foreach (var product in await _productService.GetProducts())
+				{
+					<p>@product.Name</p>
+					<p>@product.Quantity</p>
+				}
 			</div>
 		</div>
 
 		<div class="col-lg-4" style="background-color: whitesmoke">
 			<div class="row">
 				<div class="col-4">
-					<p>@resultProduct.ProductDetails.Price</p>
-					<p>@resultProductDto.ProductDetailsDto.Price</p>
+					<p>Jija</p>
 				</div>
 			</div>
 		</div>

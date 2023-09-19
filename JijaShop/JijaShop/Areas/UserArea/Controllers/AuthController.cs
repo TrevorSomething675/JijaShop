@@ -2,7 +2,6 @@
 using JijaShop.Services.Abstractions;
 using JijaShop.Models.DTOModels;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections;
 using Serilog;
 
 namespace JijaShop.Areas.UserArea.Controllers
@@ -42,7 +41,8 @@ namespace JijaShop.Areas.UserArea.Controllers
 			if (result)
 			{
 				HttpContext.Response.Headers.Add("Authorization", $"Bearer {response}");
-				Log.Information(HttpContext.Response.Headers.Authorization);
+				var jija = HttpContext.Response.Headers.Authorization;
+				Log.Information($"[Login] {HttpContext.Response.Headers.Authorization}");
 				return Ok(new {token = response});
 			}
 			else

@@ -1,4 +1,5 @@
 ﻿using JijaShop.Repositories.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using JijaShop.Models.Entities;
 using System.Linq.Expressions;
 
@@ -14,10 +15,15 @@ namespace JijaShop.Repositories
             _logger = logger;
         }
 
+        public async Task<List<User>> GetUsers()
+        {
+            var users = await _context.Users.ToListAsync();
+            return users;
+        }
+
         public User GetUser(Expression<Func<User, bool>> filter)
         {
             var user = _context.Users.FirstOrDefault(filter);
-
             return user;
         }
 

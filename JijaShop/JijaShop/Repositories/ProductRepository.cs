@@ -1,8 +1,6 @@
 ﻿using JijaShop.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
-using JijaShop.Models.DTOModels;
 using JijaShop.Models.Entities;
-using AutoMapper;
 
 namespace JijaShop.Repositories
 {
@@ -10,29 +8,30 @@ namespace JijaShop.Repositories
     {
         private readonly ILogger<ProductRepository> _logger;
         private readonly MainContext _context;
-        private readonly IMapper _mapper;
-        public ProductRepository(MainContext context, IMapper mapper, ILogger<ProductRepository> logger) 
+        public ProductRepository(MainContext context, ILogger<ProductRepository> logger) 
         {
             _context = context;
             _logger = logger;
-            _mapper = mapper;
+        }
+
+        public async Task<List<Product>> GetProducts()
+        {
+            var resultProducts = await _context.Products.ToListAsync();
+            return resultProducts;
         }
 
         public async Task<Product> GetProduct(int id)
         {
             var resultProduct = await _context.Products.FirstOrDefaultAsync(prod => prod.Id == id);
-
             return resultProduct;
         }
 
-        public async Task CreateNewProduct(ProductDto productDto)
+        public async Task CreateNewProduct(Product product)
         {
             try
             {
-                var resultProduct = _mapper.Map<Product>(productDto);
-                resultProduct.CreatedDate = DateTime.Now;
-                _context.Add(resultProduct);
-
+				product.CreatedDate = DateTime.Now;
+                _context.Add(product);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -41,13 +40,11 @@ namespace JijaShop.Repositories
             }
         }
 
-        public async Task DeleteProduct(ProductDto productDto)
+        public async Task DeleteProduct(Product product)
         {
             try
             {
-                var product = _mapper.Map<Product>(productDto);
                 _context.Remove(product);
-                    
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -56,13 +53,11 @@ namespace JijaShop.Repositories
             }
         }
 
-        public async Task UpdateProduct(ProductDto productDto)
+        public async Task UpdateProduct(Product product)
         {
             try
             {
-                var resultProduct = _mapper.Map<Product>(productDto);
-                _context.Products.Update(resultProduct);
-
+                _context.Products.Update(product);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
