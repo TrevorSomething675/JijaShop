@@ -3,6 +3,7 @@ using JijaShop.Services.Abstractions;
 using JijaShop.Models.DTOModels;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using System.Linq;
 
 namespace JijaShop.Areas.UserArea.Controllers
 {
@@ -40,9 +41,6 @@ namespace JijaShop.Areas.UserArea.Controllers
 
 			if (result)
 			{
-				HttpContext.Response.Headers.Add("Authorization", $"Bearer {response}");
-				var jija = HttpContext.Response.Headers.Authorization;
-				Log.Information($"[Login] {HttpContext.Response.Headers.Authorization}");
 				return Ok(new { token = response });
 			}
 			else
@@ -55,7 +53,7 @@ namespace JijaShop.Areas.UserArea.Controllers
 			return View();
 		}
 
-		[HttpGet("GetInfo"), Authorize(Roles = "User")]
+		[HttpGet("{area}/{controller}/GetInfo"), Authorize]
 		public async Task<IActionResult> GetInfo()
 		{
 			return Ok("Jija");

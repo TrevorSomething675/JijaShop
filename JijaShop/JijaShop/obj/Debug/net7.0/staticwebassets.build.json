@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aJp91iAHgBFJh3arjTbEtXQSHr4jzXjrp75ZqM6ADaE=",
+  "Hash": "XglLpvG9BRSVsTOaaYea2e4DlLzqCjBmKQkMTEj0wKo=",
   "Source": "JijaShop",
   "BasePath": "_content/JijaShop",
   "Mode": "Default",
@@ -797,6 +797,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\js\\helper.js",
+      "SourceId": "JijaShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\",
+      "BasePath": "_content/JijaShop",
+      "RelativePath": "js/helper.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\helper.js"
     },
     {
       "Identity": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\js\\site.js",

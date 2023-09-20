@@ -16,5 +16,10 @@ namespace JijaShop.Areas.UserArea.Controllers
 		{
 			return View();
 		}
+
+		public IActionResult Info()
+		{
+			return View();
+		}
 	}
 }

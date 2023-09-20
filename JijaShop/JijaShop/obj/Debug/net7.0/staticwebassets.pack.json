@@ -185,6 +185,10 @@
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\js\\helper.js",
+      "PackagePath": "staticwebassets\\js\\helper.js"
+    },
+    {
       "Id": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -8,7 +8,7 @@
 }
 
 .user-header-background-color {
-    padding: 20px;
+    padding: 15px;
     background: var(--gradientUserColor1);
     background: -moz-linear-gradient(top, var(--gradientUserColor1) 0%, var(--gradientUserColor2) 100%);
     background: -webkit-linear-gradient(top, var(--gradientUserColor1) 0%,var(--gradientUserColor2) 100%);
@@ -17,7 +17,7 @@
 }
 
 .moderator-header-background-color {
-    padding: 20px;
+    padding: 15px;
     background: var(--gradientModeratorColor1);
     background: -moz-linear-gradient(top, var(--gradientModeratorColor1) 0%, var(--gradientModeratorColor2) 100%);
     background: -webkit-linear-gradient(top, var(--gradientModeratorColor1) 0%,var(--gradientModeratorColor2) 100%);
@@ -26,7 +26,7 @@
 }
 
 .admin-header-background-color {
-    padding: 20px;
+    padding: 15px;
     background: var(--gradientAdminColor1);
     background: -moz-linear-gradient(top, var(--gradientAdminColor1) 0%, var(--gradientAdminColor2) 100%);
     background: -webkit-linear-gradient(top, var(--gradientAdminColor1) 0%,var(--gradientAdminColor2) 100%);
@@ -36,4 +36,17 @@
 
 .nav-link{
     color: black;
+}
+
+.icon-with-space::before {
+    display: inline-block;
+    width: 2px;
+}
+
+.header-text-size{
+    font-size: 20px;
+}
+
+.navbar-brand{
+    font-size: 26px;
 }
