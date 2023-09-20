@@ -15,10 +15,10 @@ namespace JijaShop.Areas.UserArea.Controllers
 		{
 			_identityService = identityService;
 		}
-		
-		[HttpPost("register")]
+
+		[HttpPost("{area}/{controller}/register")]
 		public IActionResult Register(UserDto userDto)
-		{ 
+		{
 			var result = _identityService.RegisterUser(userDto, out string response);
 
 			if (result)
@@ -27,13 +27,13 @@ namespace JijaShop.Areas.UserArea.Controllers
 				return BadRequest(response);
 		}
 
-        [HttpGet]
-        public async Task<IActionResult> Register()
-        {
-            return View();
-        }
+		[HttpGet]
+		public async Task<IActionResult> Register()
+		{
+			return View();
+		}
 
-		[HttpPost("login")]
+		[HttpPost("{area}/{controller}/login")]
 		public async Task<IActionResult> Login(UserDto userDto)
 		{
 			var result = _identityService.LoginUser(userDto, out string response);
@@ -43,17 +43,17 @@ namespace JijaShop.Areas.UserArea.Controllers
 				HttpContext.Response.Headers.Add("Authorization", $"Bearer {response}");
 				var jija = HttpContext.Response.Headers.Authorization;
 				Log.Information($"[Login] {HttpContext.Response.Headers.Authorization}");
-				return Ok(new {token = response});
+				return Ok(new { token = response });
 			}
 			else
 				return BadRequest(response);
 		}
 
 		[HttpGet]
-        public async Task<IActionResult> Login()
-        {
-            return View();
-        }
+		public async Task<IActionResult> Login()
+		{
+			return View();
+		}
 
 		[HttpGet("GetInfo"), Authorize(Roles = "User")]
 		public async Task<IActionResult> GetInfo()

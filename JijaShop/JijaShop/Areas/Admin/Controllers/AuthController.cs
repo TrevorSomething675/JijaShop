@@ -22,6 +22,11 @@ namespace JijaShop.Areas.Admin.Controllers
 			_userRepository = userRepository;
 		}
 
+		public IActionResult Login()
+		{
+			return View();
+		}
+
 		[NonAction]
 		private bool IsRegistered(UserDto userDto)
 		{

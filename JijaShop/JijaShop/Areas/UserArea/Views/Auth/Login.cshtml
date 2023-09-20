@@ -13,7 +13,7 @@ else
 	<div class="row">
 		<div class="col-4">
 			<div class="row">
-				<form method="post" asp-controller="Auth" asp-action="Login">
+				<form method="post" asp-area="UserArea" asp-controller="Auth" asp-action="Login">
 					<lable>Логин</lable> <input type="text" name="UserName" /><br />
 					<label>Пароль</label> <input type="text" name="UserPassword" /><br />
 					<input type="submit" value="Войти" />

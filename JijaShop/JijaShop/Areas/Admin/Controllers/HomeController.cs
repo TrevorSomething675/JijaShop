@@ -10,7 +10,7 @@ namespace JijaShop.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult Users()
+        public IActionResult Index()
         {
             return View();
         }

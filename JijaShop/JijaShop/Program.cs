@@ -101,7 +101,7 @@ app.MapAreaControllerRoute(
 app.MapAreaControllerRoute(
     name: "Admin_area",
     areaName: "Admin",
-    pattern: "Admin/{controller=Home}/{action=Users}");
+    pattern: "Admin/{controller=Home}/{action=Index}");
 
 app.UseSwagger();
 app.UseSwaggerUI();
