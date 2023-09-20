@@ -17,7 +17,8 @@ namespace JijaShop.Areas.UserArea.Controllers
 			_identityService = identityService;
 		}
 
-		[HttpPost("{area}/{controller}/register")]
+		//[HttpPost("{area}/{controller}/register")]
+		[HttpPost]
 		public IActionResult Register(UserDto userDto)
 		{
 			var result = _identityService.RegisterUser(userDto, out string response);
@@ -34,7 +35,8 @@ namespace JijaShop.Areas.UserArea.Controllers
 			return View();
 		}
 
-		[HttpPost("{area}/{controller}/login")]
+		//[HttpPost("{area}/{controller}/login")]
+		[HttpPost]
 		public async Task<IActionResult> Login(UserDto userDto)
 		{
 			var result = _identityService.LoginUser(userDto, out string response);
@@ -53,7 +55,7 @@ namespace JijaShop.Areas.UserArea.Controllers
 			return View();
 		}
 
-		[HttpGet("{area}/{controller}/GetInfo"), Authorize]
+		[HttpGet("GetInfo"), Authorize]
 		public async Task<IActionResult> GetInfo()
 		{
 			return Ok("Jija");
