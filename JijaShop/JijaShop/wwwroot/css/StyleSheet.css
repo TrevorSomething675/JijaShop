@@ -7,6 +7,8 @@
     --gradientAdminColor2: #bc8b89;
 }
 
+/*=========================== Header ===========================*/
+
 .user-header-background-color {
     padding: 15px;
     background: var(--gradientUserColor1);
@@ -34,19 +36,13 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientAdminColor1), endColorstr=var(--gradientAdminColor2),GradientType=0 );
 }
 
-.nav-link{
-    color: black;
+.header-ul-navbar{
+    list-style: none;
 }
 
-.icon-with-space::before {
-    display: inline-block;
-    width: 2px;
+.header-company-name{
+    font-size: 24px;
+
 }
 
-.header-text-size{
-    font-size: 20px;
-}
-
-.navbar-brand{
-    font-size: 26px;
-}
+/*=========================== Body ===========================*/
