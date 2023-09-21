@@ -19,20 +19,28 @@
                     <p class="header-company-name d-flex justify-content-center align-content-center mb-0">Jija Shop</p>
                 </div>
 
-                <div class="col-8 border">
-                    <ul class="header-ul-navbar d-flex mb-0">
-                        <li class="col">
-                            <a class="btn" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-                        </li>
+                <div class="col-8 border text-center">
+                    <div class="row">
+                        <div class="col-md-4 gx-0">
+                            <ul class="header-ul-navbar d-flex justify-content-center mb-0 p-0">
+                                <li class="col border">
+                                    <a class="btn bi bi-house" asp-area="" asp-controller="Home" asp-action="Index"><span class="header-void-icon"></span>Главная</a>
+                                </li>
 
-                        <li class="col">
-                            <a class="btn" asp-area="" asp-controller="Home" asp-action="Products">Товары</a>
-                        </li>
+                                <li class="col border">
+                                    <a class="btn bi bi-bag" asp-area="" asp-controller="Home" asp-action="Products"><span class="header-void-icon"></span>Товары</a>
+                                </li>
 
-                        <li class="col">
-                            <a class="btn" asp-area="" asp-controller="Home" asp-action="Info">О нас</a>
-                        </li>
-                    </ul>
+                                <li class="col border">
+                                    <a class="btn bi bi-info-square" asp-area="" asp-controller="Home" asp-action="Info"><span class="header-void-icon"></span>О нас</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-md-8">
+
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-2 border">

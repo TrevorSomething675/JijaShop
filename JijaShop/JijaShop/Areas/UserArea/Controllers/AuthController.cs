@@ -2,8 +2,6 @@
 using JijaShop.Services.Abstractions;
 using JijaShop.Models.DTOModels;
 using Microsoft.AspNetCore.Mvc;
-using Serilog;
-using System.Linq;
 
 namespace JijaShop.Areas.UserArea.Controllers
 {
