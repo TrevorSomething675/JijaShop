@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fHUi97nV5DvMn2JBqHFjouEPhpM6HrOfPXnK0FX7sD0=",
+  "Hash": "2rQk+NZ3WAHxLcB9N0fLv8z8n/T4/PXtIkKTwI+Ly1w=",
   "Source": "JijaShop",
   "BasePath": "_content/JijaShop",
   "Mode": "Default",
@@ -593,6 +593,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\Images\\jija-brand-logo.png",
+      "SourceId": "JijaShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\",
+      "BasePath": "_content/JijaShop",
+      "RelativePath": "Images/jija-brand-logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\jija-brand-logo.png"
     },
     {
       "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\js\\bootstrap.bundle.js",

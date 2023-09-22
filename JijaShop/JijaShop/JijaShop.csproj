@@ -9,13 +9,9 @@
 
   <ItemGroup>
     <Compile Remove="Areas\UserArea\Views\Новая папка\**" />
-    <Compile Remove="wwwroot\Images\**" />
     <Content Remove="Areas\UserArea\Views\Новая папка\**" />
-    <Content Remove="wwwroot\Images\**" />
     <EmbeddedResource Remove="Areas\UserArea\Views\Новая папка\**" />
-    <EmbeddedResource Remove="wwwroot\Images\**" />
     <None Remove="Areas\UserArea\Views\Новая папка\**" />
-    <None Remove="wwwroot\Images\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,6 +46,7 @@
   <ItemGroup>
     <Folder Include="Migrations\" />
     <Folder Include="Logs\" />
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
 </Project>

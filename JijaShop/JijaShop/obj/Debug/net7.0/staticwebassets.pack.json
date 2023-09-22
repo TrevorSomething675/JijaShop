@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\Images\\jija-brand-logo.png",
+      "PackagePath": "staticwebassets\\Images\\jija-brand-logo.png"
+    },
+    {
       "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\css\\StyleSheet.css",
       "PackagePath": "staticwebassets\\css\\StyleSheet.css"
     },

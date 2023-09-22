@@ -36,16 +36,13 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientAdminColor1), endColorstr=var(--gradientAdminColor2),GradientType=0 );
 }
 
-.header-ul-navbar{
-    list-style: none;
-}
-
-.header-company-name{
-    font-size: 24px;
-}
-
 .header-void-icon::after {
     content: "\00a0";
+}
+
+.header-brand-logo{
+    height:42px;
+    width:180px;
 }
 
 /*=========================== Body ===========================*/
