@@ -40,9 +40,13 @@
     content: "\00a0";
 }
 
-.header-brand-logo{
-    height:42px;
-    width:180px;
+.btn{
+    font-size: 24px;
+}
+
+.header-brand-logo {
+    height: 48px;
+    width: 190px;
 }
 
 /*=========================== Body ===========================*/
