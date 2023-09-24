@@ -11,10 +11,12 @@
 			<ul class="row row-cols-3 text-center d-flex mx-1 my-1 p-0">
 			@foreach (var product in await Model?.ProductService?.GetProducts())
 			{
-				<li class="body-user-item col">
-					<div class="h2">@product.Name</div>
-					<img class="body-product-item align-content-center" src="~/Images/product1.jpg" />
-					<div>Осталось в наличии: @product.Quantity</div>
+					<li class="body-user-item g-1">
+						<div class="col body-user-item-border">
+						<div class="h2">@product.Name</div>
+						<img class="body-product-item-image align-content-center" src="~/Images/product1.jpg" />
+						<div>Осталось в наличии: @product.Quantity</div>
+					</div>
 				</li>
 			}
 			</ul>
