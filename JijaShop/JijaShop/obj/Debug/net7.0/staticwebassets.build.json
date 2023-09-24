@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2rQk+NZ3WAHxLcB9N0fLv8z8n/T4/PXtIkKTwI+Ly1w=",
+  "Hash": "NyvoVSZhP9FYxAdVjQTTYm4bdadiZ+DtMxV99DpTz5A=",
   "Source": "JijaShop",
   "BasePath": "_content/JijaShop",
   "Mode": "Default",
@@ -610,6 +610,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\jija-brand-logo.png"
+    },
+    {
+      "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\Images\\product1.jpg",
+      "SourceId": "JijaShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\",
+      "BasePath": "_content/JijaShop",
+      "RelativePath": "Images/product1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\product1.jpg"
+    },
+    {
+      "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\Images\\product2.jpg",
+      "SourceId": "JijaShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\",
+      "BasePath": "_content/JijaShop",
+      "RelativePath": "Images/product2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\product2.jpg"
     },
     {
       "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\js\\bootstrap.bundle.js",

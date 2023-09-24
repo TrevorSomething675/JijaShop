@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Images\\jija-brand-logo.png"
     },
     {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\Images\\product1.jpg",
+      "PackagePath": "staticwebassets\\Images\\product1.jpg"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\Images\\product2.jpg",
+      "PackagePath": "staticwebassets\\Images\\product2.jpg"
+    },
+    {
       "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\css\\StyleSheet.css",
       "PackagePath": "staticwebassets\\css\\StyleSheet.css"
     },

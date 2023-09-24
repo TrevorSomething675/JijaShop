@@ -74,11 +74,11 @@ using(var scope = app.Services.CreateScope())
         {
             //var product1 = new Product()
             //{
-            //    Name = "testProduct3",
-            //    Quantity = 20,
+            //    Name = "testProduct4",
+            //    Quantity = 30,
             //    ProductDetails = new ProductDetails
             //    {
-            //        Price = 10,
+            //        Price = 20,
             //        Description = "TestDescriptions",
             //    }
             //};

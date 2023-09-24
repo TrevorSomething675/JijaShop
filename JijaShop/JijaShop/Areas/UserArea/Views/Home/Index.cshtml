@@ -7,16 +7,17 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-9" style="background-color: #D3D3D3;">
-			<div class="row">
-				@foreach (var product in await Model?.ProductService?.GetProducts())
-				{
-					<div class="col-4 text-center">
-						<p>@product.Name</p>
-						
-					</div>
-				}
-			</div>
+		<div class="col-md-9 p-0" style="background-color: #D3D3D3;">
+			<ul class="row row-cols-3 text-center d-flex mx-1 my-1 p-0">
+			@foreach (var product in await Model?.ProductService?.GetProducts())
+			{
+				<li class="body-user-item col">
+					<div class="h2">@product.Name</div>
+					<img class="body-product-item align-content-center" src="~/Images/product1.jpg" />
+					<div>Осталось в наличии: @product.Quantity</div>
+				</li>
+			}
+			</ul>
 		</div>
 
 		<div class="col-lg-3" style="background-color: whitesmoke">

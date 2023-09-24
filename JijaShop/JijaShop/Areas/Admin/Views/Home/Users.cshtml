@@ -1,26 +1,31 @@
 ﻿@using JijaShop.Services.Abstractions;
 @{
-    ViewData["title"] = "Admin Area";
+    ViewData["title"] = "Пользователи";
 }
 @inject IUserService _userService;
 
+<h2>Пользователи</h2>
 
 <div class="container">
     <div class="row text-center">
         <div class="col-lg-8" style="background-color: #D3D3D3">
             <div class="row d-flex">
+                <ul class="d-flex body-user-item list-group">
                 @foreach (var user in await _userService.GetUsers())
                 {
-                    <div class="col">
-                        <p>@user.UserName</p>
-                        <p>@user.UserEmail</p>
-                        <p class="btn btn-danger">Удалить</p>
-                    </div>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <p>Имя: @user.UserName</p>
+                        <p>Майл: @user.UserEmail</p>
+                        <div class="btn btn-danger d-flex">Удалить</div>
+                        <div class="btn btn-primary d-flex">Редактировать</div>
+                    </li>
                 }
+                </ul>
             </div>
         </div>
+
         <div class="col-lg-4" style="background-color: whitesmoke">
-            <div class="col">Jija2</div>
+            <div class="col">Users</div>
         </div>
     </div>
 </div>

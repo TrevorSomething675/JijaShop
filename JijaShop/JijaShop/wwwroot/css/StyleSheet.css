@@ -51,6 +51,16 @@
 
 /*=========================== Body ===========================*/
 
-.body-product-item{
-    
+:root {
+    --backgroundColorItemInBody: #dee3e0
+}
+
+.body-product-item {
+    height: 200px;
+    width: 280px;
+}
+
+.body-user-item {
+    list-style: none;
+    border: 3px solid var(--backgroundColorItemInBody)
 }
