@@ -13,6 +13,7 @@ using JijaShop.Services;
 using System.Text;
 using JijaShop;
 using Serilog;
+using JijaShop.Models.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -71,6 +72,20 @@ using(var scope = app.Services.CreateScope())
     {
         try
         {
+            //var product1 = new Product()
+            //{
+            //    Name = "testProduct3",
+            //    Quantity = 20,
+            //    ProductDetails = new ProductDetails
+            //    {
+            //        Price = 10,
+            //        Description = "TestDescriptions",
+            //    }
+            //};
+
+            //context.Products.Add(product1);
+            //context.SaveChanges();
+
             context.Database.Migrate();
         }
         catch
@@ -101,7 +116,7 @@ app.MapAreaControllerRoute(
 app.MapAreaControllerRoute(
     name: "Admin_area",
     areaName: "Admin",
-    pattern: "Admin/{controller=Home}/{action=Index}");
+    pattern: "Admin/{controller=Home}/{action=Users}");
 
 app.UseSwagger();
 app.UseSwaggerUI();
