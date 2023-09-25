@@ -3,6 +3,7 @@ using JijaShop.Services.Abstractions;
 using JijaShop.Models.DTOModels;
 using JijaShop.Models.Entities;
 using AutoMapper;
+using Serilog;
 
 namespace JijaShop.Services
 {
@@ -22,9 +23,9 @@ namespace JijaShop.Services
             await _productRepository.CreateNewProduct(product);
         }
 
-        public async Task<List<ProductDto>> GetProducts()
+        public async Task<List<ProductDto>?> GetProducts()
         {
-            var products = await _productRepository.GetProducts();
+			var products = await _productRepository.GetProducts();
             var productsDto = _mapper.Map<List<ProductDto>>(products);
 
             return productsDto;

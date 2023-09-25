@@ -74,7 +74,7 @@ using(var scope = app.Services.CreateScope())
         {
             //var product1 = new Product()
             //{
-            //    Name = "testProduct4",
+            //    Name = "testProduct3",
             //    Quantity = 30,
             //    ProductDetails = new ProductDetails
             //    {
