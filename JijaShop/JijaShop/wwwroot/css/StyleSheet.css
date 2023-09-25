@@ -1,4 +1,4 @@
-﻿:root {
+﻿:root{
     --gradientUserColor1: #52998A;
     --gradientUserColor2: #A5C9E5;
     --gradientModeratorColor1: #b0bf65;
@@ -7,9 +7,22 @@
     --gradientAdminColor2: #bc8b89;
 }
 
+/*=========================== Global ===========================*/
+
+a {
+    color: black !important;
+    font-size: 22px !important;
+    text-decoration: none !important;
+    transition: all .3s !important;
+}
+
+a:hover {
+    color: #4d4d4d;
+}
+
 /*=========================== Header ===========================*/
 
-.user-header-background-color {
+.user-header-background-color{
     padding: 15px;
     background: var(--gradientUserColor1);
     background: -moz-linear-gradient(top, var(--gradientUserColor1) 0%, var(--gradientUserColor2) 100%);
@@ -18,7 +31,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientUserColor1), endColorstr=var(--gradientUserColor2),GradientType=0 );
 }
 
-.moderator-header-background-color {
+.moderator-header-background-color{
     padding: 15px;
     background: var(--gradientModeratorColor1);
     background: -moz-linear-gradient(top, var(--gradientModeratorColor1) 0%, var(--gradientModeratorColor2) 100%);
@@ -27,7 +40,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientModeratorColor1), endColorstr=var(--gradientModeratorColor2),GradientType=0 );
 }
 
-.admin-header-background-color {
+.admin-header-background-color{
     padding: 15px;
     background: var(--gradientAdminColor1);
     background: -moz-linear-gradient(top, var(--gradientAdminColor1) 0%, var(--gradientAdminColor2) 100%);
@@ -36,34 +49,24 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientAdminColor1), endColorstr=var(--gradientAdminColor2),GradientType=0 );
 }
 
-.header-void-icon::after {
-    content: "\00a0";
+.mx-1{
+    white-space: nowrap;
 }
 
-.btn{
-    font-size: 22px;
-}
-
-.header-brand-logo {
-    height: 48px;
-    width: 190px;
+.header-brand-logo{
+    max-height: 60px;
 }
 
 /*=========================== Body ===========================*/
 
-:root {
+:root{
     --backgroundColorItemInBody: #dee3e0
 }
 
-.body-product-item-image {
-    height: 200px;
-    width: 280px;
-}
-
-.body-user-item {
+.body-user-item{
     list-style: none;
 }
 
-.body-user-item-border {
+.body-user-item-border{
     border: 3px solid #b0f2c7;
 }
