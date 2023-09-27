@@ -9,101 +9,105 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = JijaShop
 build_property.RootNamespace = JijaShop
-build_property.ProjectDir = C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop\
+build_property.ProjectDir = C:\JijaShop\JijaShop\JijaShop\JijaShop\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Ivan\Desktop\JijaShop\JijaShop\JijaShop
+build_property.MSBuildProjectDirectory = C:\JijaShop\JijaShop\JijaShop\JijaShop
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Auth/Login.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Home/Products.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Home/Products.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxQcm9kdWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Home/Users.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Home/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Auth/Login.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTW9kZXJhdG9yXFZpZXdzXEF1dGhcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Auth/Register.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTW9kZXJhdG9yXFZpZXdzXEF1dGhcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Home/Index.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTW9kZXJhdG9yXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Shared/_ModeratorLayout.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Shared/_ModeratorLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTW9kZXJhdG9yXFZpZXdzXFNoYXJlZFxfTW9kZXJhdG9yTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTW9kZXJhdG9yXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/_ViewImports.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTW9kZXJhdG9yXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/_ViewStart.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/Moderator/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTW9kZXJhdG9yXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Auth/Login.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Auth/Register.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Home/Index.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Home/Favorites.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcSG9tZVxGYXZvcml0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Home/Info.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Home/Info.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcSG9tZVxJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Home/Products.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Home/Products.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcSG9tZVxQcm9kdWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Shared/_UserLayout.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Shared/_UserLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/_ViewImports.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ivan/Desktop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/_ViewStart.cshtml]
+[C:/JijaShop/JijaShop/JijaShop/JijaShop/Areas/UserArea/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

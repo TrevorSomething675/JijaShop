@@ -5,10 +5,19 @@
     --accent-color-header-botton: #539486;
     --accent-color-header-top: #969696;
     --white-text-color: #ccc;
+    --dark-text-color: #000;
     --gray-color: #ccc;
 }
 
 /*=========================== Global ===========================*/
+
+.badge-warning {
+    color: var(--dark-text-color);
+}
+
+.badge-warning:hover {
+    color: var(--dark-text-color);
+}
 
 .btn,
 .dropdown-menu,
@@ -87,18 +96,6 @@
     color: var(--dark-text-color);
     text-decoration: none;
     font-size: 22px;
-}
-
-.nav-item span {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    float: left;
-    text-align: center;
-    transition: all .3s;
 }
 
 /*=========================== Body ===========================*/

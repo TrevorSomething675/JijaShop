@@ -33,5 +33,10 @@ namespace JijaShop.Areas.UserArea.Controllers
 		{
 			return View();
 		}
+
+		public IActionResult Favorites()
+		{
+			return View();
+		}
 	}
 }

@@ -93,25 +93,25 @@
                                     </div>
 
                                     <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
-                                        <ul class="navbar-nav header-botton-items px-1">
+                                        <ul class="navbar-nav header-botton-items px-0 px-lg-1 pt-4 py-lg-0">
 
-                                            <li class="nav-item mx-lg-2">
-                                                <a asp-area="" asp-controller="Home" asp-action="Jija">
+                                            <li class="nav-item py-2 py-lg-0 px-1 mx-lg-2">
+                                                <a class="position-relative" asp-area="" asp-controller="Home" asp-action="Favorites">
                                                     <i class="bi bi-heart-fill"></i>
                                                     Избраное
+                                                    <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">2</span>
                                                 </a>
-                                                <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">2</span>
 
                                             </li>
 
-                                            <li class="nav-item mx-lg-2">
-                                                <a asp-area="" asp-controller="Home" asp-action="Jija">
+                                            <li class="nav-item py-2 py-lg-0 px-1 mx-lg-2">
+                                                <a class="position-relative" asp-area="" asp-controller="Home" asp-action="Jija">
                                                     <i class="bi bi-bag-check-fill"></i>
                                                     Корзина
-                                                <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
+                                                    <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">3</span>
                                                 </a>
-                                            </li>
 
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container-fluid">
         <main role="main">
             @RenderBody()
         </main>
