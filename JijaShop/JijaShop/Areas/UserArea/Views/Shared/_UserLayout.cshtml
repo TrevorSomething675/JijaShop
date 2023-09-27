@@ -13,46 +13,78 @@
 </head>
 
 <body>
-    <header class="user-header-background-color">
-        <div class="container-flex">
-            <div class="row d-flex">
-                <div class="col-lg-2 d-lg-block d-none">
-                    <a class="btn-link px-1 d-flex justify-content-center align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
-                        <img class="img-fluid header-brand-logo" src="~/Images/jija-brand-logo.png" />
-                    </a>
-                </div>
-
-                <div class="col text-center">
-                    <div class="row h-100">
-                        <div class="col col-md-auto d-flex justify-content-center align-items-center">
-                            <a class="d-flex" asp-area="" asp-controller="Home" asp-action="Index">
-                                <i class="bi bi-house mx-1"></i>Главная
-                            </a>
-                        </div>
-
-                        <div class="col col-md-auto d-flex justify-content-center align-items-center">
-                            <a class="d-flex" asp-area="" asp-controller="Home" asp-action="Products">
-                                <i class="bi bi-bag mx-1"></i>Товары
-                            </a>
-                        </div>
-
-                        <div class="col col-md-auto d-flex justify-content-center align-items-center">
-                            <a class="d-flex" asp-area="" asp-controller="Home" asp-action="Info">
-                                <i class="bi bi-info-square mx-1"></i>О нас
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-lg-auto d-flex justify-content-between align-items-center text-center">
-                    <div class="col d-flex justify-content-center align-items-center px-4">
-                        <a class="btn-link" asp-area="" asp-controller="Auth" asp-action="Login">Войти</a>
+    <header>
+        <div class="header-top">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center">
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <div class="container-fluid">
+                                <a asp-area="" asp-controller="" asp-action="Index" class="header-logo h1">JijaShop</a>
+                            </div>
+                        </nav>
                     </div>
 
-                    <div class="col d-flex justify-content-center align-items-center">
-                        <a class="btn-link" asp-area="" asp-controller="Auth" asp-action="Register">Регистрация</a>
+                    <div class="col">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="search" placeholder="Найти"
+                                       aria-label="Searching" aria-describedby="search-button" />
+
+                                <button class="btn btn-light" type="submit" id="search-button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col">
+                        <ul class="list-group d-flex">
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Auth" asp-action="Login">Войти</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Auth" asp-action="Register">Регистрация</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="header-botton">
+            <div class="container-fluid">
+                <nav class="row navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-start" id="offcanvasNavbar" tabindex="-1"
+                             aria-labelledby="offcanvasNavbarLable">
+
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasLabel">JijaShop</h5>
+                                <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav header-botton-items px-1">
+                                    <li class="nav-item">
+                                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Главная</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a asp-area="" asp-controller="Home" asp-action="Products" class="nav-link">Продукты</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a asp-area="" asp-controller="Home" asp-action="Info" class="nav-link">О нас</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>

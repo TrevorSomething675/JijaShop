@@ -1,72 +1,77 @@
-﻿:root{
-    --gradientUserColor1: #52998A;
-    --gradientUserColor2: #A5C9E5;
-    --gradientModeratorColor1: #b0bf65;
-    --gradientModeratorColor2: #b0f2c7;
-    --gradientAdminColor1: #c66969;
-    --gradientAdminColor2: #bc8b89;
+﻿:root {
+    --header-top-color1: #52998A;
+    --header-top-color2: #A5C9E5;
+    --header-botton-color: #3d3d3d;
+    --accent-color-header-botton: #539486;
+    --dark-text-color: #171717;
+    --white-text-color: #ccc;
+    --gray-color: #ccc;
 }
-
 /*=========================== Global ===========================*/
 
-a {
-    color: black !important;
-    font-size: 22px !important;
-    text-decoration: none !important;
-    transition: all .3s !important;
+.btn,
+.dropdown-menu,
+.form-control {
+    border: none;
+    border-radius: 0;
 }
 
-a:hover {
-    color: #4d4d4d;
+.btn,
+.dropdown-menu,
+.form-control:hover {
+    color: var(--accent-color);
 }
 
-/*=========================== Header ===========================*/
-
-.user-header-background-color{
-    padding: 15px;
-    background: var(--gradientUserColor1);
-    background: -moz-linear-gradient(top, var(--gradientUserColor1) 0%, var(--gradientUserColor2) 100%);
-    background: -webkit-linear-gradient(top, var(--gradientUserColor1) 0%,var(--gradientUserColor2) 100%);
-    background: linear-gradient(to bottom, var(--gradientUserColor1) 0%,var(--gradientUserColor2) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientUserColor1), endColorstr=var(--gradientUserColor2),GradientType=0 );
+.form-control:focus {
+    color: none;
+    border:none;
+    box-shadow: none;
+    outline: none;
 }
 
-.moderator-header-background-color{
-    padding: 15px;
-    background: var(--gradientModeratorColor1);
-    background: -moz-linear-gradient(top, var(--gradientModeratorColor1) 0%, var(--gradientModeratorColor2) 100%);
-    background: -webkit-linear-gradient(top, var(--gradientModeratorColor1) 0%,var(--gradientModeratorColor2) 100%);
-    background: linear-gradient(to bottom, var(--gradientModeratorColor1) 0%,var(--gradientModeratorColor2) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientModeratorColor1), endColorstr=var(--gradientModeratorColor2),GradientType=0 );
+.form-control::placeholder {
+    color: var(--gray-color);
 }
 
-.admin-header-background-color{
-    padding: 15px;
-    background: var(--gradientAdminColor1);
-    background: -moz-linear-gradient(top, var(--gradientAdminColor1) 0%, var(--gradientAdminColor2) 100%);
-    background: -webkit-linear-gradient(top, var(--gradientAdminColor1) 0%,var(--gradientAdminColor2) 100%);
-    background: linear-gradient(to bottom, var(--gradientAdminColor1) 0%,var(--gradientAdminColor2) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--gradientAdminColor1), endColorstr=var(--gradientAdminColor2),GradientType=0 );
+.bg-semi-dark {
+    background: var(--header-botton-color);
+    color:var(--white-text-color);
 }
 
-.mx-1{
-    white-space: nowrap;
+/*=========================== Header-Top ===========================*/
+
+.header-logo {
+    text-decoration: none;
+    color: var(--dark-text-color);
+    transition: .2s;
 }
 
-.header-brand-logo{
-    max-height: 60px;
+.header-logo:hover{
+    color: var(--accent-color);
+}
+
+.header-top {
+    background: var(--header-top-color1);
+    background: -moz-linear-gradient(top, var(--header-top-color1) 0%, var(--header-top-color2) 100%);
+    background: -webkit-linear-gradient(top, var(--header-top-color1) 0%,var(--header-top-color2) 100%);
+    background: linear-gradient(to bottom, var(--header-top-color1) 0%,var(--header-top-color2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--header-top-color1), endColorstr=var(--header-top-color2),GradientType=0 );
+}
+/*=========================== Header-Botton ===========================*/
+
+.header-botton-items li a {
+    color: var(--white-text-color);
+    transition: .2s;
+}
+
+.header-botton-items li a:hover {
+    color: var(--accent-color-header-botton);
+}
+
+.nav-item a {
+    color: var(--dark-text-color);
+    text-decoration: none;
+    font-size: 22px;
 }
 
 /*=========================== Body ===========================*/
-
-:root{
-    --backgroundColorItemInBody: #dee3e0
-}
-
-.body-user-item{
-    list-style: none;
-}
-
-.body-user-item-border{
-    border: 3px solid #b0f2c7;
-}
