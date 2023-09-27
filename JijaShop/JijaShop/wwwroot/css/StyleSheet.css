@@ -3,10 +3,11 @@
     --header-top-color2: #A5C9E5;
     --header-botton-color: #3d3d3d;
     --accent-color-header-botton: #539486;
-    --dark-text-color: #171717;
+    --accent-color-header-top: #969696;
     --white-text-color: #ccc;
     --gray-color: #ccc;
 }
+
 /*=========================== Global ===========================*/
 
 .btn,
@@ -40,14 +41,27 @@
 
 /*=========================== Header-Top ===========================*/
 
+.list-inline-item a {
+    color: var(--dark-text-color);
+    font-size: 24px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.list-inline-item a:hover {
+    color: var(--accent-color-header-top);
+    font-size: 24px;
+    text-decoration: none;
+}
+
 .header-logo {
     text-decoration: none;
     color: var(--dark-text-color);
     transition: .2s;
 }
 
-.header-logo:hover{
-    color: var(--accent-color);
+.header-logo:hover {
+    color: var(--accent-color-header-top);
 }
 
 .header-top {
@@ -57,6 +71,7 @@
     background: linear-gradient(to bottom, var(--header-top-color1) 0%,var(--header-top-color2) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--header-top-color1), endColorstr=var(--header-top-color2),GradientType=0 );
 }
+
 /*=========================== Header-Botton ===========================*/
 
 .header-botton-items li a {
@@ -72,6 +87,18 @@
     color: var(--dark-text-color);
     text-decoration: none;
     font-size: 22px;
+}
+
+.nav-item span {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
+    transition: all .3s;
 }
 
 /*=========================== Body ===========================*/
