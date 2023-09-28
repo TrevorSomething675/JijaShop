@@ -13,6 +13,7 @@
 
 .badge-warning {
     color: var(--dark-text-color);
+
 }
 
 .badge-warning:hover {
