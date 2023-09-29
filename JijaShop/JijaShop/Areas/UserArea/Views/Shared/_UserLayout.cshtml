@@ -7,14 +7,12 @@
 
 <body>
 
-    <header>
+    <header class="shadow-lg">
         @await Html.PartialAsync("HeaderPartial")
     </header>
 
-    <div class="container-fluid">
-        <main role="main">
-            @RenderBody()
-        </main>
+    <div class="container-fluid p-0">
+        @RenderBody()
     </div>
 
     <footer class="border-top footer text-muted">

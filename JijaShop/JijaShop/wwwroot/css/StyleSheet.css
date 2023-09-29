@@ -7,13 +7,20 @@
     --white-text-color: #ccc;
     --dark-text-color: #000;
     --gray-color: #ccc;
+    --orange-color: #f07d11;
 }
 
 /*=========================== Global ===========================*/
 
+.text-void{
+    white-space: pre-wrap;
+}
+
 .badge-warning {
     color: var(--dark-text-color);
-
+    font-size: 17px;
+    padding: 3px 8px 6px 8px;
+    margin: 8px;
 }
 
 .badge-warning:hover {
@@ -100,3 +107,12 @@
 }
 
 /*=========================== Body ===========================*/
+
+.text-carousel-item {
+    color: var(--orange-color);
+    text-shadow: 0 0 5px var(--dark-text-color);
+}
+
+.text-body {
+    font-size: 18px;
+}

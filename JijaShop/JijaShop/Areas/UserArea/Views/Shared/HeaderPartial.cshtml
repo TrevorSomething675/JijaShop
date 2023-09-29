@@ -1,4 +1,4 @@
-﻿<div class="header-top">
+﻿<div class="header-top shadow-lg">
     <div class="container-fluid">
         <div class="row d-flex align-items-center">
 
@@ -42,11 +42,10 @@
 </div>
 
 <div class="header-botton">
-    <div class="container-fluid">
-        <nav class="row navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-            <div class="container-fluid">
-                <div class="col">
-
+    <div class="container-fluid bg-dark">
+        <div class="row">
+            <nav class="col navbar navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +53,7 @@
                     </button>
 
                     <div class="offcanvas offcanvas-start" id="offcanvasNavbar" tabindex="-1"
-                         aria-labelledby="offcanvasNavbarLable">
+                        aria-labelledby="offcanvasNavbarLable">
 
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasLabel">JijaShop</h5>
@@ -65,42 +64,44 @@
                             <div class="col">
                                 <ul class="navbar-nav header-botton-items px-1">
                                     <li class="nav-item">
-                                        @Html.ActionLink("Главная", "Index", "Home", htmlAttributes: new {@class = "nav-link"})
+                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
                                     </li>
                                     <li class="nav-item">
-                                        @Html.ActionLink("Товары", "Products", "Home", htmlAttributes: new {@class = "nav-link"})
+                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Products">Продукты</a>
                                     </li>
                                     <li class="nav-item">
-                                        @Html.ActionLink("О Нас", "Info", "Home", htmlAttributes: new {@class = "nav-link"})
+                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Info">О нас</a>
                                     </li>
-                                </ul>
-                            </div>
-
-                            <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
-                                <ul class="navbar-nav header-botton-items px-0 px-lg-1 pt-4 py-lg-0">
-
-                                    <li class="nav-item py-2 py-lg-0 px-1 mx-lg-2">
-                                        <a class="position-relative" asp-area="" asp-controller="Home" asp-action="Favorites">
-                                            <i class="bi bi-heart-fill"></i>
-                                            Избраное
-                                            <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">2</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item py-2 py-lg-0 px-1 mx-lg-2">
-                                        <a class="position-relative" asp-area="" asp-controller="Home" asp-action="Jija">
-                                            <i class="bi bi-bag-check-fill"></i>
-                                            Корзина
-                                            <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">3</span>
-                                        </a>
-                                    </li>
-
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            </nav>
+
+            <div class="col d-flex align-items-center px-3">
+                <div class="container-fluid d-flex justify-content-end">
+
+                    <ul class="list-inline header-botton-items d-flex my-0">
+                        <li class="list-inline-item px-2">
+                            <a class="position-relative d-flex justify-content-around" asp-area="" asp-controller="Home" asp-action="Favorites">
+                                <i class="bi bi-heart-fill px-1"></i>
+                                <span class="d-none d-lg-block">Избраное</span>
+                                <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">2</span>
+                            </a>
+                        </li>
+
+                        <li class="list-inline-item px-2">
+                            <a class="position-relative d-flex justify-content-around" asp-area="" asp-controller="Home" asp-action="Jija">
+                                <i class="bi bi-bag-check-fill px-1"></i>
+                                <span class="d-none d-lg-block">Корзина</span>
+                                <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">3</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-        </nav>
+        </div>
     </div>
 </div>

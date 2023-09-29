@@ -5,29 +5,3 @@
 
 @model UserIndexViewModel
 
-<div class="container">
-	<div class="row">
-		<div class="col col-md-9 p-0" style="background-color: #D3D3D3;">
-			<ul class="row row-cols-md-2 row-cols-lg-3 text-center d-flex mx-1 my-1 p-0">
-				@foreach (var product in await Model.ProductService.GetProducts())
-				{
-					<li class="body-user-item g-1">
-						<div class="col body-user-item-border">
-							<div class="h2">@product.Name</div>
-							<img class="img-fluid align-content-center p-1" src="~/Images/product1.jpg" />
-						<div>Осталось в наличии: @product.Quantity</div>
-					</div>
-				</li>
-				}
-			</ul>
-		</div>
-
-		<div class="col-lg-3" style="background-color: whitesmoke">
-			<div class="row">
-				<div class="col-4">
-					<p>Jija</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
