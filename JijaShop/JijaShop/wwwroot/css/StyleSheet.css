@@ -4,10 +4,13 @@
     --header-botton-color: #3d3d3d;
     --accent-color-header-botton: #539486;
     --accent-color-header-top: #969696;
-    --white-text-color: #ccc;
     --dark-text-color: #000;
     --gray-color: #ccc;
+    --light-gray-color: #eee;
+    --hard-gray-color: #6c757d;
     --orange-color: #f07d11;
+    --red-offer: #ee6e73;
+    --yellow-offer: #ffd333;
 }
 
 /*=========================== Global ===========================*/
@@ -53,7 +56,7 @@
 
 .bg-semi-dark {
     background: var(--header-botton-color);
-    color:var(--white-text-color);
+    color: var(--gray-color);
 }
 
 /*=========================== Header-Top ===========================*/
@@ -92,7 +95,7 @@
 /*=========================== Header-Botton ===========================*/
 
 .header-botton-items li a {
-    color: var(--white-text-color);
+    color: var(--gray-color);
     transition: .2s;
 }
 
@@ -111,4 +114,90 @@
 .text-carousel-item {
     color: var(--orange-color);
     text-shadow: 0 0 5px var(--dark-text-color);
+}
+
+/*=========================== Product-Card ===========================*/
+
+.product-card {
+    transition: all .3s;
+    border: 1px solid var(--gray-color);
+    background-color: white;
+    position: relative;
+}
+
+.product-card:hover {
+    box-shadow: 0 2px 18px black;
+}
+
+.product-card-offer {
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-transform: uppercase;
+}
+
+.product-card-offer > div {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.offer-hit {
+    background-color: var(--red-offer);
+}
+
+.offer-new {
+    background-color: var(--yellow-offer);
+}
+
+.product-name h4 a {
+    height: 45px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-decoration: none;
+    transition: all 0.3s;
+    color:black;
+}
+
+.product-details h4 a:hover {
+    color: var(--accent-color);
+}
+
+.product-details-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 45px;
+    overflow: hidden;
+}
+
+.product-details-price {
+    font-size: 18px;
+    color: var(--red-offer);
+    font-weight: 600;
+}
+
+.product-details-price small {
+    color: var(--gray-color);
+    font-weight: 400;
+    text-decoration: line-through;
+    font-size: 0.8rem;
+}
+
+.product-img {
+    text-align: center;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

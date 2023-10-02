@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\Images\\1.jpg",
+      "PackagePath": "staticwebassets\\Images\\1.jpg"
+    },
+    {
       "Id": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\wwwroot\\Images\\Slider\\SliderImage1.png",
       "PackagePath": "staticwebassets\\Images\\Slider\\SliderImage1.png"
     },
