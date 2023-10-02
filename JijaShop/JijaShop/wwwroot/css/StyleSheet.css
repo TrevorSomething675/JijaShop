@@ -112,12 +112,3 @@
     color: var(--orange-color);
     text-shadow: 0 0 5px var(--dark-text-color);
 }
-
-.text-body {
-    font-size: 18px;
-}
-
-.scrollable-div {
-    max-height: 520px; /* Установите эту величину согласно высоте картинки в слайдере */
-    overflow-y: auto; /* Параметр auto добавляет прокрутку, только когда контент превышает максимальную высоту */
-}

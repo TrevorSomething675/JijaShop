@@ -11,9 +11,9 @@
         @await Html.PartialAsync("HeaderPartial")
     </header>
 
-    <div class="container-fluid p-0">
+    <main role="main">
         @RenderBody()
-    </div>
+    </main>
 
     <footer class="border-top footer text-muted">
         @await Html.PartialAsync("FooterPartial")
