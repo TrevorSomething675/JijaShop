@@ -108,18 +108,6 @@
 
 /*=========================== Body ===========================*/
 
-.h2-info{
-    position: relative;
-}
-
-.h2-info:after {
-    position: absolute;
-    content:"";
-    width:100%;
-    top:60%;
-    border-top: 1px dashed black;
-}
-
 .text-carousel-item {
     color: var(--orange-color);
     text-shadow: 0 0 5px var(--dark-text-color);
@@ -127,4 +115,9 @@
 
 .text-body {
     font-size: 18px;
+}
+
+.scrollable-div {
+    max-height: 520px; /* Установите эту величину согласно высоте картинки в слайдере */
+    overflow-y: auto; /* Параметр auto добавляет прокрутку, только когда контент превышает максимальную высоту */
 }

@@ -4522,19 +4522,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Win10Pro\\.nuget\\packages\\": {}
+    "C:\\Users\\Ivan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
+      "projectUniqueName": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
       "projectName": "JijaShop",
-      "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
-      "packagesPath": "C:\\Users\\Win10Pro\\.nuget\\packages\\",
-      "outputPath": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\obj\\",
+      "projectPath": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
+      "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Win10Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4542,6 +4542,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4664,7 +4665,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
