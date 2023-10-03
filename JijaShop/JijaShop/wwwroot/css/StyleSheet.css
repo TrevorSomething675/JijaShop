@@ -15,6 +15,10 @@
 
 /*=========================== Global ===========================*/
 
+.text-body{
+    font-size:18px;
+}
+
 .text-void{
     white-space: pre-wrap;
 }
