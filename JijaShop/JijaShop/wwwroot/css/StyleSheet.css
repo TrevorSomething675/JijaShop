@@ -183,13 +183,15 @@
     font-size: 18px;
     color: var(--red-offer);
     font-weight: 600;
+    width:80px;
+    border: 1px solid;
 }
 
 .product-details-price small {
-    color: var(--gray-color);
+    color: var(--hard-gray-color);
     font-weight: 400;
-    text-decoration: line-through;
-    font-size: 0.8rem;
+    text-decoration: 2px line-through;
+    font-size: 1rem;
 }
 
 .product-img {

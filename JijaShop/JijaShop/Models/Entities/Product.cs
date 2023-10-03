@@ -7,6 +7,9 @@
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdateDate { get; set; }
 
+        public int ProductOffersId { get; set; }
+        public ProductOffers ProductOffers { get; set; }
+
         public int ProductDetailsId { get; set; }
         public ProductDetails ProductDetails { get; set; }
     }

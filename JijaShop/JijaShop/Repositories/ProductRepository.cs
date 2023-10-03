@@ -16,13 +16,17 @@ namespace JijaShop.Repositories
 
         public async Task<List<Product>> GetProducts()
         {
-            var resultProducts = await _context.Products.Include(prod=>prod.ProductDetails).ToListAsync();
+            var resultProducts = await _context.Products
+                .Include(prod=>prod.ProductDetails)
+                .Include(prod=>prod.ProductOffers).ToListAsync();
+
             return resultProducts;
         }
 
         public async Task<Product> GetProduct(int id)
         {
             var resultProduct = await _context.Products.Include(prod => prod.ProductDetails)
+                .Include(prod => prod.ProductOffers)
                 .FirstOrDefaultAsync(prod => prod.Id == id);
 
             return resultProduct;

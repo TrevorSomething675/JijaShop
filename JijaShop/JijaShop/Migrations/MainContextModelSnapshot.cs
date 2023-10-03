@@ -22,6 +22,42 @@ namespace JijaShop.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("JijaShop.Models.Entities.Admin", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AdminEmail")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("AdminIp")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("AdminName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("AdminPassword")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<byte[]>("AdminPasswordHash")
+                        .HasColumnType("bytea");
+
+                    b.Property<byte[]>("AdminPasswordSalt")
+                        .HasColumnType("bytea");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Admin");
+                });
+
             modelBuilder.Entity("JijaShop.Models.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -40,6 +76,9 @@ namespace JijaShop.Migrations
                     b.Property<int>("ProductDetailsId")
                         .HasColumnType("integer");
 
+                    b.Property<int>("ProductOffersId")
+                        .HasColumnType("integer");
+
                     b.Property<int?>("Quantity")
                         .HasColumnType("integer");
 
@@ -49,6 +88,8 @@ namespace JijaShop.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ProductDetailsId");
+
+                    b.HasIndex("ProductOffersId");
 
                     b.ToTable("Products");
                 });
@@ -65,12 +106,35 @@ namespace JijaShop.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<decimal?>("OldPrice")
+                        .HasColumnType("numeric");
+
                     b.Property<decimal?>("Price")
                         .HasColumnType("numeric");
 
                     b.HasKey("Id");
 
                     b.ToTable("ProductDetails");
+                });
+
+            modelBuilder.Entity("JijaShop.Models.Entities.ProductOffers", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsHitOffer")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsNewOffer")
+                        .HasColumnType("boolean");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductOffers");
                 });
 
             modelBuilder.Entity("JijaShop.Models.Entities.User", b =>
@@ -115,7 +179,15 @@ namespace JijaShop.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("JijaShop.Models.Entities.ProductOffers", "ProductOffers")
+                        .WithMany()
+                        .HasForeignKey("ProductOffersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("ProductDetails");
+
+                    b.Navigation("ProductOffers");
                 });
 #pragma warning restore 612, 618
         }

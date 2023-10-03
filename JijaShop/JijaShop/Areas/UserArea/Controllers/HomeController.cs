@@ -1,7 +1,7 @@
-﻿using JijaShop.Models.ViewModels.Abstractions;
-using JijaShop.Services.Abstractions;
+﻿using JijaShop.Services.Abstractions;
 using JijaShop.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using JijaShop.Models.Entities;
 
 namespace JijaShop.Areas.UserArea.Controllers
 {
@@ -9,22 +9,12 @@ namespace JijaShop.Areas.UserArea.Controllers
 	public class HomeController : Controller
 	{
 		private readonly IProductService _productService;
-
-		private readonly IUserViewModel _userViewModel;
 		public HomeController(IProductService productService)
 		{
 			_productService = productService;
+		}
 
-			_userViewModel = new UserIndexViewModel();
-			_userViewModel.ProductService = productService;
-		}
 		public IActionResult Index()
-		{
-			var viewModel = _userViewModel;
-			return View(viewModel);
-		}
-		
-		public IActionResult Products()
 		{
 			return View();
 		}
@@ -38,5 +28,23 @@ namespace JijaShop.Areas.UserArea.Controllers
 		{
 			return View();
 		}
+
+		public IActionResult Products(int page = 1)
+		{
+			var pageResult = 3f;
+			var pageCount = Math.Ceiling(_productService.GetProducts().Result.Count() / pageResult);
+
+			var products = _productService.GetProducts().Result
+				.Take((int)pageResult * page).ToList();
+
+			var response = new UserProductsViewModel
+			{
+				products = products,
+				CurrentPage = page,
+				Pages = (int)pageCount
+			};
+
+			return View(response);
+		} 
 	}
 }

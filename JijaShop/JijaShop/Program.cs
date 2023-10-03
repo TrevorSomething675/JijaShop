@@ -70,22 +70,31 @@ using(var scope = app.Services.CreateScope())
 {
     using(var context = scope.ServiceProvider.GetRequiredService<MainContext>())
     {
-        try
+        List<Product> prd = new List<Product>();
+        for (int i = 0; i < 20; i++)
         {
             //var product1 = new Product()
             //{
-            //    Name = "testProduct3",
-            //    Quantity = 30,
+            //    Name = $"testProduct{i}",
+            //    Quantity = i,
             //    ProductDetails = new ProductDetails
             //    {
             //        Price = 20,
-            //        Description = "TestDescriptions",
+            //        Description = $"TestDescriptions{i}",
+            //    },
+
+            //    ProductsOffers = new ProductsOffers
+            //    {
+            //        IsHitOffer = true,
+            //        IsNewOffer = true,
             //    }
             //};
 
             //context.Products.Add(product1);
             //context.SaveChanges();
-
+        }
+        try
+        {
             context.Database.Migrate();
         }
         catch
