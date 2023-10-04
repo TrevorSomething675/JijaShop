@@ -62,23 +62,3 @@
     </div>
 </section>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        var counter = 0;
-        $("#incrementButton").click(function () {
-            counter += 1;
-            $.ajax({
-                url: 'UserArea/HomeController/UpdateProductIncrement',
-                type: 'POST',
-                data: { value: counter },
-                success: function (result) {
-                    $("#counterValue").text(counter);
-                },
-                error: function (result) {
-                    alert('error');
-                }
-            });
-        });
-    });
-</script>

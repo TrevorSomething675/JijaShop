@@ -29,26 +29,18 @@ namespace JijaShop.Areas.UserArea.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult Products(int page = 1)
+		public IActionResult Products(int value = 1)
 		{
-			var products = _productService.GetProducts(page).Result;
+			var products = _productService.GetProducts(value).Result;
 
 			var model = new UserProductsViewModel
 			{
 				products = products,
-				CurrentPage = page,
+				CurrentPage = value,
 				Pages = 1
 			};
 
 			return View(model);
 		}
-
-        [HttpPost]
-        public IActionResult UpdateProductIncrement(int value)
-        {
-            // Обрабатываем пришедшие данные
-            // При успешной обработке возвращаем успешный статус
-            return Json(new { success = true });
-        }
     }
 }

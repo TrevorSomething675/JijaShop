@@ -6,6 +6,7 @@
 </head>
 
 <body>
+    @await Html.PartialAsync("ScriptsPartial")
 
     <header class="shadow-lg">
         @await Html.PartialAsync("HeaderPartial")
@@ -19,7 +20,6 @@
         @await Html.PartialAsync("FooterPartial")
     </footer>
 
-    @await Html.PartialAsync("ScriptsPartial")
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
