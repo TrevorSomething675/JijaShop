@@ -17,6 +17,7 @@
 
 .text-body{
     font-size:18px;
+    color:black;
 }
 
 .text-void{
@@ -118,6 +119,20 @@
 .text-carousel-item {
     color: var(--orange-color);
     text-shadow: 0 0 5px var(--dark-text-color);
+}
+
+.text-body-download {
+    color: var(--dark-text-color);
+    text-decoration: none;
+    transition: .3s all;
+    background-color: white;
+    border: 0px;
+}
+
+.text-body-download:hover {
+    color: var(--gray-color);
+    text-decoration: none;
+    border: 0px;
 }
 
 /*=========================== Product-Card ===========================*/

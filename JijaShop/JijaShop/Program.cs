@@ -13,7 +13,6 @@ using JijaShop.Services;
 using System.Text;
 using JijaShop;
 using Serilog;
-using JijaShop.Models.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 

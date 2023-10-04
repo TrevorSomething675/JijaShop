@@ -1,7 +1,6 @@
 ﻿using JijaShop.Services.Abstractions;
 using JijaShop.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using JijaShop.Models.Entities;
 
 namespace JijaShop.Areas.UserArea.Controllers
 {
@@ -29,22 +28,27 @@ namespace JijaShop.Areas.UserArea.Controllers
 			return View();
 		}
 
+		[HttpGet]
 		public IActionResult Products(int page = 1)
 		{
-			var pageResult = 3f;
-			var pageCount = Math.Ceiling(_productService.GetProducts().Result.Count() / pageResult);
+			var products = _productService.GetProducts(page).Result;
 
-			var products = _productService.GetProducts().Result
-				.Take((int)pageResult * page).ToList();
-
-			var response = new UserProductsViewModel
+			var model = new UserProductsViewModel
 			{
 				products = products,
 				CurrentPage = page,
-				Pages = (int)pageCount
+				Pages = 1
 			};
 
-			return View(response);
-		} 
-	}
+			return View(model);
+		}
+
+        [HttpPost]
+        public IActionResult UpdateProductIncrement(int value)
+        {
+            // Обрабатываем пришедшие данные
+            // При успешной обработке возвращаем успешный статус
+            return Json(new { success = true });
+        }
+    }
 }
