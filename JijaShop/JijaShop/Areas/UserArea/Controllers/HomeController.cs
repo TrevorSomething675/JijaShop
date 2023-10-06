@@ -1,5 +1,5 @@
-﻿using JijaShop.Services.Abstractions;
-using JijaShop.Models.ViewModels;
+﻿using JijaShop.Areas.UserArea.ViewModels;
+using JijaShop.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JijaShop.Areas.UserArea.Controllers
@@ -28,26 +28,23 @@ namespace JijaShop.Areas.UserArea.Controllers
 			return View();
 		}
 
-		public IActionResult Products(int value = 1)
+		public async Task<IActionResult> Products()
 		{
-			var products = _productService.GetProducts(value).Result;
-
+			var products = await _productService.GetProducts();
 			var model = new UserProductsViewModel
 			{
-				products = products,
-				CurrentPage = value,
-				Pages = 1
+				products = products
 			};
 
-			return View();
+			return View(model);
 		}
 
 		[HttpGet]
-		public IActionResult ProductsPartial(int value = 1)
+		public async Task<IActionResult> GetProductsPartial(int value = 1)
 		{
-			var model = _productService.GetProducts(value).Result;
+			var model = await _productService.GetProducts(value);
 
-			return PartialView("ProductsPartial", model);
+			return PartialView("GetProductsPartial", model);
 		}
     }
 }

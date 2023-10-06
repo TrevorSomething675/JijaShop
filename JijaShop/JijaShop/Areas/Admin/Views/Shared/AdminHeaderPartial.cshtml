@@ -5,7 +5,7 @@
             <div class="col-6 col-md">
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container-fluid">
-                        <a asp-area="" asp-controller="" asp-action="" class="header-logo h1">JijaShop</a>
+                        <a asp-area="Admin" asp-controller="" asp-action="Index" class="header-logo h1">JijaShop - Admin</a>
                     </div>
                 </nav>
             </div>
@@ -23,20 +23,20 @@
                 </form>
             </div>
 
-
             <div class="col d-none d-md-block">
-
                 <ul class="list-inline d-flex justify-content-end my-1">
+
                     <li class="list-inline-item mx-3">
-                        <a asp-area="" asp-controller="Auth" asp-action="Login">Войти</a>
+                        <a asp-area="Admin" asp-controller="Auth" asp-action="Login">Войти</a>
                     </li>
 
                     <li class="list-inline-item mx-3">
-                        <a asp-area="" asp-controller="Auth" asp-action="Register">Регистрация</a>
+                        <a asp-area="Admin" asp-controller="Auth" asp-action="Register">Регистрация</a>
                     </li>
+                     
                 </ul>
-
             </div>
+
         </div>
     </div>
 </div>
@@ -63,15 +63,20 @@
                         <div class="offcanvas-body">
                             <div class="col">
                                 <ul class="navbar-nav header-botton-items px-1">
+
                                     <li class="nav-item">
-                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Home" asp-action="Index">Главная</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Products">Продукты</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Products" asp-action="Index">Продукты</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Info">О нас</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Users" asp-action="Index">Пользователи</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Moderators" asp-action="Index">Модераторы</a>
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -83,8 +88,9 @@
                 <div class="container-fluid d-flex justify-content-end">
 
                     <ul class="list-inline header-botton-items d-flex my-0">
+
                         <li class="list-inline-item px-2">
-                            <a class="position-relative d-flex justify-content-around" asp-area="" asp-controller="Home" asp-action="Favorites">
+                            <a class="position-relative d-flex justify-content-around" asp-area="Admin" asp-controller="Home" asp-action="Favorites">
                                 <i class="bi bi-heart-fill px-1"></i>
                                 <span class="d-none d-lg-block">Избраное</span>
                                 <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">2</span>
@@ -92,7 +98,7 @@
                         </li>
 
                         <li class="list-inline-item px-2">
-                            <a class="position-relative d-flex justify-content-around" asp-area="" asp-controller="Home" asp-action="Jija">
+                            <a class="position-relative d-flex justify-content-around" asp-area="Admin" asp-controller="Home" asp-action="Jija">
                                 <i class="bi bi-bag-check-fill px-1"></i>
                                 <span class="d-none d-lg-block">Корзина</span>
                                 <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">3</span>

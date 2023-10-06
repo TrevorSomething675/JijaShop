@@ -9,17 +9,43 @@ namespace JijaShop.Services
 	public class UserService : IUserService
 	{
 		private readonly IUserRepository _userRepository;
+		private readonly ILogger<UserService> _logger;
 		private readonly IMapper _mapper;
-		public UserService(IUserRepository userRepository, IMapper mapper) 
+		public UserService(IUserRepository userRepository, IMapper mapper, ILogger<UserService> logger) 
 		{
 			_userRepository = userRepository;
 			_mapper = mapper;
+			_logger = logger;
 		}
 
-		public async Task CreateNewUser(UserDto userDto)
+		public async Task<bool> CreateNewUser(UserDto userDto)
 		{
-			var user = _mapper.Map<User>(userDto);
-			await _userRepository.CreateUser(user);
+			try
+			{
+				var user = _mapper.Map<User>(userDto);
+				await _userRepository.CreateUser(user);
+				return true;
+			}
+			catch(Exception ex)
+			{
+				_logger.LogError($"{ex}");
+				return false;
+			}
+		}
+
+		public async Task<bool> UpdateUser(UserDto userDto)
+		{
+			try
+			{
+				var user = _mapper.Map<User>(userDto);
+				await _userRepository.UpdateUser(user);
+				return true;
+			}
+			catch(Exception ex)
+			{
+				_logger.LogError($"{ex}");
+				return false;
+			}
 		}
 
 		public async Task<List<UserDto>> GetUsers()

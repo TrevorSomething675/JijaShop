@@ -1,4 +1,6 @@
 ﻿:root {
+    /*Global Colors*/
+
     --header-top-color1: #52998A;
     --header-top-color2: #A5C9E5;
     --header-botton-color: #3d3d3d;
@@ -11,6 +13,9 @@
     --orange-color: #f07d11;
     --red-offer: #ee6e73;
     --yellow-offer: #ffd333;
+    /*Admin Colors*/
+
+    --admin-header-update-text-color: #f07d11;
 }
 
 /*=========================== Global ===========================*/
@@ -113,9 +118,7 @@
     text-decoration: none;
     font-size: 22px;
 }
-
 /*=========================== Body ===========================*/
-
 .text-carousel-item {
     color: var(--orange-color);
     text-shadow: 0 0 5px var(--dark-text-color);

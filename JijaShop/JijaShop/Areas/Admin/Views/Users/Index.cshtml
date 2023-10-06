@@ -1,0 +1,28 @@
+﻿@using JijaShop.Areas.Admin.ViewModels;
+
+@model UsersViewModel
+@{
+    ViewData["title"] = "Пользователи";
+}
+
+<section>
+    <div class="container-fluid" style="background-color:#e8e8e8;">
+        <div class="row">
+            <div class="col-8">
+                <h2 class="text-center">Пользователи</h2>
+
+                <div id="UsersContainer" class="row mx-2">
+                    @await Html.PartialAsync("GetUsersPartial", Model?.Users)
+                </div>
+
+                <div class="d-flex justify-content-center pb-3">
+                    <button id="CreateNewUser" class="text-body-download p-2">Добавить пользователя</button>
+                </div>
+
+            </div>
+
+            <div class="col-4">
+            </div>
+        </div>
+    </div>
+</section>

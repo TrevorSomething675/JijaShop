@@ -3,8 +3,8 @@
 namespace JijaShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-	public class HomeController : Controller
-    { 
+    public class ModeratorsController : Controller
+    {
         public IActionResult Index()
         {
             return View();
