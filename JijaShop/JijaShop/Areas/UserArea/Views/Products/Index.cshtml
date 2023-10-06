@@ -32,7 +32,7 @@
         $(function () {
             $('#GetMoreUsers').click(function () {
                 $.ajax({
-                    url: '@Url.Action("GetProductsPartial", "Home")',
+                    url: '@Url.Action("GetProductsPartial", "Products")',
                     type: 'GET',
                     success: function (result) {
                         $('#ProductsContainer').html(result);

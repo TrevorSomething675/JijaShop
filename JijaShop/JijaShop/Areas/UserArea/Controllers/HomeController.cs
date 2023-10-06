@@ -7,12 +7,6 @@ namespace JijaShop.Areas.UserArea.Controllers
 	[Area("UserArea")]
 	public class HomeController : Controller
 	{
-		private readonly IProductService _productService;
-		public HomeController(IProductService productService)
-		{
-			_productService = productService;
-		}
-
 		public IActionResult Index()
 		{
 			return View();
@@ -26,25 +20,6 @@ namespace JijaShop.Areas.UserArea.Controllers
 		public IActionResult Favorites()
 		{
 			return View();
-		}
-
-		public async Task<IActionResult> Products()
-		{
-			var products = await _productService.GetProducts();
-			var model = new UserProductsViewModel
-			{
-				products = products
-			};
-
-			return View(model);
-		}
-
-		[HttpGet]
-		public async Task<IActionResult> GetProductsPartial(int value = 1)
-		{
-			var model = await _productService.GetProducts(value);
-
-			return PartialView("GetProductsPartial", model);
 		}
     }
 }
