@@ -21,9 +21,9 @@ namespace JijaShop.Repositories
             return users;
         }
 
-        public User GetUser(Expression<Func<User, bool>> filter)
+        public async Task<User> GetUser(Expression<Func<User, bool>> filter = null)
         {
-            var user = _context.Users.FirstOrDefault(filter);
+            var user = await _context.Users.FirstOrDefaultAsync(filter);
             return user;
         }
 

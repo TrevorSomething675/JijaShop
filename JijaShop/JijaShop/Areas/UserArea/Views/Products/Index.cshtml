@@ -1,6 +1,6 @@
-﻿@using JijaShop.Services.Abstractions;
+﻿@using JijaShop.Areas.UserArea.ViewModels;
+@using JijaShop.Services.Abstractions;
 @using JijaShop.Models.DTOModels;
-@using JijaShop.Areas.UserArea.ViewModels;
 
 @model UserProductsViewModel
 @{
@@ -14,7 +14,7 @@
                 <h2 class="text-center">Список товаров</h2>
 
                 <div id="ProductsContainer" class="row mx-2">
-                    @await Html.PartialAsync("GetProductsPartial", Model?.products)
+                    @await Html.PartialAsync("IndexProductsPartial", Model?.products)
                 </div>
                 
                 <div class="d-flex justify-content-center pb-3">
@@ -32,7 +32,7 @@
         $(function () {
             $('#GetMoreUsers').click(function () {
                 $.ajax({
-                    url: '@Url.Action("GetProductsPartial", "Products")',
+                    url: '@Url.Action("IndexProductsPartial", "Products")',
                     type: 'GET',
                     success: function (result) {
                         $('#ProductsContainer').html(result);

@@ -26,11 +26,11 @@ namespace JijaShop.Areas.UserArea.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProductsPartial(int value = 1)
+        public async Task<IActionResult> IndexProductsPartial(int value = 1)
         {
             var model = await _productService.GetProducts(value);
 
-            return PartialView("GetProductsPartial", model);
+            return PartialView("IndexProductsPartial", model);
         }
     }
 }

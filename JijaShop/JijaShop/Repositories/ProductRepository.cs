@@ -1,6 +1,7 @@
 ﻿using JijaShop.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using JijaShop.Models.Entities;
+using System.Linq.Expressions;
 
 namespace JijaShop.Repositories
 {
@@ -14,13 +15,27 @@ namespace JijaShop.Repositories
             _logger = logger;
         }
 
-        public async Task<List<Product>> GetProducts()
+        public async Task<List<Product>> GetProducts(Expression<Func<Product, bool>> filter = null)
         {
-            var resultProducts = await _context.Products
-                .Include(prod=>prod.ProductDetails)
-                .Include(prod=>prod.ProductOffers).ToListAsync();
+            if (filter != null)
+            {
+                var resultProducts = await _context.Products
+                    .Include(prod=>prod.ProductDetails)
+                    .Include(prod=>prod.ProductOffers)
+                    .ToListAsync();
 
-            return resultProducts;
+                return resultProducts;
+            }
+            else
+            {
+                var resultProducts = await _context.Products
+                    .Include(prod => prod.ProductDetails)
+                    .Include(prod => prod.ProductOffers)
+                    .Where(filter).ToListAsync();
+
+                return resultProducts;
+            }
+
         }
 
         public async Task<Product> GetProduct(int id)

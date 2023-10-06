@@ -41,7 +41,7 @@ namespace JijaShop.Areas.Admin.Controllers
 		[NonAction]
 		private bool IsValidPasswordHash(UserDto userDto)
 		{
-			var user = _userRepository.GetUser(userFilter => userFilter.UserName == userDto.UserName);
+			var user = _userRepository.GetUser(userFilter => userFilter.UserName == userDto.UserName).Result;
 
 			using (var hmac = new HMACSHA256(user.UserPasswordSalt))
 			{
@@ -55,7 +55,7 @@ namespace JijaShop.Areas.Admin.Controllers
 		{
 			try
 			{
-				var user = _userRepository.GetUser(userFilter => userFilter.UserName == userDto.UserName);
+				var user = _userRepository.GetUser(userFilter => userFilter.UserName == userDto.UserName).Result;
 
 				List<Claim> claims = new List<Claim>
 				{

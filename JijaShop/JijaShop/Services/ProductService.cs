@@ -15,13 +15,11 @@ namespace JijaShop.Services
             _productRepository = productRepository;
             _mapper = mapper;
         }
-
-        public async Task CreateNewProduct(ProductDto productDto)
+        public Task<Product> GetProduct(int id)
         {
-            var product = _mapper.Map<Product>(productDto);
-            await _productRepository.CreateNewProduct(product);
+            var product = _productRepository.GetProduct(id);
+            return product;
         }
-
         public async Task<List<ProductDto>?> GetProducts(int pageNumber = 1)
         {
             var pageResult = 6f;
@@ -35,5 +33,24 @@ namespace JijaShop.Services
 
             return productsDto;
         } 
+
+        public async Task UpdateProduct(ProductDto productDto)
+        {
+            var product = _mapper.Map<Product>(productDto);
+            await _productRepository.UpdateProduct(product);
+        }
+
+        public async Task DeleteProduct(ProductDto productDto)
+        {
+            var product = _mapper.Map<Product>(productDto);
+            await _productRepository.DeleteProduct(product);
+        }
+
+        public async Task CreateNewProduct(ProductDto productDto)
+        {
+            var product = _mapper.Map<Product>(productDto);
+            await _productRepository.CreateNewProduct(product);
+        }
+
     }
 }

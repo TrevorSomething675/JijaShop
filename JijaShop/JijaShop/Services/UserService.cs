@@ -18,7 +18,30 @@ namespace JijaShop.Services
 			_logger = logger;
 		}
 
-		public async Task<bool> CreateNewUser(UserDto userDto)
+        public async Task<List<UserDto>> GetUsers()
+        {
+            var users = await _userRepository.GetUsers();
+            var usersDto = _mapper.Map<List<UserDto>>(users);
+
+            return usersDto;
+        }
+
+		public async Task<bool> DeleteUser(UserDto userDto)
+		{
+			try
+			{
+				var user = _mapper.Map<User>(userDto);
+				await _userRepository.DeleteUser(user);
+				return true;
+			}
+			catch(Exception ex)
+			{
+				_logger.LogError($"{ex}");
+				return false;
+			}
+		}
+
+        public async Task<bool> CreateNewUser(UserDto userDto)
 		{
 			try
 			{
@@ -46,14 +69,6 @@ namespace JijaShop.Services
 				_logger.LogError($"{ex}");
 				return false;
 			}
-		}
-
-		public async Task<List<UserDto>> GetUsers()
-		{
-			var users = await _userRepository.GetUsers();
-			var usersDto = _mapper.Map<List<UserDto>>(users);
-
-			return usersDto;
 		}
 	}
 }
