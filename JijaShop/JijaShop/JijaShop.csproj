@@ -8,13 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Areas\UserArea\Views\Новая папка\**" />
-    <Content Remove="Areas\UserArea\Views\Новая папка\**" />
-    <EmbeddedResource Remove="Areas\UserArea\Views\Новая папка\**" />
-    <None Remove="Areas\UserArea\Views\Новая папка\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\css\MediaSheet.css" />
   </ItemGroup>
 

@@ -1,7 +1,6 @@
 ﻿@using JijaShop.Services.Abstractions;
 @using JijaShop.Models.ViewModels;
 @using JijaShop.Models.DTOModels;
-@model UserProductsViewModel
 @{
     ViewData["title"] = "Список товаров";
 }
@@ -12,53 +11,24 @@
             <div class="col-8">
                 <div class="row mx-2">
                     <h2>Список товаров</h2>
-                    @foreach (var product in Model.products)
-                    {
-                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
-                            <div class="product-card p-1">
-                                <div class="product-card-offer">
-                                    @if (product.ProductOffersDto.IsHitOffer)
-                                    {
-                                    <div class="offer-hit">Хит</div>
-                                    }
-                                    @if (product.ProductOffersDto.IsNewOffer)
-                                    {
-                                    <div class="offer-new">New</div>
-                                    }
-                                </div>
-                            <div class="product-img">
-                                <a href="product.html"><img src="~/Images/1.jpg" /></a>
-                            </div>
-                            <div class="product-name">
-                                <h4>
-                                    <a href="products.html">@product.Name</a>
-                                </h4>
-        
-                                <p class="product-details-description">@product.ProductDetailsDto.Description</p>
-        
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-details-price d-flex justify-content-center py-1">
-                                        @if (product.ProductDetailsDto.OldPrice != null && product.ProductDetailsDto.OldPrice!= 0)
-                                        {
-                                            <small>@product.ProductDetailsDto.OldPrice</small>
-                                        }
-                                        @product.ProductDetailsDto.Price$
-                                    </div>
-        
-                                    <div class="product-links">
-                                        <a href="#" class="btn btn-outline-secondary add-to-cart"><i class="bi bi-bag-check-fill"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    }
-                </div>
-                <div class="d-flex justify-content-center pb-3">
-                    <button id="incrementButton" class="text-body-download p-2">Загрузить ещё</button>
+                    <div id="jija"></div>
+                    @*@await Html.PartialAsync("ProductsPartial")*@
                 </div>
             </div>
         </div>
     </div>
-</section>
 
+    <div class="d-flex justify-content-center pb-3">
+        <button id="incrementButton" class="text-body-download p-2">Загрузить ещё</button>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#incrementButton").click(function () {
+                $.get("ProductsPartial", function (data) {
+                    var target = $('#jija');//Укажите здесь идентификатор элемента, внутри которого должен находиться ваш частичный вид
+                    target.empty().html(data);
+                });
+            });
+        });
+    </script>
+</section>

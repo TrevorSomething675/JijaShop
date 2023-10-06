@@ -28,7 +28,6 @@ namespace JijaShop.Areas.UserArea.Controllers
 			return View();
 		}
 
-		[HttpGet]
 		public IActionResult Products(int value = 1)
 		{
 			var products = _productService.GetProducts(value).Result;
@@ -40,7 +39,15 @@ namespace JijaShop.Areas.UserArea.Controllers
 				Pages = 1
 			};
 
-			return View(model);
+			return View();
+		}
+
+		[HttpGet]
+		public IActionResult ProductsPartial(int value = 1)
+		{
+			var model = _productService.GetProducts(value).Result;
+
+			return PartialView("ProductsPartial", model);
 		}
     }
 }
