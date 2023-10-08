@@ -27,7 +27,6 @@ namespace JijaShop.Areas.Admin.Controllers
 			return View();
 		}
 
-		[NonAction]
 		private bool IsRegistered(UserDto userDto)
 		{
 			var user = _userRepository.GetUser(filterUser => filterUser.UserName == userDto.UserName);
@@ -38,7 +37,6 @@ namespace JijaShop.Areas.Admin.Controllers
 				return false;
 		}
 
-		[NonAction]
 		private bool IsValidPasswordHash(UserDto userDto)
 		{
 			var user = _userRepository.GetUser(userFilter => userFilter.UserName == userDto.UserName).Result;
@@ -50,7 +48,6 @@ namespace JijaShop.Areas.Admin.Controllers
 			}
 		}
 
-		[NonAction]
 		private string CreateToken(UserDto userDto)
 		{
 			try

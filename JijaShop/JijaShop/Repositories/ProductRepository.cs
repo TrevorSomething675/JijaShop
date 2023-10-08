@@ -22,7 +22,7 @@ namespace JijaShop.Repositories
                 var resultProducts = await _context.Products
                     .Include(prod=>prod.ProductDetails)
                     .Include(prod=>prod.ProductOffers)
-                    .ToListAsync();
+                    .Where(filter).ToListAsync();
 
                 return resultProducts;
             }
@@ -31,7 +31,7 @@ namespace JijaShop.Repositories
                 var resultProducts = await _context.Products
                     .Include(prod => prod.ProductDetails)
                     .Include(prod => prod.ProductOffers)
-                    .Where(filter).ToListAsync();
+                    .ToListAsync();
 
                 return resultProducts;
             }

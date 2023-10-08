@@ -26,7 +26,7 @@ namespace JijaShop.Services
             var pageCount = Math.Ceiling(_productRepository.GetProducts().Result.Count() / pageResult);
 
             var products = _productRepository.GetProducts().Result
-                .Skip((int)pageCount).ToList()
+                .Skip((int)pageCount)
                 .Take((int)pageResult * pageNumber).ToList();
 
             var productsDto = _mapper.Map<List<ProductDto>>(products);

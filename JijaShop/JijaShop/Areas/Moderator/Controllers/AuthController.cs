@@ -5,12 +5,12 @@ namespace JijaShop.Areas.Moderator.Controllers
     [Area("Moderator")]
 	public class AuthController : Controller
     {
-        public IActionResult Register()
+        public async Task<IActionResult> Register()
         {
             return View();
         }
 
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
             return View();
         }

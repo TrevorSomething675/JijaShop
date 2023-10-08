@@ -17,7 +17,7 @@ namespace JijaShop.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var users = await _userService.GetUsers();
-            var model = new UsersViewModel
+            var model = new AdminUsersViewModel
             {
                 Users = users
             };

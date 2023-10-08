@@ -19,16 +19,16 @@ namespace JijaShop.Areas.UserArea.Controllers
             var products = await _productService.GetProducts();
             var model = new UserProductsViewModel
             {
-                products = products
+                Products = products
             };
 
             return View(model);
         }
 
         [HttpGet]
-        public async Task<IActionResult> IndexProductsPartial(int value = 1)
+        public async Task<IActionResult> IndexProductsPartial(int pageCount = 1)
         {
-            var model = await _productService.GetProducts(value);
+            var model = await _productService.GetProducts(pageCount);
 
             return PartialView("IndexProductsPartial", model);
         }

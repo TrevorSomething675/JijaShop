@@ -16,7 +16,7 @@ namespace JijaShop.Areas.UserArea.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Register(UserDto userDto)
+		public async Task<IActionResult> Register(UserDto userDto)
 		{
 			var result = _identityService.RegisterUser(userDto, out string response);
 

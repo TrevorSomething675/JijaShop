@@ -5,17 +5,17 @@ namespace JijaShop.Areas.UserArea.Controllers
 	[Area("UserArea")]
 	public class HomeController : Controller
 	{
-		public IActionResult Index()
+		public async Task<IActionResult> Index()
 		{
 			return View();
 		}
 
-		public IActionResult Info()
+		public async Task<IActionResult> Info()
 		{
 			return View();
 		}
 
-		public IActionResult Favorites()
+		public async Task<IActionResult> Favorites()
 		{
 			return View();
 		}

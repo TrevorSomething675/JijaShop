@@ -4,6 +4,6 @@ namespace JijaShop.Areas.UserArea.ViewModels
 {
     public class UserProductsViewModel
     {
-        public List<ProductDto> products { get; set; } = new List<ProductDto>();
+        public List<ProductDto> Products { get; set; } = new List<ProductDto>();
     }
 }
