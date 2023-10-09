@@ -22,7 +22,7 @@ namespace JijaShop.Services
         }
         public async Task<List<ProductDto>?> GetProducts(int pageNumber = 1)
         {
-            var pageResult = 6f;
+            var pageResult = 12f;
             var pageCount = Math.Ceiling(_productRepository.GetProducts().Result.Count() / pageResult);
 
             var products = _productRepository.GetProducts().Result
