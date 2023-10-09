@@ -8,11 +8,9 @@
 }
 
 <section>
-    <div class="container-fluid" style="background-color:#e8e8e8;">
+    <div class="container-fluid pt-4">
         <div class="row">
-            <div class="col-8">
-                <h2 class="text-center">Список товаров</h2>
-
+            <div class="col col-md-9">
                 <div id="ProductsContainer" class="row mx-2">
                     @await Html.PartialAsync("IndexProductsPartial", Model?.Products)
                 </div>
@@ -22,8 +20,10 @@
                 </div>
             </div>
 
-            <div class="col-4">
-
+            <div class="col-3 d-md-block d-none">
+                <div class="row mx-3">
+                    @await Html.PartialAsync("IndexCategoryFilterPartial")
+                </div>
             </div>
         </div>
     </div>
