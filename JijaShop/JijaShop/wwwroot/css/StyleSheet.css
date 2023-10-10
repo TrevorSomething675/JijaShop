@@ -145,25 +145,12 @@
 
 /*=========================== Category-Sort ===========================*/
 
-.price-items {
-    margin: 2px 0px 2px 0px;
-}
-
-.categories-items {
-    margin: 2px 0px 2px 0px;
-}
-
-.offer-items {
-    margin: 2px 0px 2px 0px;
-}
-
 .price-item input {
     height:28px;
 }
 
-.offer-item {
-    display: flex;
-    align-content: center;
+.categories-items {
+    margin: 2px 0px 2px 0px;
 }
 
 .categories-item {

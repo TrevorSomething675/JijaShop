@@ -1,0 +1,41 @@
+﻿@using JijaShop.Areas.UserArea.ViewModels;
+@using JijaShop.Services.Abstractions;
+@using JijaShop.Models.DTOModels;
+
+@model UserProductsViewModel
+@{
+    ViewData["title"] = "Список товаров";
+}
+
+<section>
+    <div class="container-fluid pt-4">
+        <div class="row">
+            <div class="col col-md-12">
+                <div id="SalesProductsContainer" class="row mx-2">
+                    @await Html.PartialAsync("IndexSalesProductsPartial", Model?.Products)
+                </div>
+                
+                <div class="d-flex justify-content-center pb-3">
+                    <button id="GetMoreUsers" class="text-body-download p-2">Загрузить ещё</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('#GetMoreUsers').click(function () {
+                $.ajax({
+                    url: '@Url.Action("IndexSalesProductsPartial", "Sales")',
+                    type: 'GET',
+                    success: function (result) {
+                        $('#SalesProductsContainer').html(result);
+                    },
+                    error: function () {
+                        alert('Error occurred while refreshing products.');
+                    }
+                });
+            });
+        });
+    </script>
+</section>

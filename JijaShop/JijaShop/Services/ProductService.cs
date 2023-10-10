@@ -2,6 +2,7 @@
 using JijaShop.Services.Abstractions;
 using JijaShop.Models.DTOModels;
 using JijaShop.Models.Entities;
+using System.Linq.Expressions;
 using AutoMapper;
 
 namespace JijaShop.Services
@@ -20,12 +21,12 @@ namespace JijaShop.Services
             var product = _productRepository.GetProduct(id);
             return product;
         }
-        public async Task<List<ProductDto>?> GetProducts(int pageNumber = 1)
+        public async Task<List<ProductDto>?> GetProducts(int pageNumber = 1, Expression<Func<Product, bool>> filter = null)
         {
             var pageResult = 12f;
             var pageCount = Math.Ceiling(_productRepository.GetProducts().Result.Count() / pageResult);
 
-            var products = _productRepository.GetProducts().Result
+            var products = _productRepository.GetProducts(filter).Result
                 .Skip((int)pageCount)
                 .Take((int)pageResult * pageNumber).ToList();
 

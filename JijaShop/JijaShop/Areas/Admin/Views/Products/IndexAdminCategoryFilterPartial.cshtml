@@ -1,10 +1,145 @@
 ﻿@using JijaShop.Models.DTOModels;
 
-@if(Model != null)
+@if (Model != null)
 {
-    <div class="col category-sorter">
-        <div class="p-1">
-            <h5 class="text-center">Сортировка по категориям</h5>
+    <div class="row category-sorter py-2">
+        <div class="offers">
+            <div class="text-center category-title">
+                <span class="category-title-text px-2">Офферы</span>
+            </div>
+
+            <div class="offer-items">
+                <div class="offer-item">
+                    <div class="mx-1">
+                        <input type="checkbox" />
+                        Новинки
+                    </div>
+                </div>
+
+                <div class="offer-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Хит продаж
+                    </span>
+                </div>
+
+                <div class="offer-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Скидки
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="categories">
+            <div class="text-center category-title">
+                <span class="category-title-text px-2">Категории</span>
+            </div>
+
+            <div class="categories-items">
+                <div class="categories-item">
+                    <span class="mx-1">
+                        <input type="checkbox" class="chekBox" />
+                        Бытовая техника
+                    </span>
+                </div>
+
+                <div class="categories-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Красота и здоровье
+                    </span>
+                </div>
+
+                <div class="categories-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Смартфоны и фототехника
+                    </span>
+                </div>
+
+                <div class="categories-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        ТВ
+                    </span>
+                </div>
+
+                <div class="categories-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Офис и мебель
+                    </span>
+                </div>
+
+                <div class="categories-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Автотовары
+                    </span>
+                </div>
+
+                <div class="categories-item">
+                    <span class="mx-1">
+                        <input type="checkbox">
+                        Одежда
+                    </span>
+                </div>
+
+                <div class="categories-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Компьютеры
+                    </span>
+                </div>
+
+                <div class="categories-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Игры и консоли
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="price">
+            <div class="text-center category-title">
+                <span class="category-title-text px-2">Цена</span>
+            </div>
+
+            <div class="price-items">
+                <div class="price-item d-flex align-items-center">
+                    <label class="mx-1">От</label><input placeholder="0" class="w-100" />
+                </div>
+
+                <div class="price-item d-flex align-items-center">
+                    <label class="mx-1">До</label><input placeholder="50000" class="w-100" />
+                </div>
+            </div>
+        </div>
+
+        <div class="services">
+            <div class="text-center category-title">
+                <span class="category-title-text px-2">Услуги</span>
+            </div>
+
+            <div class="services-items">
+
+                <div class="services-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Доставка
+                    </span>
+                </div>
+
+                <div>
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Гарантия
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 }
