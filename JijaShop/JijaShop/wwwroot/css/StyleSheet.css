@@ -20,6 +20,10 @@
 
 /*=========================== Global ===========================*/
 
+.sidebar-search form{
+    border: 1px solid var(--gray-color);
+}
+
 .body-main-container {
     background-color: #e8e8e8;
 }
