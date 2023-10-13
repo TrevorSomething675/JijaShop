@@ -10,11 +10,6 @@ namespace JijaShop.Areas.UserArea.Controllers
 			return View();
 		}
 
-		public async Task<IActionResult> Info()
-		{
-			return View();
-		}
-
 		public async Task<IActionResult> Favorites()
 		{
 			return View();
