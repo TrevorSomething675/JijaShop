@@ -115,10 +115,12 @@
 .header-botton-items li a {
     color: var(--gray-color);
     transition: .2s;
+    font-size:26px;
 }
 
 .header-botton-items li a:hover {
     color: var(--accent-color-header-botton);
+    font-size: 26px;
 }
 
 .nav-item a {

@@ -4522,19 +4522,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ivan\\.nuget\\packages\\": {}
+    "C:\\Users\\Win10Pro\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
+      "projectUniqueName": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
       "projectName": "JijaShop",
-      "projectPath": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
-      "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ivan\\Desktop\\JijaShop\\JijaShop\\JijaShop\\obj\\",
+      "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\JijaShop.csproj",
+      "packagesPath": "C:\\Users\\Win10Pro\\.nuget\\packages\\",
+      "outputPath": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Win10Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
