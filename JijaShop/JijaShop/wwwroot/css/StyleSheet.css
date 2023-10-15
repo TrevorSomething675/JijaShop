@@ -151,37 +151,54 @@
 
 /*=========================== Category-Sort ===========================*/
 
-.price-item input {
-    height:28px;
-}
-
-.categories-items {
-    margin: 2px 0px 2px 0px;
-}
-
-.categories-item {
-    display: flex;
-    align-content: center;
-}
-
-.category-sorter {
-    font-size:22px;
+.search-products {
+    font-size: 22px;
     background-color: white;
     border: 1px solid var(--gray-color);
 }
 
-.category-title-text {
+.sidebar-title-text {
     background-color: white;
 }
 
-.category-title {
+.sidebar-items input {
+    border: 1px solid var(--gray-color);
+}
+
+.sidebar-items input:active {
+    border: 1px solid var(--gray-color);
+    outline: none;
+    box-shadow: 0 0 10px none;
+}
+
+.sidebar-items input:focus {
+    border: 1px solid var(--gray-color);
+    outline: none;
+    box-shadow: 0 0 10px none;
+}
+
+.sidebar-items span input {
+    height: 20px;
+    width: 20px;
+}
+
+.sidebar-item {
+    display: flex;
+    align-content: center;
+}
+
+.sidebar-items {
+    margin: 2px 0px 2px 0px;
+}
+
+.sidebar-title {
     position: relative;
     z-index: 0;
     font-size:28px;
 }
 
-.category-title::after {
-    color:var(--gray-color);
+.sidebar-title::after {
+    color: var(--gray-color);
     position: absolute;
     content: "";
     height: 0;
