@@ -2,6 +2,7 @@
 using JijaShop.Services.Abstractions;
 using JijaShop.Models.DTOModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 
 namespace JijaShop.Areas.UserArea.Controllers
 {
@@ -9,10 +10,13 @@ namespace JijaShop.Areas.UserArea.Controllers
 	public class AuthController : Controller
 	{
 		private readonly IIdentityService _identityService;
-
-		public AuthController(IIdentityService identityService)
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
+        public AuthController(IIdentityService identityService, SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
 		{
 			_identityService = identityService;
+			_signInManager = signInManager;
+			_userManager = userManager;
 		}
 
 		[HttpPost]
@@ -39,10 +43,12 @@ namespace JijaShop.Areas.UserArea.Controllers
 
 			if (result)
 			{
-				return Ok(new { token = response });
+                return Ok(new { token = response });
 			}
 			else
+			{
 				return BadRequest(response);
+			}
 		}
 
 		[HttpGet]

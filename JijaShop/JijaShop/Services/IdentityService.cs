@@ -80,7 +80,7 @@ namespace JijaShop.Services
 
 		private bool IsRegistered(UserDto userDto)
 		{
-			var user = _userRepository.GetUser(filterUser => filterUser.UserName == userDto.UserName);
+			var user = _userRepository.GetUser(filterUser => filterUser.UserName == userDto.UserName).Result;
 
 			if (user != null)
 				return true;
