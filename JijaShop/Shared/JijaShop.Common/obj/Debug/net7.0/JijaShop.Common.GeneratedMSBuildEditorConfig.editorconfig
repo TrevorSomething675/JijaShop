@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = JijaShop.Common
-build_property.ProjectDir = C:\JijaShop\JijaShop\JijaShop\JijaShop.Common\
+build_property.ProjectDir = C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop.Common\\JijaShop.Common.csproj",
+      "projectUniqueName": "C:\\JijaShop\\JijaShop\\JijaShop\\Shared\\JijaShop.Common\\JijaShop.Common.csproj",
       "projectName": "JijaShop.Common",
-      "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop.Common\\JijaShop.Common.csproj",
+      "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Shared\\JijaShop.Common\\JijaShop.Common.csproj",
       "packagesPath": "C:\\Users\\Win10Pro\\.nuget\\packages\\",
-      "outputPath": "C:\\JijaShop\\JijaShop\\JijaShop\\JijaShop.Common\\obj\\",
+      "outputPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Shared\\JijaShop.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Win10Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -36,4 +36,11 @@
     <PackageReference Include="System.Text.Encoding.Extensions" Version="4.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\JijaShop.Context\JijaShop.Context.csproj" />
+    <ProjectReference Include="..\..\..\JijaShop.Services.Settings\JijaShop.Services.Settings.csproj" />
+    <ProjectReference Include="..\..\..\JijaShop.Settings\JijaShop.Settings.csproj" />
+    <ProjectReference Include="..\..\..\Shared\JijaShop.Common\JijaShop.Common.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,11 @@
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\bin\Debug\net7.0\JijaShop.Common.deps.json
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\bin\Debug\net7.0\JijaShop.Common.dll
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\bin\Debug\net7.0\JijaShop.Common.pdb
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\obj\Debug\net7.0\JijaShop.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\obj\Debug\net7.0\JijaShop.Common.AssemblyInfoInputs.cache
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\obj\Debug\net7.0\JijaShop.Common.AssemblyInfo.cs
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\obj\Debug\net7.0\JijaShop.Common.csproj.CoreCompileInputs.cache
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\obj\Debug\net7.0\JijaShop.Common.dll
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\obj\Debug\net7.0\refint\JijaShop.Common.dll
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\obj\Debug\net7.0\JijaShop.Common.pdb
+C:\JijaShop\JijaShop\JijaShop\Shared\JijaShop.Common\obj\Debug\net7.0\ref\JijaShop.Common.dll

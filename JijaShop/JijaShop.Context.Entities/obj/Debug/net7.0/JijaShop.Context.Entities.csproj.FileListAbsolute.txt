@@ -1,0 +1,11 @@
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\bin\Debug\net7.0\JijaShop.Context.Entities.deps.json
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\bin\Debug\net7.0\JijaShop.Context.Entities.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\bin\Debug\net7.0\JijaShop.Context.Entities.pdb
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\obj\Debug\net7.0\JijaShop.Context.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\obj\Debug\net7.0\JijaShop.Context.Entities.AssemblyInfoInputs.cache
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\obj\Debug\net7.0\JijaShop.Context.Entities.AssemblyInfo.cs
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\obj\Debug\net7.0\JijaShop.Context.Entities.csproj.CoreCompileInputs.cache
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\obj\Debug\net7.0\JijaShop.Context.Entities.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\obj\Debug\net7.0\refint\JijaShop.Context.Entities.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\obj\Debug\net7.0\JijaShop.Context.Entities.pdb
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context.Entities\obj\Debug\net7.0\ref\JijaShop.Context.Entities.dll

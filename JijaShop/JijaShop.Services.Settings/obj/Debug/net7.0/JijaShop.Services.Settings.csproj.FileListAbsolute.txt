@@ -1,0 +1,15 @@
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\bin\Debug\net7.0\JijaShop.Services.Settings.deps.json
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\bin\Debug\net7.0\JijaShop.Services.Settings.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\bin\Debug\net7.0\JijaShop.Services.Settings.pdb
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\bin\Debug\net7.0\JijaShop.Settings.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\bin\Debug\net7.0\JijaShop.Settings.pdb
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\JijaShop.Services.Settings.csproj.AssemblyReference.cache
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\JijaShop.Services.Settings.GeneratedMSBuildEditorConfig.editorconfig
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\JijaShop.Services.Settings.AssemblyInfoInputs.cache
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\JijaShop.Services.Settings.AssemblyInfo.cs
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\JijaShop.Services.Settings.csproj.CoreCompileInputs.cache
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\JijaShop.Services.Settings.csproj.CopyComplete
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\JijaShop.Services.Settings.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\refint\JijaShop.Services.Settings.dll
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\JijaShop.Services.Settings.pdb
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Services.Settings\obj\Debug\net7.0\ref\JijaShop.Services.Settings.dll

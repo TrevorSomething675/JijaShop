@@ -1,0 +1,5 @@
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context\obj\Debug\net7.0\JijaShop.Context.csproj.AssemblyReference.cache
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context\obj\Debug\net7.0\JijaShop.Context.GeneratedMSBuildEditorConfig.editorconfig
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context\obj\Debug\net7.0\JijaShop.Context.AssemblyInfoInputs.cache
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context\obj\Debug\net7.0\JijaShop.Context.AssemblyInfo.cs
+C:\JijaShop\JijaShop\JijaShop\JijaShop.Context\obj\Debug\net7.0\JijaShop.Context.csproj.CoreCompileInputs.cache
