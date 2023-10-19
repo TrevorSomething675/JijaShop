@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "mLrBV/KmJZy1YFG+4mxWilv5R7FrodN37hKRES/hp3RFa2hEhfTbMEpkhJbk4yRL8TdNqTkN2+RhR0VbxVP5RQ==",
-  "success": true,
+  "dgSpecHash": "kzscbECfP/aRjBnFhNGaaieaZgn2/MveKeoJbaObVrQqUajnta9b0FOdQLTB0v55B2Vv5+Fk87pAD/MoIgTafg==",
+  "success": false,
   "projectFilePath": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop\\JijaShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Win10Pro\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
@@ -97,5 +97,51 @@
     "C:\\Users\\Win10Pro\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\Win10Pro\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета Microsoft.EntityFrameworkCore.Abstractions с 7.0.12 на 7.0.10. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> Microsoft.EntityFrameworkCore.Abstractions (>= 7.0.12) \r\n JijaShop -> Microsoft.EntityFrameworkCore.Abstractions (>= 7.0.10)",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета System.IdentityModel.Tokens.Jwt с 7.0.3 на 7.0.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> System.IdentityModel.Tokens.Jwt (>= 7.0.3) \r\n JijaShop -> System.IdentityModel.Tokens.Jwt (>= 7.0.0)",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета Microsoft.IdentityModel.Tokens с 7.0.3 на 7.0.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> Microsoft.IdentityModel.Tokens (>= 7.0.3) \r\n JijaShop -> Microsoft.IdentityModel.Tokens (>= 7.0.0)",
+      "libraryId": "Microsoft.IdentityModel.Tokens",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета Microsoft.AspNetCore.Authentication.JwtBearer с 7.0.12 на 7.0.11. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> Microsoft.AspNetCore.Authentication.JwtBearer (>= 7.0.12) \r\n JijaShop -> Microsoft.AspNetCore.Authentication.JwtBearer (>= 7.0.11)",
+      "libraryId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета Npgsql.EntityFrameworkCore.PostgreSQL с 7.0.11 на 7.0.4. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> Npgsql.EntityFrameworkCore.PostgreSQL (>= 7.0.11) \r\n JijaShop -> Npgsql.EntityFrameworkCore.PostgreSQL (>= 7.0.4)",
+      "libraryId": "Npgsql.EntityFrameworkCore.PostgreSQL",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

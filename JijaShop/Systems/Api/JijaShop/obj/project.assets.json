@@ -1494,6 +1494,40 @@
             "related": ".xml"
           }
         }
+      },
+      "JijaShop.Api/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.12",
+          "Microsoft.EntityFrameworkCore.Abstractions": "7.0.12",
+          "Microsoft.Extensions.Configuration.Json": "7.0.0",
+          "Microsoft.IdentityModel.Tokens": "7.0.3",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11",
+          "Portable.BouncyCastle": "1.9.0",
+          "Serilog": "3.0.1",
+          "Serilog.AspNetCore": "7.0.0",
+          "Serilog.Enrichers.CorrelationId": "3.0.1",
+          "Serilog.Sinks.Console": "4.1.0",
+          "Serilog.Sinks.File": "5.0.0",
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "Swashbuckle.AspNetCore.Filters": "7.0.11",
+          "System.IdentityModel.Tokens.Jwt": "7.0.3",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/JijaShop.Api.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JijaShop.Api.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -4739,12 +4773,18 @@
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "JijaShop.Api/1.0.0": {
+      "type": "project",
+      "path": "../JijaShop.Api/JijaShop.Api.csproj",
+      "msbuildProject": "../JijaShop.Api/JijaShop.Api.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "JijaShop.Api >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.11",
       "Microsoft.EntityFrameworkCore.Abstractions >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.10",
@@ -4792,7 +4832,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\JijaShop.Api.csproj": {
+              "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\JijaShop.Api.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4916,5 +4960,52 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета Microsoft.EntityFrameworkCore.Abstractions с 7.0.12 на 7.0.10. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> Microsoft.EntityFrameworkCore.Abstractions (>= 7.0.12) \r\n JijaShop -> Microsoft.EntityFrameworkCore.Abstractions (>= 7.0.10)",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета System.IdentityModel.Tokens.Jwt с 7.0.3 на 7.0.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> System.IdentityModel.Tokens.Jwt (>= 7.0.3) \r\n JijaShop -> System.IdentityModel.Tokens.Jwt (>= 7.0.0)",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета Microsoft.IdentityModel.Tokens с 7.0.3 на 7.0.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> Microsoft.IdentityModel.Tokens (>= 7.0.3) \r\n JijaShop -> Microsoft.IdentityModel.Tokens (>= 7.0.0)",
+      "libraryId": "Microsoft.IdentityModel.Tokens",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета Microsoft.AspNetCore.Authentication.JwtBearer с 7.0.12 на 7.0.11. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> Microsoft.AspNetCore.Authentication.JwtBearer (>= 7.0.12) \r\n JijaShop -> Microsoft.AspNetCore.Authentication.JwtBearer (>= 7.0.11)",
+      "libraryId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета Npgsql.EntityFrameworkCore.PostgreSQL с 7.0.11 на 7.0.4. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n JijaShop -> JijaShop.Api -> Npgsql.EntityFrameworkCore.PostgreSQL (>= 7.0.11) \r\n JijaShop -> Npgsql.EntityFrameworkCore.PostgreSQL (>= 7.0.4)",
+      "libraryId": "Npgsql.EntityFrameworkCore.PostgreSQL",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
