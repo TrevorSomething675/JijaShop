@@ -1,0 +1,158 @@
+﻿@using JijaShop.Data.Models.DTOModels;
+
+@if(Model != null)
+{
+    <div class="row search-products py-2">
+        <div id="searchInSidebar" class="sidebar-search d-none">
+            <form>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="search" placeholder="Найти"
+                           aria-label="Searching" aria-describedby="search-button" />
+
+                    <button class="btn btn-light" type="submit" id="search-button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="offers">
+            <div class="text-center sidebar-title">
+                <span class="sidebar-title-text px-2">Офферы</span>
+             </div>
+
+            <div class="sidebar-items">
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         Новинки
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         Хит продаж
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         Скидки
+                     </span>
+                 </div>
+             </div>
+         </div>
+
+        <div class="categories">
+            <div class="text-center sidebar-title">
+                 <span class="sidebar-title-text px-2">Категории</span>
+             </div>
+
+            <div class="sidebar-items">
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         Бытовая техника
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         Красота и здоровье
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         Смартфоны и фототехника
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         ТВ
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                          Офис и мебель
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         Автотовары
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox">
+                         Одежда
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         Компьютеры
+                     </span>
+                 </div>
+
+                <div class="sidebar-item">
+                     <span class="mx-1">
+                         <input type="checkbox" />
+                         Игры и консоли
+                     </span>
+                 </div>
+             </div>
+         </div>
+
+        <div class="price">
+            <div class="text-center sidebar-title">
+                <span class="sidebar-title-text px-2">Цена</span>
+             </div>
+
+            <div class="sidebar-items">
+                <div class="sidebar-item d-flex align-items-center">
+                    <label class="mx-1" style="margin-right:6px!important;">От</label><input placeholder="0" class="w-100 my-1" />
+                 </div>
+
+                <div class="sidebar-item d-flex align-items-center">
+                     <label class="mx-1">До</label><input placeholder="50000" class="w-100 my-1" />
+                 </div>
+             </div>
+         </div>
+
+        <div class="services">
+            <div class="text-center sidebar-title">
+                <span class="sidebar-title-text px-2">Услуги</span>
+            </div>
+
+            <div class="sidebar-items">
+
+                <div class="sidebar-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Доставка
+                    </span>
+                </div>
+
+                <div class="sidebar-item">
+                    <span class="mx-1">
+                        <input type="checkbox" />
+                        Гарантия
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+}

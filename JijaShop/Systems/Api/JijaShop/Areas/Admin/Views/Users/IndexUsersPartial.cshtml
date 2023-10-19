@@ -1,0 +1,19 @@
+﻿@using JijaShop.Data.Models.DTOModels;
+@model IEnumerable<UserDto>
+
+@if(Model != null && Model.Count() != 0)
+{
+    <ul class="d-flex body-user-item list-group">
+        @foreach (var user in Model)
+        {
+            <li class="list-group-item d-flex justify-content-between">
+                <p>Имя: @user.UserName</p>
+                <p>Майл: @user.UserEmail</p>
+                <p>Пароль: @user.UserPassword</p>
+                <p>Возраст: @user.UserAge</p>
+                <div class="btn btn-danger d-flex">Удалить</div>
+                <div class="btn btn-primary d-flex">Редактировать</div>
+            </li>
+        }
+    </ul>
+}
