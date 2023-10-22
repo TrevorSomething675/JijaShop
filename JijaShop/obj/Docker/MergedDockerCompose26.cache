@@ -1,0 +1,61 @@
+name: dockercompose14797412381080318144
+services:
+  db:
+    environment:
+      POSTGRES_DB: JijaShopDataBase
+      POSTGRES_PASSWORD: jijahiha14
+      POSTGRES_USER: postgres
+    image: postgres:13
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 5432
+      published: "5432"
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: pgdata
+      target: /var/lib/postgresql/data
+      volume: {}
+  jijashop.api:
+    build:
+      context: C:\JijaShop\JijaShop\JijaShop
+      dockerfile: Systems/Api/JijaShop.Api/Dockerfile
+    depends_on:
+      db:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DATABASE_URL: postgresql://postgres:jijahiha14@db:5432/JijaShopDataBase
+    image: jijashopapi
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\Win10Pro\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Win10Pro\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose14797412381080318144_default
+volumes:
+  pgdata:
+    name: dockercompose14797412381080318144_pgdata

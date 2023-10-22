@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  jijashop.api:
+    image: ${DOCKER_REGISTRY-}jijashopapi
+    build:
+      context: .
+      dockerfile: Systems/Api/JijaShop.Api/Dockerfile
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://postgres:jijahiha14@db:5432/JijaShopDataBase
+    networks:
+      - jija_shop_network
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_DB=JijaShopDataBase
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=jijahiha14
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports: 
+      - "5432:5432"
+    networks:
+      - jija_shop_network
+
+volumes:
+  pgdata: {}
+
+networks: 
+    jija_shop_network: {}

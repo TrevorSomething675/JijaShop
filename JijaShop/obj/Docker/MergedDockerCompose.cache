@@ -1,0 +1,24 @@
+name: dockercompose14797412381080318144
+services:
+  postgres:
+    environment:
+      POSTGRES_NAME: postgres
+      POSTGRES_PASSWORD: jijahiha14
+      POSTGRES_USER: postgres
+    image: postgres:13.3
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 5432
+      published: "5432"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\JijaShop\JijaShop\JijaShop
+      target: /docker-entrypoint-initdb.d
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose14797412381080318144_default

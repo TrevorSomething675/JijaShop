@@ -1,131 +1,81 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using JijaShop.Api.Repositories.Abstractions;
-using JijaShop.Api.Services.Abstractions;
-using Microsoft.IdentityModel.Tokens;
+using JijaShop.Services.Settings.SettingsModel;
+using Microsoft.EntityFrameworkCore;
 using JijaShop.Api.Configurations;
-using JijaShop.Api.Repositories;
-using JijaShop.Api.Services;
-using JijaShop.Context;
+using JijaShop.Api.Data;
+using JijaShop.Settings;
 using JijaShop.Api;
-using System.Text;
+using JijaShop.Api.Data.Models.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var swaggerSettings = Settings.Load<SwaggerSettings>("Swagger");
+var dataBaseSettings = Settings.Load<DataBaseSettings>("DataBase");
+
 builder.AddAppLogger();
+var services = builder.Services;
 
-builder.Services.AddAutoMapper(typeof(AutoMapperConfiguration));
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IIdentityService, IdentityService>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-//builder.Services.AddSwaggerGen(options =>
-//{
-//    options.DocInclusionPredicate((docName, apiDesc) =>
-//    {
-//        if (!apiDesc.TryGetMethodInfo(out MethodInfo methodInfo)) return false;
-//        var controllerActionDescriptor = (ControllerActionDescriptor)apiDesc.ActionDescriptor;
-//        var controllerNamespace = controllerActionDescriptor.ControllerTypeInfo.Namespace;
-//        return controllerNamespace != null && controllerNamespace.Contains("JijaShop.Areas.UserArea");
-//    });
+services.AddAutoMapper(typeof(AutoMapperConfiguration));
+services.AddRazorPages();
+services.AddServerSideBlazor();
+services.AddControllersWithViews();
 
-//    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
-//    {
-//        Description = "Standart Authorization",
-//        In = ParameterLocation.Header,
-//        Name = "Authorization",
-//        Type = SecuritySchemeType.ApiKey
-//    });
-//    options.OperationFilter<SecurityRequirementsOperationFilter>();
-//});
-
-builder.Services.AddAppDbContext(builder.Configuration);
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = false,
-        ValidateAudience = false,
-        ValidateLifetime = false,
-        ValidateIssuerSigningKey = false,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
-            .GetBytes(builder.Configuration.GetSection("AppSettings:SecretKeyForToken").Value)),
-    };
-});
-
-//builder.Services.AddDbContext<MainContext>(options => options
-//    .UseNpgsql(builder.Configuration.GetConnectionString("MainConnectionString")));
-
-builder.Services.RegisterAppServices();
+services.AddAppDbContext(dataBaseSettings);
+services.AddAppSwagger(swaggerSettings);
+services.RegisterAppServices();
+services.RegisterRepositories();
 
 var app = builder.Build();
-#region DbOperator
-//using (var scope = app.Services.CreateScope())
-//{
-//    using (var context = scope.ServiceProvider.GetRequiredService<MainContext>())
-//    {
-//List<Product> prd = new List<Product>();
-//for (int i = 0; i < 20; i++)
-//{
-//    var product1 = new Product()
-//    {
-//        Name = $"testProduct{i}",
-//        Quantity = i,
-//        ProductDetails = new ProductDetails
-//        {
-//            Price = 20,
-//            Description = $"TestDescriptions{i}",
-//        },
 
-//        ProductOffers = new ProductOffers
-//        {
-//            IsHitOffer = true,
-//            IsNewOffer = true,
-//        }
-//    };
+#region testData
+using (var scope = app.Services.CreateScope())
+{
+    using (var context = scope.ServiceProvider.GetRequiredService<MainContext>())
+    {
+        //List<Product> prd = new List<Product>();
+        //for (int i = 0; i < 20; i++)
+        //{
+        //    var product1 = new Product()
+        //    {
+        //        Name = $"testProduct{i}",
+        //        Quantity = i,
+        //        ProductDetails = new ProductDetails
+        //        {
+        //            Price = 20,
+        //            Description = $"TestDescriptions{i}",
+        //        },
 
-//    context.Products.Add(product1);
-//    context.SaveChanges();
-//}
-//        try
-//        {
-//            context.Database.Migrate();
-//        }
-//        catch
-//        {
-//            context.Database.EnsureCreated();
-//        }
-//    }
-//}
+        //        ProductOffers = new ProductOffers
+        //        {
+        //            IsHitOffer = true,
+        //            IsNewOffer = true,
+        //        }
+        //    };
+
+        //    context.Products.Add(product1);
+        //    context.SaveChanges();
+        //}
+        try
+        {
+            context.Database.Migrate();
+        }
+        catch
+        {
+            context.Database.EnsureCreated();
+        }
+    }
+}
 #endregion
+
 app.MapBlazorHub();
-app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseHttpsRedirection();
 
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapAreaControllerRoute(
-    name: "User_area",
-    areaName: "UserArea",
-    pattern: "{area:exists}/{controller=Home}/{action=Index}");
+app.MapAppAreaControllerRoute();
 
-app.MapAreaControllerRoute(
-    name: "Moderator_area",
-    areaName: "Moderator",
-    pattern: "Moderator/{controller=Home}/{action=Index}");
-
-app.MapAreaControllerRoute(
-    name: "Admin_area",
-    areaName: "Admin",
-    pattern: "Admin/{controller=Home}/{action=Index}");
-
-app.UseSwagger();
-app.UseSwaggerUI();
+app.UseAppSwagger(swaggerSettings);
 
 app.Run();
