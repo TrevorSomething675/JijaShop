@@ -22,8 +22,6 @@ C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\AutoMapp
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Humanizer.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.dll
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -58,10 +56,8 @@ C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Swashbuc
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\System.CodeDom.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Services.Settings.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Settings.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Settings.pdb
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Services.Settings.pdb
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\staticwebassets\msbuild.JijaShop.Api.Microsoft.AspNetCore.StaticWebAssets.props
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\staticwebassets\msbuild.build.JijaShop.Api.props
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.JijaShop.Api.props
@@ -73,3 +69,13 @@ C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\scopedcs
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\JijaShop.Api.csproj.CopyComplete
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\JijaShop.Api.genruntimeconfig.cache
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\ref\JijaShop.Api.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Common.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Common.pdb
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Extentions.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Extentions.pdb

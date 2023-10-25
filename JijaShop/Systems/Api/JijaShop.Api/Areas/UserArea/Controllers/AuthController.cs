@@ -1,4 +1,4 @@
-﻿using JijaShop.Api.Data.Models.DTOModels;
+﻿using JijaShop.Api.Data.Models.AuthDtoModels;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -41,7 +41,14 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
 
             if (result)
             {
-                Response.Cookies.Append("Bearer", response);
+                var cookieOptions = new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true, 
+                    SameSite = SameSiteMode.Strict,
+                };
+
+                Response.Cookies.Append("Token", response, cookieOptions);
                 return Ok(new { token = response });
             }
             else

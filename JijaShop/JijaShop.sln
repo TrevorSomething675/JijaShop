@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{9C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JijaShop.Api", "Systems\Api\JijaShop.Api\JijaShop.Api.csproj", "{CD278334-2B6B-4937-A834-3D81B333D74A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JijaShop.Services.Settings", "Services\JijaShop.Services.Settings\JijaShop.Services.Settings.csproj", "{9FAA263C-1030-4162-AC08-54C9FC51BD62}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extentions", "Extentions", "{1D615B73-6331-4B9F-9E52-B5463CB6ECF1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JijaShop.Common", "Extentions\JijaShop.Common\JijaShop.Common.csproj", "{11FAD713-C99F-4862-AE42-290DF0D4FA5F}"
@@ -20,6 +18,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JijaShop.Settings", "Extentions\JijaShop.Settings\JijaShop.Settings.csproj", "{F0B98A99-A330-4695-A7FE-AE93A321B2CD}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{10D20D7B-D96A-4842-9BA0-0789A5255A7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JijaShop.Extentions", "..\JijaShop.Extentions\JijaShop.Extentions.csproj", "{A2CDBE89-D3FD-407F-871F-E5E242992442}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,6 @@ Global
 		{CD278334-2B6B-4937-A834-3D81B333D74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD278334-2B6B-4937-A834-3D81B333D74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD278334-2B6B-4937-A834-3D81B333D74A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9FAA263C-1030-4162-AC08-54C9FC51BD62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FAA263C-1030-4162-AC08-54C9FC51BD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FAA263C-1030-4162-AC08-54C9FC51BD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FAA263C-1030-4162-AC08-54C9FC51BD62}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11FAD713-C99F-4862-AE42-290DF0D4FA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11FAD713-C99F-4862-AE42-290DF0D4FA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11FAD713-C99F-4862-AE42-290DF0D4FA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +43,10 @@ Global
 		{10D20D7B-D96A-4842-9BA0-0789A5255A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10D20D7B-D96A-4842-9BA0-0789A5255A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10D20D7B-D96A-4842-9BA0-0789A5255A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2CDBE89-D3FD-407F-871F-E5E242992442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2CDBE89-D3FD-407F-871F-E5E242992442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2CDBE89-D3FD-407F-871F-E5E242992442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2CDBE89-D3FD-407F-871F-E5E242992442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,9 +54,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2B02DFC1-7610-4E1A-8794-D49D61DAAB96} = {31F506C6-985D-4634-A89C-57FDE5BE0A8C}
 		{CD278334-2B6B-4937-A834-3D81B333D74A} = {2B02DFC1-7610-4E1A-8794-D49D61DAAB96}
-		{9FAA263C-1030-4162-AC08-54C9FC51BD62} = {9C772B5D-1DAF-4713-B3E5-07AD5029551A}
 		{11FAD713-C99F-4862-AE42-290DF0D4FA5F} = {1D615B73-6331-4B9F-9E52-B5463CB6ECF1}
 		{F0B98A99-A330-4695-A7FE-AE93A321B2CD} = {1D615B73-6331-4B9F-9E52-B5463CB6ECF1}
+		{A2CDBE89-D3FD-407F-871F-E5E242992442} = {2B02DFC1-7610-4E1A-8794-D49D61DAAB96}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9074C035-7A7F-4CC7-87D7-342785E2E20B}

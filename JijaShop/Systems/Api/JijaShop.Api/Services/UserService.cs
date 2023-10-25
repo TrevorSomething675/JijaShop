@@ -1,8 +1,8 @@
 ﻿using JijaShop.Api.Repositories.Abstractions;
-using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Services.Abstractions;
-using JijaShop.Api.Data.Models.Entities;
 using AutoMapper;
+using JijaShop.Api.Data.Models.AuthEntities;
+using JijaShop.Api.Data.Models.AuthDtoModels;
 
 namespace JijaShop.Api.Services
 {

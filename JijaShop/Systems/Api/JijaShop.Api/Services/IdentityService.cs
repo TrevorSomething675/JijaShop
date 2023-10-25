@@ -1,8 +1,5 @@
-﻿using JijaShop.Services.Settings.SettingsModel;
-using JijaShop.Api.Repositories.Abstractions;
-using JijaShop.Api.Data.Models.DTOModels;
+﻿using JijaShop.Api.Repositories.Abstractions;
 using JijaShop.Api.Services.Abstractions;
-using JijaShop.Api.Data.Models.Entities;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
@@ -11,6 +8,9 @@ using System.Text;
 using AutoMapper;
 using Serilog;
 using JijaShop.Api.Data;
+using JijaShop.Api.Data.Models.AuthEntities;
+using JijaShop.Api.Data.Models.AuthDtoModels;
+using JijaShop.Extentions.SettingsModel;
 
 namespace JijaShop.Api.Services
 {

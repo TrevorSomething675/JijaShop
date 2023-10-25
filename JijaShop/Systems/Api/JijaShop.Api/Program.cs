@@ -1,10 +1,9 @@
-using JijaShop.Services.Settings.SettingsModel;
+using JijaShop.Extentions.SettingsModel;
 using Microsoft.EntityFrameworkCore;
 using JijaShop.Api.Configurations;
 using JijaShop.Api.Data;
 using JijaShop.Settings;
 using JijaShop.Api;
-using JijaShop.Api.Data.Models.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -71,8 +70,8 @@ using (var scope = app.Services.CreateScope())
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 
-app.UseAppAuth();
 app.UseRouting();
+app.UseAppAuth();
 
 app.MapAppAreaControllerRoute();
 

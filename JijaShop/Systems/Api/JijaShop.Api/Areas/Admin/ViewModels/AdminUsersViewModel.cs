@@ -1,4 +1,4 @@
-﻿using JijaShop.Api.Data.Models.DTOModels;
+﻿using JijaShop.Api.Data.Models.AuthDtoModels;
 
 namespace JijaShop.Api.Areas.Admin.ViewModels
 {

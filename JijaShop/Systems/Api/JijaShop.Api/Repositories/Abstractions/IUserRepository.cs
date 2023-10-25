@@ -1,4 +1,4 @@
-﻿using JijaShop.Api.Data.Models.Entities;
+﻿using JijaShop.Api.Data.Models.AuthEntities;
 using System.Linq.Expressions;
 
 namespace JijaShop.Api.Repositories.Abstractions

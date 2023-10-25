@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc.Controllers;
+using JijaShop.Extentions.SettingsModel;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.Filters;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
-using JijaShop.Services.Settings.SettingsModel;
 
 namespace JijaShop.Api.Configurations
 {

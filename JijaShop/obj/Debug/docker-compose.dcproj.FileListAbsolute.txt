@@ -6,7 +6,6 @@ C:\JijaShop\JijaShop\JijaShop\bin\Debug\appsettings.json
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Api.staticwebassets.runtime.json
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Api.exe
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Api.dll
-C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Services.Settings.dll
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\AutoMapper.dll
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.IdentityModel.Tokens.dll
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
@@ -33,7 +32,17 @@ C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.Extensions.DependencyModel.dll
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\Scrutor.dll
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Api.pdb
-C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Services.Settings.pdb
 C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Settings.pdb
 C:\JijaShop\JijaShop\JijaShop\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\JijaShop\JijaShop\JijaShop\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Extentions.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.Extensions.Identity.Stores.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.Extensions.Identity.Core.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.Extensions.Options.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Extentions.pdb

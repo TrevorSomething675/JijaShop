@@ -1,7 +1,6 @@
-﻿using JijaShop.Services.Settings.SettingsModel;
+﻿using JijaShop.Extentions.SettingsModel;
 using Microsoft.EntityFrameworkCore;
 using JijaShop.Api.Data;
-using JijaShop.Api.Data.Models.Entities;
 
 namespace JijaShop.Api.Configurations
 {

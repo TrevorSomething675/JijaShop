@@ -1,8 +1,8 @@
 ﻿using JijaShop.Api.Repositories.Abstractions;
-using JijaShop.Api.Repositories;
-using JijaShop.Services.Settings;
 using JijaShop.Api.Services.Abstractions;
+using JijaShop.Api.Repositories;
 using JijaShop.Api.Services;
+using JijaShop.Extentions;
 
 namespace JijaShop.Api
 {
@@ -15,7 +15,8 @@ namespace JijaShop.Api
                 AddSwaggerSettings().
                 AddScoped<IUserService, UserService>().
                 AddScoped<IProductService, ProductService>().
-                AddScoped<IIdentityService, IdentityService>();
+                AddScoped<IIdentityService, IdentityService>().
+                AddScoped<IHashService, HashService>();
 
             return services;
         }

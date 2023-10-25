@@ -1,5 +1,4 @@
 ﻿using JijaShop.Api.Repositories.Abstractions;
-using JijaShop.Api.Data.Models.DTOModels;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
@@ -7,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using System.Text;
 using Serilog;
+using JijaShop.Api.Data.Models.AuthDtoModels;
 
 namespace JijaShop.Api.Areas.Admin.Controllers
 {

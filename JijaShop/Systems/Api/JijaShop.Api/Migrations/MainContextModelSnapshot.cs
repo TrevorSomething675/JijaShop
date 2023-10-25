@@ -22,40 +22,76 @@ namespace JijaShop.Api.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.Admin", b =>
+            modelBuilder.Entity("JijaShop.Api.Data.Models.AuthEntities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("Id");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AdminEmail")
-                        .IsRequired()
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ConcurrencyStamp")
                         .HasColumnType("text");
 
-                    b.Property<string>("AdminIp")
-                        .IsRequired()
+                    b.Property<string>("Email")
                         .HasColumnType("text");
 
-                    b.Property<string>("AdminName")
-                        .IsRequired()
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("NormalizedEmail")
                         .HasColumnType("text");
 
-                    b.Property<string>("AdminPassword")
-                        .IsRequired()
+                    b.Property<string>("NormalizedUserName")
                         .HasColumnType("text");
 
-                    b.Property<byte[]>("AdminPasswordHash")
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<byte?>("Role")
+                        .HasColumnType("smallint");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<int?>("UserAge")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("text");
+
+                    b.Property<byte[]>("UserPasswordHash")
+                        .IsRequired()
                         .HasColumnType("bytea");
 
-                    b.Property<byte[]>("AdminPasswordSalt")
+                    b.Property<byte[]>("UserPasswordSalt")
+                        .IsRequired()
                         .HasColumnType("bytea");
+
+                    b.Property<string>("UserPhone")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Admin");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.Product", b =>
@@ -135,40 +171,6 @@ namespace JijaShop.Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProductOffers");
-                });
-
-            modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("Id");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("UserAge")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("UserEmail")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<byte[]>("UserPasswordHash")
-                        .HasColumnType("bytea");
-
-                    b.Property<byte[]>("UserPasswordSalt")
-                        .HasColumnType("bytea");
-
-                    b.Property<string>("UserPhone")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.Product", b =>

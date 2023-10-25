@@ -1,5 +1,5 @@
 ﻿using JijaShop.Api.Areas.Admin.ViewModels;
-using JijaShop.Api.Data.Models.DTOModels;
+using JijaShop.Api.Data.Models.AuthDtoModels;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
