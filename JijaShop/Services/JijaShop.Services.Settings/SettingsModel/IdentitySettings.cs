@@ -2,6 +2,6 @@
 {
     public class IdentitySettings
     {
-        public string Url { get; private set; }
+        public string SecretKeyForToken { get; private set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
@@ -10,13 +9,9 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
     public class AuthController : Controller
     {
         private readonly IIdentityService _identityService;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
-        public AuthController(IIdentityService identityService, SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
+        public AuthController(IIdentityService identityService)
         {
             _identityService = identityService;
-            _signInManager = signInManager;
-            _userManager = userManager;
         }
 
         [HttpPost]
@@ -25,7 +20,10 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
             var result = _identityService.RegisterUser(userDto, out string response);
 
             if (result)
+            {
+                Response.Cookies.Append("Bearer", response);
                 return Ok(userDto);
+            }
             else
                 return BadRequest(response);
         }
@@ -43,6 +41,7 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
 
             if (result)
             {
+                Response.Cookies.Append("Bearer", response);
                 return Ok(new { token = response });
             }
             else
@@ -57,7 +56,7 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
             return View();
         }
 
-        [HttpGet("GetInfo"), Authorize]
+        [HttpGet, Authorize]
         public async Task<IActionResult> GetInfo()
         {
             return Ok("Jija");

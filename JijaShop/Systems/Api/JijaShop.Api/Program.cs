@@ -10,17 +10,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 var swaggerSettings = Settings.Load<SwaggerSettings>("Swagger");
 var dataBaseSettings = Settings.Load<DataBaseSettings>("DataBase");
+var identitySettings = Settings.Load<IdentitySettings>("Identity");
 
 builder.AddAppLogger();
 var services = builder.Services;
 
 services.AddAutoMapper(typeof(AutoMapperConfiguration));
 services.AddRazorPages();
-services.AddServerSideBlazor();
 services.AddControllersWithViews();
 
 services.AddAppDbContext(dataBaseSettings);
 services.AddAppSwagger(swaggerSettings);
+services.AddAppAuth(identitySettings);
+
 services.RegisterAppServices();
 services.RegisterRepositories();
 
@@ -66,13 +68,11 @@ using (var scope = app.Services.CreateScope())
 }
 #endregion
 
-app.MapBlazorHub();
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 
+app.UseAppAuth();
 app.UseRouting();
-app.UseAuthentication();
-app.UseAuthorization();
 
 app.MapAppAreaControllerRoute();
 

@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿using JijaShop.Services.Settings.SettingsModel;
 using JijaShop.Api.Repositories.Abstractions;
 using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Services.Abstractions;
@@ -8,7 +8,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
 using System.Security.Claims;
 using System.Text;
+using AutoMapper;
 using Serilog;
+using JijaShop.Api.Data;
 
 namespace JijaShop.Api.Services
 {
@@ -16,12 +18,12 @@ namespace JijaShop.Api.Services
     {
         private readonly ILogger<IdentityService> _logger;
         private readonly IUserRepository _userRepository;
-        private readonly IConfiguration _configuration;
+        private readonly IdentitySettings _identityService;
         private readonly IMapper _mapper;
-        public IdentityService(IUserRepository userRepository, ILogger<IdentityService> logger, IMapper mapper, IConfiguration configuration)
+        public IdentityService(IUserRepository userRepository, ILogger<IdentityService> logger, IMapper mapper)
         {
+            _identityService = Settings.Settings.Load<IdentitySettings>("Identity");
             _userRepository = userRepository;
-            _configuration = configuration;
             _logger = logger;
             _mapper = mapper;
         }
@@ -120,7 +122,7 @@ namespace JijaShop.Api.Services
                     new Claim(ClaimTypes.Role, "User"),
                 };
                 var key = new SymmetricSecurityKey(Encoding.UTF8
-                    .GetBytes(_configuration.GetSection("AppSettings:SecretKeyForToken").Value));
+                    .GetBytes(_identityService.SecretKeyForToken!));
 
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
 

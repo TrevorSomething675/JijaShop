@@ -22,7 +22,7 @@ services:
       - POSTGRES_PASSWORD=jijahiha14
     volumes:
       - pgdata:/var/lib/postgresql/data
-    ports: 
+    ports:
       - "5432:5432"
     networks:
       - jija_shop_network

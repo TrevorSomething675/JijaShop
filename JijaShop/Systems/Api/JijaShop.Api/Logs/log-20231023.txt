@@ -1,0 +1,415 @@
+2023-10-23 09:36:55.362 +00:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-10-23 09:36:55.437 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-10-23 09:36:55.473 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-10-23 09:36:55.497 +00:00 [INF] No migrations were applied. The database is already up to date.
+2023-10-23 09:36:55.638 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-10-23 09:36:55.639 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-10-23 09:36:55.945 +00:00 [INF] Creating key {6f8fcf51-8b8a-4521-88cf-156442bfbba4} with creation date 2023-10-23 09:36:55Z, activation date 2023-10-23 09:36:55Z, and expiration date 2024-01-21 09:36:55Z.
+2023-10-23 09:36:55.961 +00:00 [WRN] No XML encryptor configured. Key {6f8fcf51-8b8a-4521-88cf-156442bfbba4} may be persisted to storage in unencrypted form.
+2023-10-23 09:36:55.972 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-6f8fcf51-8b8a-4521-88cf-156442bfbba4.xml'.
+2023-10-23 09:36:56.285 +00:00 [INF] Now listening on: https://[::]:443
+2023-10-23 09:36:56.286 +00:00 [INF] Now listening on: http://[::]:80
+2023-10-23 09:36:56.289 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-23 09:36:56.291 +00:00 [INF] Hosting environment: Development
+2023-10-23 09:36:56.291 +00:00 [INF] Content root path: /app
+2023-10-23 09:37:00.388 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/UserArea - -
+2023-10-23 09:37:00.437 +00:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 09:37:00.454 +00:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-10-23 09:37:00.471 +00:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 09:37:00.710 +00:00 [INF] Executed ViewResult - view Index executed in 241.2828ms.
+2023-10-23 09:37:00.717 +00:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 261.373ms
+2023-10-23 09:37:00.719 +00:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 09:37:00.727 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/UserArea - - - 200 - text/html;+charset=utf-8 340.7504ms
+2023-10-23 09:37:00.760 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/JijaShop.Api.styles.css - -
+2023-10-23 09:37:00.760 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage1.png - -
+2023-10-23 09:37:00.763 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage2.png - -
+2023-10-23 09:37:00.760 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/css/site.css - -
+2023-10-23 09:37:00.760 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 09:37:00.760 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/css/StyleSheet.css - -
+2023-10-23 09:37:00.766 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage3.png - -
+2023-10-23 09:37:00.806 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/css/site.css - - - 404 0 - 45.7876ms
+2023-10-23 09:37:00.806 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/JijaShop.Api.styles.css - - - 404 0 - 45.8086ms
+2023-10-23 09:37:00.869 +00:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/js/site.js'
+2023-10-23 09:37:00.871 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 200 1047 text/javascript 110.9071ms
+2023-10-23 09:37:00.900 +00:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/css/StyleSheet.css'
+2023-10-23 09:37:00.923 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/css/StyleSheet.css - - - 200 6094 text/css 162.6005ms
+2023-10-23 09:37:01.003 +00:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage2.png'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/Slider/SliderImage2.png'
+2023-10-23 09:37:01.004 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage2.png - - - 200 200280 image/png 241.4578ms
+2023-10-23 09:37:01.019 +00:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage3.png'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/Slider/SliderImage3.png'
+2023-10-23 09:37:01.020 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage3.png - - - 200 283321 image/png 253.8361ms
+2023-10-23 09:37:01.035 +00:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage1.png'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/Slider/SliderImage1.png'
+2023-10-23 09:37:01.036 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage1.png - - - 200 431969 image/png 275.3888ms
+2023-10-23 09:37:01.293 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/favicon.ico - -
+2023-10-23 09:37:01.316 +00:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/favicon.ico'
+2023-10-23 09:37:01.317 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/favicon.ico - - - 200 5430 image/x-icon 23.5625ms
+2023-10-23 09:37:02.074 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/UserArea/Products - -
+2023-10-23 09:37:02.077 +00:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-10-23 09:37:02.082 +00:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-10-23 09:37:02.597 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+2023-10-23 09:37:02.736 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+2023-10-23 09:37:02.778 +00:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 09:37:02.896 +00:00 [INF] Executed ViewResult - view Index executed in 119.2123ms.
+2023-10-23 09:37:02.942 +00:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 858.7721ms
+2023-10-23 09:37:02.942 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/css/StyleSheet.css - -
+2023-10-23 09:37:02.942 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/JijaShop.Api.styles.css - -
+2023-10-23 09:37:02.943 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/1.jpg - -
+2023-10-23 09:37:02.943 +00:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-10-23 09:37:02.943 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/css/site.css - -
+2023-10-23 09:37:02.943 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 09:37:02.945 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/JijaShop.Api.styles.css - - - 404 0 - 2.9086ms
+2023-10-23 09:37:02.948 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/css/site.css - - - 404 0 - 5.3477ms
+2023-10-23 09:37:02.952 +00:00 [INF] The file /css/StyleSheet.css was not modified
+2023-10-23 09:37:02.952 +00:00 [INF] The file /js/site.js was not modified
+2023-10-23 09:37:02.953 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/css/StyleSheet.css - - - 304 - text/css 10.1870ms
+2023-10-23 09:37:02.953 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 304 - text/javascript 10.3471ms
+2023-10-23 09:37:02.981 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/UserArea/Products - - - 200 - text/html;+charset=utf-8 907.6521ms
+2023-10-23 09:37:02.982 +00:00 [INF] Sending file. Request path: '/Images/1.jpg'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/1.jpg'
+2023-10-23 09:37:02.983 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/1.jpg - - - 200 11545 image/jpeg 40.1489ms
+2023-10-23 09:37:02.991 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/favicon.ico - -
+2023-10-23 09:37:02.999 +00:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/favicon.ico'
+2023-10-23 09:37:02.999 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/favicon.ico - - - 0 5430 image/x-icon 8.7657ms
+2023-10-23 09:37:06.516 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/ - -
+2023-10-23 09:37:06.517 +00:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 09:37:06.518 +00:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-10-23 09:37:06.519 +00:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 09:37:06.538 +00:00 [INF] Executed ViewResult - view Index executed in 19.1555ms.
+2023-10-23 09:37:06.540 +00:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 21.6911ms
+2023-10-23 09:37:06.541 +00:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 09:37:06.542 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/ - - - 200 - text/html;+charset=utf-8 26.5066ms
+2023-10-23 09:37:06.577 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/JijaShop.Api.styles.css - -
+2023-10-23 09:37:06.577 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/css/site.css - -
+2023-10-23 09:37:06.577 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/css/StyleSheet.css - -
+2023-10-23 09:37:06.579 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 09:37:06.581 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/JijaShop.Api.styles.css - - - 404 0 - 4.3032ms
+2023-10-23 09:37:06.582 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/css/site.css - - - 404 0 - 5.7295ms
+2023-10-23 09:37:06.584 +00:00 [INF] The file /css/StyleSheet.css was not modified
+2023-10-23 09:37:06.584 +00:00 [INF] The file /js/site.js was not modified
+2023-10-23 09:37:06.584 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/css/StyleSheet.css - - - 304 - text/css 7.8288ms
+2023-10-23 09:37:06.585 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 304 - text/javascript 5.7883ms
+2023-10-23 09:37:06.613 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage3.png - -
+2023-10-23 09:37:06.613 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage1.png - -
+2023-10-23 09:37:06.614 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage2.png - -
+2023-10-23 09:37:06.618 +00:00 [INF] The file /Images/Slider/SliderImage3.png was not modified
+2023-10-23 09:37:06.618 +00:00 [INF] The file /Images/Slider/SliderImage2.png was not modified
+2023-10-23 09:37:06.618 +00:00 [INF] The file /Images/Slider/SliderImage1.png was not modified
+2023-10-23 09:37:06.619 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage3.png - - - 304 - image/png 5.4389ms
+2023-10-23 09:37:06.619 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage2.png - - - 304 - image/png 5.8610ms
+2023-10-23 09:37:06.620 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage1.png - - - 304 - image/png 6.3793ms
+2023-10-23 09:37:07.513 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/ - -
+2023-10-23 09:37:07.514 +00:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 09:37:07.515 +00:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-10-23 09:37:07.517 +00:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 09:37:07.547 +00:00 [INF] Executed ViewResult - view Index executed in 30.8845ms.
+2023-10-23 09:37:07.550 +00:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 33.6367ms
+2023-10-23 09:37:07.552 +00:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 09:37:07.553 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/ - - - 200 - text/html;+charset=utf-8 39.6956ms
+2023-10-23 09:37:07.576 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/JijaShop.Api.styles.css - -
+2023-10-23 09:37:07.577 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/css/StyleSheet.css - -
+2023-10-23 09:37:07.576 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/css/site.css - -
+2023-10-23 09:37:07.579 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 09:37:07.580 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/JijaShop.Api.styles.css - - - 404 0 - 3.6359ms
+2023-10-23 09:37:07.581 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/css/site.css - - - 404 0 - 4.6248ms
+2023-10-23 09:37:07.581 +00:00 [INF] The file /css/StyleSheet.css was not modified
+2023-10-23 09:37:07.582 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/css/StyleSheet.css - - - 304 - text/css 5.3463ms
+2023-10-23 09:37:07.584 +00:00 [INF] The file /js/site.js was not modified
+2023-10-23 09:37:07.585 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 304 - text/javascript 6.6076ms
+2023-10-23 09:37:07.612 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage2.png - -
+2023-10-23 09:37:07.612 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage1.png - -
+2023-10-23 09:37:07.613 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage3.png - -
+2023-10-23 09:37:07.617 +00:00 [INF] The file /Images/Slider/SliderImage1.png was not modified
+2023-10-23 09:37:07.617 +00:00 [INF] The file /Images/Slider/SliderImage3.png was not modified
+2023-10-23 09:37:07.618 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage1.png - - - 304 - image/png 5.6185ms
+2023-10-23 09:37:07.618 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage3.png - - - 304 - image/png 5.5977ms
+2023-10-23 09:37:07.648 +00:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage2.png'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/Slider/SliderImage2.png'
+2023-10-23 09:37:07.649 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/Images/Slider/SliderImage2.png - - - 200 200280 image/png 37.2632ms
+2023-10-23 09:37:07.736 +00:00 [INF] Request starting HTTP/2 GET https://localhost:57173/favicon.ico - -
+2023-10-23 09:37:07.743 +00:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/favicon.ico'
+2023-10-23 09:37:07.743 +00:00 [INF] Request finished HTTP/2 GET https://localhost:57173/favicon.ico - - - 0 5430 image/x-icon 7.3677ms
+2023-10-23 10:24:54.043 +00:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-10-23 10:24:54.105 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-10-23 10:24:54.132 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-10-23 10:24:54.152 +00:00 [INF] No migrations were applied. The database is already up to date.
+2023-10-23 10:24:54.250 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-10-23 10:24:54.250 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-10-23 10:24:54.433 +00:00 [INF] Creating key {1d3c1b1e-33da-4f2b-8e91-aaf69f61a410} with creation date 2023-10-23 10:24:54Z, activation date 2023-10-23 10:24:54Z, and expiration date 2024-01-21 10:24:54Z.
+2023-10-23 10:24:54.445 +00:00 [WRN] No XML encryptor configured. Key {1d3c1b1e-33da-4f2b-8e91-aaf69f61a410} may be persisted to storage in unencrypted form.
+2023-10-23 10:24:54.452 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-1d3c1b1e-33da-4f2b-8e91-aaf69f61a410.xml'.
+2023-10-23 10:24:54.659 +00:00 [INF] Now listening on: https://[::]:443
+2023-10-23 10:24:54.660 +00:00 [INF] Now listening on: http://[::]:80
+2023-10-23 10:24:54.664 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-23 10:24:54.665 +00:00 [INF] Hosting environment: Development
+2023-10-23 10:24:54.666 +00:00 [INF] Content root path: /app
+2023-10-23 10:24:58.848 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/UserArea - -
+2023-10-23 10:24:58.897 +00:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 10:24:58.914 +00:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-10-23 10:24:58.930 +00:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 10:24:59.168 +00:00 [INF] Executed ViewResult - view Index executed in 236.5941ms.
+2023-10-23 10:24:59.175 +00:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 259.4223ms
+2023-10-23 10:24:59.176 +00:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 10:24:59.183 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/UserArea - - - 200 - text/html;+charset=utf-8 338.0178ms
+2023-10-23 10:24:59.271 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/css/StyleSheet.css - -
+2023-10-23 10:24:59.271 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage1.png - -
+2023-10-23 10:24:59.271 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/JijaShop.Api.styles.css - -
+2023-10-23 10:24:59.271 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/css/site.css - -
+2023-10-23 10:24:59.273 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 10:24:59.275 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage2.png - -
+2023-10-23 10:24:59.282 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage3.png - -
+2023-10-23 10:24:59.295 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/JijaShop.Api.styles.css - - - 404 0 - 45.3284ms
+2023-10-23 10:24:59.296 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/css/site.css - - - 404 0 - 45.9358ms
+2023-10-23 10:24:59.424 +00:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/js/site.js'
+2023-10-23 10:24:59.424 +00:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/css/StyleSheet.css'
+2023-10-23 10:24:59.425 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/css/StyleSheet.css - - - 200 6094 text/css 175.8327ms
+2023-10-23 10:24:59.426 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 200 1047 text/javascript 152.0066ms
+2023-10-23 10:24:59.466 +00:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage2.png'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/Slider/SliderImage2.png'
+2023-10-23 10:24:59.488 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage2.png - - - 200 200280 image/png 192.8277ms
+2023-10-23 10:24:59.499 +00:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage3.png'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/Slider/SliderImage3.png'
+2023-10-23 10:24:59.501 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage3.png - - - 200 283321 image/png 218.8034ms
+2023-10-23 10:24:59.520 +00:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage1.png'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/Slider/SliderImage1.png'
+2023-10-23 10:24:59.520 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage1.png - - - 200 431969 image/png 248.9643ms
+2023-10-23 10:24:59.532 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/favicon.ico - -
+2023-10-23 10:24:59.545 +00:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/favicon.ico'
+2023-10-23 10:24:59.546 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/favicon.ico - - - 200 5430 image/x-icon 14.1871ms
+2023-10-23 10:25:02.051 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/UserArea/Products - -
+2023-10-23 10:25:02.054 +00:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-10-23 10:25:02.061 +00:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-10-23 10:25:02.547 +00:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+2023-10-23 10:25:02.706 +00:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+2023-10-23 10:25:02.728 +00:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 10:25:02.813 +00:00 [INF] Executed ViewResult - view Index executed in 85.6199ms.
+2023-10-23 10:25:02.837 +00:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 775.9897ms
+2023-10-23 10:25:02.838 +00:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-10-23 10:25:02.846 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/UserArea/Products - - - 200 - text/html;+charset=utf-8 795.4796ms
+2023-10-23 10:25:02.853 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 10:25:02.857 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/Images/1.jpg - -
+2023-10-23 10:25:02.857 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/css/StyleSheet.css - -
+2023-10-23 10:25:02.856 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/css/site.css - -
+2023-10-23 10:25:02.857 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/JijaShop.Api.styles.css - -
+2023-10-23 10:25:02.860 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/JijaShop.Api.styles.css - - - 404 0 - 3.9198ms
+2023-10-23 10:25:02.861 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/css/site.css - - - 404 0 - 5.2210ms
+2023-10-23 10:25:02.865 +00:00 [INF] The file /css/StyleSheet.css was not modified
+2023-10-23 10:25:02.865 +00:00 [INF] The file /js/site.js was not modified
+2023-10-23 10:25:02.866 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/css/StyleSheet.css - - - 304 - text/css 9.8914ms
+2023-10-23 10:25:02.866 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 304 - text/javascript 13.4711ms
+2023-10-23 10:25:02.875 +00:00 [INF] Sending file. Request path: '/Images/1.jpg'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/1.jpg'
+2023-10-23 10:25:02.875 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/Images/1.jpg - - - 200 11545 image/jpeg 19.1035ms
+2023-10-23 10:25:04.599 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/ - -
+2023-10-23 10:25:04.600 +00:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 10:25:04.601 +00:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-10-23 10:25:04.602 +00:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 10:25:04.645 +00:00 [INF] Executed ViewResult - view Index executed in 43.8267ms.
+2023-10-23 10:25:04.667 +00:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 66.1381ms
+2023-10-23 10:25:04.668 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/JijaShop.Api.styles.css - -
+2023-10-23 10:25:04.669 +00:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 10:25:04.669 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 10:25:04.671 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/ - - - 200 - text/html;+charset=utf-8 72.5016ms
+2023-10-23 10:25:04.668 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/css/site.css - -
+2023-10-23 10:25:04.669 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/css/StyleSheet.css - -
+2023-10-23 10:25:04.673 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/JijaShop.Api.styles.css - - - 404 0 - 4.4330ms
+2023-10-23 10:25:04.674 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/css/site.css - - - 404 0 - 5.7487ms
+2023-10-23 10:25:04.675 +00:00 [INF] The file /js/site.js was not modified
+2023-10-23 10:25:04.675 +00:00 [INF] The file /css/StyleSheet.css was not modified
+2023-10-23 10:25:04.676 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 304 - text/javascript 6.6515ms
+2023-10-23 10:25:04.676 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/css/StyleSheet.css - - - 304 - text/css 6.9671ms
+2023-10-23 10:25:04.700 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage2.png - -
+2023-10-23 10:25:04.700 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage1.png - -
+2023-10-23 10:25:04.700 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage3.png - -
+2023-10-23 10:25:04.705 +00:00 [INF] The file /Images/Slider/SliderImage3.png was not modified
+2023-10-23 10:25:04.705 +00:00 [INF] The file /Images/Slider/SliderImage1.png was not modified
+2023-10-23 10:25:04.705 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage3.png - - - 304 - image/png 4.8227ms
+2023-10-23 10:25:04.706 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage1.png - - - 304 - image/png 5.1845ms
+2023-10-23 10:25:04.734 +00:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage2.png'. Physical path: '/src/Systems/Api/JijaShop.Api/wwwroot/Images/Slider/SliderImage2.png'
+2023-10-23 10:25:04.734 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/Images/Slider/SliderImage2.png - - - 200 200280 image/png 34.3211ms
+2023-10-23 10:25:08.028 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/UserArea/Products - -
+2023-10-23 10:25:08.041 +00:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-10-23 10:25:08.041 +00:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-10-23 10:25:08.122 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+2023-10-23 10:25:08.149 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+2023-10-23 10:25:08.172 +00:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 10:25:08.185 +00:00 [INF] Executed ViewResult - view Index executed in 12.6123ms.
+2023-10-23 10:25:08.188 +00:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 146.7052ms
+2023-10-23 10:25:08.189 +00:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-10-23 10:25:08.190 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/UserArea/Products - - - 200 - text/html;+charset=utf-8 162.9747ms
+2023-10-23 10:25:08.256 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/css/site.css - -
+2023-10-23 10:25:08.259 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/JijaShop.Api.styles.css - -
+2023-10-23 10:25:08.261 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/JijaShop.Api.styles.css - - - 404 0 - 2.7252ms
+2023-10-23 10:25:08.262 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/css/site.css - - - 404 0 - 6.2698ms
+2023-10-23 10:25:08.270 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/css/StyleSheet.css - -
+2023-10-23 10:25:08.274 +00:00 [INF] The file /css/StyleSheet.css was not modified
+2023-10-23 10:25:08.274 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/css/StyleSheet.css - - - 304 - text/css 4.4491ms
+2023-10-23 10:25:08.285 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 10:25:08.288 +00:00 [INF] The file /js/site.js was not modified
+2023-10-23 10:25:08.289 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 304 - text/javascript 4.7014ms
+2023-10-23 10:25:08.346 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58598/Images/1.jpg - -
+2023-10-23 10:25:08.350 +00:00 [INF] The file /Images/1.jpg was not modified
+2023-10-23 10:25:08.350 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58598/Images/1.jpg - - - 304 - image/jpeg 4.3672ms
+2023-10-23 19:58:07.377 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-10-23 19:58:07.479 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-10-23 19:58:07.506 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-10-23 19:58:07.524 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-10-23 19:58:07.679 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-23 19:58:08.036 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-23 19:58:08.036 +03:00 [INF] Hosting environment: Development
+2023-10-23 19:58:08.036 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-10-23 19:58:08.068 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-10-23 19:58:08.134 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 19:58:08.146 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-10-23 19:58:08.158 +03:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 19:58:08.443 +03:00 [INF] Executed ViewResult - view Index executed in 288.2564ms.
+2023-10-23 19:58:08.447 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 300.6329ms
+2023-10-23 19:58:08.448 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-10-23 19:58:08.485 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 419.9126ms
+2023-10-23 19:58:08.561 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/site.css - -
+2023-10-23 19:58:08.561 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/JijaShop.Api.styles.css - -
+2023-10-23 19:58:08.561 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 19:58:08.561 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-10-23 19:58:08.592 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage2.png - -
+2023-10-23 19:58:08.601 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage1.png - -
+2023-10-23 19:58:08.606 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage3.png - -
+2023-10-23 19:58:08.609 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-10-23 19:58:08.615 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-10-23 19:58:08.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/JijaShop.Api.styles.css - - - 404 - - 89.5252ms
+2023-10-23 19:58:08.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/site.css - - - 404 - - 91.0355ms
+2023-10-23 19:58:08.628 +03:00 [INF] The file /Images/Slider/SliderImage1.png was not modified
+2023-10-23 19:58:08.628 +03:00 [INF] The file /Images/Slider/SliderImage3.png was not modified
+2023-10-23 19:58:08.631 +03:00 [INF] The file /Images/Slider/SliderImage2.png was not modified
+2023-10-23 19:58:08.631 +03:00 [INF] The file /js/site.js was not modified
+2023-10-23 19:58:08.636 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage1.png - - - 304 - image/png 34.6515ms
+2023-10-23 19:58:08.636 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage3.png - - - 304 - image/png 29.5491ms
+2023-10-23 19:58:08.638 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 304 - text/javascript 107.3627ms
+2023-10-23 19:58:08.638 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage2.png - - - 304 - image/png 43.2781ms
+2023-10-23 19:58:08.645 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 79.5192ms
+2023-10-23 19:58:08.672 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-10-23 19:58:08.672 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 6094 text/css 64.7014ms
+2023-10-23 19:58:08.678 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 63.3148ms
+2023-10-23 19:58:10.139 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-10-23 19:58:10.141 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-10-23 19:58:10.145 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-10-23 19:58:10.596 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+2023-10-23 19:58:10.611 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+2023-10-23 19:58:10.627 +03:00 [INF] Executing ViewResult, running view Index.
+2023-10-23 19:58:10.762 +03:00 [INF] Executed ViewResult - view Index executed in 135.8274ms.
+2023-10-23 19:58:10.763 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 617.4674ms
+2023-10-23 19:58:10.763 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-10-23 19:58:10.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 632.4143ms
+2023-10-23 19:58:10.882 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - -
+2023-10-23 19:58:10.883 +03:00 [INF] The file /js/site.js was not modified
+2023-10-23 19:58:10.883 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/js/site.js?v=IvXQUb7AD7i0V_MZKgnDqPzhUJy2J9t3re79thjb4KQ - - - 304 - text/javascript 0.7196ms
+2023-10-23 19:58:10.889 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-10-23 19:58:10.892 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-10-23 19:58:10.893 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.8697ms
+2023-10-23 19:58:10.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/site.css - -
+2023-10-23 19:58:10.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/JijaShop.Api.styles.css - -
+2023-10-23 19:58:10.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/site.css - - - 404 - - 0.9977ms
+2023-10-23 19:58:10.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/JijaShop.Api.styles.css - - - 404 - - 0.9300ms
+2023-10-23 19:58:10.900 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.8781ms
+2023-10-23 19:58:10.901 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-10-23 19:58:10.902 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-10-23 19:58:10.902 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 0.6668ms
+2023-10-23 19:58:15.254 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Auth/Register - -
+2023-10-23 19:58:15.256 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.AuthController.Register (JijaShop.Api)'
+2023-10-23 19:58:15.285 +03:00 [INF] Route matched with {area = "UserArea", action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register() on controller JijaShop.Api.Areas.UserArea.Controllers.AuthController (JijaShop.Api).
+2023-10-23 19:58:15.289 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.AuthController.Register (JijaShop.Api) in 3.9841ms
+2023-10-23 19:58:15.290 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.AuthController.Register (JijaShop.Api)'
+2023-10-23 19:58:15.292 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Identity.SignInManager`1[Microsoft.AspNetCore.Identity.IdentityUser]' while attempting to activate 'JijaShop.Api.Areas.UserArea.Controllers.AuthController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method146(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-10-23 19:58:15.341 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Auth/Register - - - 500 - text/html;+charset=utf-8 86.6842ms
+2023-10-23 19:58:15.370 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-10-23 19:58:15.370 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-10-23 19:58:15.372 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.4804ms
+2023-10-23 19:58:15.382 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.2177ms
+2023-10-23 19:58:20.804 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-10-23 19:58:20.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9638ms
