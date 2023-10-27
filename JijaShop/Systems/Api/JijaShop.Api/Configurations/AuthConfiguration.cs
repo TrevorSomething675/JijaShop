@@ -14,7 +14,7 @@ namespace JijaShop.Api.Configurations
         public static IServiceCollection AddAppAuth(this IServiceCollection services, IdentitySettings identitySettings)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddCookie()
+                //.AddCookie()
                 .AddJwtBearer(jwt =>
                 {
                     jwt.TokenValidationParameters = new TokenValidationParameters
@@ -34,8 +34,15 @@ namespace JijaShop.Api.Configurations
                             context.Token = context.Request.Cookies["Token"];
                             return Task.CompletedTask;
                         }
-                    };
-                });
+					//jwt.Events = new JwtBearerEvents
+					//{
+					//	OnMessageReceived = context =>
+					//	{
+					//		context.Token = context.Request.Cookies["Token"];
+					//		return Task.CompletedTask;
+					//	}
+					//};
+				});
 
             services.AddAuthorization(options =>
             {
@@ -53,8 +60,8 @@ namespace JijaShop.Api.Configurations
 
         public static void UseAppAuth(this WebApplication app)
         {
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
         }
     }
 }

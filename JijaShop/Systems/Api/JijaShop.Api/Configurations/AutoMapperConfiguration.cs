@@ -1,8 +1,8 @@
-﻿using JijaShop.Api.Data.Models.DTOModels;
+﻿using JijaShop.Api.Data.Models.AuthDtoModels;
+using JijaShop.Api.Data.Models.AuthEntities;
+using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Data.Models.Entities;
 using AutoMapper;
-using JijaShop.Api.Data.Models.AuthEntities;
-using JijaShop.Api.Data.Models.AuthDtoModels;
 
 namespace JijaShop.Api.Configurations
 {
@@ -42,7 +42,12 @@ namespace JijaShop.Api.Configurations
 
             CreateMap<ProductDetails, ProductDetailsDto>().ReverseMap();
             CreateMap<ProductOffers, ProductOffersDto>().ReverseMap();
-            CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<User, UserDto>()
+                .ForMember(user => user.UserEmail, opt =>
+                {
+                    opt.MapFrom(user => user.Email);
+                })
+                .ReverseMap();
         }
     }
 }

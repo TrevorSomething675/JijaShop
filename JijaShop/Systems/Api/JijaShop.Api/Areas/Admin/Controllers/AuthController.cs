@@ -27,27 +27,6 @@ namespace JijaShop.Api.Areas.Admin.Controllers
             return View();
         }
 
-        private bool IsRegistered(UserDto userDto)
-        {
-            var user = _userRepository.GetUser(filterUser => filterUser.UserName == userDto.UserName);
-
-            if (user != null)
-                return true;
-            else
-                return false;
-        }
-
-        private bool IsValidPasswordHash(UserDto userDto)
-        {
-            var user = _userRepository.GetUser(userFilter => userFilter.UserName == userDto.UserName).Result;
-
-            using (var hmac = new HMACSHA256(user.UserPasswordSalt))
-            {
-                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(userDto.UserPassword));
-                return computedHash.SequenceEqual(user.UserPasswordHash);
-            }
-        }
-
         private string CreateToken(UserDto userDto)
         {
             try

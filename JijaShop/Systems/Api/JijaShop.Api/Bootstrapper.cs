@@ -14,6 +14,7 @@ namespace JijaShop.Api
                 AddIdentitySettings().
                 AddSwaggerSettings().
                 AddScoped<IUserService, UserService>().
+                AddScoped<ITokenService, TokenService>().
                 AddScoped<IProductService, ProductService>().
                 AddScoped<IIdentityService, IdentityService>().
                 AddScoped<IHashService, HashService>();
@@ -24,6 +25,7 @@ namespace JijaShop.Api
         public static IServiceCollection RegisterRepositories(this IServiceCollection services)
         {
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IRolesRepository, RolesRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
 
             return services;

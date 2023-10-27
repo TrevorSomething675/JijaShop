@@ -37,11 +37,7 @@ namespace JijaShop.Api.Services
             }
             try
             {
-                CreatePasswordHash(userDto.UserPassword, out byte[] passwordHash, out byte[] passwordSalt);
-
                 var user = _mapper.Map<User>(userDto);
-                user.UserPasswordHash = passwordHash;
-                user.UserPasswordSalt = passwordSalt;
 
                 _userRepository.CreateUser(user);
                 response = CreateToken(userDto);
@@ -62,11 +58,11 @@ namespace JijaShop.Api.Services
                 response = "Пользователя с таким именем не существует";
                 return false;
             }
-            if (!IsValidPasswordHash(userDto))
-            {
-                response = "Неверный пароль";
-                return false;
-            }
+            //if (!IsValidPasswordHash(userDto))
+            //{
+            //    response = "Неверный пароль";
+            //    return false;
+            //}
             try
             {
                 response = CreateToken(userDto);
@@ -90,25 +86,6 @@ namespace JijaShop.Api.Services
                 return false;
         }
 
-        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
-        {
-            using (var hmac = new HMACSHA256())
-            {
-                passwordSalt = hmac.Key;
-                passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-            }
-        }
-
-        private bool IsValidPasswordHash(UserDto userDto)
-        {
-            var user = _userRepository.GetUser(userFilter => userFilter.UserName == userDto.UserName).Result;
-
-            using (var hmac = new HMACSHA256(user.UserPasswordSalt))
-            {
-                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(userDto.UserPassword));
-                return computedHash.SequenceEqual(user.UserPasswordHash);
-            }
-        }
 
         private string CreateToken(UserDto userDto)
         {

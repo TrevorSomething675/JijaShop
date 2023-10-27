@@ -48,7 +48,8 @@ namespace JijaShop.Api.Services
                     _idetitySettings.Issuer,
                     _idetitySettings.Audience,
                     claims,
-                    expires: DateTime.UtcNow.AddHours(_idetitySettings.ExpTimeHours),
+                    expires: DateTime.UtcNow.AddMinutes(2),
+                    //expires: DateTime.UtcNow.AddHours(_idetitySettings.ExpTimeHours),
                     signingCredentials: creds
                     );
                 var jwtHandler = new JwtSecurityTokenHandler().WriteToken(token);
