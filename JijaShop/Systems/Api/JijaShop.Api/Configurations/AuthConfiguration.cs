@@ -28,15 +28,15 @@ namespace JijaShop.Api.Configurations
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(identitySettings.SecretKeyForToken))
                     };
 
-					//jwt.Events = new JwtBearerEvents
-					//{
-					//	OnMessageReceived = context =>
-					//	{
-					//		context.Token = context.Request.Cookies["Token"];
-					//		return Task.CompletedTask;
-					//	}
-					//};
-				});
+                    //jwt.Events = new JwtBearerEvents
+                    //{
+                    //    OnMessageReceived = context =>
+                    //    {
+                    //        context.Token = context.Request.Cookies["Token"];
+                    //        return Task.CompletedTask;
+                    //    }
+                    //};
+                });
 
             services.AddAuthorization(options =>
             {
