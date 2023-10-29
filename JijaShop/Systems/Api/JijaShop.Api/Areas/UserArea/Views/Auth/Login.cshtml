@@ -11,13 +11,24 @@ else
 }
 <div class="container">
 	<div class="row">
-		<div class="col-4">
+		<div class="col-4 py-4">
 			<div class="row">
 				<form method="post" asp-area="UserArea" asp-controller="Auth" asp-action="Login">
-					<lable>Логин</lable> <input type="text" name="UserName" /><br />
-					<label>Пароль</label> <input type="text" name="UserPassword" /><br />
-					<label>E-mail почта</label> <input type="text" name="UserEmail" /><br />
-					<input type="submit" value="Войти" />
+					<div>
+						<label>Логин</label> <input type="text" name="UserName" /><br />
+					</div>
+					<div>
+						<label>Пароль</label> <input type="password" name="UserPassword" /><br />
+					</div>
+					<div>
+						<label>E-mail</label> <input type="text" name="UserEmail" /><br />
+					</div>
+					<div class="d-flex justify-content-between">
+						<div>
+							<label>Не выходить</label> <input type="checkbox"/>
+						</div>
+						<input type="submit" value="Войти" />
+					</div>
 				</form>
 			</div>
 		</div>

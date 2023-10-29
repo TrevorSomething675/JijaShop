@@ -1,8 +1,36 @@
 {
   "Files": [
     {
-      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\1.jpg",
-      "PackagePath": "staticwebassets\\Images\\1.jpg"
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Products\\1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\1.jpg"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Products\\2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\2.jpg"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Products\\3.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\3.jpg"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Products\\4.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\4.jpg"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Products\\5.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\5.jpg"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Products\\6.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\6.jpg"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Products\\7.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\7.jpg"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Products\\8.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\8.jpg"
     },
     {
       "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Slider\\SliderImage1.png",

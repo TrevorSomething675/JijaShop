@@ -12,18 +12,19 @@ namespace JijaShop.Api.Configurations
         {
             CreateMap<Product, ProductDto>()
                 .ForMember(prodDto => prodDto.ProductDetailsDto, opt =>
-                    opt.MapFrom(prod => new ProductDetailsDto
+                    opt.MapFrom(prod => new ProductDetails
                     {
                         Price = prod.ProductDetails.Price,
                         OldPrice = prod.ProductDetails.OldPrice,
                         Description = prod.ProductDetails.Description
                     }))
                 .ForMember(prodDto => prodDto.ProductOffersDto, opt =>
-                    opt.MapFrom(prod => new ProductOffersDto
+                    opt.MapFrom(prod => new ProductOffers
                     {
                         IsHitOffer = prod.ProductOffers.IsHitOffer,
                         IsNewOffer = prod.ProductOffers.IsNewOffer
                     }));
+
 
             CreateMap<ProductDto, Product>()
                 .ForMember(prod => prod.ProductDetails, opt =>
@@ -40,14 +41,14 @@ namespace JijaShop.Api.Configurations
                         IsNewOffer = prodDto.ProductOffersDto.IsNewOffer
                     }));
 
-            CreateMap<ProductDetails, ProductDetailsDto>().ReverseMap();
-            CreateMap<ProductOffers, ProductOffersDto>().ReverseMap();
             CreateMap<User, UserDto>()
                 .ForMember(user => user.UserEmail, opt =>
                 {
                     opt.MapFrom(user => user.Email);
-                })
-                .ReverseMap();
+                }).ReverseMap();
+
+            CreateMap<ProductDetails, ProductDetailsDto>().ReverseMap();
+            CreateMap<ProductOffers, ProductOffersDto>().ReverseMap();
         }
     }
 }

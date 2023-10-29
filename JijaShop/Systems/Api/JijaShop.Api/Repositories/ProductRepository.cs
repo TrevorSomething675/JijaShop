@@ -52,7 +52,7 @@ namespace JijaShop.Api.Repositories
         {
             try
             {
-                product.CreatedDate = DateTime.Now;
+                //product.CreatedDate = DateTime.Now;
                 _context.Add(product);
                 await _context.SaveChangesAsync();
             }

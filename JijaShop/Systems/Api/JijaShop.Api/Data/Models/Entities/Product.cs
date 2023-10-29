@@ -7,10 +7,13 @@
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdateDate { get; set; }
 
+        public int ProductImageId { get; set; }
+        public ProductImage ProductImage { get; set; } = null!;
+
         public int ProductOffersId { get; set; }
-        public ProductOffers ProductOffers { get; set; }
+        public ProductOffers ProductOffers { get; set; } = null!;
 
         public int ProductDetailsId { get; set; }
-        public ProductDetails ProductDetails { get; set; }
+        public ProductDetails ProductDetails { get; set; } = null!;
     }
 }

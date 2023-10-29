@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>10d20d7b-d96a-4842-9ba0-0789a5255a7b</ProjectGuid>
+    <ProjectGuid>04a8bd44-9cfe-44c2-8440-297b3a5e7639</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/UserArea</DockerServiceUrl>
     <DockerServiceName>jijashop.api</DockerServiceName>

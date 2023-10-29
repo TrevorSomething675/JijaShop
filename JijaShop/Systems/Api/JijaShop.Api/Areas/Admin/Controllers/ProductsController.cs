@@ -1,4 +1,5 @@
 ﻿using JijaShop.Api.Areas.Admin.ViewModels;
+using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,48 @@ namespace JijaShop.Api.Areas.Admin.Controllers
             _productService = productService;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> CreateProduct(ProductDto productDto)
+        {
+            try
+            {
+                await _productService.CreateNewProduct(productDto);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return BadRequest("Ошибка при добавлении продукта");
+            }
+
+        }
+
+        public async Task<IActionResult> UpdateProduct(ProductDto productDto)
+        {
+            try
+            {
+                await _productService.UpdateProduct(productDto);
+                return Ok();
+            }
+            catch
+            {
+                return BadRequest("Не удалось обновить продукт");
+            }
+        }
+
+        public async Task<IActionResult> DeleteProduct(ProductDto productDto)
+        {
+            try
+            {
+                await _productService.DeleteProduct(productDto);
+                return Ok();
+            }
+            catch
+            {
+                return BadRequest("Не удалось удалить продукт");
+            }
+        }
+
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var products = await _productService.GetProducts();

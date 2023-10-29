@@ -30,7 +30,7 @@ namespace JijaShop.Api.Services
                 .Skip((int)pageCount)
                 .Take((int)pageResult * pageNumber).ToList();
 
-            var productsDto = _mapper.Map<List<ProductDto>>(products);
+			var productsDto = _mapper.Map<List<ProductDto>>(products);
 
             return productsDto;
         }
@@ -50,8 +50,19 @@ namespace JijaShop.Api.Services
         public async Task CreateNewProduct(ProductDto productDto)
         {
             var product = _mapper.Map<Product>(productDto);
+            using (var memoryStream = new MemoryStream())
+            {
+                await productDto.ProductImageDto.Image.CopyToAsync(memoryStream);
+                byte[] data = memoryStream.ToArray();
+
+                product.ProductImage = new ProductImage
+                {
+                    ImageName = productDto.ProductImageDto.Image.FileName,
+                    ImageContent = data
+                };
+            }
+
             await _productRepository.CreateNewProduct(product);
         }
-
     }
 }

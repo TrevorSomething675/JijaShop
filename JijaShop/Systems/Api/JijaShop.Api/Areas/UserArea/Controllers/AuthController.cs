@@ -1,12 +1,12 @@
 ﻿using JijaShop.Api.Data.Models.AuthDtoModels;
+using JijaShop.Api.Repositories.Abstractions;
 using JijaShop.Api.Data.Models.AuthEntities;
 using JijaShop.Api.Services.Abstractions;
-using JijaShop.Extentions.Constants;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using JijaShop.Extentions.Constants;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using JijaShop.Api.Repositories.Abstractions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
@@ -83,28 +83,6 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
 
             return Ok(accessToken);
         }
-
-        //public async Task<IActionResult> Login(UserDto userDto)
-        //{
-        //    var result = _identityService.LoginUser(userDto, out string response);
-
-        //    if (result)
-        //    {
-        //        var cookieOptions = new CookieOptions
-        //        {
-        //            HttpOnly = true,
-        //            Secure = true,
-        //            SameSite = SameSiteMode.Strict,
-        //        };
-
-        //        Response.Cookies.Append("Token", response, cookieOptions);
-        //        return Ok(new { token = response });
-        //    }
-        //    else
-        //    {
-        //        return BadRequest(response);
-        //    }
-        //}
 
         [HttpGet]
         public async Task<IActionResult> Login()

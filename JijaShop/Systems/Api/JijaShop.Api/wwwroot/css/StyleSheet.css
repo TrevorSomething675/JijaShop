@@ -296,3 +296,39 @@
     height: 100%;
     object-fit: cover;
 }
+
+/*=========================== Auth-Form ===========================*/
+
+/*=========================== Admin-SideBar ===========================*/
+
+.admin-sidebar div a {
+    font-size:28px;
+    text-decoration:none;
+    color:var(--dark-text-color);
+    text-align:center;
+    transition:0.3s;
+    width:100%;
+    padding:5px 0px 5px 0px;
+}
+
+.admin-sidebar div {
+    padding: 8px 8px;
+}
+
+.admin-sidebar div a:hover {
+    font-size:28px;
+    text-decoration:none;
+    color:var(--gray-color);
+}
+
+.create-product-button {
+    background-color:#58f57a;
+}
+
+.update-product-button {
+    background-color:#f0f252;
+}
+
+.delete-product-button {
+    background-color:#e34953;
+}

@@ -4,7 +4,9 @@
     {
         public string? Name { get; set; }
         public int? Quantity { get; set; }
-        public ProductDetailsDto ProductDetailsDto { get; set; }
-        public ProductOffersDto ProductOffersDto { get; set; }
+
+		public ProductImageDto ProductImageDto { get; set; } = new ProductImageDto();
+        public ProductOffersDto ProductOffersDto { get; set; } = new ProductOffersDto();
+        public ProductDetailsDto ProductDetailsDto { get; set; } = new ProductDetailsDto();
     }
 }

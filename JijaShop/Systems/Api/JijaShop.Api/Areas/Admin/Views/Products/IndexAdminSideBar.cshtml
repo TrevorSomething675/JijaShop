@@ -1,0 +1,52 @@
+﻿@using JijaShop.Api.Data.Models.DTOModels;
+
+<div class="admin-sidebar">
+
+	<div class="d-flex">
+		@using (Html.BeginForm("CreateProduct", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
+		{
+			<div>
+  				<label>Имя: </label>
+				  <input name="ProductDto.Name" />
+			</div>
+			<div>
+				<label>Количество:</label>
+				<input name="ProductDto.Quantity" />
+			</div>
+			<h2>Подробное описание продукта</h2>
+			<div>
+				<label>Цена</label>
+				<input name="ProductDto.ProductDetailsDto.Price" />
+			</div>
+			<div>
+				<label>Старая цена</label>
+				<input name="ProductDto.ProductDetailsDto.OldPrice" />
+			</div>
+			<div>
+				<label>Описание</label>
+				<input name="ProductDto.ProductDetailsDto.Description" />
+			</div>
+			<h2>Тэги</h2>
+			<div>
+				<label>Хит продаж</label>
+				<input type="checkbox"  name="ProductDto.ProductOffersDto.IsHitOffer" value="true"/>
+
+				<label>Новинка</label>
+				<input type="checkbox"  name="ProductDto.ProductOffersDto.IsNewOffer" value="true"/>
+			</div>
+			<div>
+				<label>Картинка</label>
+				<input type="file" name="ProductDto.ProductImageDto.Image" />
+			</div>
+			<input type="submit" value="Добавить" />
+		}
+	</div>
+
+@* 	<div class="d-flex">
+		<a asp-area="admin" asp-controller="products" asp-action="CreateProduct" class="create-product-button">
+			<span>Добавить продукт</span>
+			<i class="bi bi-plus-circle"></i>
+		</a>
+	</div> *@
+
+</div>

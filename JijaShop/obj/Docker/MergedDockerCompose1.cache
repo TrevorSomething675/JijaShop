@@ -1,27 +1,131 @@
 name: dockercompose14797412381080318144
 services:
-  postgres:
+  db:
     environment:
-      POSTGRES_NAME: postgres
+      POSTGRES_DB: JijaShopDataBase
       POSTGRES_PASSWORD: jijahiha14
       POSTGRES_USER: postgres
-    image: postgres:13.3
+    image: postgres:latest
     networks:
-      default: null
+      jija_shop_network: null
     ports:
     - mode: ingress
       target: 5432
       published: "5432"
       protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: pgdata
+      target: /var/lib/postgresql/data
+      volume: {}
+  jijashop.api:
+    build:
+      context: C:\JijaShop\JijaShop\JijaShop
+      dockerfile: Systems/Api/JijaShop.Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: JijaShop.Api
+      target: base
+    container_name: JijaShop.Api
+    depends_on:
+      db:
+        condition: service_started
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DATABASE_URL: postgresql://postgres:jijahiha14@db:5432/JijaShopDataBase
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: jijashopapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages  "/app/bin/Debug/net7.0/JijaShop.Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      jija_shop_network: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    tty: true
     volumes:
     - type: bind
-      source: C:\JijaShop\JijaShop\JijaShop
-      target: /docker-entrypoint-initdb.d
+      source: C:\Users\Win10Pro\.nuget\packages\
+      target: /.nuget/packages
+      read_only: true
       bind:
         create_host_path: true
-    - type: volume
-      target: E:\TestDataPosgr
-      volume: {}
+    - type: bind
+      source: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload
+      target: /HotReloadAgent
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net7.0
+      target: /HotReloadProxy
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net7.0
+      target: /TokenService.Proxy
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Win10Pro\AppData\Roaming/ASP.NET/Https
+      target: /home/app/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Win10Pro\AppData\Roaming/Microsoft/UserSecrets
+      target: /home/app/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Win10Pro\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Win10Pro\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Win10Pro\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\JijaShop\JijaShop\JijaShop
+      target: /src
+      bind:
+        create_host_path: true
 networks:
-  default:
-    name: dockercompose14797412381080318144_default
+  jija_shop_network:
+    name: dockercompose14797412381080318144_jija_shop_network
+volumes:
+  pgdata:
+    name: dockercompose14797412381080318144_pgdata

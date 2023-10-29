@@ -40,6 +40,9 @@ namespace JijaShop.Api.Migrations
                     b.Property<int>("ProductDetailsId")
                         .HasColumnType("integer");
 
+                    b.Property<int>("ProductImageId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("ProductOffersId")
                         .HasColumnType("integer");
 
@@ -52,6 +55,8 @@ namespace JijaShop.Api.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ProductDetailsId");
+
+                    b.HasIndex("ProductImageId");
 
                     b.HasIndex("ProductOffersId");
 
@@ -79,6 +84,28 @@ namespace JijaShop.Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProductDetails");
+                });
+
+            modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.ProductImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<byte[]>("ImageContent")
+                        .IsRequired()
+                        .HasColumnType("bytea");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductImage");
                 });
 
             modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.ProductOffers", b =>
@@ -332,6 +359,12 @@ namespace JijaShop.Api.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("JijaShop.Api.Data.Models.Entities.ProductImage", "ProductImage")
+                        .WithMany()
+                        .HasForeignKey("ProductImageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("JijaShop.Api.Data.Models.Entities.ProductOffers", "ProductOffers")
                         .WithMany()
                         .HasForeignKey("ProductOffersId")
@@ -339,6 +372,8 @@ namespace JijaShop.Api.Migrations
                         .IsRequired();
 
                     b.Navigation("ProductDetails");
+
+                    b.Navigation("ProductImage");
 
                     b.Navigation("ProductOffers");
                 });

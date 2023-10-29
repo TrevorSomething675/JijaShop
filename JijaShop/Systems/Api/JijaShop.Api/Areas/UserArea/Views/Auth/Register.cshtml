@@ -13,10 +13,11 @@ else
 	<div class="row">
 		<div class="col-4">
 			<div class="row">
-				<form method="post" asp-area="UserArea" asp-controller="Auth" asp-action="Register">
-					<lable>Логин</lable> <input type="text" name="UserName" /><br />
-					<label>Пароль</label> <input type="text" name="UserPassword" /><br />
-					<label>E-mail почта</label> <input type="text" name="UserEmail" /><br />
+				<form class="login-form" method="post" asp-area="UserArea" asp-controller="Auth" asp-action="Register">
+					<label>Логин</label> <input type="text" name="UserName" /><br />
+					<label>Пароль</label> <input type="password" name="UserPassword" /><br />
+					<label>E-mail</label> <input type="text" name="UserEmail" /><br />
+					<label>Не выходить</label> <input type="checkbox" />
 					<input type="submit" value="Войти" />
 				</form>
 			</div>

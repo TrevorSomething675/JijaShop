@@ -4,6 +4,7 @@ using JijaShop.Api.Configurations;
 using JijaShop.Api.Data;
 using JijaShop.Settings;
 using JijaShop.Api;
+using JijaShop.Api.Data.Models.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +40,11 @@ using (var scope = app.Services.CreateScope())
         //    {
         //        Name = $"testProduct{i}",
         //        Quantity = i,
+        //        ProductImage = new ProductImage
+        //        {
+        //            ImageContent = new byte[] {1,2,3 },
+        //            ImageName = "TestNameImage"
+        //        },
         //        ProductDetails = new ProductDetails
         //        {
         //            Price = 20,

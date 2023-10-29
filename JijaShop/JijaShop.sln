@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JijaShop.Common", "Extentio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JijaShop.Settings", "Extentions\JijaShop.Settings\JijaShop.Settings.csproj", "{F0B98A99-A330-4695-A7FE-AE93A321B2CD}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{10D20D7B-D96A-4842-9BA0-0789A5255A7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JijaShop.Extentions", "..\JijaShop.Extentions\JijaShop.Extentions.csproj", "{A2CDBE89-D3FD-407F-871F-E5E242992442}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JijaShop.Extentions", "..\JijaShop.Extentions\JijaShop.Extentions.csproj", "{A2CDBE89-D3FD-407F-871F-E5E242992442}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{04A8BD44-9CFE-44C2-8440-297B3A5E7639}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,14 +39,14 @@ Global
 		{F0B98A99-A330-4695-A7FE-AE93A321B2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0B98A99-A330-4695-A7FE-AE93A321B2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0B98A99-A330-4695-A7FE-AE93A321B2CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10D20D7B-D96A-4842-9BA0-0789A5255A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10D20D7B-D96A-4842-9BA0-0789A5255A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10D20D7B-D96A-4842-9BA0-0789A5255A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10D20D7B-D96A-4842-9BA0-0789A5255A7B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A2CDBE89-D3FD-407F-871F-E5E242992442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2CDBE89-D3FD-407F-871F-E5E242992442}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2CDBE89-D3FD-407F-871F-E5E242992442}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2CDBE89-D3FD-407F-871F-E5E242992442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04A8BD44-9CFE-44C2-8440-297B3A5E7639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A8BD44-9CFE-44C2-8440-297B3A5E7639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A8BD44-9CFE-44C2-8440-297B3A5E7639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A8BD44-9CFE-44C2-8440-297B3A5E7639}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
