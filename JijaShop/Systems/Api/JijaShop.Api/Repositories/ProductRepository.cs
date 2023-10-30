@@ -1,8 +1,8 @@
 ﻿using JijaShop.Api.Repositories.Abstractions;
 using JijaShop.Api.Data.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using JijaShop.Api.Data;
-using Microsoft.EntityFrameworkCore;
 
 namespace JijaShop.Api.Repositories
 {

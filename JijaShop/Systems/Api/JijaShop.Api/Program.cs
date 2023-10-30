@@ -5,7 +5,6 @@ using JijaShop.Api.Data;
 using JijaShop.Settings;
 using JijaShop.Api;
 using JijaShop.Api.Data.Models.Entities;
-using Mapster;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +15,7 @@ var identitySettings = Settings.Load<IdentitySettings>("Identity");
 builder.AddAppLogger();
 var services = builder.Services;
 
-//services.AddAutoMapper(typeof(AutoMapperConfiguration));
-services.AddMapster();
+services.AddAutoMapper(typeof(AutoMapperConfiguration));
 services.AddRazorPages();
 services.AddControllersWithViews();
 

@@ -365,22 +365,6 @@
                   "SubPath": "Images/Products/6.jpg"
                 },
                 "Patterns": null
-              },
-              "7.jpg": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "Images/Products/7.jpg"
-                },
-                "Patterns": null
-              },
-              "8.jpg": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "Images/Products/8.jpg"
-                },
-                "Patterns": null
               }
             },
             "Asset": null,

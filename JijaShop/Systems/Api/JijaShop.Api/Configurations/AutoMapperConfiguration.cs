@@ -49,7 +49,7 @@ namespace JijaShop.Api.Configurations
                     opt.MapFrom(prodDto => new ProductImageDto
                     {
                         ImageNameDto = prodDto.ProductImageDto.ImageNameDto,
-                        ImagePathDto = prodDto.ProductImageDto.ImagePathDto,
+                        ImagePathDto = prodDto.ProductImageDto.ImagePathDto
                     }));
 
             CreateMap<User, UserDto>()
@@ -60,7 +60,13 @@ namespace JijaShop.Api.Configurations
 
             CreateMap<ProductDetails, ProductDetailsDto>().ReverseMap();
             CreateMap<ProductOffers, ProductOffersDto>().ReverseMap();
-            CreateMap<ProductImage, ProductImageDto>().ReverseMap();
+            CreateMap<ProductImage, ProductImageDto>()
+                .ForMember(dest => dest.Image, opt => opt.Ignore())
+                .ForMember(dest => dest.ImageNameDto, opt => opt.MapFrom(src => src.ImageName))
+                .ForMember(dest => dest.ImagePathDto, opt => opt.MapFrom(src => src.ImagePath))
+                .ReverseMap()
+                .ForMember(dest => dest.ImageName, opt => opt.MapFrom(src => src.ImageNameDto))
+                .ForMember(dest => dest.ImagePath, opt => opt.MapFrom(src => src.ImagePathDto));
         }
     }
 }
