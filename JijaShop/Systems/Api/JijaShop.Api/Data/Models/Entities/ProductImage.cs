@@ -2,7 +2,7 @@
 {
 	public class ProductImage : BaseEntity
 	{
-		public string ImageName { get; set; } = null!;
-		public byte[] ImageContent { get; set; } = null!;
-	}
+        public string ImageName { get; set; } = "";
+        public string ImagePath { get; set; } = "";
+    }
 }

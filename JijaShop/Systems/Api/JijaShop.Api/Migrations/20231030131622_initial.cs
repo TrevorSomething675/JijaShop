@@ -79,7 +79,7 @@ namespace JijaShop.Api.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     ImageName = table.Column<string>(type: "text", nullable: false),
-                    ImageContent = table.Column<byte[]>(type: "bytea", nullable: false)
+                    ImagePath = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

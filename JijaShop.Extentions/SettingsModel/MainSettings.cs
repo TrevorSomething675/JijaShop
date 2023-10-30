@@ -2,6 +2,6 @@
 {
     public class MainSettings
     {
-        public string SecretKeyForToken { get; private set; } = null!;
+        public string ProductImagesPath { get; private set; } = null!;
     }
 }

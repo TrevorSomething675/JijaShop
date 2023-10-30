@@ -23,6 +23,7 @@ namespace JijaShop.Api.Repositories
                 var resultProducts = await _context.Products
                     .Include(prod => prod.ProductDetails)
                     .Include(prod => prod.ProductOffers)
+                    .Include(prod => prod.ProductImage)
                     .Where(filter).ToListAsync();
 
                 return resultProducts;
@@ -32,6 +33,7 @@ namespace JijaShop.Api.Repositories
                 var resultProducts = await _context.Products
                     .Include(prod => prod.ProductDetails)
                     .Include(prod => prod.ProductOffers)
+                    .Include(prod => prod.ProductImage)
                     .ToListAsync();
 
                 return resultProducts;
@@ -43,6 +45,8 @@ namespace JijaShop.Api.Repositories
         {
             var resultProduct = await _context.Products.Include(prod => prod.ProductDetails)
                 .Include(prod => prod.ProductOffers)
+                .Include(prod => prod.ProductDetails)
+                .Include(prod => prod.ProductImage)
                 .FirstOrDefaultAsync(prod => prod.Id == id);
 
             return resultProduct;

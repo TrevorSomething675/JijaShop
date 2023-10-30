@@ -3,7 +3,7 @@
 	public class ProductImageDto : BaseEntityDto
 	{
 		public IFormFile Image { get; set; } = null!;
-		public string ImageName { get; set; } = null!;
-		public byte[] ImageContent { get; set; } = null!;
+		public string ImageNameDto { get; set; } = null!;
+		public string ImagePathDto { get; set; } = null!;
 	}
 }

@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace JijaShop.Api.Migrations
 {
     [DbContext(typeof(MainContext))]
-    [Migration("20231029194550_initial")]
+    [Migration("20231030131622_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -98,11 +98,11 @@ namespace JijaShop.Api.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<byte[]>("ImageContent")
-                        .IsRequired()
-                        .HasColumnType("bytea");
-
                     b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ImagePath")
                         .IsRequired()
                         .HasColumnType("text");
 

@@ -2,6 +2,7 @@
 using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Data.Models.Entities;
 using JijaShop.Api.Services.Abstractions;
+using JijaShop.Extentions.SettingsModel;
 using System.Linq.Expressions;
 using AutoMapper;
 
@@ -10,10 +11,14 @@ namespace JijaShop.Api.Services
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
+        private readonly IWebHostEnvironment _appEnvironment;
+        private readonly MainSettings _mainSettings;
         private readonly IMapper _mapper;
-        public ProductService(IProductRepository productRepository, IMapper mapper)
+        public ProductService(IProductRepository productRepository, IMapper mapper, IWebHostEnvironment appEnvironment)
         {
+            _mainSettings = Settings.Settings.Load<MainSettings>("Main");
             _productRepository = productRepository;
+            _appEnvironment = appEnvironment;
             _mapper = mapper;
         }
         public Task<Product> GetProduct(int id)
@@ -30,6 +35,7 @@ namespace JijaShop.Api.Services
                 .Skip((int)pageCount)
                 .Take((int)pageResult * pageNumber).ToList();
 
+            var jija = _mapper.Map<ProductDto>(products.FirstOrDefault());
 			var productsDto = _mapper.Map<List<ProductDto>>(products);
 
             return productsDto;
@@ -46,21 +52,21 @@ namespace JijaShop.Api.Services
             var product = _mapper.Map<Product>(productDto);
             await _productRepository.DeleteProduct(product);
         }
-
+        
         public async Task CreateNewProduct(ProductDto productDto)
         {
             var product = _mapper.Map<Product>(productDto);
-            using (var memoryStream = new MemoryStream())
-            {
-                await productDto.ProductImageDto.Image.CopyToAsync(memoryStream);
-                byte[] data = memoryStream.ToArray();
+            product.ProductImage.ImageName = "test2";
+            product.ProductImage.ImagePath = "test1";
+            
+            //using (var fileStream = new FileStream($"{_appEnvironment.WebRootPath}/{_mainSettings.ProductImagesPath}/{productDto.ProductImageDto.Image.FileName}", FileMode.Create))
+            //{
+            //    productDto.ProductImageDto.Image.CopyTo(fileStream);
+            //    productDto.ProductImageDto.ImageNameDto = productDto.ProductImageDto.Image.FileName;
+            //}
 
-                product.ProductImage = new ProductImage
-                {
-                    ImageName = productDto.ProductImageDto.Image.FileName,
-                    ImageContent = data
-                };
-            }
+            //product.ProductImage.ImageName = productDto.ProductImageDto.ImageNameDto;
+            //product.ProductImage.ImagePath = $"{ _mainSettings.ProductImagesPath}/{ productDto.ProductImageDto.Image.FileName}";
 
             await _productRepository.CreateNewProduct(product);
         }
