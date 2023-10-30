@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "agra4nxEUBZrxfqrpujD9zpRPT0JhxU9UN/xI0OHwBM=",
+  "Hash": "iDIn+nH8E+KwFiR1t5nbD5Uoj/cI60F9WercXG9ZkjY=",
   "Source": "JijaShop.Api",
   "BasePath": "_content/JijaShop.Api",
   "Mode": "Default",
@@ -763,6 +763,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Products\\6.jpg"
+    },
+    {
+      "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Products\\8.jpg",
+      "SourceId": "JijaShop.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\",
+      "BasePath": "_content/JijaShop.Api",
+      "RelativePath": "Images/Products/8.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\8.jpg"
     },
     {
       "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\Images\\Slider\\SliderImage1.png",

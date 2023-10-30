@@ -59,10 +59,9 @@ namespace JijaShop.Api.Services
             using (var fileStream = new FileStream($"{_appEnvironment.WebRootPath}/{_mainSettings.ProductImagesPath}/{productDto.ProductImageDto.Image.FileName}", FileMode.Create))
             {
                 productDto.ProductImageDto.Image.CopyTo(fileStream);
-                productDto.ProductImageDto.ImageNameDto = productDto.ProductImageDto.Image.FileName;
             }
 
-            product.ProductImage.ImageName = productDto.ProductImageDto.ImageNameDto;
+            product.ProductImage.ImageName = productDto.ProductImageDto.Image.FileName;
             product.ProductImage.ImagePath = $"{_mainSettings.ProductImagesPath}/{productDto.ProductImageDto.Image.FileName}";
 
             await _productRepository.CreateNewProduct(product);
