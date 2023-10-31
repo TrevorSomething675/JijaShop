@@ -52,13 +52,13 @@
 .dropdown-menu,
 .form-control {
     border: none;
-    border-radius: 0;
+    border-radius: 3px;
 }
 
 .btn,
 .dropdown-menu,
 .form-control:hover {
-    color: var(--accent-color);
+    color: var(--gray-color);
 }
 
 .form-control:focus {
@@ -304,7 +304,7 @@
 
 /*=========================== Auth-Form ===========================*/
 
-/*=========================== Admin-SideBar ===========================*/
+/*========================= Admin-SideBar =========================*/
 
 .sidebar-products div a:hover {
     font-size: 28px;
@@ -328,4 +328,15 @@
 
 .delete-product-button {
     background-color:#e34953;
+}
+
+/*========================= Product-Card-Big =========================*/
+
+.product-big-name {
+    font-size: 32px;
+    text-align:center;
+}
+
+.product-big-form{
+    background-color:white;
 }

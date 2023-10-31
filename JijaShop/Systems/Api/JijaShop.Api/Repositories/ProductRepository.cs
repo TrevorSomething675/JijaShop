@@ -41,13 +41,13 @@ namespace JijaShop.Api.Repositories
 
         }
 
-        public async Task<Product> GetProduct(int id)
+        public async Task<Product> GetProduct(string name)
         {
             var resultProduct = await _context.Products.Include(prod => prod.ProductDetails)
                 .Include(prod => prod.ProductOffers)
                 .Include(prod => prod.ProductDetails)
                 .Include(prod => prod.ProductImage)
-                .FirstOrDefaultAsync(prod => prod.Id == id);
+                .FirstOrDefaultAsync(prod => prod.Name == name);
 
             return resultProduct;
         }

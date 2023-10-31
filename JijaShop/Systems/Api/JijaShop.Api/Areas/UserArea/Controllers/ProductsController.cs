@@ -1,4 +1,5 @@
 ﻿using JijaShop.Api.Areas.UserArea.ViewModels;
+using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +24,14 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
             };
 
             return View(model);
+        }
+
+        public async Task<IActionResult> IndexProduct(ProductDto productDto)
+        {
+            //var model = await _productService.GetProduct(productDto.Name);
+            var model = await _productService.GetProducts();
+
+            return View(model[4]);
         }
 
         [HttpGet]
