@@ -357,11 +357,33 @@
 
 /*========================= Product-Card-Big =========================*/
 
+.product-details-big-price{
+    font-size:32px;
+    color:var(--red-offer)
+}
+
 .product-big-name {
-    font-size: 322px;
+    font-size: 32px;
     text-align:center;
 }
 
 .product-big-bg{
     background-color:white;
+}
+
+.product-big-buttons div {
+    color: var(--dark-text-color);
+    font-size: 20px;
+}
+
+.product-big-buttons div:hover {
+    color: var(--hard-gray-color);
+    font-size: 20px;
+}
+
+.product-details-big-price small {
+    color: var(--hard-gray-color);
+    font-weight: 400;
+    text-decoration: 2px line-through;
+    font-size: 1rem;
 }
