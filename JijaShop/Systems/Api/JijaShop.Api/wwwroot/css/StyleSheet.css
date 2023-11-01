@@ -77,15 +77,6 @@
     color: var(--gray-color);
 }
 
-.return-back-btn {
-    color: var(--dark-text-color);
-    font-size: 40px;
-    transition: 0.2s;
-}
-
-    .return-back-btn:hover {
-        color: var(--gray-color);
-    }
 /*=========================== Header-Top ===========================*/
 
 .list-inline-item a {
@@ -323,7 +314,6 @@
 .product-img img {
     width: 100%;
     height: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -356,6 +346,12 @@
 }
 
 /*========================= Product-Card-Big =========================*/
+
+.product-big-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .product-details-big-price{
     font-size:32px;

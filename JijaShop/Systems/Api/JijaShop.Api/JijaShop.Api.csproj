@@ -49,4 +49,8 @@
     <ProjectReference Include="..\..\..\Extentions\JijaShop.Settings\JijaShop.Settings.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\owlcarousel\" />
+  </ItemGroup>
+
 </Project>
