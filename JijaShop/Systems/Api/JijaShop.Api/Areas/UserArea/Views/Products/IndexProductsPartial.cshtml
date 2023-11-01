@@ -18,7 +18,7 @@
                     }
                 </div>
                 <div class="product-img">
-                    <a href="product.html">
+                    <a asp-area="UserArea" asp-controller="Products" asp-action="IndexProduct" asp-route-productName="@product.Name">
                         <img src="@product.ProductImageDto.ImagePathDto" />
                     </a>
                 </div>

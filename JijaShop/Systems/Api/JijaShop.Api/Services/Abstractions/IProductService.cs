@@ -6,7 +6,7 @@ namespace JijaShop.Api.Services.Abstractions
 {
     public interface IProductService
     {
-		public Task<Product> GetProduct(string name);
+		public Task<ProductDto> GetProduct(string name);
 		public Task<List<ProductDto>> GetProducts(int pageNumber = 1, Expression<Func<Product, bool>> filter = null);
 		public Task UpdateProduct(ProductDto productDto);
 		public Task DeleteProduct(ProductDto productDto);

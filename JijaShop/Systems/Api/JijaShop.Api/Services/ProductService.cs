@@ -21,9 +21,10 @@ namespace JijaShop.Api.Services
             _appEnvironment = appEnvironment;
             _mapper = mapper;
         }
-        public Task<Product> GetProduct(string name)
+        public async Task<ProductDto?> GetProduct(string name)
         {
-            var product = _productRepository.GetProduct(name);
+            var product = _mapper.Map<ProductDto>(await _productRepository.GetProduct(name));
+
             return product;
         }
         public async Task<List<ProductDto>?> GetProducts(int pageNumber = 1, Expression<Func<Product, bool>> filter = null)

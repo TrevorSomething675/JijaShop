@@ -77,6 +77,15 @@
     color: var(--gray-color);
 }
 
+.return-back-btn {
+    color: var(--dark-text-color);
+    font-size: 40px;
+    transition: 0.2s;
+}
+
+    .return-back-btn:hover {
+        color: var(--gray-color);
+    }
 /*=========================== Header-Top ===========================*/
 
 .list-inline-item a {
@@ -159,6 +168,22 @@
 
 .sidebar-items input {
     border: 1px solid var(--gray-color);
+}
+
+.sidebar-item textarea {
+    border: 1px solid var(--gray-color);
+}
+
+.sidebar-item textarea:active {
+    border: 1px solid var(--gray-color);
+    outline: none;
+    box-shadow: 0 0 10px none;
+}
+
+.sidebar-items textarea:focus {
+    border: 1px solid var(--gray-color);
+    outline: none;
+    box-shadow: 0 0 10px none;
 }
 
 .sidebar-items input:active {
@@ -333,10 +358,10 @@
 /*========================= Product-Card-Big =========================*/
 
 .product-big-name {
-    font-size: 32px;
+    font-size: 322px;
     text-align:center;
 }
 
-.product-big-form{
+.product-big-bg{
     background-color:white;
 }
