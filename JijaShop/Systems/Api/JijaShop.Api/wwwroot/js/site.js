@@ -1,4 +1,8 @@
-﻿//$(document).ready(function () {
+﻿$(document).ready(function () {
+    $(".owl-carousel").owlCarousel();
+});
+
+//$(document).ready(function () {
 //    var counter = 0;
 //$("#incrementButton").click(function () {
 //    counter += 1;
