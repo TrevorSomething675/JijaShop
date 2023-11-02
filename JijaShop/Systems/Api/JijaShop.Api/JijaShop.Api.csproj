@@ -50,7 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\owlcarousel\" />
+    <Folder Include="wwwroot\owlcarousel\js\" />
   </ItemGroup>
 
 </Project>

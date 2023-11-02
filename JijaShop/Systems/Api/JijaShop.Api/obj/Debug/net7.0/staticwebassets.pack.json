@@ -437,10 +437,6 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\lib\\jquery-for-owl-carousel\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-for-owl-carousel\\jquery.js"
-    },
-    {
       "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -487,6 +483,14 @@
     {
       "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\owlcarousel\\js\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\owlcarousel\\js\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\owlcarousel\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\owlcarousel\\js\\owl.carousel.min.js"
     },
     {
       "Id": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\owlcarousel\\owl.carousel.min.css",

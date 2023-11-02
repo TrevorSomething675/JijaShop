@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ssrrQsYusMQFDgGCp/iovUp20pJ4STxCsvXGEhPA0ZI=",
+  "Hash": "YVeZ9ejztsku8D/+wNHnxcqVvVfYDFALC4ZpCuycMSY=",
   "Source": "JijaShop.Api",
   "BasePath": "_content/JijaShop.Api",
   "Mode": "Default",
@@ -1938,23 +1938,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\lib\\jquery-for-owl-carousel\\jquery.js",
-      "SourceId": "JijaShop.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\",
-      "BasePath": "_content/JijaShop.Api",
-      "RelativePath": "lib/jquery-for-owl-carousel/jquery.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-for-owl-carousel\\jquery.js"
-    },
-    {
       "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "JijaShop.Api",
       "SourceType": "Discovered",
@@ -2089,6 +2072,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\owlcarousel\\js\\owl.carousel.js",
+      "SourceId": "JijaShop.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\",
+      "BasePath": "_content/JijaShop.Api",
+      "RelativePath": "owlcarousel/js/owl.carousel.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\owlcarousel\\js\\owl.carousel.js"
+    },
+    {
+      "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\owlcarousel\\js\\owl.carousel.min.js",
+      "SourceId": "JijaShop.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\",
+      "BasePath": "_content/JijaShop.Api",
+      "RelativePath": "owlcarousel/js/owl.carousel.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\owlcarousel\\js\\owl.carousel.min.js"
     },
     {
       "Identity": "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\wwwroot\\owlcarousel\\owl.carousel.min.css",
