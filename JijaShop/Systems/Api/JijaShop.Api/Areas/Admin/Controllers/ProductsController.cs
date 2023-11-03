@@ -1,7 +1,7 @@
-﻿using JijaShop.Api.Areas.Admin.ViewModels;
-using JijaShop.Api.Data.Models.DTOModels;
+﻿using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
+using JijaShop.Api.ViewModels;
 
 namespace JijaShop.Api.Areas.Admin.Controllers
 {
@@ -55,12 +55,11 @@ namespace JijaShop.Api.Areas.Admin.Controllers
             }
         }
 
-        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var products = await _productService.GetProducts();
 
-            var model = new AdminProductsViewModel()
+            var model = new ProductsViewModel()
             {
                 Products = products,
             };
@@ -68,7 +67,7 @@ namespace JijaShop.Api.Areas.Admin.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> IndexAdminProductsPartial(int pageCount)
+        public async Task<IActionResult> IndexAdminProductsPartial(int pageCount = 1)
         {
             var model = await _productService.GetProducts(pageCount);
 

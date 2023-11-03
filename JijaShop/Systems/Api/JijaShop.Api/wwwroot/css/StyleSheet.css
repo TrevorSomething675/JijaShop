@@ -383,3 +383,15 @@
     text-decoration: 2px line-through;
     font-size: 1rem;
 }
+
+/*========================= Footer =========================*/
+
+.footer-content-text{
+    color:var(--gray-color);
+}
+
+/*=========================== Owl-Carousel-Card ===========================*/
+
+.owl-carousel-item{
+    border: 1px solid var(--gray-color);
+}

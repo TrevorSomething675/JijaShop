@@ -2,6 +2,7 @@
 @model ProductDto
 
 <div class="container py-3">
+
 	<div class="product-big-bg">
 		<div class="row">
 			
@@ -41,4 +42,11 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="py-4">
+		@await Component.InvokeAsync("OwlCarousel")
+	</div>
+
+
+
 </div>

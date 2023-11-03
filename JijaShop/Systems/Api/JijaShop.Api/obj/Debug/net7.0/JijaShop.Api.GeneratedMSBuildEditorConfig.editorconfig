@@ -24,14 +24,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/Admin/Views/Moderators/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW9kZXJhdG9yc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/Admin/Views/Moderators/IndexModeratorsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW9kZXJhdG9yc1xJbmRleE1vZGVyYXRvcnNQYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/Admin/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,24 +36,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcSW5kZXhBZG1pblNpZGVCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/Admin/Views/Shared/AdminFooterPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEFkbWluRm9vdGVyUGFydGlhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/Admin/Views/Shared/AdminHeaderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEFkbWluSGVhZGVyUGFydGlhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/Admin/Views/Shared/AdminHeadPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEFkbWluSGVhZFBhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/Admin/Views/Shared/AdminLinksPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEFkbWluTGlua3NQYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/Admin/Views/Shared/AdminScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEFkbWluU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
@@ -120,24 +96,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcUHJvZHVjdHNcSW5kZXhQcm9kdWN0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/UserArea/Views/Shared/FooterPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXEZvb3RlclBhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/UserArea/Views/Shared/HeaderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXEhlYWRlclBhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/UserArea/Views/Shared/HeadPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXEhlYWRQYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/UserArea/Views/Shared/LinksPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXExpbmtzUGFydGlhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/UserArea/Views/Shared/ScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXFNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/UserArea/Views/Shared/_UserLayout.cshtml]
@@ -154,4 +114,24 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/UserArea/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Views/Shared/Components/OwlCarousel/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcT3dsQ2Fyb3VzZWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Views/Shared/FooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZvb3RlclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Views/Shared/HeadPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhlYWRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Views/Shared/LinksPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExpbmtzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Views/Shared/ScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

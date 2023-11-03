@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    @await Html.PartialAsync("AdminHeadPartial")
-    @await Html.PartialAsync("AdminLinksPartial")
+    @await Html.PartialAsync("HeadPartial")
+    @await Html.PartialAsync("LinksPartial")
 </head>
 
 <body>
-    @await Html.PartialAsync("AdminScriptsPartial")
+    @await Html.PartialAsync("ScriptsPartial")
 
     <header class="shadow-lg">
         @await Html.PartialAsync("AdminHeaderPartial")
@@ -17,9 +17,9 @@
     </main>
 
     <footer class="border-top footer text-muted">
-        @await Html.PartialAsync("AdminFooterPartial")
+        @await Html.PartialAsync("FooterPartial")
     </footer>
 
-    @await RenderSectionAsync("AdminScripts", required: false)
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

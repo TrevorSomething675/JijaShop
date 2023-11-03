@@ -1,0 +1,42 @@
+﻿@using JijaShop.Api.ViewModels;
+@model OwlCarouselViewModel
+
+<div class="container">
+    <div class="owl-carousel">
+        @foreach(var product in Model?.Products)
+        {
+            <div class="owl-carousel-item">
+                <div class="col product-big-img">
+                    <img src="@product.ProductImageDto.ImagePathDto" />
+                </div>
+
+                <div class="col">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <h2 class="text-center">@product.Name</h2>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="product-details-big-price d-flex justify-content-center m-1">
+                                @if (product.ProductDetailsDto.OldPrice != null && product.ProductDetailsDto.OldPrice != 0)
+                                {
+                                    <small class="me-1">@product.ProductDetailsDto.OldPrice$</small>
+                                }
+                                @product.ProductDetailsDto.Price$
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col px-2">
+                    <p style="overflow:hidden">
+                        @product.ProductDetailsDto.Description
+                    </p>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
