@@ -13,30 +13,25 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
         {
             _productService = productService;
         }
-
         public async Task<IActionResult> Index()
         {
             var products = await _productService.GetProducts();
-            var model = new ProductsViewModel
-            {
-                Products = products
-            };
 
-            return View(model);
+            return View(products);
         }
 
-        public async Task<IActionResult> IndexProduct(string productName)
+        public async Task<IActionResult> Product(string productName)
         {
             var model = await _productService.GetProduct(productName);
 
             return View(model);
         }
 
-        public async Task<IActionResult> IndexProductsPartial(int pageCount = 1)
+        public async Task<IActionResult> ProductsPartial(int pageCount = 1)
         {
             var model = await _productService.GetProducts(pageCount);
 
-            return PartialView(model);
+            return PartialView("ProductsPartial/ProductsPartial", model);
         }
     }
 }

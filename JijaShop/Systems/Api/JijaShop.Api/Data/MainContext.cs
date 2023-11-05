@@ -1,7 +1,7 @@
-﻿using JijaShop.Api.Data.Models.AuthEntities;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using JijaShop.Api.Data.Models.AuthEntities;
 using JijaShop.Api.Data.Models.Entities;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace JijaShop.Api.Data

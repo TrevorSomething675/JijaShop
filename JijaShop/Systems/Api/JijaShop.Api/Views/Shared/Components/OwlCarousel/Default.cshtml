@@ -14,14 +14,14 @@
                     <div class="row">
 
                         <div class="col-6">
-                            <h2 class="text-center">@product.Name</h2>
+                            <h2 class="text-center my-2 mx-1">@product.Name</h2>
                         </div>
 
                         <div class="col-6">
-                            <div class="product-details-big-price d-flex justify-content-center m-1">
+                            <div class="product-details-big-price d-flex justify-content-end m-1 px-1">
                                 @if (product.ProductDetailsDto.OldPrice != null && product.ProductDetailsDto.OldPrice != 0)
                                 {
-                                    <small class="me-1">@product.ProductDetailsDto.OldPrice$</small>
+                                    <small class="">@product.ProductDetailsDto.OldPrice$</small>
                                 }
                                 @product.ProductDetailsDto.Price$
                             </div>

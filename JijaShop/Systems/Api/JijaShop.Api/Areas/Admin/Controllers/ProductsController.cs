@@ -59,15 +59,10 @@ namespace JijaShop.Api.Areas.Admin.Controllers
         {
             var products = await _productService.GetProducts();
 
-            var model = new ProductsViewModel()
-            {
-                Products = products,
-            };
-
-            return View(model);
+            return View(products);
         }
 
-        public async Task<IActionResult> IndexAdminProductsPartial(int pageCount = 1)
+        public async Task<IActionResult> ProductsPartial(int pageCount = 1)
         {
             var model = await _productService.GetProducts(pageCount);
 

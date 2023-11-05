@@ -1,0 +1,50 @@
+﻿@using JijaShop.Api.Data.Models.DTOModels;
+@model IEnumerable<ProductDto>
+
+@if (Model != null)
+{
+    @foreach (var product in Model)
+    {
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="product-card p-1">
+                <div class="product-card-offer">
+                    @if (product.ProductOffersDto.IsHitOffer)
+                    {
+                        <div class="offer-hit">Хит</div>
+                    }
+                    @if (product.ProductOffersDto.IsNewOffer)
+                    {
+                        <div class="offer-new">New</div>
+                    }
+                </div>
+                <div class="product-img">
+                    <a href="product.html">
+                        <img src="@product.ProductImageDto.ImagePathDto" />
+                    </a>
+                </div>
+                <div class="product-name">
+                    <h4>
+                        <a href="products.html">@product.Name</a>
+                    </h4>
+
+                    <p class="product-details-description">@product.ProductDetailsDto.Description</p>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="product-details-price d-flex justify-content-center py-1">
+                            @if (product.ProductDetailsDto.OldPrice != null && product.ProductDetailsDto.OldPrice != 0)
+                            {
+                                <small class="me-1">@product.ProductDetailsDto.OldPrice</small>
+                            }
+                            @product.ProductDetailsDto.Price$
+                        </div>
+
+                        <div class="product-links">
+                            <a asp-area="admin" class="btn btn-outline-secondary"><i class="bi bi-trash-fill"></i></a>
+                            <a asp-area="admin" class="btn btn-outline-secondary"><i class="bi bi-pencil-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

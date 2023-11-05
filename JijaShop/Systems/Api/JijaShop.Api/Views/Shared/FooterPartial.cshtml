@@ -41,3 +41,16 @@
 		</div>
 	</div>
 </div>
+
+<button type="button" class="to-header" id="scrollToTop">
+	<i class="bi bi-arrow-up"></i>
+</button>
+
+<script>
+	document.getElementById('scrollToTop').addEventListener('click', function () {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	});
+</script>
