@@ -51,6 +51,7 @@
 
 .sidebar-search form {
     border: 1px solid var(--gray-color);
+    border-radius:5px;
 }
 
 .body-main-container {
@@ -265,6 +266,7 @@
     border: 1px solid var(--gray-color);
     background-color: white;
     position: relative;
+    border-radius: 5px;
 }
 
 .product-card:hover {
@@ -350,6 +352,10 @@
 
 /*========================= Admin-SideBar =========================*/
 
+.sidebar-products{
+    border-radius:5px;
+}
+
 .sidebar-products div a:hover {
     font-size: 28px;
     text-decoration: none;
@@ -392,8 +398,9 @@
     text-align:center;
 }
 
-.product-big-bg{
+.product-big-card{
     background-color:white;
+    border-radius:10px;
 }
 
 .product-big-buttons div {

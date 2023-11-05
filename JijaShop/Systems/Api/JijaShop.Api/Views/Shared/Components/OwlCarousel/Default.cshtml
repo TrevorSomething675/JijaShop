@@ -7,7 +7,9 @@
         {
             <div class="owl-carousel-item">
                 <div class="col product-big-img">
-                    <img src="@product.ProductImageDto.ImagePathDto" />
+                    <a asp-area="UserArea" asp-controller="Products" asp-action="Product" asp-route-productName="@product.Name">
+                        <img src="@product.ProductImageDto.ImagePathDto" />
+                    </a>
                 </div>
 
                 <div class="col">

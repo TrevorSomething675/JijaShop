@@ -8925,3 +8925,1584 @@ INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
 2023-11-05 19:26:38.758 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/ProductsPartial - - - 200 - text/html;+charset=utf-8 10.8881ms
 2023-11-05 19:26:38.762 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
 2023-11-05 19:26:38.763 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 0.7567ms
+2023-11-05 22:30:56.968 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:30:57.052 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:30:57.067 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-11-05 22:30:57.085 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-05 22:30:57.167 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-05 22:30:57.328 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-05 22:30:57.334 +03:00 [INF] Hosting environment: Development
+2023-11-05 22:30:57.334 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-11-05 22:30:57.360 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-11-05 22:30:57.460 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:30:57.475 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:30:57.486 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:30:57.712 +03:00 [INF] Executed ViewResult - view Index executed in 229.0839ms.
+2023-11-05 22:30:57.716 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 240.2347ms
+2023-11-05 22:30:57.717 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:30:57.753 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:30:57.753 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/js/site.js?v=3pPUAvz_5oJd-b8FZval6s37mF9onWhMB2Xh9I3JFlM - -
+2023-11-05 22:30:57.753 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:30:57.753 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:30:57.763 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 403.0963ms
+2023-11-05 22:30:57.785 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 30.8830ms
+2023-11-05 22:30:57.786 +03:00 [INF] The file /js/site.js was not modified
+2023-11-05 22:30:57.786 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:30:57.788 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 35.3057ms
+2023-11-05 22:30:57.788 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/js/site.js?v=3pPUAvz_5oJd-b8FZval6s37mF9onWhMB2Xh9I3JFlM - - - 304 - text/javascript 35.3090ms
+2023-11-05 22:30:57.815 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 62.3250ms
+2023-11-05 22:31:00.115 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:31:00.120 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:31:00.124 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:31:00.581 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:31:00.711 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:31:00.734 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:31:00.827 +03:00 [INF] Executed ViewResult - view Index executed in 93.952ms.
+2023-11-05 22:31:00.827 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 703.1648ms
+2023-11-05 22:31:00.827 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:31:00.839 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:31:00.841 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 725.6309ms
+2023-11-05 22:31:00.843 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 4.2593ms
+2023-11-05 22:31:00.848 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:31:00.850 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.3446ms
+2023-11-05 22:31:00.850 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:31:00.860 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.4092ms
+2023-11-05 22:31:02.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd11 - -
+2023-11-05 22:31:02.949 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:31:02.960 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:31:03.116 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:31:03.126 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:31:03.141 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:31:03.149 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:31:03.163 +03:00 [INF] Executed ViewResult - view Product executed in 36.8638ms.
+2023-11-05 22:31:03.163 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 202.5603ms
+2023-11-05 22:31:03.163 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:31:03.173 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd11 - - - 200 - text/html;+charset=utf-8 225.9033ms
+2023-11-05 22:31:03.179 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:31:03.180 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:31:03.184 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:31:03.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 8.7995ms
+2023-11-05 22:31:03.191 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 6.4745ms
+2023-11-05 22:31:03.196 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.8917ms
+2023-11-05 22:32:48.011 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:32:48.091 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:32:48.105 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-11-05 22:32:48.124 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-05 22:32:48.198 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-05 22:32:48.349 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-05 22:32:48.354 +03:00 [INF] Hosting environment: Development
+2023-11-05 22:32:48.354 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-11-05 22:32:48.382 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-11-05 22:32:48.471 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:32:48.486 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:32:48.498 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:32:48.700 +03:00 [INF] Executed ViewResult - view Index executed in 204.5284ms.
+2023-11-05 22:32:48.704 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 217.3871ms
+2023-11-05 22:32:48.705 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:32:48.732 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 352.6357ms
+2023-11-05 22:32:48.734 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:32:48.734 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:32:48.755 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 18.1028ms
+2023-11-05 22:32:48.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.4991ms
+2023-11-05 22:32:51.046 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:32:51.050 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:32:51.054 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:32:51.480 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:32:51.607 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:32:51.628 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:32:51.714 +03:00 [INF] Executed ViewResult - view Index executed in 86.9214ms.
+2023-11-05 22:32:51.714 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 660.1874ms
+2023-11-05 22:32:51.714 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:32:51.727 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:32:51.732 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 4.9579ms
+2023-11-05 22:32:51.732 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 686.2156ms
+2023-11-05 22:32:51.735 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:32:51.737 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.3125ms
+2023-11-05 22:32:51.737 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:32:51.747 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.8656ms
+2023-11-05 22:32:52.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd11 - -
+2023-11-05 22:32:52.830 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:32:52.839 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:32:52.957 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:32:52.970 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:32:52.985 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:32:52.989 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:32:53.011 +03:00 [INF] Executed ViewResult - view Product executed in 41.1295ms.
+2023-11-05 22:32:53.011 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 171.1225ms
+2023-11-05 22:32:53.011 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:32:53.019 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd11 - - - 200 - text/html;+charset=utf-8 190.8796ms
+2023-11-05 22:32:53.022 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:32:53.023 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:32:53.023 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:32:53.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.8410ms
+2023-11-05 22:32:53.026 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 3.6005ms
+2023-11-05 22:32:53.040 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.1811ms
+2023-11-05 22:32:54.241 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - -
+2023-11-05 22:32:54.242 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:32:54.243 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:32:54.252 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:32:54.256 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:32:54.261 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:32:54.265 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:32:54.277 +03:00 [INF] Executed ViewResult - view Product executed in 20.4861ms.
+2023-11-05 22:32:54.277 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 34.1536ms
+2023-11-05 22:32:54.277 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:32:54.286 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - - - 200 - text/html;+charset=utf-8 44.9198ms
+2023-11-05 22:32:54.291 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:32:54.291 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:32:54.291 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:32:54.292 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 1.0348ms
+2023-11-05 22:32:54.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.5546ms
+2023-11-05 22:32:54.302 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.2402ms
+2023-11-05 22:32:56.037 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:32:56.038 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9141ms
+2023-11-05 22:32:56.815 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd4 - -
+2023-11-05 22:32:56.816 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:32:56.816 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:32:56.820 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:32:56.823 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:32:56.828 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:32:56.832 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:32:56.842 +03:00 [INF] Executed ViewResult - view Product executed in 18.5021ms.
+2023-11-05 22:32:56.842 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 25.463ms
+2023-11-05 22:32:56.842 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:32:56.849 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd4 - - - 200 - text/html;+charset=utf-8 34.1411ms
+2023-11-05 22:32:56.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:32:56.854 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 0.8592ms
+2023-11-05 22:32:56.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:32:56.861 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:32:56.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 2.1571ms
+2023-11-05 22:32:56.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.8702ms
+2023-11-05 22:33:05.295 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd7 - -
+2023-11-05 22:33:05.296 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:33:05.296 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:33:05.300 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:33:05.303 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:33:05.307 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:33:05.311 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:33:05.320 +03:00 [INF] Executed ViewResult - view Product executed in 16.6566ms.
+2023-11-05 22:33:05.320 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 23.7844ms
+2023-11-05 22:33:05.320 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:33:05.326 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd7 - - - 200 - text/html;+charset=utf-8 31.5290ms
+2023-11-05 22:33:05.329 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:33:05.330 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 0.9119ms
+2023-11-05 22:33:05.331 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:33:05.331 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:33:05.336 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 5.3533ms
+2023-11-05 22:33:05.342 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.3701ms
+2023-11-05 22:33:06.404 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/ - -
+2023-11-05 22:33:06.405 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:33:06.405 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:33:06.406 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:33:06.416 +03:00 [INF] Executed ViewResult - view Index executed in 10.5196ms.
+2023-11-05 22:33:06.417 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 11.462ms
+2023-11-05 22:33:06.417 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:33:06.423 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/ - - - 200 - text/html;+charset=utf-8 18.3369ms
+2023-11-05 22:33:06.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:33:06.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:33:06.428 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.1050ms
+2023-11-05 22:33:06.435 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.3827ms
+2023-11-05 22:34:06.863 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:34:06.865 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:34:06.865 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:34:06.875 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:06.884 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:06.885 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:34:06.895 +03:00 [INF] Executed ViewResult - view Index executed in 9.8112ms.
+2023-11-05 22:34:06.896 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 30.8396ms
+2023-11-05 22:34:06.899 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:34:06.909 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 45.2224ms
+2023-11-05 22:34:06.912 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:34:06.913 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 0.7698ms
+2023-11-05 22:34:06.917 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:34:06.918 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.7759ms
+2023-11-05 22:34:06.919 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:34:06.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.8884ms
+2023-11-05 22:34:11.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/ProductsPartial - -
+2023-11-05 22:34:11.305 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.ProductsPartial (JijaShop.Api)'
+2023-11-05 22:34:11.308 +03:00 [INF] Route matched with {area = "UserArea", action = "ProductsPartial", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductsPartial(Int32) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:34:11.314 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:11.318 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:11.320 +03:00 [INF] Executing PartialViewResult, running view ProductsPartial/ProductsPartial.
+2023-11-05 22:34:11.321 +03:00 [INF] Executed PartialViewResult - view ProductsPartial/ProductsPartial executed in 1.9263ms.
+2023-11-05 22:34:11.321 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.ProductsPartial (JijaShop.Api) in 12.9018ms
+2023-11-05 22:34:11.322 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.ProductsPartial (JijaShop.Api)'
+2023-11-05 22:34:11.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/ProductsPartial - - - 200 - text/html;+charset=utf-8 17.6437ms
+2023-11-05 22:34:11.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:34:11.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 0.7230ms
+2023-11-05 22:34:13.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=test1112 - -
+2023-11-05 22:34:13.509 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:34:13.509 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:34:13.513 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:34:13.516 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:34:13.520 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:13.523 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:13.531 +03:00 [INF] Executed ViewResult - view Product executed in 15.2385ms.
+2023-11-05 22:34:13.531 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 21.8646ms
+2023-11-05 22:34:13.531 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:34:13.537 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=test1112 - - - 200 - text/html;+charset=utf-8 29.0391ms
+2023-11-05 22:34:13.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:34:13.543 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 1.1000ms
+2023-11-05 22:34:13.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:34:13.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:34:13.545 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.1399ms
+2023-11-05 22:34:13.551 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 7.9691ms
+2023-11-05 22:34:21.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:34:21.306 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:34:21.306 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:34:21.310 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:21.314 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:21.315 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:34:21.325 +03:00 [INF] Executed ViewResult - view Index executed in 9.7319ms.
+2023-11-05 22:34:21.325 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 19.0603ms
+2023-11-05 22:34:21.325 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:34:21.333 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 29.2052ms
+2023-11-05 22:34:21.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:34:21.338 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 0.8801ms
+2023-11-05 22:34:21.338 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:34:21.338 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:34:21.340 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.5715ms
+2023-11-05 22:34:21.346 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.5118ms
+2023-11-05 22:34:33.805 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=test1112 - -
+2023-11-05 22:34:33.806 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:34:33.806 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:34:33.810 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:34:33.814 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:34:33.817 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:33.821 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:33.829 +03:00 [INF] Executed ViewResult - view Product executed in 15.9426ms.
+2023-11-05 22:34:33.830 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 23.0473ms
+2023-11-05 22:34:33.830 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:34:33.836 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=test1112 - - - 200 - text/html;+charset=utf-8 31.0448ms
+2023-11-05 22:34:33.840 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:34:33.840 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:34:33.840 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:34:33.841 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 0.9108ms
+2023-11-05 22:34:33.841 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.0367ms
+2023-11-05 22:34:33.852 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.3012ms
+2023-11-05 22:34:35.431 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:34:35.432 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.7591ms
+2023-11-05 22:34:36.296 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd11 - -
+2023-11-05 22:34:36.297 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:34:36.297 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:34:36.301 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:34:36.304 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:34:36.308 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:36.312 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:34:36.321 +03:00 [INF] Executed ViewResult - view Product executed in 17.0439ms.
+2023-11-05 22:34:36.321 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 23.9501ms
+2023-11-05 22:34:36.321 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:34:36.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd11 - - - 200 - text/html;+charset=utf-8 31.7600ms
+2023-11-05 22:34:36.331 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:34:36.332 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 0.9472ms
+2023-11-05 22:34:36.332 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:34:36.332 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:34:36.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.7615ms
+2023-11-05 22:34:36.340 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.0774ms
+2023-11-05 22:35:06.435 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:35:06.436 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:35:06.436 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:35:06.441 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:35:06.449 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:35:06.456 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:35:06.465 +03:00 [INF] Executed ViewResult - view Index executed in 8.8379ms.
+2023-11-05 22:35:06.466 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 29.7135ms
+2023-11-05 22:35:06.466 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:35:06.475 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 39.9227ms
+2023-11-05 22:35:06.479 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:35:06.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 0.9301ms
+2023-11-05 22:35:06.481 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:35:06.481 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:35:06.482 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.0083ms
+2023-11-05 22:35:06.490 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.0023ms
+2023-11-05 22:35:48.506 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:35:48.586 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:35:48.599 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-11-05 22:35:48.616 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-05 22:35:48.690 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-05 22:35:48.831 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-05 22:35:48.834 +03:00 [INF] Hosting environment: Development
+2023-11-05 22:35:48.834 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-11-05 22:35:48.861 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-11-05 22:35:48.938 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:35:48.952 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:35:48.963 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:35:49.152 +03:00 [INF] Executed ViewResult - view Index executed in 191.8359ms.
+2023-11-05 22:35:49.156 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 203.6959ms
+2023-11-05 22:35:49.157 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:35:49.183 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 324.2689ms
+2023-11-05 22:35:49.184 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:35:49.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:35:49.198 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 9.1813ms
+2023-11-05 22:35:49.217 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.4307ms
+2023-11-05 22:35:52.067 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:35:52.072 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:35:52.076 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:35:52.520 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:35:52.641 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:35:52.662 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:35:52.747 +03:00 [INF] Executed ViewResult - view Index executed in 85.6679ms.
+2023-11-05 22:35:52.747 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 671.7098ms
+2023-11-05 22:35:52.748 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:35:52.760 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:35:52.765 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 698.2720ms
+2023-11-05 22:35:52.765 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 5.0076ms
+2023-11-05 22:35:52.768 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:35:52.769 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.2461ms
+2023-11-05 22:35:52.777 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:35:52.797 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.8419ms
+2023-11-05 22:36:04.432 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/ProductsPartial - -
+2023-11-05 22:36:04.433 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.ProductsPartial (JijaShop.Api)'
+2023-11-05 22:36:04.442 +03:00 [INF] Route matched with {area = "UserArea", action = "ProductsPartial", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductsPartial(Int32) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:36:04.507 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:36:04.511 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:36:04.514 +03:00 [INF] Executing PartialViewResult, running view ProductsPartial/ProductsPartial.
+2023-11-05 22:36:04.517 +03:00 [INF] Executed PartialViewResult - view ProductsPartial/ProductsPartial executed in 3.5801ms.
+2023-11-05 22:36:04.517 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.ProductsPartial (JijaShop.Api) in 74.4774ms
+2023-11-05 22:36:04.517 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.ProductsPartial (JijaShop.Api)'
+2023-11-05 22:36:04.517 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/ProductsPartial - - - 200 - text/html;+charset=utf-8 84.9492ms
+2023-11-05 22:36:04.525 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:36:04.526 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 0.8072ms
+2023-11-05 22:36:37.231 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=c656bba4523c47dda47fc2af7d202c87 - -
+2023-11-05 22:36:37.254 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:36:37.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=c656bba4523c47dda47fc2af7d202c87 - - - 200 8633 text/css 22.7251ms
+2023-11-05 22:36:39.207 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - -
+2023-11-05 22:36:39.210 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:36:39.213 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:36:39.283 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:36:39.295 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:36:39.310 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:36:39.315 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:36:39.332 +03:00 [INF] Executed ViewResult - view Product executed in 37.6992ms.
+2023-11-05 22:36:39.332 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 119.0694ms
+2023-11-05 22:36:39.332 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:36:39.341 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - - - 200 - text/html;+charset=utf-8 133.1515ms
+2023-11-05 22:36:39.344 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:36:39.344 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:36:39.344 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:36:39.345 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 0.9074ms
+2023-11-05 22:36:39.347 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.8064ms
+2023-11-05 22:36:39.359 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.4176ms
+2023-11-05 22:36:41.143 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:36:41.144 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9051ms
+2023-11-05 22:36:42.223 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:36:42.224 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:36:42.225 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:36:42.230 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:36:42.233 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:36:42.234 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:36:42.244 +03:00 [INF] Executed ViewResult - view Index executed in 10.7661ms.
+2023-11-05 22:36:42.245 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 19.7178ms
+2023-11-05 22:36:42.245 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:36:42.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 30.8681ms
+2023-11-05 22:36:42.257 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:36:42.258 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 1.0867ms
+2023-11-05 22:36:42.259 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:36:42.259 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:36:42.260 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9241ms
+2023-11-05 22:36:42.267 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 7.8453ms
+2023-11-05 22:36:51.037 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:36:51.039 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:36:51.039 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:36:51.043 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:36:51.046 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:36:51.047 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:36:51.057 +03:00 [INF] Executed ViewResult - view Index executed in 9.6794ms.
+2023-11-05 22:36:51.057 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 18.3515ms
+2023-11-05 22:36:51.057 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:36:51.065 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 27.7744ms
+2023-11-05 22:36:51.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:36:51.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/owlcarousel/owl.carousel.min.css - -
+2023-11-05 22:36:51.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/owlcarousel/owl.theme.default.min.css - -
+2023-11-05 22:36:51.078 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:36:51.078 +03:00 [INF] Sending file. Request path: '/owlcarousel/owl.carousel.min.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\owlcarousel\owl.carousel.min.css'
+2023-11-05 22:36:51.078 +03:00 [INF] Sending file. Request path: '/owlcarousel/owl.theme.default.min.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\owlcarousel\owl.theme.default.min.css'
+2023-11-05 22:36:51.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 8633 text/css 3.2422ms
+2023-11-05 22:36:51.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/owlcarousel/owl.theme.default.min.css - - - 200 1013 text/css 3.3202ms
+2023-11-05 22:36:51.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/owlcarousel/owl.carousel.min.css - - - 200 3351 text/css 3.3082ms
+2023-11-05 22:36:51.080 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:36:51.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/6.jpg - -
+2023-11-05 22:36:51.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/js/site.js?v=3pPUAvz_5oJd-b8FZval6s37mF9onWhMB2Xh9I3JFlM - -
+2023-11-05 22:36:51.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:36:51.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/8.jpg - -
+2023-11-05 22:36:51.086 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 5.6276ms
+2023-11-05 22:36:51.086 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/owlcarousel/js/owl.carousel.min.js - -
+2023-11-05 22:36:51.095 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/product2.jpg - -
+2023-11-05 22:36:51.123 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/3.jpg - -
+2023-11-05 22:36:51.138 +03:00 [INF] Sending file. Request path: '/owlcarousel/js/owl.carousel.min.js'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\owlcarousel\js\owl.carousel.min.js'
+2023-11-05 22:36:51.138 +03:00 [INF] Sending file. Request path: '/Images/Products/8.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\8.jpg'
+2023-11-05 22:36:51.138 +03:00 [INF] Sending file. Request path: '/Images/Products/6.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\6.jpg'
+2023-11-05 22:36:51.143 +03:00 [INF] Sending file. Request path: '/Images/Products/product2.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\product2.jpg'
+2023-11-05 22:36:51.143 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/4.jpg - -
+2023-11-05 22:36:51.143 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/7.jpg - -
+2023-11-05 22:36:51.143 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:36:51.143 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/5.jpg - -
+2023-11-05 22:36:51.145 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/product1.jpg - -
+2023-11-05 22:36:51.145 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/2.jpg - -
+2023-11-05 22:36:51.146 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 2.1184ms
+2023-11-05 22:36:51.146 +03:00 [INF] Sending file. Request path: '/Images/Products/3.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\3.jpg'
+2023-11-05 22:36:51.146 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/6.jpg - - - 200 47539 image/jpeg 62.6157ms
+2023-11-05 22:36:51.146 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/product2.jpg - - - 200 74572 image/jpeg 52.2533ms
+2023-11-05 22:36:51.147 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/8.jpg - - - 200 37117 image/jpeg 62.7863ms
+2023-11-05 22:36:51.151 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/3.jpg - - - 200 47994 image/jpeg 27.2286ms
+2023-11-05 22:36:51.151 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/owlcarousel/js/owl.carousel.min.js - - - 200 44342 text/javascript 63.8951ms
+2023-11-05 22:36:51.155 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\js\site.js'
+2023-11-05 22:36:51.157 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/js/site.js?v=3pPUAvz_5oJd-b8FZval6s37mF9onWhMB2Xh9I3JFlM - - - 200 975 text/javascript 72.2239ms
+2023-11-05 22:36:51.168 +03:00 [INF] Sending file. Request path: '/Images/Products/2.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\2.jpg'
+2023-11-05 22:36:51.168 +03:00 [INF] Sending file. Request path: '/Images/Products/4.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\4.jpg'
+2023-11-05 22:36:51.168 +03:00 [INF] Sending file. Request path: '/Images/Products/5.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\5.jpg'
+2023-11-05 22:36:51.169 +03:00 [INF] Sending file. Request path: '/Images/Products/7.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\7.jpg'
+2023-11-05 22:36:51.170 +03:00 [INF] Sending file. Request path: '/Images/Products/product1.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\product1.jpg'
+2023-11-05 22:36:51.171 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/2.jpg - - - 200 25648 image/jpeg 26.4624ms
+2023-11-05 22:36:51.172 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/product1.jpg - - - 200 117652 image/jpeg 26.6645ms
+2023-11-05 22:36:51.172 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/4.jpg - - - 200 39709 image/jpeg 28.8068ms
+2023-11-05 22:36:51.173 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/5.jpg - - - 200 40719 image/jpeg 29.6309ms
+2023-11-05 22:36:51.173 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/7.jpg - - - 200 31039 image/jpeg 30.0088ms
+2023-11-05 22:36:51.176 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 92.0370ms
+2023-11-05 22:36:51.803 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/favicon.ico - -
+2023-11-05 22:36:51.805 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\favicon.ico'
+2023-11-05 22:36:51.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/favicon.ico - - - 200 5430 image/x-icon 2.1352ms
+2023-11-05 22:36:57.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=5a3a9d711fa14733b3b9201b3a2de85c - -
+2023-11-05 22:36:57.196 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:36:57.196 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=5a3a9d711fa14733b3b9201b3a2de85c - - - 200 8609 text/css 14.5537ms
+2023-11-05 22:37:07.011 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:37:07.095 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:37:07.109 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-11-05 22:37:07.127 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-05 22:37:07.206 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-05 22:37:07.358 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-05 22:37:07.358 +03:00 [INF] Hosting environment: Development
+2023-11-05 22:37:07.358 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-11-05 22:37:07.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-11-05 22:37:07.470 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:37:07.485 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:37:07.496 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:37:07.680 +03:00 [INF] Executed ViewResult - view Index executed in 186.1951ms.
+2023-11-05 22:37:07.684 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 197.9884ms
+2023-11-05 22:37:07.685 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:37:07.720 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage1.png - -
+2023-11-05 22:37:07.721 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:37:07.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage3.png - -
+2023-11-05 22:37:07.725 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage2.png - -
+2023-11-05 22:37:07.732 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:37:07.738 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:37:07.739 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 346.7847ms
+2023-11-05 22:37:07.752 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 18.3928ms
+2023-11-05 22:37:07.790 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.9951ms
+2023-11-05 22:37:07.792 +03:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage3.png'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Slider\SliderImage3.png'
+2023-11-05 22:37:07.792 +03:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage1.png'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Slider\SliderImage1.png'
+2023-11-05 22:37:07.792 +03:00 [INF] Sending file. Request path: '/Images/Slider/SliderImage2.png'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Slider\SliderImage2.png'
+2023-11-05 22:37:07.792 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:37:07.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 8609 text/css 77.0013ms
+2023-11-05 22:37:07.793 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage2.png - - - 200 200280 image/png 68.9662ms
+2023-11-05 22:37:07.815 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage1.png - - - 200 431969 image/png 98.7587ms
+2023-11-05 22:37:07.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Slider/SliderImage3.png - - - 200 283321 image/png 103.6403ms
+2023-11-05 22:39:03.895 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:39:03.906 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:39:03.911 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:39:04.390 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:39:04.523 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:39:04.546 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:39:04.643 +03:00 [INF] Executed ViewResult - view Index executed in 97.7058ms.
+2023-11-05 22:39:04.644 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 732.7939ms
+2023-11-05 22:39:04.647 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:39:04.664 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:39:04.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:39:04.665 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:39:04.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:39:04.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.2269ms
+2023-11-05 22:39:04.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 2.9665ms
+2023-11-05 22:39:04.672 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 776.4017ms
+2023-11-05 22:39:04.672 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:39:04.679 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 14.0186ms
+2023-11-05 22:39:04.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.4617ms
+2023-11-05 22:39:28.895 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/ProductsPartial - -
+2023-11-05 22:39:28.896 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.ProductsPartial (JijaShop.Api)'
+2023-11-05 22:39:28.911 +03:00 [INF] Route matched with {area = "UserArea", action = "ProductsPartial", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductsPartial(Int32) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:39:28.978 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:39:28.984 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:39:28.991 +03:00 [INF] Executing PartialViewResult, running view ProductsPartial/ProductsPartial.
+2023-11-05 22:39:28.994 +03:00 [INF] Executed PartialViewResult - view ProductsPartial/ProductsPartial executed in 3.5791ms.
+2023-11-05 22:39:28.994 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.ProductsPartial (JijaShop.Api) in 83.6973ms
+2023-11-05 22:39:28.995 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.ProductsPartial (JijaShop.Api)'
+2023-11-05 22:39:28.995 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/ProductsPartial - - - 200 - text/html;+charset=utf-8 100.0412ms
+2023-11-05 22:39:28.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:39:29.000 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 0.6813ms
+2023-11-05 22:39:48.752 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:39:48.752 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:39:48.753 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 1.0928ms
+2023-11-05 22:40:56.332 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=656b0ae56cc24ae8bd82ce3222b85c89 - -
+2023-11-05 22:40:56.345 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:40:56.346 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=656b0ae56cc24ae8bd82ce3222b85c89 - - - 200 8634 text/css 13.3031ms
+2023-11-05 22:41:06.482 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=ee51a639d3674d5ab7b7ab359faa5370 - -
+2023-11-05 22:41:06.494 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:41:06.495 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=ee51a639d3674d5ab7b7ab359faa5370 - - - 200 8634 text/css 12.9605ms
+2023-11-05 22:41:51.353 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=317417a63caa4d57998d3500fb74144b - -
+2023-11-05 22:41:51.367 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:41:51.367 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=317417a63caa4d57998d3500fb74144b - - - 200 8659 text/css 14.3477ms
+2023-11-05 22:41:52.656 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:41:52.657 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:41:52.658 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:41:52.664 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:41:52.670 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:41:52.670 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:41:52.682 +03:00 [INF] Executed ViewResult - view Index executed in 11.8652ms.
+2023-11-05 22:41:52.682 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 24.6395ms
+2023-11-05 22:41:52.682 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:41:52.689 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 33.3477ms
+2023-11-05 22:41:52.694 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:41:52.697 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:41:52.697 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:41:52.697 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:41:52.697 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 8659 text/css 3.2099ms
+2023-11-05 22:41:52.698 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 1.4305ms
+2023-11-05 22:41:52.698 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9551ms
+2023-11-05 22:41:52.699 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:41:52.709 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.3697ms
+2023-11-05 22:42:02.615 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:42:02.617 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:42:02.617 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:42:02.620 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:42:02.624 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:42:02.625 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:42:02.639 +03:00 [INF] Executed ViewResult - view Index executed in 13.4334ms.
+2023-11-05 22:42:02.639 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 21.9901ms
+2023-11-05 22:42:02.639 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:42:02.648 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 32.8017ms
+2023-11-05 22:42:02.651 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:42:02.651 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:42:02.652 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 0.6748ms
+2023-11-05 22:42:02.652 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:42:02.652 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:42:02.653 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 0.7548ms
+2023-11-05 22:42:02.653 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.7895ms
+2023-11-05 22:42:02.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:42:02.666 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 7.6904ms
+2023-11-05 22:42:03.811 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/ - -
+2023-11-05 22:42:03.812 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:42:03.812 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:42:03.812 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:42:03.825 +03:00 [INF] Executed ViewResult - view Index executed in 12.8701ms.
+2023-11-05 22:42:03.826 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 13.4968ms
+2023-11-05 22:42:03.826 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:42:03.832 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/ - - - 200 - text/html;+charset=utf-8 20.8634ms
+2023-11-05 22:42:03.835 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:42:03.836 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:42:03.836 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 0.5908ms
+2023-11-05 22:42:03.838 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:42:03.838 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:42:03.840 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9380ms
+2023-11-05 22:42:03.847 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.5116ms
+2023-11-05 22:42:05.200 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:42:05.201 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:42:05.202 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:42:05.206 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:42:05.209 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:42:05.211 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:42:05.220 +03:00 [INF] Executed ViewResult - view Index executed in 9.4349ms.
+2023-11-05 22:42:05.221 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 18.8846ms
+2023-11-05 22:42:05.221 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:42:05.230 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 29.4376ms
+2023-11-05 22:42:05.233 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:42:05.233 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:42:05.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 0.6480ms
+2023-11-05 22:42:05.234 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:42:05.235 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:42:05.235 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 0.9289ms
+2023-11-05 22:42:05.236 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.7373ms
+2023-11-05 22:42:05.237 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:42:05.245 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 7.8034ms
+2023-11-05 22:42:10.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=61602a8633974873bd16b749b190e523 - -
+2023-11-05 22:42:10.059 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:42:10.059 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=61602a8633974873bd16b749b190e523 - - - 200 8660 text/css 12.3813ms
+2023-11-05 22:42:15.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=25aec4f247c34e4f8fd5380a4f5193d8 - -
+2023-11-05 22:42:15.617 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:42:15.617 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=25aec4f247c34e4f8fd5380a4f5193d8 - - - 200 8634 text/css 13.6907ms
+2023-11-05 22:42:28.587 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=fd934784acfa46918c1f9810f1b0c4eb - -
+2023-11-05 22:42:28.599 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:42:28.599 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=fd934784acfa46918c1f9810f1b0c4eb - - - 200 8684 text/css 12.6342ms
+2023-11-05 22:42:32.539 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=8f447be050c04ef59a83dee1ffc6002d - -
+2023-11-05 22:42:32.553 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:42:32.553 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=8f447be050c04ef59a83dee1ffc6002d - - - 200 8683 text/css 14.0334ms
+2023-11-05 22:43:29.794 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:43:29.872 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:43:29.886 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-11-05 22:43:29.903 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-05 22:43:29.982 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-05 22:43:30.137 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-05 22:43:30.142 +03:00 [INF] Hosting environment: Development
+2023-11-05 22:43:30.143 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-11-05 22:43:30.169 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-11-05 22:43:30.248 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:43:30.262 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:43:30.272 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:43:30.460 +03:00 [INF] Executed ViewResult - view Index executed in 190.0325ms.
+2023-11-05 22:43:30.464 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 201.5166ms
+2023-11-05 22:43:30.465 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:43:30.488 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 321.7115ms
+2023-11-05 22:43:30.489 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:43:30.489 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:43:30.490 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:43:30.502 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 9.0423ms
+2023-11-05 22:43:30.517 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.0202ms
+2023-11-05 22:43:30.527 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:43:30.527 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 8683 text/css 38.2593ms
+2023-11-05 22:43:40.523 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:43:40.528 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:43:40.531 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:43:40.966 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:43:41.090 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:43:41.111 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:43:41.196 +03:00 [INF] Executed ViewResult - view Index executed in 85.3116ms.
+2023-11-05 22:43:41.196 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 665.0763ms
+2023-11-05 22:43:41.197 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:43:41.208 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:43:41.209 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:43:41.210 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:43:41.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 2.2587ms
+2023-11-05 22:43:41.214 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 5.0503ms
+2023-11-05 22:43:41.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:43:41.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:43:41.219 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 695.8775ms
+2023-11-05 22:43:41.221 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.6792ms
+2023-11-05 22:43:41.234 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.9119ms
+2023-11-05 22:43:59.708 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:43:59.709 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:43:59.710 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 1.2964ms
+2023-11-05 22:45:29.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=31dd543666f24c4eaba26a8ca531f29b - -
+2023-11-05 22:45:29.811 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:45:29.811 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=31dd543666f24c4eaba26a8ca531f29b - - - 200 8707 text/css 12.1811ms
+2023-11-05 22:47:06.383 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:47:06.476 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:47:06.492 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-11-05 22:47:06.512 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-05 22:47:06.590 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-05 22:47:06.744 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-05 22:47:06.748 +03:00 [INF] Hosting environment: Development
+2023-11-05 22:47:06.748 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-11-05 22:47:06.775 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-11-05 22:47:06.856 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:47:06.871 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:47:06.882 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:47:07.092 +03:00 [INF] Executed ViewResult - view Index executed in 211.5738ms.
+2023-11-05 22:47:07.096 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 224.4595ms
+2023-11-05 22:47:07.097 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:47:07.133 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:47:07.133 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:47:07.133 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:47:07.141 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 362.1831ms
+2023-11-05 22:47:07.163 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 26.9815ms
+2023-11-05 22:47:07.175 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.4003ms
+2023-11-05 22:47:07.186 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:47:07.186 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 8707 text/css 53.4037ms
+2023-11-05 22:47:08.938 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:47:08.942 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:47:08.945 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:47:09.380 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:47:09.497 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:47:09.518 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:47:09.603 +03:00 [INF] Executed ViewResult - view Index executed in 85.4128ms.
+2023-11-05 22:47:09.603 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 658.0443ms
+2023-11-05 22:47:09.604 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:47:09.616 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:47:09.620 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 4.2875ms
+2023-11-05 22:47:09.621 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 682.9931ms
+2023-11-05 22:47:09.624 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:47:09.625 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9462ms
+2023-11-05 22:47:09.629 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:47:09.635 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 5.4929ms
+2023-11-05 22:47:12.103 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - -
+2023-11-05 22:47:12.105 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:47:12.115 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:47:12.234 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:47:12.246 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:47:12.261 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:47:12.265 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:47:12.282 +03:00 [INF] Executed ViewResult - view Product executed in 36.8647ms.
+2023-11-05 22:47:12.282 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 166.8421ms
+2023-11-05 22:47:12.283 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:47:12.292 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - - - 200 - text/html;+charset=utf-8 189.1643ms
+2023-11-05 22:47:12.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:47:12.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:47:12.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:47:12.318 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.6922ms
+2023-11-05 22:47:12.320 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 4.0753ms
+2023-11-05 22:47:12.330 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.7173ms
+2023-11-05 22:47:33.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:47:33.220 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:47:33.220 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 1.7885ms
+2023-11-05 22:47:54.802 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=c3e085f312624d4eaa4a0397ddbefa91 - -
+2023-11-05 22:47:54.823 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:47:54.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=c3e085f312624d4eaa4a0397ddbefa91 - - - 200 8709 text/css 21.0387ms
+2023-11-05 22:48:13.989 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:48:14.067 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:48:14.082 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-11-05 22:48:14.100 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-05 22:48:14.178 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-05 22:48:14.333 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-05 22:48:14.339 +03:00 [INF] Hosting environment: Development
+2023-11-05 22:48:14.339 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-11-05 22:48:14.366 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-11-05 22:48:14.453 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:48:14.468 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:48:14.479 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:48:14.676 +03:00 [INF] Executed ViewResult - view Index executed in 199.4286ms.
+2023-11-05 22:48:14.680 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 211.5845ms
+2023-11-05 22:48:14.681 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:48:14.712 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:48:14.712 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:48:14.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:48:14.713 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 347.7091ms
+2023-11-05 22:48:14.729 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 10.8014ms
+2023-11-05 22:48:14.744 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.2371ms
+2023-11-05 22:48:14.744 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:48:14.745 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 8709 text/css 32.8449ms
+2023-11-05 22:48:16.141 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:48:16.145 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:48:16.149 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:48:16.579 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:48:16.695 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:48:16.717 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:48:16.801 +03:00 [INF] Executed ViewResult - view Index executed in 84.7122ms.
+2023-11-05 22:48:16.802 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 652.6092ms
+2023-11-05 22:48:16.802 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:48:16.816 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:48:16.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:48:16.819 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:48:16.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 5.2311ms
+2023-11-05 22:48:16.824 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 5.3332ms
+2023-11-05 22:48:16.824 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:48:16.825 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.1265ms
+2023-11-05 22:48:16.825 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:48:16.826 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 684.6203ms
+2023-11-05 22:48:16.840 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.9042ms
+2023-11-05 22:48:18.112 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=test1112 - -
+2023-11-05 22:48:18.114 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:48:18.123 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:48:18.246 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:48:18.259 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:48:18.274 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:48:18.279 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:48:18.295 +03:00 [INF] Executed ViewResult - view Product executed in 36.8924ms.
+2023-11-05 22:48:18.295 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 171.9008ms
+2023-11-05 22:48:18.296 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:48:18.302 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=test1112 - - - 200 - text/html;+charset=utf-8 190.2975ms
+2023-11-05 22:48:18.306 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:48:18.306 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:48:18.307 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:48:18.307 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:48:18.307 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 0.9141ms
+2023-11-05 22:48:18.308 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.0977ms
+2023-11-05 22:48:18.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:48:18.313 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 6.0235ms
+2023-11-05 22:48:18.321 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.3931ms
+2023-11-05 22:48:22.785 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/ - -
+2023-11-05 22:48:22.786 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:48:22.786 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:48:22.786 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:48:22.797 +03:00 [INF] Executed ViewResult - view Index executed in 10.1806ms.
+2023-11-05 22:48:22.797 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 10.6047ms
+2023-11-05 22:48:22.797 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:48:22.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/ - - - 200 - text/html;+charset=utf-8 17.6263ms
+2023-11-05 22:48:22.805 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:48:22.806 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:48:22.806 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 0.9002ms
+2023-11-05 22:48:22.806 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:48:22.806 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:48:22.808 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9095ms
+2023-11-05 22:48:22.814 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.3304ms
+2023-11-05 22:48:23.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:48:23.799 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:48:23.799 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:48:23.806 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:48:23.810 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:48:23.811 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:48:23.823 +03:00 [INF] Executed ViewResult - view Index executed in 11.9177ms.
+2023-11-05 22:48:23.823 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 23.8357ms
+2023-11-05 22:48:23.823 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:48:23.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 33.3664ms
+2023-11-05 22:48:23.835 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:48:23.836 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:48:23.836 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:48:23.836 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 1.4216ms
+2023-11-05 22:48:23.838 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9053ms
+2023-11-05 22:48:23.848 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.8981ms
+2023-11-05 22:48:25.046 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - -
+2023-11-05 22:48:25.047 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:48:25.047 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:48:25.055 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:48:25.058 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:48:25.063 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:48:25.067 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:48:25.080 +03:00 [INF] Executed ViewResult - view Product executed in 22.4964ms.
+2023-11-05 22:48:25.080 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 32.4427ms
+2023-11-05 22:48:25.080 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:48:25.093 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:48:25.093 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:48:25.094 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - - - 200 - text/html;+charset=utf-8 47.1348ms
+2023-11-05 22:48:25.097 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:48:25.097 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:48:25.097 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:48:25.097 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 4.7899ms
+2023-11-05 22:48:25.097 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 4.7656ms
+2023-11-05 22:48:25.098 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.8586ms
+2023-11-05 22:48:25.105 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.0887ms
+2023-11-05 22:48:37.925 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=93c6f775bfcc474988ce168c8e7f4812 - -
+2023-11-05 22:48:37.937 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:48:37.937 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css?__browserLink_refresh=93c6f775bfcc474988ce168c8e7f4812 - - - 200 8733 text/css 12.8754ms
+2023-11-05 22:48:57.988 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:48:58.065 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-05 22:48:58.080 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-11-05 22:48:58.096 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-05 22:48:58.175 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-05 22:48:58.323 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-05 22:48:58.324 +03:00 [INF] Hosting environment: Development
+2023-11-05 22:48:58.324 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-11-05 22:48:58.357 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-11-05 22:48:58.438 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:48:58.453 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-05 22:48:58.464 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:48:58.668 +03:00 [INF] Executed ViewResult - view Index executed in 206.8058ms.
+2023-11-05 22:48:58.672 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 218.735ms
+2023-11-05 22:48:58.673 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-05 22:48:58.700 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:48:58.700 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:48:58.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:48:58.702 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 346.9346ms
+2023-11-05 22:48:58.714 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 7.0456ms
+2023-11-05 22:48:58.758 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.5114ms
+2023-11-05 22:48:58.771 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:48:58.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 8734 text/css 71.0549ms
+2023-11-05 22:48:59.993 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-05 22:48:59.998 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:49:00.001 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:49:00.453 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:00.578 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:00.600 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 22:49:00.690 +03:00 [INF] Executed ViewResult - view Index executed in 90.6367ms.
+2023-11-05 22:49:00.691 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 689.1992ms
+2023-11-05 22:49:00.691 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-05 22:49:00.704 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:49:00.704 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/test1 - -
+2023-11-05 22:49:00.705 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:49:00.706 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 2.0598ms
+2023-11-05 22:49:00.707 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 713.8914ms
+2023-11-05 22:49:00.709 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/test1 - - - 404 - - 4.4596ms
+2023-11-05 22:49:00.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:49:00.721 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:49:00.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 3.4193ms
+2023-11-05 22:49:00.740 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.9450ms
+2023-11-05 22:49:01.599 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - -
+2023-11-05 22:49:01.601 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:49:01.610 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:49:01.728 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:49:01.741 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:49:01.757 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:01.761 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:01.780 +03:00 [INF] Executed ViewResult - view Product executed in 39.3463ms.
+2023-11-05 22:49:01.780 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 169.7905ms
+2023-11-05 22:49:01.780 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:49:01.789 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - - - 200 - text/html;+charset=utf-8 189.7978ms
+2023-11-05 22:49:01.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:49:01.792 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:49:01.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:49:01.793 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 0.9237ms
+2023-11-05 22:49:01.793 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:49:01.794 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.8986ms
+2023-11-05 22:49:01.795 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 2.3391ms
+2023-11-05 22:49:01.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:49:01.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.3058ms
+2023-11-05 22:49:11.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - -
+2023-11-05 22:49:11.666 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:49:11.666 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:49:11.675 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:49:11.679 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:49:11.683 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:11.687 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:11.696 +03:00 [INF] Executed ViewResult - view Product executed in 16.989ms.
+2023-11-05 22:49:11.696 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 29.8628ms
+2023-11-05 22:49:11.696 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:49:11.704 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - - - 200 - text/html;+charset=utf-8 37.4058ms
+2023-11-05 22:49:11.709 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:49:11.710 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/owlcarousel/owl.theme.default.min.css - -
+2023-11-05 22:49:11.710 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/owlcarousel/owl.carousel.min.css - -
+2023-11-05 22:49:11.712 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:49:11.712 +03:00 [INF] Sending file. Request path: '/owlcarousel/owl.carousel.min.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\owlcarousel\owl.carousel.min.css'
+2023-11-05 22:49:11.712 +03:00 [INF] Sending file. Request path: '/owlcarousel/owl.theme.default.min.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\owlcarousel\owl.theme.default.min.css'
+2023-11-05 22:49:11.716 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 8734 text/css 3.0849ms
+2023-11-05 22:49:11.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/product1.jpg - -
+2023-11-05 22:49:11.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/js/site.js?v=3pPUAvz_5oJd-b8FZval6s37mF9onWhMB2Xh9I3JFlM - -
+2023-11-05 22:49:11.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/product2.jpg - -
+2023-11-05 22:49:11.718 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/owlcarousel/owl.theme.default.min.css - - - 200 1013 text/css 6.3592ms
+2023-11-05 22:49:11.720 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/7.jpg - -
+2023-11-05 22:49:11.720 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/owlcarousel/owl.carousel.min.css - - - 200 3351 text/css 6.3635ms
+2023-11-05 22:49:11.720 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/2.jpg - -
+2023-11-05 22:49:11.735 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:49:11.741 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 8.7186ms
+2023-11-05 22:49:11.751 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/8.jpg - -
+2023-11-05 22:49:11.770 +03:00 [INF] Sending file. Request path: '/Images/Products/product2.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\product2.jpg'
+2023-11-05 22:49:11.770 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:49:11.770 +03:00 [INF] Sending file. Request path: '/Images/Products/2.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\2.jpg'
+2023-11-05 22:49:11.771 +03:00 [INF] Sending file. Request path: '/Images/Products/product1.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\product1.jpg'
+2023-11-05 22:49:11.771 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/5.jpg - -
+2023-11-05 22:49:11.772 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/4.jpg - -
+2023-11-05 22:49:11.772 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/6.jpg - -
+2023-11-05 22:49:11.773 +03:00 [INF] Sending file. Request path: '/Images/Products/7.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\7.jpg'
+2023-11-05 22:49:11.775 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\js\site.js'
+2023-11-05 22:49:11.775 +03:00 [INF] Sending file. Request path: '/Images/Products/8.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\8.jpg'
+2023-11-05 22:49:11.775 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:49:11.775 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/Images/Products/3.jpg - -
+2023-11-05 22:49:11.776 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/js/site.js?v=3pPUAvz_5oJd-b8FZval6s37mF9onWhMB2Xh9I3JFlM - - - 200 975 text/javascript 59.5400ms
+2023-11-05 22:49:11.777 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/owlcarousel/js/owl.carousel.min.js - -
+2023-11-05 22:49:11.777 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/2.jpg - - - 200 25648 image/jpeg 58.7346ms
+2023-11-05 22:49:11.781 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/7.jpg - - - 200 31039 image/jpeg 62.5958ms
+2023-11-05 22:49:11.781 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/product2.jpg - - - 200 74572 image/jpeg 65.1655ms
+2023-11-05 22:49:11.785 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 9.5267ms
+2023-11-05 22:49:11.790 +03:00 [INF] Sending file. Request path: '/Images/Products/4.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\4.jpg'
+2023-11-05 22:49:11.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/product1.jpg - - - 200 117652 image/jpeg 74.9720ms
+2023-11-05 22:49:11.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/4.jpg - - - 200 39709 image/jpeg 19.5556ms
+2023-11-05 22:49:11.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/8.jpg - - - 200 37117 image/jpeg 41.6014ms
+2023-11-05 22:49:11.792 +03:00 [INF] Sending file. Request path: '/Images/Products/5.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\5.jpg'
+2023-11-05 22:49:11.793 +03:00 [INF] Sending file. Request path: '/Images/Products/3.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\3.jpg'
+2023-11-05 22:49:11.793 +03:00 [INF] Sending file. Request path: '/owlcarousel/js/owl.carousel.min.js'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\owlcarousel\js\owl.carousel.min.js'
+2023-11-05 22:49:11.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/5.jpg - - - 200 40719 image/jpeg 29.9692ms
+2023-11-05 22:49:11.802 +03:00 [INF] Sending file. Request path: '/Images/Products/6.jpg'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\Images\Products\6.jpg'
+2023-11-05 22:49:11.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/6.jpg - - - 200 47539 image/jpeg 32.6368ms
+2023-11-05 22:49:11.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/owlcarousel/js/owl.carousel.min.js - - - 200 44342 text/javascript 28.0187ms
+2023-11-05 22:49:11.809 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.3914ms
+2023-11-05 22:49:11.809 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/Images/Products/3.jpg - - - 200 47994 image/jpeg 33.9728ms
+2023-11-05 22:49:12.350 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/favicon.ico - -
+2023-11-05 22:49:12.352 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\favicon.ico'
+2023-11-05 22:49:12.352 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/favicon.ico - - - 200 5430 image/x-icon 1.9704ms
+2023-11-05 22:49:37.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - -
+2023-11-05 22:49:37.387 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:49:37.390 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:49:37.395 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:49:37.401 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:49:37.408 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:37.412 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:37.426 +03:00 [INF] Executed ViewResult - view Product executed in 28.2208ms.
+2023-11-05 22:49:37.427 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 36.3793ms
+2023-11-05 22:49:37.427 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:49:37.433 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - - - 200 - text/html;+charset=utf-8 48.0007ms
+2023-11-05 22:49:37.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:49:37.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:49:37.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:49:37.445 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.8455ms
+2023-11-05 22:49:37.445 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:49:37.451 +03:00 [INF] Sending file. Request path: '/css/StyleSheet.css'. Physical path: 'C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\wwwroot\css\StyleSheet.css'
+2023-11-05 22:49:37.456 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 200 8734 text/css 12.3525ms
+2023-11-05 22:49:37.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 20.4791ms
+2023-11-05 22:49:37.470 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.4117ms
+2023-11-05 22:49:51.780 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - -
+2023-11-05 22:49:51.781 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:49:51.785 +03:00 [INF] Route matched with {area = "UserArea", action = "Product", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Product(System.String) on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-05 22:49:51.789 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+WHERE p."Name" = @__name_0
+LIMIT 1
+2023-11-05 22:49:51.794 +03:00 [INF] Executing ViewResult, running view Product.
+2023-11-05 22:49:51.802 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:51.805 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-05 22:49:51.819 +03:00 [INF] Executed ViewResult - view Product executed in 25.9666ms.
+2023-11-05 22:49:51.819 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api) in 34.1593ms
+2023-11-05 22:49:51.819 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Product (JijaShop.Api)'
+2023-11-05 22:49:51.826 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/Product?productName=TestProd5 - - - 200 - text/html;+charset=utf-8 45.8907ms
+2023-11-05 22:49:51.830 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - -
+2023-11-05 22:49:51.830 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/css/StyleSheet.css - -
+2023-11-05 22:49:51.831 +03:00 [INF] The file /css/StyleSheet.css was not modified
+2023-11-05 22:49:51.831 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 22:49:51.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/css/StyleSheet.css - - - 304 - text/css 1.6941ms
+2023-11-05 22:49:51.832 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.9802ms
+2023-11-05 22:49:51.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products/test1 - - - 404 - - 4.6784ms
+2023-11-05 22:49:51.838 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-05 22:49:51.847 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.9423ms
