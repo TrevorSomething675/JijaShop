@@ -50,7 +50,9 @@ namespace JijaShop.Api.Migrations
                     Discriminator = table.Column<string>(type: "text", nullable: false),
                     UserAge = table.Column<int>(type: "integer", nullable: true),
                     UserPhone = table.Column<string>(type: "text", nullable: true),
-                    AccessToken = table.Column<string>(type: "text", nullable: true)
+                    AccessToken = table.Column<string>(type: "text", nullable: true),
+                    CartProductId = table.Column<int>(type: "integer", nullable: true),
+                    FavoriteProductId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -63,9 +65,9 @@ namespace JijaShop.Api.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Price = table.Column<decimal>(type: "numeric", nullable: true),
-                    OldPrice = table.Column<decimal>(type: "numeric", nullable: true),
-                    Description = table.Column<string>(type: "text", nullable: true)
+                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    OldPrice = table.Column<decimal>(type: "numeric", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -207,6 +209,92 @@ namespace JijaShop.Api.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CartProducts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    Quantity = table.Column<int>(type: "integer", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    ProductImageId = table.Column<int>(type: "integer", nullable: false),
+                    ProductOffersId = table.Column<int>(type: "integer", nullable: false),
+                    ProductDetailsId = table.Column<int>(type: "integer", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CartProducts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CartProducts_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_CartProducts_ProductDetails_ProductDetailsId",
+                        column: x => x.ProductDetailsId,
+                        principalTable: "ProductDetails",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CartProducts_ProductImage_ProductImageId",
+                        column: x => x.ProductImageId,
+                        principalTable: "ProductImage",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CartProducts_ProductOffers_ProductOffersId",
+                        column: x => x.ProductOffersId,
+                        principalTable: "ProductOffers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FavoriteProducts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    Quantity = table.Column<int>(type: "integer", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    UpdateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    ProductImageId = table.Column<int>(type: "integer", nullable: false),
+                    ProductOffersId = table.Column<int>(type: "integer", nullable: false),
+                    ProductDetailsId = table.Column<int>(type: "integer", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FavoriteProducts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FavoriteProducts_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_FavoriteProducts_ProductDetails_ProductDetailsId",
+                        column: x => x.ProductDetailsId,
+                        principalTable: "ProductDetails",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_FavoriteProducts_ProductImage_ProductImageId",
+                        column: x => x.ProductImageId,
+                        principalTable: "ProductImage",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_FavoriteProducts_ProductOffers_ProductOffersId",
+                        column: x => x.ProductOffersId,
+                        principalTable: "ProductOffers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -281,6 +369,46 @@ namespace JijaShop.Api.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_CartProducts_ProductDetailsId",
+                table: "CartProducts",
+                column: "ProductDetailsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartProducts_ProductImageId",
+                table: "CartProducts",
+                column: "ProductImageId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartProducts_ProductOffersId",
+                table: "CartProducts",
+                column: "ProductOffersId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartProducts_UserId",
+                table: "CartProducts",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FavoriteProducts_ProductDetailsId",
+                table: "FavoriteProducts",
+                column: "ProductDetailsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FavoriteProducts_ProductImageId",
+                table: "FavoriteProducts",
+                column: "ProductImageId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FavoriteProducts_ProductOffersId",
+                table: "FavoriteProducts",
+                column: "ProductOffersId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FavoriteProducts_UserId",
+                table: "FavoriteProducts",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Products_ProductDetailsId",
                 table: "Products",
                 column: "ProductDetailsId");
@@ -313,6 +441,12 @@ namespace JijaShop.Api.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "CartProducts");
+
+            migrationBuilder.DropTable(
+                name: "FavoriteProducts");
 
             migrationBuilder.DropTable(
                 name: "Products");

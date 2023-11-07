@@ -18,7 +18,10 @@ namespace JijaShop.Api.Repositories
 
         public async Task<List<User>> GetUsers()
         {
-            var users = await _context.Users.ToListAsync();
+            var users = await _context.Users
+                .Include(user=>user.CartProduct)
+                .Include(user=>user.FavoriteProduct)
+                .ToListAsync();
             return users;
         }
 

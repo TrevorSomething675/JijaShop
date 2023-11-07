@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Identity;
 using JijaShop.Extentions.Constants;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
 {
@@ -29,12 +28,12 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(UserDto userDto)
+		public async Task<IActionResult> Register(UserDto userDto)
         {
             var user = await _userManager.FindByEmailAsync(userDto.UserEmail);
 
-            if (!ModelState.IsValid)
-                return BadRequest("Критическая ошибка");
+            //if (!ModelState.IsValid)
+            //    return BadRequest("Критическая ошибка");
 
             if (user != null)
                 return BadRequest("Такой пользователь уже существует");
@@ -47,7 +46,7 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
                 return BadRequest();
 
             await _userManager.AddToRoleAsync(resultUser, UserRoles.User);
-
+            
             return await Login(userDto);
         }
 
@@ -60,8 +59,8 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(UserDto userDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Критическая ошибка");
+            //if (!ModelState.IsValid)
+            //    return BadRequest("Критическая ошибка");
 
             var user = await _userManager.FindByEmailAsync(userDto.UserEmail);
 

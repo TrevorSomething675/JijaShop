@@ -10,6 +10,8 @@ namespace JijaShop.Api.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<CartProduct> CartProducts { get; set; }
+        public DbSet<FavoriteProduct> FavoriteProducts { get; set; }
 
         public MainContext(DbContextOptions options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

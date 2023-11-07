@@ -1,7 +1,6 @@
 ﻿using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
-using JijaShop.Api.ViewModels;
 
 namespace JijaShop.Api.Areas.Admin.Controllers
 {

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using JijaShop.Api.Data.Models.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace JijaShop.Api.Data.Models.AuthEntities
 {
@@ -7,5 +8,11 @@ namespace JijaShop.Api.Data.Models.AuthEntities
         public int? UserAge { get; set; }
         public string? UserPhone { get; set; }
         public string? AccessToken { get; set; }
+
+        public int CartProductId { get; set; }
+        public List<CartProduct> CartProduct { get; set; }
+
+        public int FavoriteProductId { get; set; }
+        public List<FavoriteProduct> FavoriteProduct { get; set; }
     }
 }

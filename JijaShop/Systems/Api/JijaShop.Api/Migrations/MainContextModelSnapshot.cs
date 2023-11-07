@@ -22,6 +22,98 @@ namespace JijaShop.Api.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.CartProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<int>("ProductDetailsId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ProductImageId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ProductOffersId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductDetailsId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasIndex("ProductOffersId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CartProducts");
+                });
+
+            modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.FavoriteProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<int>("ProductDetailsId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ProductImageId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ProductOffersId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductDetailsId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasIndex("ProductOffersId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("FavoriteProducts");
+                });
+
             modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -73,12 +165,13 @@ namespace JijaShop.Api.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal?>("OldPrice")
+                    b.Property<decimal>("OldPrice")
                         .HasColumnType("numeric");
 
-                    b.Property<decimal?>("Price")
+                    b.Property<decimal>("Price")
                         .HasColumnType("numeric");
 
                     b.HasKey("Id");
@@ -342,6 +435,12 @@ namespace JijaShop.Api.Migrations
                     b.Property<string>("AccessToken")
                         .HasColumnType("text");
 
+                    b.Property<int>("CartProductId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("FavoriteProductId")
+                        .HasColumnType("integer");
+
                     b.Property<int?>("UserAge")
                         .HasColumnType("integer");
 
@@ -349,6 +448,68 @@ namespace JijaShop.Api.Migrations
                         .HasColumnType("text");
 
                     b.HasDiscriminator().HasValue("User");
+                });
+
+            modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.CartProduct", b =>
+                {
+                    b.HasOne("JijaShop.Api.Data.Models.Entities.ProductDetails", "ProductDetails")
+                        .WithMany()
+                        .HasForeignKey("ProductDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JijaShop.Api.Data.Models.Entities.ProductImage", "ProductImage")
+                        .WithMany()
+                        .HasForeignKey("ProductImageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JijaShop.Api.Data.Models.Entities.ProductOffers", "ProductOffers")
+                        .WithMany()
+                        .HasForeignKey("ProductOffersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JijaShop.Api.Data.Models.AuthEntities.User", null)
+                        .WithMany("CartProduct")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("ProductDetails");
+
+                    b.Navigation("ProductImage");
+
+                    b.Navigation("ProductOffers");
+                });
+
+            modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.FavoriteProduct", b =>
+                {
+                    b.HasOne("JijaShop.Api.Data.Models.Entities.ProductDetails", "ProductDetails")
+                        .WithMany()
+                        .HasForeignKey("ProductDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JijaShop.Api.Data.Models.Entities.ProductImage", "ProductImage")
+                        .WithMany()
+                        .HasForeignKey("ProductImageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JijaShop.Api.Data.Models.Entities.ProductOffers", "ProductOffers")
+                        .WithMany()
+                        .HasForeignKey("ProductOffersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JijaShop.Api.Data.Models.AuthEntities.User", null)
+                        .WithMany("FavoriteProduct")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("ProductDetails");
+
+                    b.Navigation("ProductImage");
+
+                    b.Navigation("ProductOffers");
                 });
 
             modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.Product", b =>
@@ -427,6 +588,13 @@ namespace JijaShop.Api.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("JijaShop.Api.Data.Models.AuthEntities.User", b =>
+                {
+                    b.Navigation("CartProduct");
+
+                    b.Navigation("FavoriteProduct");
                 });
 #pragma warning restore 612, 618
         }

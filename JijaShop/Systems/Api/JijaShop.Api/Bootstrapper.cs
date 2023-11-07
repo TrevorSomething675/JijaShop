@@ -13,17 +13,21 @@ namespace JijaShop.Api
             services.AddMainSettings().
                 AddIdentitySettings().
                 AddSwaggerSettings().
+                AddScoped<IHashService, HashService>().
                 AddScoped<IUserService, UserService>().
                 AddScoped<ITokenService, TokenService>().
                 AddScoped<IProductService, ProductService>().
                 AddScoped<IIdentityService, IdentityService>().
-                AddScoped<IHashService, HashService>();
+                AddScoped<IProductCartService, ProductCartService>().
+                AddScoped<IProductFavoritesService, ProductFavoritesService>();
 
             return services;
         }
 
         public static IServiceCollection RegisterRepositories(this IServiceCollection services)
         {
+            services.AddScoped<IProductFavoritesRepository, ProductFavoritesRepository>();
+            services.AddScoped<IProductCartRepository, ProductCartRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IRolesRepository, RolesRepository>();
             services.AddScoped<IUserRepository, UserRepository>();

@@ -7,11 +7,14 @@
             <form>
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Найти"
-                           aria-label="Searching" aria-describedby="search-button" />
+                           aria-label="Searching" aria-describedby="search-button" id="sidebar-search-products"/>
 
-                    <button class="btn btn-light" type="submit" id="search-button">
-                        <i class="bi bi-search"></i>
-                    </button>
+                    <a class="btn btn-light" asp-area="UserArea" asp-controller="Products" asp-action="SearchProducts">
+
+                        @* <button class="btn btn-light" type="submit" id="search-button"> *@
+                            <i class="bi bi-search"></i>
+                        @* </button> *@
+                    </a>
                 </div>
             </form>
         </div>
@@ -158,3 +161,16 @@
         </div>
     </div>
 }
+
+<script>
+    const input1 = document.getElementById('header-search-products');
+    const input2 = document.getElementById('sidebar-search-products');
+
+    input1.addEventListener('input', function () {
+        input2.value = input1.value;
+    });
+
+    input2.addEventListener('input', function () {
+        input1.value = input2.value;
+    });
+</script>

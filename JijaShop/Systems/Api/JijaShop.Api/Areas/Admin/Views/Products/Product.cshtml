@@ -7,7 +7,7 @@
 		<div class="row">
 			
 			<div class="col product-big-img">
-				<img src="@Model.ProductImageDto.ImagePathDto"/>
+				<img src="@Model.ProductImage.ImagePath"/>
 			</div>
 			
 			<div class="col-12 col-lg-8" style="overflow:hidden">
@@ -19,17 +19,17 @@
 					
 					<div class="p-2 flex-grow-1">
 						<p class="px-2" style="word-wrap: break-word;">
-							@Model.ProductDetailsDto.Description
+							@Model.ProductDetails.Description
 					   </p>
 					</div>
 					
 					<div class="d-flex justify-content-between align-content-end px-4">
 						<div class="product-details-big-price d-flex justify-content-center m-1">
-							@if (Model.ProductDetailsDto.OldPrice != null && Model.ProductDetailsDto.OldPrice != 0)
+							@if (Model.ProductDetails.OldPrice != null && Model.ProductDetails.OldPrice != 0)
 							{
-								<small class="me-1">@Model.ProductDetailsDto.OldPrice$</small>
+								<small class="me-1">@Model.ProductDetails.OldPrice$</small>
 							}
-							@Model.ProductDetailsDto.Price$
+							@Model.ProductDetails.Price$
 						</div>
 
 						<div class="d-flex product-big-buttons vertical-aligment-center py-2 align-text-center">

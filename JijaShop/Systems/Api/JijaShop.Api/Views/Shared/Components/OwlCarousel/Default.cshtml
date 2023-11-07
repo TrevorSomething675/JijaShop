@@ -8,7 +8,7 @@
             <div class="owl-carousel-item">
                 <div class="col product-big-img">
                     <a asp-area="UserArea" asp-controller="Products" asp-action="Product" asp-route-productName="@product.Name">
-                        <img src="@product.ProductImageDto.ImagePathDto" />
+                        <img src="@product.ProductImage.ImagePath" />
                     </a>
                 </div>
 
@@ -21,11 +21,11 @@
 
                         <div class="col-6">
                             <div class="product-details-big-price d-flex justify-content-end m-1 px-1">
-                                @if (product.ProductDetailsDto.OldPrice != null && product.ProductDetailsDto.OldPrice != 0)
+                                @if (product.ProductDetails.OldPrice != null && product.ProductDetails.OldPrice != 0)
                                 {
-                                    <small class="">@product.ProductDetailsDto.OldPrice$</small>
+                                    <small class="">@product.ProductDetails.OldPrice$</small>
                                 }
-                                @product.ProductDetailsDto.Price$
+                                @product.ProductDetails.Price$
                             </div>
                         </div>
 
@@ -34,7 +34,7 @@
 
                 <div class="col px-2">
                     <p style="overflow:hidden">
-                        @product.ProductDetailsDto.Description
+                        @product.ProductDetails.Description
                     </p>
                 </div>
 

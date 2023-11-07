@@ -27,13 +27,13 @@ namespace JijaShop.Api.Services
 
             return product;
         }
+
         public async Task<List<ProductDto>?> GetProducts(int pageNumber = 1, Expression<Func<Product, bool>> filter = null)
         {
             var pageResult = 12f;
-            var pageCount = Math.Ceiling(_productRepository.GetProducts().Result.Count() / pageResult);
+            var pageCount = Math.Ceiling(_productRepository.GetProducts(filter).Result.Count() / pageResult);
 
             var products = _productRepository.GetProducts(filter).Result
-                .Skip((int)pageCount)
                 .Take((int)pageResult * pageNumber).ToList();
 
 			var productsDto = _mapper.Map<List<ProductDto>>(products);
@@ -57,13 +57,13 @@ namespace JijaShop.Api.Services
         {
             var product = _mapper.Map<Product>(productDto);
 
-            using (var fileStream = new FileStream($"{_appEnvironment.WebRootPath}/{_mainSettings.ProductImagesPath}/{productDto.ProductImageDto.Image.FileName}", FileMode.Create))
+            using (var fileStream = new FileStream($"{_appEnvironment.WebRootPath}/{_mainSettings.ProductImagesPath}/{productDto.ProductImage.Image.FileName}", FileMode.Create))
             {
-                productDto.ProductImageDto.Image.CopyTo(fileStream);
+                productDto.ProductImage.Image.CopyTo(fileStream);
             }
 
-            product.ProductImage.ImageName = productDto.ProductImageDto.Image.FileName;
-            product.ProductImage.ImagePath = $"{_mainSettings.ProductImagesPath}/{productDto.ProductImageDto.Image.FileName}";
+            product.ProductImage.ImageName = productDto.ProductImage.Image.FileName;
+            product.ProductImage.ImagePath = $"{_mainSettings.ProductImagesPath}/{productDto.ProductImage.Image.FileName}";
 
             await _productRepository.CreateNewProduct(product);
         }

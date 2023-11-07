@@ -1,4 +1,4 @@
-﻿<div class="offcanvas offcanvas-end" tabindex="-1" id="BasketСanvasExample" aria-labelledby="offcanvasExampleLabel">
+﻿@* <div class="offcanvas offcanvas-end" tabindex="-1" id="BasketСanvasExample" aria-labelledby="offcanvasExampleLabel">
 
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Cart</h5>
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-</div>
+</div> *@
 
 <div class="header-top shadow-lg">
     <div class="container-fluid">
@@ -38,10 +38,10 @@
 
             <div class="col-6 col-md">
                 <div id="searchInHeader" class="header-search">
-                    <form>
+                    <form asp-area="UserArea" asp-controller="Products" asp-action="ProductsPartial" method="post">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="search" placeholder="Найти"
-                                   aria-label="Searching" aria-describedby="search-button" />
+                            <input type="text" class="form-control" name="productName" placeholder="Найти"
+                                   aria-label="Searching" aria-describedby="search-button" id="header-search-products" />
 
                             <button class="btn btn-light" type="submit" id="search-button">
                                 <i class="bi bi-search"></i>
@@ -115,7 +115,7 @@
 
                     <ul class="list-inline header-botton-items d-flex my-0">
                         <li class="list-inline-item px-2">
-                            <a class="position-relative d-flex justify-content-around" asp-area="" asp-controller="Home" asp-action="Favorites">
+                            <a class="position-relative d-flex justify-content-around" asp-area="" asp-controller="Favorites" asp-action="Index">
                                 <i class="bi bi-heart-fill px-1"></i>
                                 <span class="d-none d-lg-block">Избраное</span>
                                 <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">2</span>
@@ -123,11 +123,14 @@
                         </li>
 
                         <li class="list-inline-item px-2">
-                            <a class="position-relative d-flex justify-content-around" data-bs-toggle="offcanvas" href="#BasketСanvasExample" role="button" aria-controls="offcanvasExample">
+                            @* <a class="position-relative d-flex justify-content-around" data-bs-toggle="offcanvas" href="#BasketСanvasExample" role="button" aria-controls="offcanvasExample"> *@
+                            <a class="position-relative d-flex justify-content-around" asp-area="" asp-controller="Cart" asp-action="Index">
+
                                 <i class="bi bi-bag-check-fill px-1"></i>
                                 <span class="d-none d-lg-block">Корзина</span>
                                 <span class="badge-warning position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">3</span>
                             </a>
+                            @* </a> *@
                         </li>
 
                     </ul>

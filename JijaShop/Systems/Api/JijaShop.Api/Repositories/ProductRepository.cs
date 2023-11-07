@@ -18,34 +18,23 @@ namespace JijaShop.Api.Repositories
 
         public async Task<List<Product>> GetProducts(Expression<Func<Product, bool>> filter = null)
         {
-            if (filter != null)
-            {
-                var resultProducts = await _context.Products
-                    .Include(prod => prod.ProductDetails)
-                    .Include(prod => prod.ProductOffers)
-                    .Include(prod => prod.ProductImage)
-                    .Where(filter).ToListAsync();
+            filter = filter ?? (prod => true);
 
-                return resultProducts;
-            }
-            else
-            {
-                var resultProducts = await _context.Products
-                    .Include(prod => prod.ProductDetails)
-                    .Include(prod => prod.ProductOffers)
-                    .Include(prod => prod.ProductImage)
-                    .ToListAsync();
+            var resultProducts = await _context.Products
+                .Include(prod => prod.ProductDetails)
+                .Include(prod => prod.ProductOffers)
+                .Include(prod => prod.ProductImage)
+                .Where(filter).ToListAsync();
 
-                return resultProducts;
-            }
+            return resultProducts;
 
         }
 
         public async Task<Product> GetProduct(string name)
         {
-            var resultProduct = await _context.Products.Include(prod => prod.ProductDetails)
-                .Include(prod => prod.ProductOffers)
+            var resultProduct = await _context.Products
                 .Include(prod => prod.ProductDetails)
+                .Include(prod => prod.ProductOffers)
                 .Include(prod => prod.ProductImage)
                 .FirstOrDefaultAsync(prod => prod.Name == name);
 
@@ -56,14 +45,13 @@ namespace JijaShop.Api.Repositories
         {
             try
             {
-                //product.CreatedDate = DateTime.Now;
                 _context.Add(product);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
-                _logger.LogError($"{ex.Message}");
-            }
+				_logger.LogInformation($"{ex.Message}");
+			}
         }
 
         public async Task DeleteProduct(Product product)
@@ -75,8 +63,8 @@ namespace JijaShop.Api.Repositories
             }
             catch (Exception ex)
             {
-                _logger.LogError($"{ex.Message}");
-            }
+				_logger.LogInformation($"{ex.Message}");
+			}
         }
 
         public async Task UpdateProduct(Product product)
@@ -88,8 +76,8 @@ namespace JijaShop.Api.Repositories
             }
             catch (Exception ex)
             {
-                _logger.LogError($"{ex.Message}");
-            }
+				_logger.LogInformation($"{ex.Message}");
+			}
         }
     }
 }

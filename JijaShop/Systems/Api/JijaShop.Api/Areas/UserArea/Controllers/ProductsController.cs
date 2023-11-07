@@ -1,6 +1,5 @@
 ﻿using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
-using JijaShop.Api.ViewModels;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
 {
@@ -13,6 +12,7 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
         {
             _productService = productService;
         }
+
         public async Task<IActionResult> Index()
         {
             var products = await _productService.GetProducts();
@@ -29,6 +29,7 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
 
         public async Task<IActionResult> ProductsPartial(int pageCount = 1)
         {
+
             var model = await _productService.GetProducts(pageCount);
 
             return PartialView("ProductsPartial/ProductsPartial", model);
