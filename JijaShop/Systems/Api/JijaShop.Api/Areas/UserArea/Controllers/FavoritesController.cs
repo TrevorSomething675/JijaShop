@@ -1,4 +1,4 @@
-﻿using JijaShop.Api.Data.Models.DTOModels;
+﻿using JijaShop.Api.Repositories.Abstractions;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,12 +7,11 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
     [Area("UserArea")]
     public class FavoritesController : Controller
     {
-        private readonly IProductFavoritesService _productFavoritesService;
         private readonly IProductService _productService;
-
-		public FavoritesController(IProductFavoritesService productFavoritesService, IProductService productService)
+        private readonly IUserFavoriteProductsService _userProductsService;
+        public FavoritesController(IProductService productService, IUserFavoriteProductsService userProductsService)
         {
-            _productFavoritesService = productFavoritesService;
+            _userProductsService = userProductsService;
             _productService = productService;
         }
 
@@ -21,15 +20,19 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
             if (!User.Identity.IsAuthenticated)
                 return RedirectToAction("Login", "Auth");
 
-            var model = await _productFavoritesService.GetAllProducts();
+            var model = await _userProductsService.GetProducts();
 
             return View(model);
         }
 
         public async Task AddToFavorite(string productName)
         {
-            var favoriteProduct = await _productService.GetProduct(productName);
-            await _productFavoritesService.AddFavoriteProduct(favoriteProduct);
-        } 
+            await _userProductsService.AddProduct(productName);
+        }
+
+        public async Task RemoveFormFavorite(string productName)
+        {
+            //var favoriteProduct = await 
+        }
     }
 }

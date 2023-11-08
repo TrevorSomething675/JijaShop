@@ -17,7 +17,18 @@ namespace JijaShop.Api.Repositories
 			_context = context;
 		}
 
-		public async Task<List<FavoriteProduct>> GetFavoriteProducts(Expression<Func<FavoriteProduct, bool>> filter = null)
+		public async Task<FavoriteProduct> GetProduct(string name)
+		{
+			var resultProduct = await _context.FavoriteProducts
+                .Include(prod => prod.ProductDetails)
+                .Include(prod => prod.ProductOffers)
+                .Include(prod => prod.ProductImage)
+                .FirstOrDefaultAsync(prod => prod.Name == name);
+
+			return resultProduct;
+		}
+
+		public async Task<List<FavoriteProduct>> GetProducts(Expression<Func<FavoriteProduct, bool>> filter = null)
 		{
 			filter = filter ?? (prod => true);
 
@@ -30,18 +41,7 @@ namespace JijaShop.Api.Repositories
             return resultProducts;
 		}
 
-		public async Task<FavoriteProduct> GetFavoriteProduct(string name)
-		{
-			var resultProduct = await _context.FavoriteProducts
-                .Include(prod => prod.ProductDetails)
-                .Include(prod => prod.ProductOffers)
-                .Include(prod => prod.ProductImage)
-                .FirstOrDefaultAsync(prod => prod.Name == name);
-
-			return resultProduct;
-		}
-
-		public async Task AddFavoriteProduct(FavoriteProduct cartProduct)
+		public async Task AddProduct(FavoriteProduct cartProduct)
 		{
 			try
 			{
@@ -54,7 +54,7 @@ namespace JijaShop.Api.Repositories
 			}
 		}
 
-		public async Task RemoveFavoriteProduct(FavoriteProduct cartProduct)
+		public async Task RemoveProduct(FavoriteProduct cartProduct)
 		{
 			try
 			{

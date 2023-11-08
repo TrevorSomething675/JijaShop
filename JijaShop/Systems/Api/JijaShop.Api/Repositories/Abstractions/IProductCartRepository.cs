@@ -5,9 +5,9 @@ namespace JijaShop.Api.Repositories.Abstractions
 {
 	public interface IProductCartRepository
 	{
-		public Task<CartProduct> GetCartProduct(string name);
-		public Task<List<CartProduct>> GetCartProducts(Expression<Func<CartProduct, bool>> filter = null);
-		public Task AddCartProduct(CartProduct cartProduct);
-		public Task RemoveCartProduct(CartProduct cartProduct);
+		public Task<CartProduct> GetProduct(string name);
+		public Task<List<CartProduct>> GetProducts(Expression<Func<CartProduct, bool>> filter = null);
+		public Task AddProduct(CartProduct cartProduct);
+		public Task RemoveProduct(CartProduct cartProduct);
 	}
 }

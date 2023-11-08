@@ -1,15 +1,13 @@
-﻿using JijaShop.Api.Services.Abstractions;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
 {
     [Area("UserArea")]
     public class CartController : Controller
     {
-        private readonly IProductCartService _productCartService;
-        public CartController(IProductCartService productCartService)
+        public CartController()
         {
-            _productCartService = productCartService;
+
         }
         public IActionResult Index()
         {

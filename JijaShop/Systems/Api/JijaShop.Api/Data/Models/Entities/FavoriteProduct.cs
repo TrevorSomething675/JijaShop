@@ -1,4 +1,5 @@
-﻿using JijaShop.Api.Data.Models.DTOModels;
+﻿using JijaShop.Api.Data.Models.AuthEntities;
+using JijaShop.Api.Data.Models.DTOModels;
 
 namespace JijaShop.Api.Data.Models.Entities
 {
@@ -8,6 +9,9 @@ namespace JijaShop.Api.Data.Models.Entities
         public int? Quantity { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdateDate { get; set; }
+
+        public int UserId { get; set; }
+        public User User { get; set; } = null!;
 
         public int ProductImageId { get; set; }
         public ProductImage ProductImage { get; set; } = null!;

@@ -1,7 +1,7 @@
 ﻿using JijaShop.Api.Repositories.Abstractions;
+using JijaShop.Api.Services.Abstractions;
 using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Data.Models.Entities;
-using JijaShop.Api.Services.Abstractions;
 using JijaShop.Extentions.SettingsModel;
 using System.Linq.Expressions;
 using AutoMapper;
@@ -36,7 +36,7 @@ namespace JijaShop.Api.Services
             var products = _productRepository.GetProducts(filter).Result
                 .Take((int)pageResult * pageNumber).ToList();
 
-			var productsDto = _mapper.Map<List<ProductDto>>(products);
+            var productsDto = _mapper.Map<List<ProductDto>>(products);
 
             return productsDto;
         }
@@ -65,7 +65,7 @@ namespace JijaShop.Api.Services
             product.ProductImage.ImageName = productDto.ProductImage.Image.FileName;
             product.ProductImage.ImagePath = $"{_mainSettings.ProductImagesPath}/{productDto.ProductImage.Image.FileName}";
 
-            await _productRepository.CreateNewProduct(product);
+            await _productRepository.CreateProduct(product);
         }
     }
 }

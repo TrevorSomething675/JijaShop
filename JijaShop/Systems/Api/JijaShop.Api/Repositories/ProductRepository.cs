@@ -20,14 +20,13 @@ namespace JijaShop.Api.Repositories
         {
             filter = filter ?? (prod => true);
 
-            var resultProducts = await _context.Products
+            var products = await _context.Products
+                .Where(filter)
                 .Include(prod => prod.ProductDetails)
                 .Include(prod => prod.ProductOffers)
-                .Include(prod => prod.ProductImage)
-                .Where(filter).ToListAsync();
+                .Include(prod => prod.ProductImage).ToListAsync();
 
-            return resultProducts;
-
+            return products;
         }
 
         public async Task<Product> GetProduct(string name)
@@ -41,7 +40,7 @@ namespace JijaShop.Api.Repositories
             return resultProduct;
         }
 
-        public async Task CreateNewProduct(Product product)
+        public async Task CreateProduct(Product product)
         {
             try
             {

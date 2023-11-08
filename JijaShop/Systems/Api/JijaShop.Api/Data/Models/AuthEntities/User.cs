@@ -10,9 +10,9 @@ namespace JijaShop.Api.Data.Models.AuthEntities
         public string? AccessToken { get; set; }
 
         public int CartProductId { get; set; }
-        public List<CartProduct> CartProduct { get; set; }
+        public List<CartProduct> CartProducts { get; set; }
 
         public int FavoriteProductId { get; set; }
-        public List<FavoriteProduct> FavoriteProduct { get; set; }
+        public List<FavoriteProduct> FavoriteProducts { get; set; }
     }
 }

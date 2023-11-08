@@ -52,7 +52,7 @@ namespace JijaShop.Api.Migrations
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -98,7 +98,7 @@ namespace JijaShop.Api.Migrations
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -470,15 +470,19 @@ namespace JijaShop.Api.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("JijaShop.Api.Data.Models.AuthEntities.User", null)
-                        .WithMany("CartProduct")
-                        .HasForeignKey("UserId");
+                    b.HasOne("JijaShop.Api.Data.Models.AuthEntities.User", "User")
+                        .WithMany("CartProducts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("ProductDetails");
 
                     b.Navigation("ProductImage");
 
                     b.Navigation("ProductOffers");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.FavoriteProduct", b =>
@@ -501,15 +505,19 @@ namespace JijaShop.Api.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("JijaShop.Api.Data.Models.AuthEntities.User", null)
-                        .WithMany("FavoriteProduct")
-                        .HasForeignKey("UserId");
+                    b.HasOne("JijaShop.Api.Data.Models.AuthEntities.User", "User")
+                        .WithMany("FavoriteProducts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("ProductDetails");
 
                     b.Navigation("ProductImage");
 
                     b.Navigation("ProductOffers");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("JijaShop.Api.Data.Models.Entities.Product", b =>
@@ -592,9 +600,9 @@ namespace JijaShop.Api.Migrations
 
             modelBuilder.Entity("JijaShop.Api.Data.Models.AuthEntities.User", b =>
                 {
-                    b.Navigation("CartProduct");
+                    b.Navigation("CartProducts");
 
-                    b.Navigation("FavoriteProduct");
+                    b.Navigation("FavoriteProducts");
                 });
 #pragma warning restore 612, 618
         }

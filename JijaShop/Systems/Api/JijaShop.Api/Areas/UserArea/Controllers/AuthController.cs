@@ -18,7 +18,8 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
         private readonly UserManager<User> _userManager;
         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
-        public AuthController(UserManager<User> userManager, IMapper mapper, IRolesRepository rolesRepository, ITokenService tokenService, SignInManager<User> signInManager)
+        public AuthController(UserManager<User> userManager, IMapper mapper, IRolesRepository rolesRepository, 
+            ITokenService tokenService, SignInManager<User> signInManager)
         {
             _rolesRepository = rolesRepository;
             _signInManager = signInManager;
@@ -80,7 +81,7 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
 
             await _signInManager.SignInAsync(user, isPersistent: false);
 
-            return Ok(accessToken);
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -93,6 +94,19 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
         public async Task<IActionResult> GetInfo()
         {
             return Ok("Jija");
+        }
+
+        public async Task<IActionResult> SignOut()
+        {
+            try
+            {
+                await _signInManager.SignOutAsync();
+                return RedirectToAction("Index", "Home");
+            }
+            catch
+            {
+                return BadRequest("Ошибка");
+            }
         }
     }
 }

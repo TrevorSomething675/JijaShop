@@ -18,8 +18,7 @@ namespace JijaShop.Api
                 AddScoped<ITokenService, TokenService>().
                 AddScoped<IProductService, ProductService>().
                 AddScoped<IIdentityService, IdentityService>().
-                AddScoped<IProductCartService, ProductCartService>().
-                AddScoped<IProductFavoritesService, ProductFavoritesService>();
+                AddScoped<IUserFavoriteProductsService, UserFavoriteProductsService>();
 
             return services;
         }

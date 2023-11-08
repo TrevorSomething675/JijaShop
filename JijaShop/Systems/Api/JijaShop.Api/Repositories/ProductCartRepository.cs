@@ -16,7 +16,7 @@ namespace JijaShop.Api.Repositories
             _logger = logger;
         }
 
-        public async Task<CartProduct> GetCartProduct(string name)
+        public async Task<CartProduct> GetProduct(string name)
         {
             var resultProduct = await _context.CartProducts
                 .Include(prod => prod.ProductDetails)
@@ -27,7 +27,7 @@ namespace JijaShop.Api.Repositories
             return resultProduct;
         }
 
-        public async Task<List<CartProduct>> GetCartProducts(Expression<Func<CartProduct, bool>> filter = null)
+        public async Task<List<CartProduct>> GetProducts(Expression<Func<CartProduct, bool>> filter = null)
         {
             filter = filter ?? (prod => true);
 
@@ -41,7 +41,7 @@ namespace JijaShop.Api.Repositories
 
 		}
 
-        public async Task AddCartProduct(CartProduct cartProduct)
+        public async Task AddProduct(CartProduct cartProduct)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace JijaShop.Api.Repositories
             }
         }
 
-        public async Task RemoveCartProduct(CartProduct cartProduct)
+        public async Task RemoveProduct(CartProduct cartProduct)
         {
             try
             {
