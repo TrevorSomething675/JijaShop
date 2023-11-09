@@ -7450,3 +7450,173 @@ WHERE f."UserId" = @__user_Id_0
 2023-11-08 23:46:08.211 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
 2023-11-08 23:46:08.213 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.2644ms
 2023-11-08 23:46:08.220 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.5994ms
+2023-11-08 23:48:12.318 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-08 23:48:12.410 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2023-11-08 23:48:12.424 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-11-08 23:48:12.441 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-08 23:48:12.522 +03:00 [INF] User profile is available. Using 'C:\Users\Win10Pro\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-08 23:48:12.765 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-08 23:48:12.765 +03:00 [INF] Hosting environment: Development
+2023-11-08 23:48:12.765 +03:00 [INF] Content root path: C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api
+2023-11-08 23:48:12.793 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea - -
+2023-11-08 23:48:12.881 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-08 23:48:12.896 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-08 23:48:12.909 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-08 23:48:13.138 +03:00 [INF] Executed ViewResult - view Index executed in 232.8181ms.
+2023-11-08 23:48:13.142 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 244.8762ms
+2023-11-08 23:48:13.143 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-08 23:48:13.171 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea - - - 200 - text/html;+charset=utf-8 380.5479ms
+2023-11-08 23:48:13.175 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-08 23:48:13.175 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-08 23:48:13.193 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 14.0822ms
+2023-11-08 23:48:13.222 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 46.1812ms
+2023-11-08 23:48:15.535 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Auth/Login - -
+2023-11-08 23:48:15.545 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.AuthController.Login (JijaShop.Api)'
+2023-11-08 23:48:15.552 +03:00 [INF] Route matched with {area = "UserArea", action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login() on controller JijaShop.Api.Areas.UserArea.Controllers.AuthController (JijaShop.Api).
+2023-11-08 23:48:15.728 +03:00 [INF] Executing ViewResult, running view Login.
+2023-11-08 23:48:15.754 +03:00 [INF] Executed ViewResult - view Login executed in 27.3254ms.
+2023-11-08 23:48:15.755 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.AuthController.Login (JijaShop.Api) in 202.1304ms
+2023-11-08 23:48:15.755 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.AuthController.Login (JijaShop.Api)'
+2023-11-08 23:48:15.766 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-08 23:48:15.766 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/js/helper.js - -
+2023-11-08 23:48:15.766 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-08 23:48:15.769 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 2.5643ms
+2023-11-08 23:48:15.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Auth/Login - - - 200 - text/html;+charset=utf-8 234.8546ms
+2023-11-08 23:48:15.776 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/js/helper.js - - - 404 - - 9.9018ms
+2023-11-08 23:48:15.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.4913ms
+2023-11-08 23:48:22.762 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44303/UserArea/Auth/Login application/x-www-form-urlencoded 258
+2023-11-08 23:48:22.765 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.AuthController.Login (JijaShop.Api)'
+2023-11-08 23:48:22.779 +03:00 [INF] Route matched with {area = "UserArea", action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(JijaShop.Api.Data.Models.AuthDtoModels.UserDto) on controller JijaShop.Api.Areas.UserArea.Controllers.AuthController (JijaShop.Api).
+2023-11-08 23:48:23.107 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Discriminator", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."AccessToken", a."CartProductId", a."FavoriteProductId", a."UserAge", a."UserPhone"
+FROM "AspNetUsers" AS a
+WHERE a."Discriminator" = 'User' AND a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-11-08 23:48:23.305 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."Id" = @__id_0
+LIMIT 1
+2023-11-08 23:48:23.350 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userDto_UserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Discriminator", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."AccessToken", a."CartProductId", a."FavoriteProductId", a."UserAge", a."UserPhone"
+FROM "AspNetUsers" AS a
+WHERE a."Discriminator" = 'User' AND a."UserName" = @__userDto_UserName_0
+LIMIT 1
+2023-11-08 23:48:23.421 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Discriminator", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."AccessToken", a."CartProductId", a."FavoriteProductId", a."UserAge", a."UserPhone"
+FROM "AspNetUsers" AS a
+WHERE a."Discriminator" = 'User' AND a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2023-11-08 23:48:23.524 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p19='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Int32), @p3='?', @p20='?', @p4='?', @p5='?' (DbType = Boolean), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?', @p10='?', @p11='?', @p12='?', @p13='?' (DbType = Boolean), @p14='?', @p15='?' (DbType = Boolean), @p16='?' (DbType = Int32), @p17='?', @p18='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "AccessToken" = @p1, "CartProductId" = @p2, "ConcurrencyStamp" = @p3, "Email" = @p4, "EmailConfirmed" = @p5, "FavoriteProductId" = @p6, "LockoutEnabled" = @p7, "LockoutEnd" = @p8, "NormalizedEmail" = @p9, "NormalizedUserName" = @p10, "PasswordHash" = @p11, "PhoneNumber" = @p12, "PhoneNumberConfirmed" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserAge" = @p16, "UserName" = @p17, "UserPhone" = @p18
+WHERE "Id" = @p19 AND "ConcurrencyStamp" = @p20;
+2023-11-08 23:48:23.588 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2023-11-08 23:48:23.617 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2023-11-08 23:48:23.627 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2023-11-08 23:48:23.636 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."ClaimType", a."ClaimValue"
+FROM "AspNetRoleClaims" AS a
+WHERE a."RoleId" = @__role_Id_0
+2023-11-08 23:48:23.643 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2023-11-08 23:48:23.645 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2023-11-08 23:48:23.646 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.AuthController.Login (JijaShop.Api) in 866.4671ms
+2023-11-08 23:48:23.646 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.AuthController.Login (JijaShop.Api)'
+2023-11-08 23:48:23.651 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/ - -
+2023-11-08 23:48:23.655 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44303/UserArea/Auth/Login application/x-www-form-urlencoded 258 - 302 - - 893.2602ms
+2023-11-08 23:48:23.657 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-08 23:48:23.657 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-08 23:48:23.657 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-08 23:48:23.674 +03:00 [INF] Executed ViewResult - view Index executed in 16.8103ms.
+2023-11-08 23:48:23.674 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 17.2699ms
+2023-11-08 23:48:23.674 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-08 23:48:23.679 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/ - - - 200 - text/html;+charset=utf-8 27.6164ms
+2023-11-08 23:48:23.682 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-08 23:48:23.682 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-08 23:48:23.684 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.8963ms
+2023-11-08 23:48:23.691 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.1839ms
+2023-11-08 23:48:25.495 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Favorites - -
+2023-11-08 23:48:25.498 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.FavoritesController.Index (JijaShop.Api)'
+2023-11-08 23:48:25.500 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Favorites"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.FavoritesController (JijaShop.Api).
+2023-11-08 23:48:28.255 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Discriminator", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", a."AccessToken", a."CartProductId", a."FavoriteProductId", a."UserAge", a."UserPhone"
+FROM "AspNetUsers" AS a
+WHERE a."Discriminator" = 'User' AND a."Id" = @__p_0
+LIMIT 1
+2023-11-08 23:48:28.295 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT f."Id", f."CreatedDate", f."Name", f."ProductDetailsId", f."ProductImageId", f."ProductOffersId", f."Quantity", f."UpdateDate", f."UserId", p."Id", p."Description", p."OldPrice", p."Price", p0."Id", p0."IsHitOffer", p0."IsNewOffer", p1."Id", p1."ImageName", p1."ImagePath"
+FROM "FavoriteProducts" AS f
+INNER JOIN "ProductDetails" AS p ON f."ProductDetailsId" = p."Id"
+INNER JOIN "ProductOffers" AS p0 ON f."ProductOffersId" = p0."Id"
+INNER JOIN "ProductImage" AS p1 ON f."ProductImageId" = p1."Id"
+WHERE f."UserId" = @__user_Id_0
+2023-11-08 23:48:28.310 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-08 23:48:28.321 +03:00 [INF] Executed ViewResult - view Index executed in 11.8153ms.
+2023-11-08 23:48:28.322 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.FavoritesController.Index (JijaShop.Api) in 2821.099ms
+2023-11-08 23:48:28.322 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.FavoritesController.Index (JijaShop.Api)'
+2023-11-08 23:48:28.324 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Favorites - - - 200 - text/html;+charset=utf-8 2828.8650ms
+2023-11-08 23:48:28.327 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-08 23:48:28.327 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-08 23:48:28.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 1.1740ms
+2023-11-08 23:48:28.339 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.7245ms
+2023-11-08 23:48:30.599 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/ - -
+2023-11-08 23:48:30.611 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-08 23:48:30.611 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.HomeController (JijaShop.Api).
+2023-11-08 23:48:30.612 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-08 23:48:30.623 +03:00 [INF] Executed ViewResult - view Index executed in 11.7415ms.
+2023-11-08 23:48:30.624 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api) in 12.0449ms
+2023-11-08 23:48:30.624 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.HomeController.Index (JijaShop.Api)'
+2023-11-08 23:48:30.628 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/ - - - 200 - text/html;+charset=utf-8 29.2273ms
+2023-11-08 23:48:30.632 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-08 23:48:30.632 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-08 23:48:30.633 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.8777ms
+2023-11-08 23:48:30.640 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.2003ms
+2023-11-08 23:48:31.247 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/UserArea/Products - -
+2023-11-08 23:48:31.249 +03:00 [INF] Executing endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-08 23:48:31.252 +03:00 [INF] Route matched with {area = "UserArea", action = "Index", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller JijaShop.Api.Areas.UserArea.Controllers.ProductsController (JijaShop.Api).
+2023-11-08 23:48:31.273 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-08 23:48:31.337 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."ProductDetailsId", p."ProductImageId", p."ProductOffersId", p."Quantity", p."UpdateDate", p0."Id", p0."Description", p0."OldPrice", p0."Price", p1."Id", p1."IsHitOffer", p1."IsNewOffer", p2."Id", p2."ImageName", p2."ImagePath"
+FROM "Products" AS p
+INNER JOIN "ProductDetails" AS p0 ON p."ProductDetailsId" = p0."Id"
+INNER JOIN "ProductOffers" AS p1 ON p."ProductOffersId" = p1."Id"
+INNER JOIN "ProductImage" AS p2 ON p."ProductImageId" = p2."Id"
+2023-11-08 23:48:31.345 +03:00 [INF] Executing ViewResult, running view Index.
+2023-11-08 23:48:31.365 +03:00 [INF] Executed ViewResult - view Index executed in 20.4669ms.
+2023-11-08 23:48:31.365 +03:00 [INF] Executed action JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api) in 113.309ms
+2023-11-08 23:48:31.365 +03:00 [INF] Executed endpoint 'JijaShop.Api.Areas.UserArea.Controllers.ProductsController.Index (JijaShop.Api)'
+2023-11-08 23:48:31.370 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/UserArea/Products - - - 200 - text/html;+charset=utf-8 122.7287ms
+2023-11-08 23:48:31.375 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - -
+2023-11-08 23:48:31.375 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/_vs/browserLink - -
+2023-11-08 23:48:31.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 0.7989ms
+2023-11-08 23:48:31.387 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.4224ms
