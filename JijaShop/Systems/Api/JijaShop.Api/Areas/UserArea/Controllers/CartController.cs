@@ -1,18 +1,27 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JijaShop.Api.Services.Abstractions;
+using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Security;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
 {
     [Area("UserArea")]
     public class CartController : Controller
     {
-        public CartController()
+		private readonly IUserCartProductsService _userProductsService;
+		public CartController(IUserCartProductsService userProductsService)
         {
-
+            _userProductsService = userProductsService;
         }
         public IActionResult Index()
         {
-            return View();
-        }
+            if (!User.Identity.IsAuthenticated)
+                return RedirectToAction("Login", "Auth");
+
+            var model = _userProductsService.GetProducts();
+
+			return View(model);
+
+		}
 
         public IActionResult AppendToCartProduct() 
         {

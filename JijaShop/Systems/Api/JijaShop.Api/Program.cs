@@ -1,3 +1,4 @@
+using JijaShop.Api.Configurations.AutoMapper;
 using JijaShop.Extentions.SettingsModel;
 using Microsoft.EntityFrameworkCore;
 using JijaShop.Api.Configurations;
@@ -5,7 +6,6 @@ using JijaShop.Api.Data;
 using JijaShop.Settings;
 using JijaShop.Api;
 using JijaShop.Api.Data.Models.Entities;
-using JijaShop.Api.Configurations.AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 

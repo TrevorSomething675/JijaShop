@@ -1,5 +1,4 @@
-﻿using JijaShop.Api.Repositories.Abstractions;
-using JijaShop.Api.Services.Abstractions;
+﻿using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
@@ -32,7 +31,7 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
 
         public async Task RemoveFormFavorite(string productName)
         {
-            //var favoriteProduct = await 
+            await _userProductsService.RemoveProduct(productName);
         }
     }
 }
