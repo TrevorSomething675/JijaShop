@@ -8,5 +8,8 @@
 		public ProductImageDto ProductImage { get; set; } = new ProductImageDto();
         public ProductOffersDto ProductOffers { get; set; } = new ProductOffersDto();
         public ProductDetailsDto ProductDetails { get; set; } = new ProductDetailsDto();
-    }
+
+		public bool IsFavorite { get; set; } = false;
+        public bool IsInCart { get; set; } = false;
+	}
 }

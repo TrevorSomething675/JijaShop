@@ -14,6 +14,7 @@ namespace JijaShop.Api.Services
         private readonly IWebHostEnvironment _appEnvironment;
         private readonly MainSettings _mainSettings;
         private readonly IMapper _mapper;
+
         public ProductService(IProductRepository productRepository, IMapper mapper, IWebHostEnvironment appEnvironment)
         {
             _mainSettings = Settings.Settings.Load<MainSettings>("Main");
@@ -21,6 +22,7 @@ namespace JijaShop.Api.Services
             _appEnvironment = appEnvironment;
             _mapper = mapper;
         }
+
         public async Task<ProductDto?> GetProduct(string name)
         {
             var product = _mapper.Map<ProductDto>(await _productRepository.GetProduct(name));

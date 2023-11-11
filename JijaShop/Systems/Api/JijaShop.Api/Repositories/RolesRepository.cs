@@ -1,7 +1,7 @@
 ﻿using JijaShop.Api.Repositories.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using JijaShop.Api.Data;
-using Microsoft.EntityFrameworkCore;
 
 namespace JijaShop.Api.Repositories
 {

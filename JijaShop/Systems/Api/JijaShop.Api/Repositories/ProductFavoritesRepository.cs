@@ -17,12 +17,15 @@ namespace JijaShop.Api.Repositories
 			_context = context;
 		}
 
-		public async Task<FavoriteProduct> GetProduct(string name)
+		public async Task<FavoriteProduct> GetProduct(string name, Expression<Func<FavoriteProduct, bool>> filter = null)
 		{
+			filter = filter ?? (prod => true);
+
 			var resultProduct = await _context.FavoriteProducts
                 .Include(prod => prod.ProductDetails)
                 .Include(prod => prod.ProductOffers)
                 .Include(prod => prod.ProductImage)
+				.Where(filter)
                 .FirstOrDefaultAsync(prod => prod.Name == name);
 
 			return resultProduct;

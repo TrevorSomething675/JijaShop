@@ -1,6 +1,5 @@
-﻿using JijaShop.Api.Services.Abstractions;
+﻿using JijaShop.Api.Services.Abstractions.UserProducts;
 using Microsoft.AspNetCore.Mvc;
-using Org.BouncyCastle.Security;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
 {

@@ -1,5 +1,4 @@
 ﻿using JijaShop.Api.Data.Models.AuthEntities;
-using JijaShop.Api.Data.Models.DTOModels;
 
 namespace JijaShop.Api.Data.Models.Entities
 {

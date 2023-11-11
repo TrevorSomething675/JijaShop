@@ -1,4 +1,6 @@
-﻿using JijaShop.Api.Repositories.Abstractions;
+﻿using JijaShop.Api.Services.Abstractions.UserProducts;
+using JijaShop.Api.Repositories.Abstractions;
+using JijaShop.Api.Services.UserProducts;
 using JijaShop.Api.Services.Abstractions;
 using JijaShop.Api.Repositories;
 using JijaShop.Api.Services;
@@ -11,13 +13,15 @@ namespace JijaShop.Api
         public static IServiceCollection RegisterAppServices(this IServiceCollection services)
         {
             services.AddMainSettings().
-                AddIdentitySettings().
                 AddSwaggerSettings().
+                AddIdentitySettings().
                 AddScoped<IHashService, HashService>().
                 AddScoped<IUserService, UserService>().
                 AddScoped<ITokenService, TokenService>().
                 AddScoped<IProductService, ProductService>().
                 AddScoped<IIdentityService, IdentityService>().
+                AddScoped<IUserProductsService , UserProductsService>().
+                AddScoped<IUserCartProductsService, UserCartProductsService>().
                 AddScoped<IUserFavoriteProductsService, UserFavoriteProductsService>();
 
             return services;

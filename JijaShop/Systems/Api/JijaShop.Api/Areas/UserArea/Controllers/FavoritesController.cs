@@ -1,4 +1,5 @@
 ﻿using JijaShop.Api.Services.Abstractions;
+using JijaShop.Api.Services.Abstractions.UserProducts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
