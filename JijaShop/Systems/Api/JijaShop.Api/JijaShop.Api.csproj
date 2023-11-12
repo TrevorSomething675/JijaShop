@@ -50,6 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Data\Models\Abstractions\" />
     <Folder Include="wwwroot\owlcarousel\js\" />
   </ItemGroup>
 

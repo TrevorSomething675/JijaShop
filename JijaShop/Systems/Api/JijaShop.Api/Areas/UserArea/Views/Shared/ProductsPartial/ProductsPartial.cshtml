@@ -17,16 +17,25 @@
                         <div class="offer-new">New</div>
                     }
                 </div>
+
                 <div class="product-img">
                     <a asp-area="UserArea" asp-controller="Products" asp-action="Product" asp-route-productName="@product.Name">
                         <img src="@product.ProductImage.ImagePath" />
                     </a>
                 </div>
+
                 <div class="product-name">
                     <h4>
                         <a href="products.html">@product.Name</a>
                     </h4>
-    
+                    
+                    @if (product.IsFavorite)
+                    {
+                        <div>IsFavorite</div>
+                    }else{
+                        <div>NotFavorite</div>
+                    }
+
                     <p class="product-details-description">@product.ProductDetails.Description</p>
     
                     <div class="d-flex justify-content-between">
@@ -39,7 +48,7 @@
                         </div>
     
                         <div class="product-links">
-                            <a asp-area="UserArea" asp-controller="Favorites" asp-action="AddToFavorite" asp-route-productName="@product.Name" class="btn btn-outline-secondary add-to-cart"><i class="bi bi-star-fill"></i></a>
+                            <a href="javascript:void(0);" onclick="addToFavorite('@product.Name')" class="btn btn-outline-secondary add-to-cart"><i class="bi bi-star-fill"></i></a>
                             <a href="#" class="btn btn-outline-secondary add-to-favorites"><i class="bi bi-bag-check-fill"></i></a>
                         </div>
                     </div>
@@ -48,3 +57,15 @@
         </div>
     }
 }
+
+<script>
+    function addToFavorite(productName) {
+        $.post('/UserArea/Favorites/ChangeFavoriteProduct', { productName: productName })
+            .done(function (data) {
+
+            })
+            .fail(function (error) {
+
+            });
+    }
+</script>

@@ -21,12 +21,13 @@ namespace JijaShop.Api.Repositories
 		{
 			filter = filter ?? (prod => true);
 
-			var resultProduct = await _context.FavoriteProducts
+			var resultProduct = _context.FavoriteProducts
                 .Include(prod => prod.ProductDetails)
                 .Include(prod => prod.ProductOffers)
                 .Include(prod => prod.ProductImage)
+				.Include(prod => prod.User)
 				.Where(filter)
-                .FirstOrDefaultAsync(prod => prod.Name == name);
+                .FirstOrDefault(prod => prod.Name == name);
 
 			return resultProduct;
 		}
@@ -39,7 +40,8 @@ namespace JijaShop.Api.Repositories
                 .Include(prod => prod.ProductDetails)
                 .Include(prod => prod.ProductOffers)
                 .Include(prod => prod.ProductImage)
-                .Where(filter).ToListAsync();
+				.Include(prod => prod.User)
+                .Where(filter).AsNoTracking().ToListAsync();
 
             return resultProducts;
 		}

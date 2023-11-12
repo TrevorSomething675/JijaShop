@@ -50,9 +50,7 @@ namespace JijaShop.Api.Migrations
                     Discriminator = table.Column<string>(type: "text", nullable: false),
                     UserAge = table.Column<int>(type: "integer", nullable: true),
                     UserPhone = table.Column<string>(type: "text", nullable: true),
-                    AccessToken = table.Column<string>(type: "text", nullable: true),
-                    CartProductId = table.Column<int>(type: "integer", nullable: true),
-                    FavoriteProductId = table.Column<int>(type: "integer", nullable: true)
+                    AccessToken = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {

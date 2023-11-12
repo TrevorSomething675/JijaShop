@@ -5,6 +5,7 @@ using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Data.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using AutoMapper;
+using JijaShop.Api.Repositories;
 
 namespace JijaShop.Api.Services.UserProducts
 {
@@ -19,8 +20,7 @@ namespace JijaShop.Api.Services.UserProducts
 
         public UserFavoriteProductsService(IProductFavoritesRepository productFavoriteRepository,
             UserManager<User> userManager, IProductRepository productRepository,
-            IMapper mapper, IHttpContextAccessor contextAccessor,
-            ILogger<UserFavoriteProductsService> logger)
+            IMapper mapper, IHttpContextAccessor contextAccessor, ILogger<UserFavoriteProductsService> logger)
         {
             _productFavoriteRepository = productFavoriteRepository;
             _productRepository = productRepository;
@@ -41,8 +41,7 @@ namespace JijaShop.Api.Services.UserProducts
 
         public async Task<ProductDto> GetProduct(string productName)
         {
-			var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext.User);
-			var favoriteProduct = await _productFavoriteRepository.GetProduct(productName, prod => prod.UserId == user.Id);
+			var favoriteProduct = await _productFavoriteRepository.GetProduct(productName);
 			var productDto = _mapper.Map<ProductDto>(favoriteProduct);
 
             return productDto;
@@ -53,13 +52,10 @@ namespace JijaShop.Api.Services.UserProducts
             try
             {
                 var product = await _productRepository.GetProduct(productName);
-                var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext.User);
+                var productDto = _mapper.Map<ProductDto>(product);
+                var favoriteProd = _mapper.Map<FavoriteProduct>(productDto);
 
-                var favoriteProduct = _mapper.Map<FavoriteProduct>(product);
-                favoriteProduct.UserId = user.Id;
-                favoriteProduct.User = user;
-
-                await _productFavoriteRepository.AddProduct(favoriteProduct);
+                await _productFavoriteRepository.AddProduct(favoriteProd);
             }
             catch (Exception ex)
             {
@@ -71,14 +67,8 @@ namespace JijaShop.Api.Services.UserProducts
         {
             try
             {
-                var product = await _productRepository.GetProduct(productName);
-                var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext.User);
-
-                var favoriteProduct = _mapper.Map<FavoriteProduct>(product);
-                favoriteProduct.UserId = user.Id;
-                favoriteProduct.User = user;
-
-                await _productFavoriteRepository.RemoveProduct(favoriteProduct);
+                var favoriteProd = await _productFavoriteRepository.GetProduct(productName);
+                await _productFavoriteRepository.RemoveProduct(favoriteProd);
             }
             catch (Exception ex)
             {

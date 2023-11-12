@@ -435,12 +435,6 @@ namespace JijaShop.Api.Migrations
                     b.Property<string>("AccessToken")
                         .HasColumnType("text");
 
-                    b.Property<int>("CartProductId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("FavoriteProductId")
-                        .HasColumnType("integer");
-
                     b.Property<int?>("UserAge")
                         .HasColumnType("integer");
 
@@ -471,7 +465,7 @@ namespace JijaShop.Api.Migrations
                         .IsRequired();
 
                     b.HasOne("JijaShop.Api.Data.Models.AuthEntities.User", "User")
-                        .WithMany("CartProducts")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -506,7 +500,7 @@ namespace JijaShop.Api.Migrations
                         .IsRequired();
 
                     b.HasOne("JijaShop.Api.Data.Models.AuthEntities.User", "User")
-                        .WithMany("FavoriteProducts")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -596,13 +590,6 @@ namespace JijaShop.Api.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("JijaShop.Api.Data.Models.AuthEntities.User", b =>
-                {
-                    b.Navigation("CartProducts");
-
-                    b.Navigation("FavoriteProducts");
                 });
 #pragma warning restore 612, 618
         }

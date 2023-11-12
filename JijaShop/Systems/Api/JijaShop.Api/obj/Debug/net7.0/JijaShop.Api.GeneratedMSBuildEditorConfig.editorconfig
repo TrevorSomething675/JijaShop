@@ -100,6 +100,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXEhlYWRlclBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/UserArea/Views/Shared/ProductsPartial/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXFByb2R1Y3RzUGFydGlhbFxQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/JijaShop/JijaShop/JijaShop/Systems/Api/JijaShop.Api/Areas/UserArea/Views/Shared/ProductsPartial/ProductSidebarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlckFyZWFcVmlld3NcU2hhcmVkXFByb2R1Y3RzUGFydGlhbFxQcm9kdWN0U2lkZWJhclBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

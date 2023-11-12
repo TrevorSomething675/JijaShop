@@ -10,6 +10,5 @@
         public ProductDetailsDto ProductDetails { get; set; } = new ProductDetailsDto();
 
 		public bool IsFavorite { get; set; } = false;
-        public bool IsInCart { get; set; } = false;
 	}
 }

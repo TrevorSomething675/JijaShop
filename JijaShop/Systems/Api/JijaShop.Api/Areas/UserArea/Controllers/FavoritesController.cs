@@ -1,5 +1,4 @@
-﻿using JijaShop.Api.Services.Abstractions;
-using JijaShop.Api.Services.Abstractions.UserProducts;
+﻿using JijaShop.Api.Services.Abstractions.UserProducts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
@@ -7,12 +6,10 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
     [Area("UserArea")]
     public class FavoritesController : Controller
     {
-        private readonly IProductService _productService;
         private readonly IUserFavoriteProductsService _userProductsService;
-        public FavoritesController(IProductService productService, IUserFavoriteProductsService userProductsService)
+        public FavoritesController(IUserFavoriteProductsService userProductsService)
         {
             _userProductsService = userProductsService;
-            _productService = productService;
         }
 
 		public async Task<IActionResult> Index()
@@ -25,14 +22,14 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
             return View(model);
         }
 
-        public async Task AddToFavorite(string productName)
+        public async Task ChangeFavoriteProduct(string productName)
         {
-            await _userProductsService.AddProduct(productName);
-        }
+            var favoriteProduct = await _userProductsService.GetProduct(productName);
 
-        public async Task RemoveFormFavorite(string productName)
-        {
-            await _userProductsService.RemoveProduct(productName);
-        }
+            if (favoriteProduct == null)
+                await _userProductsService.AddProduct(productName);
+            else
+                await _userProductsService.RemoveProduct(productName);
+		}
     }
 }

@@ -1,8 +1,8 @@
 ﻿using JijaShop.Api.Repositories.Abstractions;
+using JijaShop.Api.Data.Models.AuthEntities;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using JijaShop.Api.Data;
-using Microsoft.EntityFrameworkCore;
-using JijaShop.Api.Data.Models.AuthEntities;
 
 namespace JijaShop.Api.Repositories
 {
@@ -18,10 +18,7 @@ namespace JijaShop.Api.Repositories
 
         public async Task<List<User>> GetUsers()
         {
-            var users = await _context.Users
-                .Include(user=>user.CartProducts)
-                .Include(user=>user.FavoriteProducts)
-                .ToListAsync();
+            var users = await _context.Users.ToListAsync();
             return users;
         }
 

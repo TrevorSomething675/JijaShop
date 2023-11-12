@@ -55,6 +55,7 @@ namespace JijaShop.Api.Services.UserProducts
 				if(product != null)
 				{
 					int index = products.IndexOf(product);
+					product.IsFavorite = true;
 					products[index] = product;
 				}
 			}

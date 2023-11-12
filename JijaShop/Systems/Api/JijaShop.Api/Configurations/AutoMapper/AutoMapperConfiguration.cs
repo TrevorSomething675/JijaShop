@@ -3,11 +3,20 @@ using JijaShop.Api.Data.Models.AuthEntities;
 using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Data.Models.Entities;
 using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 
 namespace JijaShop.Api.Configurations.AutoMapper
 {
     public class AutoMapperConfiguration : Profile
     {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly UserManager<User> _userManager;
+
+        public AutoMapperConfiguration(IHttpContextAccessor httpContextAccessor, UserManager<User> userManager)
+        {
+            _httpContextAccessor = httpContextAccessor;
+            _userManager = userManager;
+        }
         public AutoMapperConfiguration()
         {
             #region Product => ProductDto
@@ -56,59 +65,21 @@ namespace JijaShop.Api.Configurations.AutoMapper
                     }));
             #endregion
 
-            #region ProductDto => FavoriteProduct
-            CreateMap<FavoriteProduct, Product>()
-                .ForMember(prod => prod.ProductDetails, opt =>
-                    opt.MapFrom(favorProd => new ProductDetails
-                    {
-                        Price = favorProd.ProductDetails.Price,
-                        OldPrice = favorProd.ProductDetails.OldPrice,
-                        Description = favorProd.ProductDetails.Description
-                    }))
-                .ForMember(prod => prod.ProductOffers, opt =>
-                    opt.MapFrom(favorProd => new ProductOffers
-                    {
-                        IsHitOffer = favorProd.ProductOffers.IsHitOffer,
-                        IsNewOffer = favorProd.ProductOffers.IsNewOffer
-                    }))
-                .ForMember(prod => prod.ProductImage, opt =>
-                    opt.MapFrom(favorProd => new ProductImageDto
-                    {
-                        ImageName = favorProd.ProductImage.ImageName,
-                        ImagePath = favorProd.ProductImage.ImagePath
-                    }));
-            #endregion
-
-            #region FavoriteProduct => ProductDto
-            CreateMap<Product, FavoriteProduct>()
-                .ForMember(favorProd => favorProd.ProductDetails, opt =>
-                    opt.MapFrom(prod => new ProductDetailsDto
-                    {
-                        Price = prod.ProductDetails.Price,
-                        OldPrice = prod.ProductDetails.OldPrice,
-                        Description = prod.ProductDetails.Description
-                    }))
-                .ForMember(favorProd => favorProd.ProductOffers, opt =>
-                    opt.MapFrom(prod => new ProductOffersDto
-                    {
-                        IsHitOffer = prod.ProductOffers.IsHitOffer,
-                        IsNewOffer = prod.ProductOffers.IsNewOffer
-                    }))
-                .ForMember(favorProd => favorProd.ProductImage, opt =>
-                    opt.MapFrom(prod => new ProductImageDto
-                    {
-                        ImageName = prod.ProductImage.ImageName,
-                        ImagePath = prod.ProductImage.ImagePath
-                    }));
-            #endregion
-
             CreateMap<User, UserDto>()
                 .ForMember(user => user.UserEmail, opt =>
                 {
                     opt.MapFrom(user => user.Email);
                 }).ReverseMap();
 
-            CreateMap<FavoriteProduct, ProductDto>().ReverseMap();
+            CreateMap<ProductDto, FavoriteProduct>()
+                .ForMember(dest => dest.User, opt => opt.Ignore())
+                .AfterMap((src, dest, context) =>
+                {
+                    var user = _userManager.GetUserAsync(_httpContextAccessor.HttpContext.User).Result;
+                    dest.User = user;
+                })
+                .ReverseMap();
+
             CreateMap<ProductDetails, ProductDetailsDto>().ReverseMap();
             CreateMap<ProductOffers, ProductOffersDto>().ReverseMap();
             CreateMap<ProductImage, ProductImageDto>()
