@@ -54,8 +54,11 @@ namespace JijaShop.Api.Services.UserProducts
                 var product = await _productRepository.GetProduct(productName);
                 var productDto = _mapper.Map<ProductDto>(product);
                 var favoriteProd = _mapper.Map<FavoriteProduct>(productDto);
+                var user = await _userManager.GetUserAsync(_contextAccessor.HttpContext.User);
+                favoriteProd.User = user;
+                favoriteProd.UserId = user.Id;
 
-                await _productFavoriteRepository.AddProduct(favoriteProd);
+				await _productFavoriteRepository.AddProduct(favoriteProd);
             }
             catch (Exception ex)
             {

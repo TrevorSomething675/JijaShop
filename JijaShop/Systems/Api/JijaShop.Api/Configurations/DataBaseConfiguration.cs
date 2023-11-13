@@ -6,7 +6,8 @@ namespace JijaShop.Api.Configurations
 {
     public static class DataBaseConfiguration
     {
-        public static IServiceCollection AddAppDbContext(this IServiceCollection services, DataBaseSettings settings = null)
+        public static IServiceCollection AddAppDbContext(this IServiceCollection services,
+            DataBaseSettings settings = null)
         {
             services.AddDbContext<MainContext>(options =>
             {
