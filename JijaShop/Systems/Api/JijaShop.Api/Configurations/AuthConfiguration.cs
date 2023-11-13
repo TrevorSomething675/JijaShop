@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using JijaShop.Api.Data.Models.AuthEntities;
 using Microsoft.AspNetCore.Authorization;
-using JijaShop.Extentions.SettingsModel;
+using JijaShop.Extensions.SettingsModel;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
 using JijaShop.Api.Data;

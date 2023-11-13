@@ -1,9 +1,9 @@
 using JijaShop.Api.Configurations.AutoMapper;
-using JijaShop.Extentions.SettingsModel;
+using JijaShop.Extensions.SettingsModel;
 using Microsoft.EntityFrameworkCore;
 using JijaShop.Api.Configurations;
+using JijaShop.Extentions;
 using JijaShop.Api.Data;
-using JijaShop.Settings;
 using JijaShop.Api;
 using JijaShop.Api.Data.Models.Entities;
 
@@ -17,7 +17,8 @@ builder.AddAppLogger();
 var services = builder.Services;
 
 services.AddHttpContextAccessor();
-services.AddAutoMapper(typeof(AutoMapperConfiguration));
+services.AddAppAutoMapperConfiguration();
+
 services.AddRazorPages();
 services.AddControllersWithViews();
 

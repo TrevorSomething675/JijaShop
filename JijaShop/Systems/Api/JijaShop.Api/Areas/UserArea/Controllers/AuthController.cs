@@ -4,9 +4,9 @@ using JijaShop.Api.Data.Models.AuthEntities;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using JijaShop.Extentions.Constants;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
+using JijaShop.Extensions.Constants;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
 {

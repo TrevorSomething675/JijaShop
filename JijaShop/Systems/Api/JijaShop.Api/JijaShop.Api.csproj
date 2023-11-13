@@ -44,14 +44,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\JijaShop.Extentions\JijaShop.Extentions.csproj" />
-    <ProjectReference Include="..\..\..\Extentions\JijaShop.Common\JijaShop.Common.csproj" />
-    <ProjectReference Include="..\..\..\Extentions\JijaShop.Settings\JijaShop.Settings.csproj" />
+    <Folder Include="Data\Models\Abstractions\" />
+    <Folder Include="wwwroot\owlcarousel\js\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Models\Abstractions\" />
-    <Folder Include="wwwroot\owlcarousel\js\" />
+    <ProjectReference Include="..\..\..\..\JijaShop.Extensions\JijaShop.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

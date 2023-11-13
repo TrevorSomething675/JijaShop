@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Controllers;
-using JijaShop.Extentions.SettingsModel;
+using JijaShop.Extensions.SettingsModel;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.Filters;
 using Microsoft.OpenApi.Models;

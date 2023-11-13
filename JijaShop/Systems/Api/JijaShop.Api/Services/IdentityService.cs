@@ -1,16 +1,15 @@
 ﻿using JijaShop.Api.Repositories.Abstractions;
+using JijaShop.Api.Data.Models.AuthDtoModels;
+using JijaShop.Api.Data.Models.AuthEntities;
 using JijaShop.Api.Services.Abstractions;
+using JijaShop.Extensions.SettingsModel;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
-using System.Security.Cryptography;
 using System.Security.Claims;
+using JijaShop.Extentions;
 using System.Text;
 using AutoMapper;
 using Serilog;
-using JijaShop.Api.Data;
-using JijaShop.Api.Data.Models.AuthEntities;
-using JijaShop.Api.Data.Models.AuthDtoModels;
-using JijaShop.Extentions.SettingsModel;
 
 namespace JijaShop.Api.Services
 {
@@ -22,7 +21,7 @@ namespace JijaShop.Api.Services
         private readonly IMapper _mapper;
         public IdentityService(IUserRepository userRepository, ILogger<IdentityService> logger, IMapper mapper)
         {
-            _identityService = Settings.Settings.Load<IdentitySettings>("Identity");
+            _identityService = Settings.Load<IdentitySettings>("Identity");
             _userRepository = userRepository;
             _logger = logger;
             _mapper = mapper;

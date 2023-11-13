@@ -1,11 +1,12 @@
 ﻿using JijaShop.Api.Data.Models.AuthDtoModels;
 using JijaShop.Api.Repositories.Abstractions;
 using JijaShop.Api.Services.Abstractions;
-using JijaShop.Extentions.SettingsModel;
+using JijaShop.Extensions.SettingsModel;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using JijaShop.Extentions;
 using System.Text;
 
 namespace JijaShop.Api.Services
@@ -20,7 +21,7 @@ namespace JijaShop.Api.Services
         {
             _logger = logger;
             _userRepository = userRepository;
-            _idetitySettings = Settings.Settings.Load<IdentitySettings>("Identity");
+            _idetitySettings = Settings.Load<IdentitySettings>("Identity");
         }
 
         public string CreateAccessToken(UserDto userDto, List<IdentityRole<int>> roles)

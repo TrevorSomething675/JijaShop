@@ -10,9 +10,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "JijaShop.Common": "1.0.0",
-          "JijaShop.Extentions": "1.0.0",
-          "JijaShop.Settings": "1.0.0",
+          "JijaShop.Extensions": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.12",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.12",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
@@ -870,33 +868,18 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "JijaShop.Common/1.0.0": {
-        "runtime": {
-          "JijaShop.Common.dll": {}
-        }
-      },
-      "JijaShop.Extentions/1.0.0": {
-        "dependencies": {
-          "JijaShop.Settings": "1.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Identity.Stores": "7.0.12"
-        },
-        "runtime": {
-          "JijaShop.Extentions.dll": {}
-        }
-      },
-      "JijaShop.Settings/1.0.0": {
+      "JijaShop.Extensions/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
           "Microsoft.Extensions.Configuration.Binder": "7.0.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "7.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "7.0.0",
-          "Microsoft.Extensions.Configuration.Json": "7.0.0"
+          "Microsoft.Extensions.Configuration.Json": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
         },
         "runtime": {
-          "JijaShop.Settings.dll": {}
+          "JijaShop.Extensions.dll": {}
         }
       }
     }
@@ -1614,17 +1597,7 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "JijaShop.Common/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "JijaShop.Extentions/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "JijaShop.Settings/1.0.0": {
+    "JijaShop.Extensions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,4 +1,4 @@
-﻿using JijaShop.Extentions.SettingsModel;
+﻿using JijaShop.Extensions.SettingsModel;
 using Microsoft.EntityFrameworkCore;
 using JijaShop.Api.Data;
 

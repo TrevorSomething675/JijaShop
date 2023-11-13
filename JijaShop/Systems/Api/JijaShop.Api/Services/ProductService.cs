@@ -2,8 +2,9 @@
 using JijaShop.Api.Services.Abstractions;
 using JijaShop.Api.Data.Models.DTOModels;
 using JijaShop.Api.Data.Models.Entities;
-using JijaShop.Extentions.SettingsModel;
+using JijaShop.Extensions.SettingsModel;
 using System.Linq.Expressions;
+using JijaShop.Extentions;
 using AutoMapper;
 
 namespace JijaShop.Api.Services
@@ -17,7 +18,7 @@ namespace JijaShop.Api.Services
 
         public ProductService(IProductRepository productRepository, IMapper mapper, IWebHostEnvironment appEnvironment)
         {
-            _mainSettings = Settings.Settings.Load<MainSettings>("Main");
+            _mainSettings = Settings.Load<MainSettings>("Main");
             _productRepository = productRepository;
             _appEnvironment = appEnvironment;
             _mapper = mapper;

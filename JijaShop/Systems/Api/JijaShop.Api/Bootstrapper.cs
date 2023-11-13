@@ -4,7 +4,6 @@ using JijaShop.Api.Services.UserProducts;
 using JijaShop.Api.Services.Abstractions;
 using JijaShop.Api.Repositories;
 using JijaShop.Api.Services;
-using JijaShop.Extentions;
 
 namespace JijaShop.Api
 {
@@ -12,10 +11,7 @@ namespace JijaShop.Api
     {
         public static IServiceCollection RegisterAppServices(this IServiceCollection services)
         {
-            services.AddMainSettings().
-                AddSwaggerSettings().
-                AddIdentitySettings().
-                AddScoped<IHashService, HashService>().
+            services.AddScoped<IHashService, HashService>().
                 AddScoped<IUserService, UserService>().
                 AddScoped<ITokenService, TokenService>().
                 AddScoped<IProductService, ProductService>().

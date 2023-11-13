@@ -50,12 +50,8 @@ C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Swashbuc
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\System.CodeDom.dll
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Common.dll
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Extentions.dll
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Settings.dll
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Extentions.pdb
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Common.pdb
-C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Settings.pdb
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Extensions.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\bin\Debug\net7.0\JijaShop.Extensions.pdb
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\JijaShop.Api.csproj.AssemblyReference.cache
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\JijaShop.Api.GeneratedMSBuildEditorConfig.editorconfig
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\JijaShop.Api.AssemblyInfoInputs.cache

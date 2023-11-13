@@ -1,0 +1,12 @@
+C:\JijaShop\JijaShop\JijaShop.Extensions\bin\Debug\net7.0\JijaShop.Extensions.deps.json
+C:\JijaShop\JijaShop\JijaShop.Extensions\bin\Debug\net7.0\JijaShop.Extensions.dll
+C:\JijaShop\JijaShop\JijaShop.Extensions\bin\Debug\net7.0\JijaShop.Extensions.pdb
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.csproj.AssemblyReference.cache
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.GeneratedMSBuildEditorConfig.editorconfig
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.AssemblyInfoInputs.cache
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.AssemblyInfo.cs
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.csproj.CoreCompileInputs.cache
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.dll
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\refint\JijaShop.Extensions.dll
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.pdb
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\ref\JijaShop.Extensions.dll

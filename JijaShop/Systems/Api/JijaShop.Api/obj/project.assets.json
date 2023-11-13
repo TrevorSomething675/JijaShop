@@ -1637,33 +1637,7 @@
           }
         }
       },
-      "JijaShop.Common/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/JijaShop.Common.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/JijaShop.Common.dll": {}
-        }
-      },
-      "JijaShop.Extentions/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "JijaShop.Settings": "1.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Identity.Stores": "7.0.12"
-        },
-        "compile": {
-          "bin/placeholder/JijaShop.Extentions.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/JijaShop.Extentions.dll": {}
-        }
-      },
-      "JijaShop.Settings/1.0.0": {
+      "JijaShop.Extensions/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1672,13 +1646,14 @@
           "Microsoft.Extensions.Configuration.Binder": "7.0.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "7.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "7.0.0",
-          "Microsoft.Extensions.Configuration.Json": "7.0.0"
+          "Microsoft.Extensions.Configuration.Json": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/JijaShop.Settings.dll": {}
+          "bin/placeholder/JijaShop.Extensions.dll": {}
         },
         "runtime": {
-          "bin/placeholder/JijaShop.Settings.dll": {}
+          "bin/placeholder/JijaShop.Extensions.dll": {}
         }
       }
     }
@@ -5151,29 +5126,17 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "JijaShop.Common/1.0.0": {
+    "JijaShop.Extensions/1.0.0": {
       "type": "project",
-      "path": "../../../Extentions/JijaShop.Common/JijaShop.Common.csproj",
-      "msbuildProject": "../../../Extentions/JijaShop.Common/JijaShop.Common.csproj"
-    },
-    "JijaShop.Extentions/1.0.0": {
-      "type": "project",
-      "path": "../../../../JijaShop.Extentions/JijaShop.Extentions.csproj",
-      "msbuildProject": "../../../../JijaShop.Extentions/JijaShop.Extentions.csproj"
-    },
-    "JijaShop.Settings/1.0.0": {
-      "type": "project",
-      "path": "../../../Extentions/JijaShop.Settings/JijaShop.Settings.csproj",
-      "msbuildProject": "../../../Extentions/JijaShop.Settings/JijaShop.Settings.csproj"
+      "path": "../../../../JijaShop.Extensions/JijaShop.Extensions.csproj",
+      "msbuildProject": "../../../../JijaShop.Extensions/JijaShop.Extensions.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
-      "JijaShop.Common >= 1.0.0",
-      "JijaShop.Extentions >= 1.0.0",
-      "JijaShop.Settings >= 1.0.0",
+      "JijaShop.Extensions >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.12",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.12",
       "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
@@ -5225,14 +5188,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\JijaShop\\JijaShop\\JijaShop.Extentions\\JijaShop.Extentions.csproj": {
-              "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop.Extentions\\JijaShop.Extentions.csproj"
-            },
-            "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Common\\JijaShop.Common.csproj": {
-              "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Common\\JijaShop.Common.csproj"
-            },
-            "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\JijaShop.Settings.csproj": {
-              "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\JijaShop.Settings.csproj"
+            "C:\\JijaShop\\JijaShop\\JijaShop.Extensions\\JijaShop.Extensions.csproj": {
+              "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop.Extensions\\JijaShop.Extensions.csproj"
             }
           }
         }

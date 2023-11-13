@@ -4,142 +4,14 @@
     "C:\\JijaShop\\JijaShop\\JijaShop\\Systems\\Api\\JijaShop.Api\\JijaShop.Api.csproj": {}
   },
   "projects": {
-    "C:\\JijaShop\\JijaShop\\JijaShop.Extentions\\JijaShop.Extentions.csproj": {
+    "C:\\JijaShop\\JijaShop\\JijaShop.Extensions\\JijaShop.Extensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\JijaShop\\JijaShop\\JijaShop.Extentions\\JijaShop.Extentions.csproj",
-        "projectName": "JijaShop.Extentions",
-        "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop.Extentions\\JijaShop.Extentions.csproj",
+        "projectUniqueName": "C:\\JijaShop\\JijaShop\\JijaShop.Extensions\\JijaShop.Extensions.csproj",
+        "projectName": "JijaShop.Extensions",
+        "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop.Extensions\\JijaShop.Extensions.csproj",
         "packagesPath": "C:\\Users\\Win10Pro\\.nuget\\packages\\",
-        "outputPath": "C:\\JijaShop\\JijaShop\\JijaShop.Extentions\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Win10Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {
-              "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\JijaShop.Settings.csproj": {
-                "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\JijaShop.Settings.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.Extensions.Configuration.Abstractions": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Extensions.Identity.Stores": {
-              "target": "Package",
-              "version": "[7.0.12, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Common\\JijaShop.Common.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Common\\JijaShop.Common.csproj",
-        "projectName": "JijaShop.Common",
-        "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Common\\JijaShop.Common.csproj",
-        "packagesPath": "C:\\Users\\Win10Pro\\.nuget\\packages\\",
-        "outputPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Common\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Win10Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\JijaShop.Settings.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\JijaShop.Settings.csproj",
-        "projectName": "JijaShop.Settings",
-        "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\JijaShop.Settings.csproj",
-        "packagesPath": "C:\\Users\\Win10Pro\\.nuget\\packages\\",
-        "outputPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\obj\\",
+        "outputPath": "C:\\JijaShop\\JijaShop\\JijaShop.Extensions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Win10Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -191,6 +63,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -237,14 +113,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\JijaShop\\JijaShop\\JijaShop.Extentions\\JijaShop.Extentions.csproj": {
-                "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop.Extentions\\JijaShop.Extentions.csproj"
-              },
-              "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Common\\JijaShop.Common.csproj": {
-                "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Common\\JijaShop.Common.csproj"
-              },
-              "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\JijaShop.Settings.csproj": {
-                "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop\\Extentions\\JijaShop.Settings\\JijaShop.Settings.csproj"
+              "C:\\JijaShop\\JijaShop\\JijaShop.Extensions\\JijaShop.Extensions.csproj": {
+                "projectPath": "C:\\JijaShop\\JijaShop\\JijaShop.Extensions\\JijaShop.Extensions.csproj"
               }
             }
           }
