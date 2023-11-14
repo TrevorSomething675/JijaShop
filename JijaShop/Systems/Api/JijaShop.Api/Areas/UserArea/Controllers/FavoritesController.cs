@@ -33,6 +33,9 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
 
         public async Task ChangeFavoriteProduct(string productName)
         {
+            if (!User.Identity.IsAuthenticated)
+                return;
+
             var favoriteProduct = await _userProductsService.GetProduct(productName);
 
             if (favoriteProduct == null)

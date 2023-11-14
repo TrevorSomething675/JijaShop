@@ -21,16 +21,6 @@ namespace JijaShop.Api.Services.UserProducts
             _mapper = mapper;
         }
 
-		public Task CreateNewProduct(ProductDto productDto)
-		{
-			throw new NotImplementedException();
-		}
-
-		public Task DeleteProduct(ProductDto productDto)
-		{
-			throw new NotImplementedException();
-		}
-
 		public async Task<ProductDto> GetProduct(string productName)
 		{
 			var product = await _productService.GetProduct(productName);
@@ -62,6 +52,16 @@ namespace JijaShop.Api.Services.UserProducts
 			var userProducts = _mapper.Map<List<ProductDto>>(products);
 
 			return userProducts;
+		}
+
+		public Task CreateNewProduct(ProductDto productDto)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task DeleteProduct(ProductDto productDto)
+		{
+			throw new NotImplementedException();
 		}
 
 		public Task UpdateProduct(ProductDto productDto)

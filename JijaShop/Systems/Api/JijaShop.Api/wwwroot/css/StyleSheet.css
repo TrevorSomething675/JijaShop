@@ -400,7 +400,8 @@
 
 .product-big-card{
     background-color:white;
-    border-radius:10px;
+    border-radius:8px;
+    border: solid 1px var(--gray-color);
 }
 
 .product-big-buttons div {

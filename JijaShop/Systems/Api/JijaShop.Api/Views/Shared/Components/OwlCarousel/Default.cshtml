@@ -2,10 +2,10 @@
 @model OwlCarouselViewModel
 
 <div class="container">
-    <div class="owl-carousel">
+    <div class="owl-carousel py-1">
         @foreach(var product in Model?.Products)
         {
-            <div class="owl-carousel-item">
+            <div class="owl-carousel-item product-card p-1">
                 <div class="col product-big-img">
                     <a asp-area="UserArea" asp-controller="Products" asp-action="Product" asp-route-productName="@product.Name">
                         <img src="@product.ProductImage.ImagePath" />
