@@ -11,7 +11,7 @@ namespace JijaShop.Api.Configurations
 {
     public static class AuthConfiguration
     {
-        public static IServiceCollection AddAppAuth(this IServiceCollection services, IdentitySettings identitySettings)
+        public static IServiceCollection AddAppAuth(this IServiceCollection services, AuthSettings identitySettings)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 //.AddCookie()

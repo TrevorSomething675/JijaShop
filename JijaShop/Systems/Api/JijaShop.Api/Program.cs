@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var swaggerSettings = Settings.Load<SwaggerSettings>("Swagger");
 var dataBaseSettings = Settings.Load<DataBaseSettings>("DataBase");
-var identitySettings = Settings.Load<IdentitySettings>("Identity");
+var identitySettings = Settings.Load<AuthSettings>("AuthSettings");
 
 builder.AddAppLogger();
 var services = builder.Services;
@@ -53,14 +53,12 @@ using (var scope = app.Services.CreateScope())
         //            Price = 20,
         //            Description = $"TestDescriptions{i}",
         //        },
-
         //        ProductOffers = new ProductOffers
         //        {
         //            IsHitOffer = true,
         //            IsNewOffer = true,
         //        }
         //    };
-
         //    context.Products.Add(product1);
         //    context.SaveChanges();
         //}

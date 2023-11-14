@@ -1,6 +1,6 @@
 ﻿namespace JijaShop.Extensions.SettingsModel
 {
-    public class IdentitySettings
+    public class AuthSettings
     {
         public string SecretKeyForToken { get; private set; } = null!;
         public string? Audience { get; private set; }

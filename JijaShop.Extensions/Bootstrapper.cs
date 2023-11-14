@@ -16,7 +16,7 @@ namespace JijaShop.Extentions
 
         public static IServiceCollection AddIdentitySettings(this IServiceCollection services, IConfiguration configuration = null)
         {
-            var settings = Settings.Load<IdentitySettings>("Identity", configuration);
+            var settings = Settings.Load<AuthSettings>("Identity", configuration);
             services.AddSingleton(settings);
 
             return services;

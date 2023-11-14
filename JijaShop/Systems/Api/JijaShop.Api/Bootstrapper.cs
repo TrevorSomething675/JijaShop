@@ -11,11 +11,9 @@ namespace JijaShop.Api
     {
         public static IServiceCollection RegisterAppServices(this IServiceCollection services)
         {
-            services.AddScoped<IHashService, HashService>().
-                AddScoped<IUserService, UserService>().
+            services.AddScoped<IUserService, UserService>().
                 AddScoped<ITokenService, TokenService>().
                 AddScoped<IProductService, ProductService>().
-                AddScoped<IIdentityService, IdentityService>().
                 AddScoped<IUserProductsService , UserProductsService>().
                 AddScoped<IUserCartProductsService, UserCartProductsService>().
                 AddScoped<IUserFavoriteProductsService, UserFavoriteProductsService>();
@@ -40,11 +38,6 @@ namespace JijaShop.Api
                 name: "User_area",
                 areaName: "UserArea",
                 pattern: "{area:exists}/{controller=Home}/{action=Index}");
-
-            app.MapAreaControllerRoute(
-                name: "Moderator_area",
-                areaName: "Moderator",
-                pattern: "Moderator/{controller=Home}/{action=Index}");
 
             app.MapAreaControllerRoute(
                 name: "Admin_area",

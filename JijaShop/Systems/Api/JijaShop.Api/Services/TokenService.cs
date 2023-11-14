@@ -15,13 +15,13 @@ namespace JijaShop.Api.Services
     {
         private readonly ILogger<TokenService> _logger;
         private readonly IUserRepository _userRepository;
-        private readonly IdentitySettings _idetitySettings;
+        private readonly AuthSettings _idetitySettings;
 
         public TokenService(ILogger<TokenService> logger, IUserRepository userRepository)
         {
             _logger = logger;
             _userRepository = userRepository;
-            _idetitySettings = Settings.Load<IdentitySettings>("Identity");
+            _idetitySettings = Settings.Load<AuthSettings>("Identity");
         }
 
         public string CreateAccessToken(UserDto userDto, List<IdentityRole<int>> roles)
@@ -49,8 +49,7 @@ namespace JijaShop.Api.Services
                     _idetitySettings.Issuer,
                     _idetitySettings.Audience,
                     claims,
-                    expires: DateTime.UtcNow.AddMinutes(2),
-                    //expires: DateTime.UtcNow.AddHours(_idetitySettings.ExpTimeHours),
+                    expires: DateTime.UtcNow.AddHours(_idetitySettings.ExpTimeHours),
                     signingCredentials: creds
                     );
                 var jwtHandler = new JwtSecurityTokenHandler().WriteToken(token);
