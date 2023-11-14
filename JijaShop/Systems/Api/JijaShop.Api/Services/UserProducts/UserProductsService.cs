@@ -36,7 +36,7 @@ namespace JijaShop.Api.Services.UserProducts
 			var product = await _productService.GetProduct(productName);
 			var favoriteProduct = await _favoriteProductsService.GetProduct(productName);
 
-			if(product != null)
+			if(product == null)
 			{
 				product = favoriteProduct;
 			}

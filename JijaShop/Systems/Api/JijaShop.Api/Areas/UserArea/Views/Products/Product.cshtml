@@ -3,7 +3,7 @@
 
 <div class="container py-3">
 
-	<div class="product-big-card">
+	<div id="@Model.Name" class="product-big-card">
 		<div class="row">
 			
 			<div class="col product-big-img p-2 ps-4">
@@ -48,3 +48,20 @@
 	</div>
 
 </div>
+
+<script>
+	$(document).ready(function () {
+		$('#GetMoreProducts').click(function () {
+			$.ajax({
+				url: 'Products/ProductsPartial',
+				type: 'GET',
+				success: function (response) {
+					$('#ProductsContainer').append(response);
+				},
+				error: function () {
+					alert('Произошла ошибка при загрузке продуктов.');
+				}
+			});
+		});
+	});
+</script>

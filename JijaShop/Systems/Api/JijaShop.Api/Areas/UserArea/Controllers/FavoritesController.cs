@@ -12,6 +12,15 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
             _userProductsService = userProductsService;
         }
 
+        public async Task<IActionResult> Product(string productName)
+        {
+            if (!User.Identity.IsAuthenticated)
+                return RedirectToAction("Login", "Auth");
+
+            var product = await _userProductsService.GetProduct(productName);
+            return PartialView(product);
+        }
+
 		public async Task<IActionResult> Index()
         {
             if (!User.Identity.IsAuthenticated)
