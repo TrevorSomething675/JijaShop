@@ -34,7 +34,6 @@ namespace JijaShop.Api.Services
                 {
                     new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                     new Claim(JwtRegisteredClaimNames.Name, user.UserName!),
-                    //new Claim(ClaimTypes.Email, user.Email!),
                     new Claim(ClaimTypes.Role, string.Join(" ", roles.Select(role=>role.Name)))
                 };
 

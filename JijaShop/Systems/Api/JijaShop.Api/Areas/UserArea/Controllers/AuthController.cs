@@ -90,7 +90,7 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
             return View();
         }
 
-        [HttpGet("getJija"), Authorize(Roles = "User")]
+        [HttpGet, Authorize(Roles = "User")]
         public async Task<IActionResult> GetInfo()
         {
             var user = await _userManager.GetUserAsync(User);
