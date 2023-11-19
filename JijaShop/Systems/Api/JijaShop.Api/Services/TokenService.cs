@@ -32,14 +32,14 @@ namespace JijaShop.Api.Services
 
                 List<Claim> claims = new List<Claim>
                 {
-                    new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                    new Claim(JwtRegisteredClaimNames.Jti, user.Id.ToString()),
                     new Claim(JwtRegisteredClaimNames.Name, user.UserName!),
                     new Claim(ClaimTypes.Role, string.Join(" ", roles.Select(role=>role.Name)))
                 };
 
                 var creds = new SigningCredentials(
                     new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(_idetitySettings.SecretKeyForToken)
+                        Encoding.UTF8.GetBytes(_idetitySettings.Key)
                         ),
                         SecurityAlgorithms.HmacSha256
                     );
@@ -50,7 +50,7 @@ namespace JijaShop.Api.Services
                     claims,
                     null,
                     //AddHours(_idetitySettings.ExpTimeHours),
-                    DateTime.UtcNow.AddMinutes(1),
+                    DateTime.UtcNow.AddMinutes(2),
                     signingCredentials: creds
                     );
                 var jwtHandler = new JwtSecurityTokenHandler().WriteToken(token);

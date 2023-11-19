@@ -43,3 +43,4 @@ C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Extensions.pdb
 C:\JijaShop\JijaShop\JijaShop\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\JijaShop\JijaShop\JijaShop\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\JijaShop\JijaShop\JijaShop\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\JijaShop\JijaShop\JijaShop\bin\Debug\JijaShop.Api.pdb

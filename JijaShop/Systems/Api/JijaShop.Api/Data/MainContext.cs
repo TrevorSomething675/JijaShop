@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JijaShop.Api.Data
 {
-    public class MainContext : IdentityDbContext<IdentityUser<int>, IdentityRole<int>, int>
+    public class MainContext : IdentityDbContext<User, IdentityRole<int>, int>
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }

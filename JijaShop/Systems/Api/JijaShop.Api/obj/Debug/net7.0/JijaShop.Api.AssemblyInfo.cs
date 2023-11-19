@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JijaShop.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+616a5f2179b27d98777ec3abbb22633ee7c6ba31")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2dcab259761dcd689663c806b0dd8b469d422c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("JijaShop.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JijaShop.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

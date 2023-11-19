@@ -90,11 +90,10 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
             return View();
         }
 
-        [HttpGet, Authorize(Roles = "User")]
+
+        [HttpGet("/testData"), Authorize(Roles = "User")]
         public async Task<IActionResult> GetInfo()
         {
-            var user = await _userManager.GetUserAsync(User);
-
             return Ok("Jija");
         }
 

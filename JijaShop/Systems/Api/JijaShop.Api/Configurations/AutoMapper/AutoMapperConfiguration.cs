@@ -18,6 +18,8 @@ namespace JijaShop.Api.Configurations.AutoMapper
                 config.AddProfile<ProductImageMap>();
                 config.AddProfile<ProductOffersMap>();
                 config.AddProfile<ProductDetailsMap>();
+
+                config.AddProfile<UserMap>();
             });
 
 			return services;

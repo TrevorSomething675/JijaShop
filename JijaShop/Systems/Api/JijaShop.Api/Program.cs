@@ -6,6 +6,7 @@ using JijaShop.Extentions;
 using JijaShop.Api.Data;
 using JijaShop.Api;
 using JijaShop.Api.Data.Models.Entities;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -73,6 +74,23 @@ using (var scope = app.Services.CreateScope())
     }
 }
 #endregion
+
+app.Use(async (context, next) =>
+{
+    if (context.User.Identity.IsAuthenticated)
+    {
+        var accessTokenExpiration = context.User.FindFirstValue("exp");
+
+        if (DateTimeOffset.FromUnixTimeSeconds(long.Parse(accessTokenExpiration)) <= DateTimeOffset.UtcNow)
+        {
+            context.Response.StatusCode = 401;
+            await context.Response.WriteAsync("Token has expired.");
+            return;
+        }
+    }
+
+    await next();
+});
 
 app.UseStaticFiles();
 app.UseHttpsRedirection();
