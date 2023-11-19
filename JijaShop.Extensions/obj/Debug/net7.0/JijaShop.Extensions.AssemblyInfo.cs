@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JijaShop.Extensions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f1c981483a6d8eb226e40156e5024482033efa1")]
 [assembly: System.Reflection.AssemblyProductAttribute("JijaShop.Extensions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JijaShop.Extensions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

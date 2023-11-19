@@ -16,13 +16,13 @@ namespace JijaShop.Api.Configurations
 
             services.AddSwaggerGen(options =>
                      {
-                options.DocInclusionPredicate((docName, apiDesc) =>
-                {
-                    if (!apiDesc.TryGetMethodInfo(out MethodInfo methodInfo)) return false;
-                    var controllerActionDescriptor = (ControllerActionDescriptor)apiDesc.ActionDescriptor;
-                    var controllerNamespace = controllerActionDescriptor.ControllerTypeInfo.Namespace;
-                    return controllerNamespace != null && controllerNamespace.Contains("JijaShop.Areas.UserArea");
-                });
+                //options.DocInclusionPredicate((docName, apiDesc) =>
+                //{
+                //    if (!apiDesc.TryGetMethodInfo(out MethodInfo methodInfo)) return false;
+                //    var controllerActionDescriptor = (ControllerActionDescriptor)apiDesc.ActionDescriptor;
+                //    var controllerNamespace = controllerActionDescriptor.ControllerTypeInfo.Namespace;
+                //    return controllerNamespace != null && controllerNamespace.Contains("JijaShop.Areas.UserArea");
+                //});
 
                 options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
                 {

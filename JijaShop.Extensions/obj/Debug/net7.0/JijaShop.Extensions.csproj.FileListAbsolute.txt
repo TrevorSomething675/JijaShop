@@ -10,3 +10,4 @@ C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.dl
 C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\refint\JijaShop.Extensions.dll
 C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.pdb
 C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\ref\JijaShop.Extensions.dll
+C:\JijaShop\JijaShop\JijaShop.Extensions\obj\Debug\net7.0\JijaShop.Extensions.sourcelink.json

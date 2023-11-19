@@ -4,9 +4,9 @@ using JijaShop.Api.Data.Models.AuthEntities;
 using JijaShop.Api.Services.Abstractions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using JijaShop.Extensions.Constants;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using JijaShop.Extensions.Constants;
 
 namespace JijaShop.Api.Areas.UserArea.Controllers
 {
@@ -90,9 +90,11 @@ namespace JijaShop.Api.Areas.UserArea.Controllers
             return View();
         }
 
-        [HttpGet, Authorize(Roles = "User")]
+        [HttpGet("getJija"), Authorize(Roles = "User")]
         public async Task<IActionResult> GetInfo()
         {
+            var user = await _userManager.GetUserAsync(User);
+
             return Ok("Jija");
         }
 

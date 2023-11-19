@@ -21,7 +21,7 @@ namespace JijaShop.Api.Services
         {
             _logger = logger;
             _userRepository = userRepository;
-            _idetitySettings = Settings.Load<AuthSettings>("Identity");
+            _idetitySettings = Settings.Load<AuthSettings>("AuthSettings");
         }
 
         public string CreateAccessToken(UserDto userDto, List<IdentityRole<int>> roles)
@@ -32,9 +32,9 @@ namespace JijaShop.Api.Services
 
                 List<Claim> claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    new Claim(ClaimTypes.Name, user.UserName!),
-                    new Claim(ClaimTypes.Email, user.Email!),
+                    new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                    new Claim(JwtRegisteredClaimNames.Name, user.UserName!),
+                    //new Claim(ClaimTypes.Email, user.Email!),
                     new Claim(ClaimTypes.Role, string.Join(" ", roles.Select(role=>role.Name)))
                 };
 
@@ -49,7 +49,9 @@ namespace JijaShop.Api.Services
                     _idetitySettings.Issuer,
                     _idetitySettings.Audience,
                     claims,
-                    expires: DateTime.UtcNow.AddHours(_idetitySettings.ExpTimeHours),
+                    null,
+                    //AddHours(_idetitySettings.ExpTimeHours),
+                    DateTime.UtcNow.AddMinutes(1),
                     signingCredentials: creds
                     );
                 var jwtHandler = new JwtSecurityTokenHandler().WriteToken(token);

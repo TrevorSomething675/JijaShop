@@ -75,3 +75,4 @@ C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\refint\J
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\JijaShop.Api.pdb
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\JijaShop.Api.genruntimeconfig.cache
 C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\ref\JijaShop.Api.dll
+C:\JijaShop\JijaShop\JijaShop\Systems\Api\JijaShop.Api\obj\Debug\net7.0\JijaShop.Api.sourcelink.json

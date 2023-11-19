@@ -14,28 +14,18 @@ namespace JijaShop.Api.Configurations
         public static IServiceCollection AddAppAuth(this IServiceCollection services, AuthSettings identitySettings)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                //.AddCookie()
                 .AddJwtBearer(jwt =>
                 {
                     jwt.TokenValidationParameters = new TokenValidationParameters
                     {
-                        ValidateIssuer = false,
-                        ValidateAudience = false,
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = identitySettings.Issuer,
                         ValidAudience = identitySettings.Audience,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(identitySettings.SecretKeyForToken))
                     };
-
-                    //jwt.Events = new JwtBearerEvents
-                    //{
-                    //    OnMessageReceived = context =>
-                    //    {
-                    //        context.Token = context.Request.Cookies["Token"];
-                    //        return Task.CompletedTask;
-                    //    }
-                    //};
                 });
 
             services.AddAuthorization(options =>
@@ -47,7 +37,8 @@ namespace JijaShop.Api.Configurations
             services.AddIdentity<User, IdentityRole<int>>()
                 .AddEntityFrameworkStores<MainContext>()
                 .AddUserManager<UserManager<User>>()
-                .AddSignInManager<SignInManager<User>>();
+                .AddSignInManager<SignInManager<User>>()
+                .AddDefaultTokenProviders();
 
             return services;
         }
